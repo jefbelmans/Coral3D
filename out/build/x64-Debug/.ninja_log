@@ -1,0 +1,67 @@
+# ninja log v5
+74	801	7099152394060955	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_monitor.c.obj	3a5f64bfec0d9f5a
+37	817	7099152394176291	third_party/GLFW/src/CMakeFiles/glfw.dir/init.c.obj	c1d3aaef5494afbb
+94	818	7099152394005809	third_party/GLFW/src/CMakeFiles/glfw.dir/egl_context.c.obj	2983ffa951e61966
+127	1240	7100163132188046	vk_renderer/CMakeFiles/vulkan_renderer.dir/main.cpp.obj	16f1c43733560c70
+69	808	7099152394050952	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_joystick.c.obj	2b095a14c2d6a1be
+64	773	7099152393945766	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_init.c.obj	5bdae8d1a179b59e
+78	785	7099152393925729	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_time.c.obj	6dbbfc2ebade9a2b
+31	816	7099152394050952	third_party/GLFW/src/CMakeFiles/glfw.dir/context.c.obj	8661c9ce804fd6e7
+58	816	7099152394090968	third_party/GLFW/src/CMakeFiles/glfw.dir/window.c.obj	b7fd70ea5b4140f7
+51	819	7099152394025819	third_party/GLFW/src/CMakeFiles/glfw.dir/vulkan.c.obj	fb641c347998e7d4
+90	815	7099152393925729	third_party/GLFW/src/CMakeFiles/glfw.dir/wgl_context.c.obj	95ead426f78134ef
+144	1706	7100163136846466	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_texture.cpp.obj	50d9983d1d61e656
+46	818	7099152393965803	third_party/GLFW/src/CMakeFiles/glfw.dir/monitor.c.obj	d3835a54d263a652
+82	819	7099152393955800	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_thread.c.obj	a143f67544d525a8
+86	820	7099152394336690	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_window.c.obj	3fcdd22a053cb2e9
+19	127	7100163121057065	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.frag.spv	3f79b3643d613499
+41	820	7099152394351722	third_party/GLFW/src/CMakeFiles/glfw.dir/input.c.obj	4389f00fb3599648
+820	889	7099152395093073	third_party/GLFW/src/glfw3.lib	90fe5d3bf3988c3
+135	535	7100163125152093	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_initializers.cpp.obj	ca5df9b02018b3be
+179	819	7099152394286679	third_party/GLFW/src/CMakeFiles/glfw.dir/osmesa_context.c.obj	4bbc79a63d9b432f
+25	1789	7099152404115983	third_party/CMakeFiles/tinyobjloader.dir/tinyobjloader/tiny_obj_loader.cc.obj	7504fd6ab36e1f25
+21	1934	7099152405572810	third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.obj	611c68ec5a735db
+1934	1974	7099152405979218	third_party/vkbootstrap.lib	b339a5cc36d209fb
+1789	1830	7099152404532579	third_party/tinyobjloader.lib	c2812261322ebfda
+5	137	7100099613839394	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.vert.spv	83725d5a2ab525ec
+154	1344	7100099625946899	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_pipeline.cpp.obj	814d5b8fc38a162d
+139	1290	7100163132688829	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_mesh.cpp.obj	3d3f9fb59d3435ba
+5	1774	7100163594180486	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	ac40aec799318050
+1774	1990	7100163595575866	vk_renderer/vulkan_renderer.exe	5e5c3a94e5fc8f12
+29	43	0	clean	21a4d0550fd2b6b1
+14	127	7100271574852386	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.frag.spv	3f79b3643d613499
+19	131	7100271574907454	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.vert.spv	83725d5a2ab525ec
+131	1186	7100271585464092	vk_renderer/CMakeFiles/vulkan_renderer.dir/main.cpp.obj	16f1c43733560c70
+138	1629	7100271589881043	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_texture.cpp.obj	50d9983d1d61e656
+135	2209	7100271595651965	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	ac40aec799318050
+2209	2479	7100271597466225	vk_renderer/vulkan_renderer.exe	5e5c3a94e5fc8f12
+13	1774	7100272115991793	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	ac40aec799318050
+1775	2000	7100272117378805	vk_renderer/vulkan_renderer.exe	5e5c3a94e5fc8f12
+13	1871	7100273239462060	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	ac40aec799318050
+1871	2126	7100273241213045	vk_renderer/vulkan_renderer.exe	5e5c3a94e5fc8f12
+33	2204	7100280002464130	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	ac40aec799318050
+2204	2512	7100280004540904	vk_renderer/vulkan_renderer.exe	5e5c3a94e5fc8f12
+11	1738	7100281416725710	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	ac40aec799318050
+1738	2035	7100281418944758	vk_renderer/vulkan_renderer.exe	5e5c3a94e5fc8f12
+12	1894	7100282343063655	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	ac40aec799318050
+1895	2108	7100282344414950	vk_renderer/vulkan_renderer.exe	5e5c3a94e5fc8f12
+26	1854	7100287144566042	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	ac40aec799318050
+1854	2148	7100287146360044	vk_renderer/vulkan_renderer.exe	5e5c3a94e5fc8f12
+4	1990	7100293158268400	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	ac40aec799318050
+1991	2218	7100293159771811	vk_renderer/vulkan_renderer.exe	5e5c3a94e5fc8f12
+14	1966	7100293617573063	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	ac40aec799318050
+1967	2232	7100293619441237	vk_renderer/vulkan_renderer.exe	5e5c3a94e5fc8f12
+13	1868	7100297768659658	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	ac40aec799318050
+1869	2085	7100297770077593	vk_renderer/vulkan_renderer.exe	5e5c3a94e5fc8f12
+14	1780	7100297927989540	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	ac40aec799318050
+1780	2036	7100297929804387	vk_renderer/vulkan_renderer.exe	5e5c3a94e5fc8f12
+14	1772	7100298646824316	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	ac40aec799318050
+1772	1992	7100298648243554	vk_renderer/vulkan_renderer.exe	5e5c3a94e5fc8f12
+14	1771	7100299233733210	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	ac40aec799318050
+1771	2039	7100299235576625	vk_renderer/vulkan_renderer.exe	5e5c3a94e5fc8f12
+13	1770	7100300252048176	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	ac40aec799318050
+1771	1984	7100300253432854	vk_renderer/vulkan_renderer.exe	5e5c3a94e5fc8f12
+17	2087	7100308134069817	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	ac40aec799318050
+2088	2455	7100308136937406	vk_renderer/vulkan_renderer.exe	5e5c3a94e5fc8f12
+13	1790	7100312881713933	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	ac40aec799318050
+1791	2026	7100312883222957	vk_renderer/vulkan_renderer.exe	5e5c3a94e5fc8f12
