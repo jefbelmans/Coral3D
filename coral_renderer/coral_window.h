@@ -17,10 +17,11 @@ namespace coral_3d
 		coral_window& operator=(const coral_window&) = delete;
 
 		bool should_close() { return glfwWindowShouldClose(pWindow_); }
+		void create_window_surface(VkInstance instance, VkSurfaceKHR* surface);
 
 	private:
-		const int cWidth;
-		const int cHeight;
+		const int c_width;
+		const int c_height;
 
 		std::string window_name_;
 		GLFWwindow* pWindow_;

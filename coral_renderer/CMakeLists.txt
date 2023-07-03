@@ -6,6 +6,11 @@ add_executable(coral_renderer
     "first_app.cpp"
     "coral_pipeline.h"
     "coral_pipeline.cpp"
+    "coral_device.h"
+    "coral_device.cpp"
+    "vk_initializers.h"
+    "vk_initializers.cpp"
+    "vk_types.h"
 )
 
 add_dependencies(coral_renderer Shaders)
