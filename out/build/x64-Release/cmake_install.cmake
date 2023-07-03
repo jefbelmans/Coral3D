@@ -34,7 +34,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/vk_renderer/cmake_install.cmake")
+  include("C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/coral_renderer/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

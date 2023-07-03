@@ -1261,7 +1261,7 @@ void VulkanEngine::init_scene()
 	Mesh* teapotMesh = get_mesh("Teapot");
 	const int vertCount = teapotMesh->vertices.size();
 	 
-	 constexpr int numObjects = 65;
+	constexpr int numObjects = 2;
 	for (int x = -numObjects * 0.5f; x < numObjects * 0.5f; x++)
 	{
 		for (int y = -numObjects * 0.5f; y < numObjects * 0.5f; y++)

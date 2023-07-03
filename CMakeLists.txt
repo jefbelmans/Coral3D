@@ -11,14 +11,14 @@ add_compile_options(/W4 /WX)
 # Vulkan
 find_package(Vulkan REQUIRED)
 
-# Executable
-add_subdirectory(vk_renderer)
+# New renderer
+add_subdirectory(coral_renderer)
 
 # Third party libraries
 add_subdirectory(third_party)
 
 # Link libs
-target_link_libraries(vulkan_renderer PRIVATE
+target_link_libraries(coral_renderer PRIVATE
 	Vulkan::Vulkan
 	glfw
 	glm

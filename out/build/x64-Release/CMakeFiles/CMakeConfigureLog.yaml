@@ -109,8 +109,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-qehuem"
-      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-qehuem"
+      source: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-9unqf0"
+      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-9unqf0"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -119,10 +119,10 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-qehuem
+        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-9unqf0
         
-        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_927b4 && [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_927b4.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_927b4.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
-        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_927b4.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_927b4.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_927b4.exe /implib:cmTC_927b4.lib /pdb:cmTC_927b4.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_33681 && [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_33681.dir\\CMakeCCompilerABI.c.obj /FdCMakeFiles\\cmTC_33681.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCCompilerABI.c"
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_33681.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_33681.dir\\CMakeCCompilerABI.c.obj  /out:cmTC_33681.exe /implib:cmTC_33681.lib /pdb:cmTC_33681.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -134,8 +134,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-igd9y9"
-      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-igd9y9"
+      source: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-sr1mc6"
+      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-sr1mc6"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -144,10 +144,10 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-igd9y9
+        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-sr1mc6
         
-        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_29b72 && [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_29b72.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_29b72.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
-        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_29b72.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_29b72.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_29b72.exe /implib:cmTC_29b72.lib /pdb:cmTC_29b72.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_0a634 && [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo /TP   /DWIN32 /D_WINDOWS /EHsc  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_0a634.dir\\CMakeCXXCompilerABI.cpp.obj /FdCMakeFiles\\cmTC_0a634.dir\\ /FS -c "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-3.26\\Modules\\CMakeCXXCompilerABI.cpp"
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_0a634.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_0a634.dir\\CMakeCXXCompilerABI.cpp.obj  /out:cmTC_0a634.exe /implib:cmTC_0a634.lib /pdb:cmTC_0a634.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
         
       exitCode: 0
   -
@@ -161,8 +161,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-svgp4d"
-      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-svgp4d"
+      source: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-ae4cyo"
+      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-ae4cyo"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -172,12 +172,12 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-svgp4d
+        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-ae4cyo
         
-        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_f6a55 && [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_f6a55.dir\\src.c.obj /FdCMakeFiles\\cmTC_f6a55.dir\\ /FS -c "C:\\Game Development\\Visual Studio Solutions\\Coral3D\\out\\build\\x64-Release\\CMakeFiles\\CMakeScratch\\TryCompile-svgp4d\\src.c"
-        FAILED: CMakeFiles/cmTC_f6a55.dir/src.c.obj 
-        C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_f6a55.dir\\src.c.obj /FdCMakeFiles\\cmTC_f6a55.dir\\ /FS -c "C:\\Game Development\\Visual Studio Solutions\\Coral3D\\out\\build\\x64-Release\\CMakeFiles\\CMakeScratch\\TryCompile-svgp4d\\src.c"
-        C:\\Game Development\\Visual Studio Solutions\\Coral3D\\out\\build\\x64-Release\\CMakeFiles\\CMakeScratch\\TryCompile-svgp4d\\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_962ec && [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_962ec.dir\\src.c.obj /FdCMakeFiles\\cmTC_962ec.dir\\ /FS -c "C:\\Game Development\\Visual Studio Solutions\\Coral3D\\out\\build\\x64-Release\\CMakeFiles\\CMakeScratch\\TryCompile-ae4cyo\\src.c"
+        FAILED: CMakeFiles/cmTC_962ec.dir/src.c.obj 
+        C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo -DCMAKE_HAVE_LIBC_PTHREAD  /DWIN32 /D_WINDOWS  /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_962ec.dir\\src.c.obj /FdCMakeFiles\\cmTC_962ec.dir\\ /FS -c "C:\\Game Development\\Visual Studio Solutions\\Coral3D\\out\\build\\x64-Release\\CMakeFiles\\CMakeScratch\\TryCompile-ae4cyo\\src.c"
+        C:\\Game Development\\Visual Studio Solutions\\Coral3D\\out\\build\\x64-Release\\CMakeFiles\\CMakeScratch\\TryCompile-ae4cyo\\src.c(1): fatal error C1083: Cannot open include file: 'pthread.h': No such file or directory
         ninja: build stopped: subcommand failed.
         
       exitCode: 1
@@ -191,8 +191,8 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-wuqcn1"
-      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-wuqcn1"
+      source: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-ofzuf3"
+      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-ofzuf3"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -202,13 +202,13 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-wuqcn1
+        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-ofzuf3
         
-        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_194b4 && [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=pthread_create /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_194b4.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_194b4.dir\\ /FS -c "C:\\Game Development\\Visual Studio Solutions\\Coral3D\\out\\build\\x64-Release\\CMakeFiles\\CMakeScratch\\TryCompile-wuqcn1\\CheckFunctionExists.c"
-        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_194b4.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_194b4.dir\\CheckFunctionExists.c.obj  /out:cmTC_194b4.exe /implib:cmTC_194b4.lib /pdb:cmTC_194b4.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        FAILED: cmTC_194b4.exe 
-        cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_194b4.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_194b4.dir\\CheckFunctionExists.c.obj  /out:cmTC_194b4.exe /implib:cmTC_194b4.lib /pdb:cmTC_194b4.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_194b4.dir\\CheckFunctionExists.c.obj /out:cmTC_194b4.exe /implib:cmTC_194b4.lib /pdb:cmTC_194b4.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_194b4.dir/intermediate.manifest CMakeFiles\\cmTC_194b4.dir/manifest.res" failed (exit code 1104) with the following output:
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_035c2 && [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=pthread_create /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_035c2.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_035c2.dir\\ /FS -c "C:\\Game Development\\Visual Studio Solutions\\Coral3D\\out\\build\\x64-Release\\CMakeFiles\\CMakeScratch\\TryCompile-ofzuf3\\CheckFunctionExists.c"
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_035c2.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_035c2.dir\\CheckFunctionExists.c.obj  /out:cmTC_035c2.exe /implib:cmTC_035c2.lib /pdb:cmTC_035c2.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_035c2.exe 
+        cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_035c2.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_035c2.dir\\CheckFunctionExists.c.obj  /out:cmTC_035c2.exe /implib:cmTC_035c2.lib /pdb:cmTC_035c2.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthreads.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_035c2.dir\\CheckFunctionExists.c.obj /out:cmTC_035c2.exe /implib:cmTC_035c2.lib /pdb:cmTC_035c2.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_035c2.dir/intermediate.manifest CMakeFiles\\cmTC_035c2.dir/manifest.res" failed (exit code 1104) with the following output:
         LINK : fatal error LNK1104: cannot open file 'pthreads.lib'\x0d
         ninja: build stopped: subcommand failed.
         
@@ -223,8 +223,8 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-lf5e5t"
-      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-lf5e5t"
+      source: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-vv8jk5"
+      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-vv8jk5"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS"
       CMAKE_C_FLAGS_DEBUG: "/Zi /Ob0 /Od /RTC1"
@@ -234,13 +234,13 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-lf5e5t
+        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/CMakeFiles/CMakeScratch/TryCompile-vv8jk5
         
-        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_72c8e && [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=pthread_create /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_72c8e.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_72c8e.dir\\ /FS -c "C:\\Game Development\\Visual Studio Solutions\\Coral3D\\out\\build\\x64-Release\\CMakeFiles\\CMakeScratch\\TryCompile-lf5e5t\\CheckFunctionExists.c"
-        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_72c8e.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_72c8e.dir\\CheckFunctionExists.c.obj  /out:cmTC_72c8e.exe /implib:cmTC_72c8e.lib /pdb:cmTC_72c8e.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        FAILED: cmTC_72c8e.exe 
-        cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_72c8e.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_72c8e.dir\\CheckFunctionExists.c.obj  /out:cmTC_72c8e.exe /implib:cmTC_72c8e.lib /pdb:cmTC_72c8e.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
-        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_72c8e.dir\\CheckFunctionExists.c.obj /out:cmTC_72c8e.exe /implib:cmTC_72c8e.lib /pdb:cmTC_72c8e.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_72c8e.dir/intermediate.manifest CMakeFiles\\cmTC_72c8e.dir/manifest.res" failed (exit code 1104) with the following output:
+        Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Enterprise/Common7/IDE/CommonExtensions/Microsoft/CMake/Ninja/ninja.exe -v cmTC_7b4d2 && [1/2] C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\cl.exe  /nologo   /DWIN32 /D_WINDOWS -DCHECK_FUNCTION_EXISTS=pthread_create /Zi /Ob0 /Od /RTC1 -MDd /showIncludes /FoCMakeFiles\\cmTC_7b4d2.dir\\CheckFunctionExists.c.obj /FdCMakeFiles\\cmTC_7b4d2.dir\\ /FS -c "C:\\Game Development\\Visual Studio Solutions\\Coral3D\\out\\build\\x64-Release\\CMakeFiles\\CMakeScratch\\TryCompile-vv8jk5\\CheckFunctionExists.c"
+        [2/2] cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_7b4d2.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_7b4d2.dir\\CheckFunctionExists.c.obj  /out:cmTC_7b4d2.exe /implib:cmTC_7b4d2.lib /pdb:cmTC_7b4d2.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        FAILED: cmTC_7b4d2.exe 
+        cmd.exe /C "cd . && "C:\\Program Files\\Microsoft Visual Studio\\2022\\Enterprise\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin\\cmake.exe" -E vs_link_exe --intdir=CMakeFiles\\cmTC_7b4d2.dir --rc=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\rc.exe --mt=C:\\PROGRA~2\\WI3CF2~1\\10\\bin\\100220~1.0\\x64\\mt.exe --manifests  -- C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_7b4d2.dir\\CheckFunctionExists.c.obj  /out:cmTC_7b4d2.exe /implib:cmTC_7b4d2.lib /pdb:cmTC_7b4d2.pdb /version:0.0 /machine:x64  /debug /INCREMENTAL /subsystem:console  pthread.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib && cd ."
+        LINK Pass 1: command "C:\\PROGRA~1\\MICROS~1\\2022\\ENTERP~1\\VC\\Tools\\MSVC\\1436~1.325\\bin\\Hostx64\\x64\\link.exe /nologo CMakeFiles\\cmTC_7b4d2.dir\\CheckFunctionExists.c.obj /out:cmTC_7b4d2.exe /implib:cmTC_7b4d2.lib /pdb:cmTC_7b4d2.pdb /version:0.0 /machine:x64 /debug /INCREMENTAL /subsystem:console pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTFILE:CMakeFiles\\cmTC_7b4d2.dir/intermediate.manifest CMakeFiles\\cmTC_7b4d2.dir/manifest.res" failed (exit code 1104) with the following output:
         LINK : fatal error LNK1104: cannot open file 'pthread.lib'\x0d
         ninja: build stopped: subcommand failed.
         
