@@ -8,7 +8,21 @@
 
 namespace coral_3d
 {
-	struct PipelineConfigInfo{};
+	struct PipelineConfigInfo
+	{
+		VkViewport viewport;
+		VkRect2D scissor;
+		VkPipelineViewportStateCreateInfo viewport_info;
+		VkPipelineInputAssemblyStateCreateInfo input_assembly_info;
+		VkPipelineRasterizationStateCreateInfo rasterization_info;
+		VkPipelineMultisampleStateCreateInfo multisample_info;
+		VkPipelineColorBlendAttachmentState color_blend_attachment;
+		VkPipelineColorBlendStateCreateInfo color_blend_info;
+		VkPipelineDepthStencilStateCreateInfo depth_stencil_info;
+		VkPipelineLayout pipeline_layout = nullptr;
+		VkRenderPass render_pass = nullptr;
+		uint32_t subpass = 0;
+	};
 
 	class coral_pipeline final
 	{
@@ -19,7 +33,7 @@ namespace coral_3d
 			const std::string& frag_file_path,
 			const PipelineConfigInfo& config_info);
 
-		~coral_pipeline() {};
+		~coral_pipeline();
 
 		coral_pipeline(const coral_pipeline&) = delete;
 		coral_pipeline& operator=(const coral_pipeline&) = delete;

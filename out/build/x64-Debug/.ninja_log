@@ -44,3 +44,13 @@
 1439	1642	7101063204872836	coral_renderer/coral_renderer.exe	20dbc57cca0c9133
 12	1293	7101063541931709	coral_renderer/CMakeFiles/coral_renderer.dir/coral_device.cpp.obj	f65feb738e17e8d7
 1293	1485	7101063543131099	coral_renderer/coral_renderer.exe	20dbc57cca0c9133
+20	383	7101131425879773	coral_renderer/CMakeFiles/coral_renderer.dir/vk_initializers.cpp.obj	e2dbff82d1c3ba0d
+8	952	7101131431560818	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	2fa3f3bbdc72680a
+4	1199	7101131434017667	coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj	f207d5295f665d92
+12	1228	7101131434324805	coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj	429a0363ba93b7c7
+17	1815	7101131440161744	coral_renderer/CMakeFiles/coral_renderer.dir/coral_device.cpp.obj	f65feb738e17e8d7
+1815	2070	7101131441889449	coral_renderer/coral_renderer.exe	20dbc57cca0c9133
+6	805	7101132283528428	coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj	429a0363ba93b7c7
+806	992	7101132284614039	coral_renderer/coral_renderer.exe	20dbc57cca0c9133
+12	902	7101133893372813	coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj	429a0363ba93b7c7
+902	1151	7101133894664193	coral_renderer/coral_renderer.exe	20dbc57cca0c9133

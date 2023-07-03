@@ -108,6 +108,9 @@ VkPipelineVertexInputStateCreateInfo vkinit::vertex_input_state_ci()
 	info.vertexBindingDescriptionCount = 0;
 	info.vertexAttributeDescriptionCount = 0;
 
+	info.pVertexAttributeDescriptions = nullptr;
+	info.pVertexBindingDescriptions = nullptr;
+
 	return info;
 }
 
@@ -172,6 +175,7 @@ VkPipelineMultisampleStateCreateInfo vkinit::multisample_state_ci()
 VkPipelineColorBlendAttachmentState vkinit::color_blend_attachment_state()
 {
 	VkPipelineColorBlendAttachmentState info{};
+
 	info.colorWriteMask = 
 		VK_COLOR_COMPONENT_R_BIT |
 		VK_COLOR_COMPONENT_G_BIT |
