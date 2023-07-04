@@ -11,8 +11,6 @@
 
 namespace coral_3d
 {
-	
-
 	struct UploadContext
 	{
 		VkFence upload_fence;
@@ -63,7 +61,7 @@ namespace coral_3d
 		VkQueue graphics_queue() { return graphics_queue_; }
 		VkQueue present_queue() { return present_queue_; }
 
-		SwapchainSupportDetails get_swapchain_support() {};
+		SwapchainSupportDetails get_swapchain_support() { return query_swapchain_support(physical_device_); }
 		uint32_t find_memory_type(uint32_t type_filter, VkMemoryPropertyFlags properties);
 		QueueFamilyIndices find_physical_queue_families() { return find_queue_families(physical_device_); }
 		VkFormat find_supported_format(

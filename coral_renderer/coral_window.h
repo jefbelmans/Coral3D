@@ -16,18 +16,22 @@ namespace coral_3d
 		coral_window(const coral_window&) = delete;
 		coral_window& operator=(const coral_window&) = delete;
 
-		bool should_close() { return glfwWindowShouldClose(pWindow_); }
-		VkExtent2D get_extent() { return { static_cast<uint32_t>(c_width), static_cast<uint32_t>(c_height)}; }
+		bool should_close() const { return glfwWindowShouldClose(pWindow_); }
+		VkExtent2D get_extent() const { return { static_cast<uint32_t>(width_), static_cast<uint32_t>(height_)}; }
+		bool was_window_resized() const { return is_framebuffer_resized_; }
+		void reset_window_resized() { is_framebuffer_resized_ = false; }
 
 		void create_window_surface(VkInstance instance, VkSurfaceKHR* surface);
 
 	private:
-		const int c_width;
-		const int c_height;
+		static void framebuffer_resize_callback(GLFWwindow* pWindow, int width, int height);
+		void init_window();
+
+		int width_;
+		int height_;
+		bool is_framebuffer_resized_{ false };
 
 		std::string window_name_;
 		GLFWwindow* pWindow_;
-
-		void init_window();
 	};
 }

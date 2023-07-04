@@ -35,12 +35,12 @@ VertexInputDescription Vertex::get_vert_desc()
     //normal_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
     //normal_attrib.offset = offsetof(Vertex, normal);
 
-    //// Color will be stored at Location 2
-    //VkVertexInputAttributeDescription color_attrib{};
-    //color_attrib.binding = 0;
-    //color_attrib.location = 2;
-    //color_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
-    //color_attrib.offset = offsetof(Vertex, color);
+    // Color will be stored at Location 1
+    VkVertexInputAttributeDescription color_attrib{};
+    color_attrib.binding = 0;
+    color_attrib.location = 1;
+    color_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
+    color_attrib.offset = offsetof(Vertex, color);
 
     //// UV will be stored at Location 3
     //VkVertexInputAttributeDescription texcoord_attrib{};
@@ -50,9 +50,9 @@ VertexInputDescription Vertex::get_vert_desc()
     //texcoord_attrib.offset = offsetof(Vertex, uv);
 
     desc.attributes.emplace_back(position_attrib);
-    //desc.attributes.emplace_back(normal_attrib);
-    //desc.attributes.emplace_back(color_attrib);
-    //desc.attributes.emplace_back(texcoord_attrib);
+    // desc.attributes.emplace_back(normal_attrib);
+    desc.attributes.emplace_back(color_attrib);
+    // desc.attributes.emplace_back(texcoord_attrib);
 
     return desc;
 }

@@ -182,7 +182,7 @@ void coral_device::create_instance()
     std::cout << "Creating instance...\n";
 
     vkb::InstanceBuilder builder;
-    auto instance_desc = builder.set_app_name("Coral3D")
+    auto instance_desc = builder.set_app_name("coral_renderer")
         .request_validation_layers(c_enable_validation_layers_)
         .require_api_version(1, 1, 0)
         .use_default_debug_messenger()
@@ -218,7 +218,7 @@ void coral_device::create_instance()
     
     shader_draw_params.shaderDrawParameters = VK_TRUE;
 
-    vkb::Device vkb_device{device_builder.add_pNext(&shader_draw_params).build().value()};
+    auto vkb_device = device_builder.add_pNext(&shader_draw_params).build().value();
 
     graphics_queue_ = vkb_device.get_queue(vkb::QueueType::graphics).value();
     present_queue_ = vkb_device.get_queue(vkb::QueueType::present).value();
@@ -250,7 +250,7 @@ void coral_device::create_command_pool()
     auto indices { find_physical_queue_families() };
 
     VkCommandPoolCreateInfo graphics_pool_info{
-        vkinit::command_pool_ci(indices.graphics_family) };
+        vkinit::command_pool_ci(indices.graphics_family, VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT) };
 
     // Create general pool
     if (vkCreateCommandPool(device_, &graphics_pool_info, nullptr, &command_pool_) != VK_SUCCESS)

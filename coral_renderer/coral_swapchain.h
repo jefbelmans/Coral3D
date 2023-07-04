@@ -8,6 +8,7 @@
 // std lib headers
 #include <string>
 #include <vector>
+#include <memory>
 
 #include "vk_types.h"
 
@@ -39,6 +40,7 @@ namespace coral_3d
     public:
         static constexpr int MAX_FRAMES_IN_FLIGHT = 2;
 
+        coral_swapchain(coral_device& device, VkExtent2D extent, std::shared_ptr<coral_swapchain> old_swapchain);
         coral_swapchain(coral_device& device, VkExtent2D extent);
         ~coral_swapchain();
 
@@ -63,7 +65,9 @@ namespace coral_3d
         VkResult submit_command_buffer(const VkCommandBuffer* buffers, uint32_t* image_index);
 
     private:
+        void init();
         void create_swapchain();
+        void create_image_views();
         void create_render_pass();
         void create_depth_resources();
         void create_frame_buffers();
@@ -92,6 +96,7 @@ namespace coral_3d
         coral_device& device_;
         VkExtent2D window_extent_;
         VkSwapchainKHR swapchain_;
+        std::shared_ptr<coral_swapchain> old_swapchain_;
 
         FrameData frames_[MAX_FRAMES_IN_FLIGHT];
         size_t current_frame_ = 0;

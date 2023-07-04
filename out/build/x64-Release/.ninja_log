@@ -52,3 +52,8 @@
 155	1641	7101828965056591	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	c9cebafec58901df
 147	2319	7101828971832944	coral_renderer/CMakeFiles/coral_renderer.dir/coral_device.cpp.obj	54ea3dd64d178489
 2319	2618	7101828974349382	coral_renderer/coral_renderer.exe	46b48affdb39d636
+10	912	7101845953773938	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	f6aa697f38bcc8c1
+5	1013	7101845954790120	coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj	b04a92f83a26ca98
+14	1076	7101845955404846	coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj	547825035d4ce491
+18	1196	7101845956606118	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	c9cebafec58901df
+1196	1516	7101845959367478	coral_renderer/coral_renderer.exe	46b48affdb39d636

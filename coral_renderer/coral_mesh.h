@@ -21,10 +21,10 @@ namespace coral_3d
 		VkPipelineVertexInputStateCreateFlags flags = 0;
 	};
 
-
 	struct Vertex
 	{
-		glm::vec2 position;
+		glm::vec3 position;
+		glm::vec3 color;
 
 		static VertexInputDescription get_vert_desc();
 	};

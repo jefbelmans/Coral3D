@@ -31,16 +31,17 @@ namespace coral_3d
 		void create_pipeline_layout();
 		void create_pipeline();
 		void create_command_buffers();
+		void free_command_buffers();
 		void draw_frame();
+		void recreate_swapchain();
+		void record_command_buffer(int image_index);
 
 		coral_window window_{ WIDTH, HEIGHT, "Coral Renderer" };
 		coral_device device_{ window_ };
-		coral_swapchain swapchain_{ device_, window_.get_extent() };
+		std::unique_ptr<coral_swapchain> swapchain_;
 		std::unique_ptr<coral_pipeline> pipeline_;
-
 		VkPipelineLayout pipeline_layout_;
 		std::vector<VkCommandBuffer> command_buffers_;
-
 		std::unique_ptr<coral_mesh> mesh_;
 	};
 }

@@ -12,7 +12,7 @@ first_app::first_app()
 {
 	load_meshes();
 	create_pipeline_layout();
-	create_pipeline();
+	recreate_swapchain();
 	create_command_buffers();
 }
 
@@ -36,9 +36,9 @@ void first_app::load_meshes()
 {
 	std::vector<Vertex> vertices
 	{
-		{{0.0f, -0.5f}},
-		{{0.5f,  0.5f}},
-		{{-0.5f, 0.5f}}
+		{{0.0f, -0.5f, 0.0f}, { 1.0f, 0.0f, 0.0f }},
+		{{-0.5f, 0.5f, 0.0f}, { 0.0f, 1.0f, 0.0f } },
+		{{0.5f,  0.5f, 0.0f}, { 0.0f, 0.0f, 1.0f } },
 	};
 
 	mesh_ = std::make_unique<coral_mesh>(device_, vertices);
@@ -53,8 +53,8 @@ void first_app::create_pipeline_layout()
 
 void first_app::create_pipeline()
 {
-	auto pipeline_config{ coral_pipeline::default_pipeline_config_info(swapchain_.width(), swapchain_.height()) };
-	pipeline_config.render_pass = swapchain_.get_render_pass();
+	auto pipeline_config{ coral_pipeline::default_pipeline_config_info(swapchain_->width(), swapchain_->height()) };
+	pipeline_config.render_pass = swapchain_->get_render_pass();
 	pipeline_config.pipeline_layout = pipeline_layout_;
 
 	pipeline_ = std::make_unique<coral_pipeline>(
@@ -69,55 +69,111 @@ void first_app::create_pipeline()
 
 void first_app::create_command_buffers()
 {
-	command_buffers_.resize(swapchain_.image_count());
+	command_buffers_.resize(swapchain_->image_count());
 
 	VkCommandBufferAllocateInfo alloc_info{ vkinit::command_buffer_ai(device_.get_command_pool(), static_cast<uint32_t>(command_buffers_.size())) };
 	if (vkAllocateCommandBuffers(device_.device(), &alloc_info, command_buffers_.data()) != VK_SUCCESS)
 		throw std::runtime_error("ERROR! first_app::create_command_buffers() >> Failed to allocate command buffers!");
+}
 
-	for (int i = 0; i < command_buffers_.size(); i++)
-	{
-		VkCommandBufferBeginInfo begin_info{};
-		begin_info.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
+void first_app::free_command_buffers()
+{
+	vkFreeCommandBuffers(
+		device_.device(),
+		device_.get_command_pool(),
+		static_cast<uint32_t>(command_buffers_.size()),
+		command_buffers_.data());
 
-		if (vkBeginCommandBuffer(command_buffers_[i], &begin_info) != VK_SUCCESS)
-			throw std::runtime_error("ERROR! first_app::create_command_buffers() >> Failed to begin recording command buffer!");
-
-		VkRenderPassBeginInfo render_pass_info{};
-		render_pass_info.sType = VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO;
-		render_pass_info.renderPass = swapchain_.get_render_pass();
-		render_pass_info.framebuffer = swapchain_.get_frame_buffers(i);
-
-		render_pass_info.renderArea.offset = { 0, 0 };
-		render_pass_info.renderArea.extent = swapchain_.get_swapchain_extent();
-
-		std::array<VkClearValue, 2> clear_values{};
-		clear_values[0].color = { 0.1f, 0.1f, 0.1f, 1.0f };
-		clear_values[1].depthStencil = { 1.0f, 0 };
-		render_pass_info.clearValueCount = static_cast<uint32_t>(clear_values.size());
-		render_pass_info.pClearValues = clear_values.data();
-
-		vkCmdBeginRenderPass(command_buffers_[i], &render_pass_info, VK_SUBPASS_CONTENTS_INLINE);
-
-		pipeline_->bind(command_buffers_[i]);
-		mesh_->bind(command_buffers_[i]);
-		mesh_->draw(command_buffers_[i]);
-
-		vkCmdEndRenderPass(command_buffers_[i]);
-
-		if (vkEndCommandBuffer(command_buffers_[i]) != VK_SUCCESS)
-			throw std::runtime_error("ERROR! first_app::create_command_buffers() >> Failed to record command buffer!");
-	}
+	command_buffers_.clear();
 }
 
 void first_app::draw_frame()
 {
 	uint32_t image_index;
-	auto result = swapchain_.aqcuire_next_image(&image_index);
+	auto result = swapchain_->aqcuire_next_image(&image_index);
+
+	// Window has been resized
+	if (result == VK_ERROR_OUT_OF_DATE_KHR)
+	{
+		recreate_swapchain();
+		return;
+	}
+
 	if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR)
 		throw std::runtime_error("ERROR! first_app::draw_frame() >> Failed to aquire swapchain image!");
 
-	result = swapchain_.submit_command_buffer(&command_buffers_[image_index], &image_index);
+	record_command_buffer(image_index);
+	result = swapchain_->submit_command_buffer(&command_buffers_[image_index], &image_index);
+
+	if (result == VK_ERROR_OUT_OF_DATE_KHR || result == VK_SUBOPTIMAL_KHR || window_.was_window_resized())
+	{
+		window_.reset_window_resized();
+		recreate_swapchain();
+		return;
+	}
+
 	if(result != VK_SUCCESS)
 		throw std::runtime_error("ERROR! first_app::draw_frame() >> Failed to present swapchain image!");
+}
+
+void first_app::recreate_swapchain()
+{
+	auto extent{ window_.get_extent() };
+
+	// Idle when minimized
+	while (extent.width == 0 || extent.height == 0)
+	{
+		extent = window_.get_extent();
+		glfwWaitEvents();
+	}
+
+	vkDeviceWaitIdle(device_.device());
+
+	if(swapchain_ == nullptr)
+		swapchain_ = std::make_unique<coral_swapchain>(device_, extent);
+	else
+	{
+		swapchain_ = std::make_unique<coral_swapchain>(device_, extent, std::move(swapchain_));
+		if (swapchain_->image_count() != command_buffers_.size())
+		{
+			free_command_buffers();
+			create_command_buffers();
+		}
+	}
+		
+	create_pipeline();
+}
+
+void first_app::record_command_buffer(int image_index)
+{
+	VkCommandBufferBeginInfo begin_info{};
+	begin_info.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
+
+	if (vkBeginCommandBuffer(command_buffers_[image_index], &begin_info) != VK_SUCCESS)
+		throw std::runtime_error("ERROR! first_app::create_command_buffers() >> Failed to begin recording command buffer!");
+
+	VkRenderPassBeginInfo render_pass_info{};
+	render_pass_info.sType = VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO;
+	render_pass_info.renderPass = swapchain_->get_render_pass();
+	render_pass_info.framebuffer = swapchain_->get_frame_buffers(image_index);
+
+	render_pass_info.renderArea.offset = { 0, 0 };
+	render_pass_info.renderArea.extent = swapchain_->get_swapchain_extent();
+
+	std::array<VkClearValue, 2> clear_values{};
+	clear_values[0].color = { 0.1f, 0.1f, 0.1f, 1.0f };
+	clear_values[1].depthStencil = { 1.0f, 0 };
+	render_pass_info.clearValueCount = static_cast<uint32_t>(clear_values.size());
+	render_pass_info.pClearValues = clear_values.data();
+
+	vkCmdBeginRenderPass(command_buffers_[image_index], &render_pass_info, VK_SUBPASS_CONTENTS_INLINE);
+
+	pipeline_->bind(command_buffers_[image_index]);
+	mesh_->bind(command_buffers_[image_index]);
+	mesh_->draw(command_buffers_[image_index]);
+
+	vkCmdEndRenderPass(command_buffers_[image_index]);
+
+	if (vkEndCommandBuffer(command_buffers_[image_index]) != VK_SUCCESS)
+		throw std::runtime_error("ERROR! first_app::create_command_buffers() >> Failed to record command buffer!");
 }
