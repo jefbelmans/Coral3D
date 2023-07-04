@@ -21,6 +21,7 @@ namespace coral_3d
 		coral_renderer& operator=(const coral_renderer&) = delete;
 
 		VkRenderPass get_swapchain_render_pass() const { return swapchain_->get_render_pass(); }
+		float get_aspect_ratio() const { return swapchain_->extent_aspect_ratio(); }
 		bool is_frame_in_progress() const { return is_frame_started_; }
 		
 		VkCommandBuffer get_current_command_buffer() const

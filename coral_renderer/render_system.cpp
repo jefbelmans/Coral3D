@@ -7,8 +7,7 @@ using namespace coral_3d;
 
 struct PushConstant
 {
-	alignas(16) glm::mat3 transform;
-	alignas(16) glm::vec3 offset;
+	glm::mat4 transform;
 	alignas(16) glm::vec3 color;
 };
 
@@ -24,16 +23,20 @@ render_system::~render_system()
 	vkDestroyPipelineLayout(device_.device(), pipeline_layout_, nullptr);
 }
 
-void render_system::render_gameobjects(VkCommandBuffer command_buffer, std::vector<coral_gameobject>& gameobjects)
+void render_system::render_gameobjects(VkCommandBuffer command_buffer, std::vector<coral_gameobject>& gameobjects, const coral_camera& camera)
 {
 	pipeline_->bind(command_buffer);
 
+	auto view_projection{ camera.get_projection() * camera.get_view() };
+
 	for (auto& obj : gameobjects)
 	{
+		obj.transform_.rotation.y = glm::mod(obj.transform_.rotation.y + 0.001f, glm::two_pi<float>());
+		obj.transform_.rotation.x = glm::mod(obj.transform_.rotation.x + 0.0005f, glm::two_pi<float>());
+
 		PushConstant push{};
-		push.offset = obj.transform_.translation;
 		push.color = obj.color_;
-		push.transform = obj.transform_.mat3();
+		push.transform = view_projection * obj.transform_.mat4();
 
 		vkCmdPushConstants(
 			command_buffer,

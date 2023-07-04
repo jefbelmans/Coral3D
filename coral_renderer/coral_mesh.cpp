@@ -25,7 +25,7 @@ VertexInputDescription Vertex::get_vert_desc()
     VkVertexInputAttributeDescription position_attrib{};
     position_attrib.binding = 0;
     position_attrib.location = 0;
-    position_attrib.format = VK_FORMAT_R32G32_SFLOAT;
+    position_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
     position_attrib.offset = offsetof(Vertex, position);
 
     //// Normal will be stored at Location 1

@@ -21,6 +21,8 @@ add_executable(coral_renderer
     "coral_renderer.cpp"
     "render_system.h"
     "render_system.cpp"
+    "coral_camera.h"
+    "coral_camera.cpp"
 )
 
 add_dependencies(coral_renderer Shaders)

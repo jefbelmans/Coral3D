@@ -1,5 +1,6 @@
 #pragma once
 
+#include "coral_camera.h"
 #include "coral_device.h"
 #include "coral_pipeline.h"
 #include "coral_gameobject.h"
@@ -19,7 +20,10 @@ namespace coral_3d
 		render_system(const render_system&) = delete;
 		render_system& operator=(const render_system&) = delete;
 
-		void render_gameobjects(VkCommandBuffer command_buffer, std::vector<coral_gameobject>& gameobjects);
+		void render_gameobjects(
+			VkCommandBuffer command_buffer,
+			std::vector<coral_gameobject>& gameobjects,
+			const coral_camera& camera);
 
 	private:
 		void create_pipeline_layout();
