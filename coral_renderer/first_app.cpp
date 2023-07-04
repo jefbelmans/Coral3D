@@ -10,7 +10,7 @@ using namespace coral_3d;
 
 first_app::first_app()
 {
-	load_meshes();
+	load_gameobjects();
 	create_pipeline_layout();
 	recreate_swapchain();
 	create_command_buffers();
@@ -32,21 +32,35 @@ void first_app::run()
 	vkDeviceWaitIdle(device_.device());
 }
 
-void first_app::load_meshes()
+void first_app::load_gameobjects()
 {
 	std::vector<Vertex> vertices
 	{
 		{{0.0f, -0.5f, 0.0f}, { 1.0f, 0.0f, 0.0f }},
-		{{-0.5f, 0.5f, 0.0f}, { 0.0f, 1.0f, 0.0f } },
-		{{0.5f,  0.5f, 0.0f}, { 0.0f, 0.0f, 1.0f } },
+		{{-0.5f, 0.5f, 0.0f}, { 0.0f, 1.0f, 0.0f }},
+		{{0.5f,  0.5f, 0.0f}, { 0.0f, 0.0f, 1.0f }},
 	};
 
-	mesh_ = std::make_unique<coral_mesh>(device_, vertices);
+	auto mesh{ std::make_shared<coral_mesh>(device_, vertices) };
+	auto triangle = coral_gameobject::create_gameobject();
+	triangle.mesh_ = mesh;
+	triangle.color_ = { 0.1f, 0.8f, 0.1f };
+	triangle.transform_.translation.x = -.2f;
+
+	gameobjects_.emplace_back(std::move(triangle));
 }
 
 void first_app::create_pipeline_layout()
 {
+	VkPushConstantRange push_constant_range{};
+	push_constant_range.stageFlags = VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT;
+	push_constant_range.offset = 0;
+	push_constant_range.size = sizeof(PushConstant);
+
 	VkPipelineLayoutCreateInfo layout_info{ vkinit::pipeline_layout_ci() };
+	layout_info.pushConstantRangeCount = 1;
+	layout_info.pPushConstantRanges = &push_constant_range;
+
 	if (vkCreatePipelineLayout(device_.device(), &layout_info, nullptr, &pipeline_layout_) != VK_SUCCESS)
 		throw std::runtime_error("ERROR! first_app::create_pipeline_layout() >> Failed to create pipeline layout!");
 }
@@ -168,12 +182,32 @@ void first_app::record_command_buffer(int image_index)
 
 	vkCmdBeginRenderPass(command_buffers_[image_index], &render_pass_info, VK_SUBPASS_CONTENTS_INLINE);
 
-	pipeline_->bind(command_buffers_[image_index]);
-	mesh_->bind(command_buffers_[image_index]);
-	mesh_->draw(command_buffers_[image_index]);
+	render_gameobjects(command_buffers_[image_index]);
 
 	vkCmdEndRenderPass(command_buffers_[image_index]);
 
 	if (vkEndCommandBuffer(command_buffers_[image_index]) != VK_SUCCESS)
 		throw std::runtime_error("ERROR! first_app::create_command_buffers() >> Failed to record command buffer!");
+}
+
+void coral_3d::first_app::render_gameobjects(VkCommandBuffer command_buffer)
+{
+	pipeline_->bind(command_buffer);
+
+	for (auto& obj : gameobjects_)
+	{
+		PushConstant push{};
+		push.offset = obj.transform_.translation;
+		push.color = obj.color_;
+		push.transform = obj.transform_.mat3();
+
+		vkCmdPushConstants(
+			command_buffer,
+			pipeline_layout_,
+			VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT,
+			0, sizeof(PushConstant), &push);
+
+		obj.mesh_->bind(command_buffer);
+		obj.mesh_->draw(command_buffer);
+	}
 }

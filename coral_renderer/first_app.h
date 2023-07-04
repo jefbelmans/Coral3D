@@ -5,6 +5,7 @@
 #include "coral_swapchain.h"
 #include "coral_window.h"
 #include "coral_mesh.h"
+#include "coral_gameobject.h"
 
 // STD
 #include <memory>
@@ -12,6 +13,13 @@
 
 namespace coral_3d
 {
+	struct PushConstant
+	{
+		alignas(16) glm::mat3 transform;
+		alignas(16) glm::vec3 offset;
+		alignas(16) glm::vec3 color;
+	};
+
 	class first_app final
 	{
 	public:
@@ -27,7 +35,7 @@ namespace coral_3d
 		void run();
 
 	private:
-		void load_meshes();
+		void load_gameobjects();
 		void create_pipeline_layout();
 		void create_pipeline();
 		void create_command_buffers();
@@ -35,6 +43,7 @@ namespace coral_3d
 		void draw_frame();
 		void recreate_swapchain();
 		void record_command_buffer(int image_index);
+		void render_gameobjects(VkCommandBuffer command_buffer);
 
 		coral_window window_{ WIDTH, HEIGHT, "Coral Renderer" };
 		coral_device device_{ window_ };
@@ -42,6 +51,6 @@ namespace coral_3d
 		std::unique_ptr<coral_pipeline> pipeline_;
 		VkPipelineLayout pipeline_layout_;
 		std::vector<VkCommandBuffer> command_buffers_;
-		std::unique_ptr<coral_mesh> mesh_;
+		std::vector<coral_gameobject> gameobjects_;
 	};
 }
