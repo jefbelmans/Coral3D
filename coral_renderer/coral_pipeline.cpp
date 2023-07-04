@@ -31,24 +31,18 @@ void coral_pipeline::bind(VkCommandBuffer command_buffer)
 	vkCmdBindPipeline(command_buffer, VK_PIPELINE_BIND_POINT_GRAPHICS, graphics_pipeline_);
 }
 
-PipelineConfigInfo coral_3d::coral_pipeline::default_pipeline_config_info(uint32_t width, uint32_t height)
+void coral_3d::coral_pipeline::default_pipeline_config_info(PipelineConfigInfo& config_info)
 {
-	PipelineConfigInfo config_info{};
-
 	// IA
 	config_info.input_assembly_info = vkinit::input_assembly_ci(VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST);
 
-	// VIEWPORT
-	config_info.viewport.x = 0.f;
-	config_info.viewport.y = 0.f;
-	config_info.viewport.width = static_cast<float>(width);
-	config_info.viewport.height = static_cast<float>(height);
-	config_info.viewport.minDepth = 0.f;
-	config_info.viewport.maxDepth = 1.f;
-
-	// SCISSOR
-	config_info.scissor.offset = { 0,0 };
-	config_info.scissor.extent = {width, height};
+	// VIEWPORT INFO
+	config_info.viewport_info.sType = VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO;
+	config_info.viewport_info.pNext = nullptr;
+	config_info.viewport_info.viewportCount = 1;
+	config_info.viewport_info.pViewports = nullptr;
+	config_info.viewport_info.scissorCount = 1;
+	config_info.viewport_info.pScissors = nullptr;
 
 	// RASTERIZER
 	config_info.rasterization_info = vkinit::rasterization_state_ci(VK_POLYGON_MODE_FILL);
@@ -74,7 +68,13 @@ PipelineConfigInfo coral_3d::coral_pipeline::default_pipeline_config_info(uint32
 	// DEPTH INFO
 	config_info.depth_stencil_info = vkinit::depth_stencil_ci(true, true, VK_COMPARE_OP_LESS_OR_EQUAL);
 
-	return config_info;
+	// DYNAMIC STATE
+	config_info.dynamic_state_enables = { VK_DYNAMIC_STATE_VIEWPORT, VK_DYNAMIC_STATE_SCISSOR };
+	config_info.dynamic_state_info.sType = VK_STRUCTURE_TYPE_PIPELINE_DYNAMIC_STATE_CREATE_INFO;
+	config_info.dynamic_state_info.pDynamicStates = config_info.dynamic_state_enables.data();
+	config_info.dynamic_state_info.dynamicStateCount =
+		static_cast<uint32_t>(config_info.dynamic_state_enables.size());
+	config_info.dynamic_state_info.flags = 0;
 }
 
 std::vector<char> coral_pipeline::read_file(const std::string& file_path)
@@ -142,27 +142,18 @@ void coral_pipeline::create_graphics_pipeline(
 	vertex_input_info.vertexBindingDescriptionCount = static_cast<uint32_t>(vertex_desc.bindings.size());
 	vertex_input_info.pVertexBindingDescriptions = vertex_desc.bindings.data();
 
-	// VIEWPORT INFO
-	VkPipelineViewportStateCreateInfo viewport_info{};
-	viewport_info.sType = VK_STRUCTURE_TYPE_PIPELINE_VIEWPORT_STATE_CREATE_INFO;
-	viewport_info.pNext = nullptr;
-	viewport_info.viewportCount = 1;
-	viewport_info.pViewports = &config_info.viewport;
-	viewport_info.scissorCount = 1;
-	viewport_info.pScissors = &config_info.scissor;
-
 	VkGraphicsPipelineCreateInfo pipeline_info{};
 	pipeline_info.sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO;
 	pipeline_info.stageCount = 2;
 	pipeline_info.pStages = shader_stages;
 	pipeline_info.pVertexInputState = &vertex_input_info;
 	pipeline_info.pInputAssemblyState = &config_info.input_assembly_info;
-	pipeline_info.pViewportState = &viewport_info;
+	pipeline_info.pViewportState = &config_info.viewport_info;
 	pipeline_info.pRasterizationState = &config_info.rasterization_info;
 	pipeline_info.pMultisampleState = &config_info.multisample_info;
 	pipeline_info.pColorBlendState = &config_info.color_blend_info;
 	pipeline_info.pDepthStencilState = &config_info.depth_stencil_info;
-	pipeline_info.pDynamicState = nullptr;
+	pipeline_info.pDynamicState = &config_info.dynamic_state_info;
 
 	pipeline_info.layout = config_info.pipeline_layout;
 	pipeline_info.renderPass = config_info.render_pass;

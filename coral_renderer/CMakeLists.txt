@@ -17,6 +17,10 @@ add_executable(coral_renderer
     "coral_mesh.cpp"
     "coral_gameobject.h"
     "coral_gameobject.cpp"
+    "coral_renderer.h"
+    "coral_renderer.cpp"
+    "render_system.h"
+    "render_system.cpp"
 )
 
 add_dependencies(coral_renderer Shaders)

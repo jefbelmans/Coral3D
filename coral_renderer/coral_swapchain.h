@@ -64,6 +64,13 @@ namespace coral_3d
         VkResult aqcuire_next_image(uint32_t* image_index);
         VkResult submit_command_buffer(const VkCommandBuffer* buffers, uint32_t* image_index);
 
+        bool compare_swap_formats(const coral_swapchain& swapchain) const
+        {
+            return
+                swapchain.swapchain_depth_format_ == swapchain_depth_format_ &&
+                swapchain.swapchain_image_format_ == swapchain_image_format_;
+        }
+
     private:
         void init();
         void create_swapchain();
@@ -83,6 +90,7 @@ namespace coral_3d
         DeletionQueue deletion_queue_;
 
         VkFormat swapchain_image_format_;
+        VkFormat swapchain_depth_format_;
         VkExtent2D swapchain_extent_;
 
         std::vector<VkFramebuffer> swapchain_frame_buffers_;
