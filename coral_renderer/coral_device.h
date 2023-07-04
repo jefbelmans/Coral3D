@@ -6,25 +6,12 @@
 
 #include <string>
 #include <vector>
-#include <deque>
-#include <functional>
 
 #include "vk_types.h"
 
 namespace coral_3d
 {
-	struct DeletionQueue
-	{
-		std::deque <std::function<void()>> deletors;
-
-		void flush()
-		{
-			for (auto it = deletors.rbegin(); it != deletors.rend(); it++)
-				(*it)();
-
-			deletors.clear();
-		}
-	};
+	
 
 	struct UploadContext
 	{
@@ -70,6 +57,8 @@ namespace coral_3d
 
 		VkCommandPool get_command_pool() { return command_pool_; }
 		VkDevice device() { return device_; }
+		VkPhysicalDevice physical_device() { return physical_device_; }
+		VmaAllocator allocator() { return allocator_; }
 		VkSurfaceKHR surface() { return surface_; }
 		VkQueue graphics_queue() { return graphics_queue_; }
 		VkQueue present_queue() { return present_queue_; }
@@ -81,7 +70,8 @@ namespace coral_3d
 			const std::vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features);
 
 		// Buffer helpers
-		AllocatedBuffer create_buffer(size_t alloc_size, VkBufferUsageFlags usage, VmaMemoryUsage memory_usage);
+		AllocatedBuffer create_buffer(VkDeviceSize alloc_size, VkBufferUsageFlags usage, VmaMemoryUsage memory_usage);
+		AllocatedImage create_image(const VkImageCreateInfo& image_info,VmaMemoryUsage memory_usage);
 		void immediate_submit(std::function<void(VkCommandBuffer cmd)>&& function);
 		void copy_buffer(AllocatedBuffer src_buffer, AllocatedBuffer dst_buffer, VkDeviceSize size);
 		void copy_buffer_to_image(AllocatedBuffer buffer, AllocatedImage image, uint32_t width, uint32_t height, uint32_t layer_count);

@@ -17,6 +17,8 @@ namespace coral_3d
 		coral_window& operator=(const coral_window&) = delete;
 
 		bool should_close() { return glfwWindowShouldClose(pWindow_); }
+		VkExtent2D get_extent() { return { static_cast<uint32_t>(c_width), static_cast<uint32_t>(c_height)}; }
+
 		void create_window_surface(VkInstance instance, VkSurfaceKHR* surface);
 
 	private:

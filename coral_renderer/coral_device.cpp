@@ -72,7 +72,7 @@ VkFormat coral_device::find_supported_format(const std::vector<VkFormat>& candid
     throw std::runtime_error("failed to find supported format!");
 }
 
-AllocatedBuffer coral_device::create_buffer(size_t alloc_size, VkBufferUsageFlags usage, VmaMemoryUsage memory_usage)
+AllocatedBuffer coral_device::create_buffer(VkDeviceSize alloc_size, VkBufferUsageFlags usage, VmaMemoryUsage memory_usage)
 {
     VkBufferCreateInfo info{};
     info.sType = VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO;
@@ -84,18 +84,31 @@ AllocatedBuffer coral_device::create_buffer(size_t alloc_size, VkBufferUsageFlag
     VmaAllocationCreateInfo vma_alloc_info{};
     vma_alloc_info.usage = memory_usage;
 
-    AllocatedBuffer new_buffer{};
+    AllocatedBuffer new_buffer;
 
     if(vmaCreateBuffer(allocator_, &info, &vma_alloc_info,
         &new_buffer.buffer,
         &new_buffer.allocation,
-        nullptr) != VK_SUCCESS);
+        nullptr) != VK_SUCCESS)
     {
         throw std::runtime_error(
             "ERROR! coral_device::create_buffer() >> Failed to create buffer!");
     }
 
     return new_buffer;
+}
+
+AllocatedImage coral_device::create_image(const VkImageCreateInfo& image_info, VmaMemoryUsage memory_usage)
+{
+    AllocatedImage new_image;
+
+    VmaAllocationCreateInfo alloc_info{};
+    alloc_info.usage = memory_usage;
+    alloc_info.requiredFlags = VkMemoryPropertyFlags(VK_MEMORY_PROPERTY_DEVICE_LOCAL_BIT);
+
+    vmaCreateImage(allocator_, &image_info, &alloc_info, &new_image.image, &new_image.allocation, nullptr);
+
+    return new_image;
 }
 
 void coral_device::immediate_submit(std::function<void(VkCommandBuffer cmd)>&& function)
@@ -262,11 +275,10 @@ void coral_device::create_command_pool()
 
 void coral_3d::coral_device::create_command_buffers()
 {
-    auto indices{ find_physical_queue_families() };
-   
     // Allocate default command buffer that we will use for immediate commands
-    VkCommandBufferAllocateInfo alloc_info{
+    VkCommandBufferAllocateInfo alloc_info {
         vkinit::command_buffer_ai(upload_context_.command_pool, 1) };
+
     if (vkAllocateCommandBuffers(device_, &alloc_info, &upload_context_.command_buffer)
         != VK_SUCCESS)
     {

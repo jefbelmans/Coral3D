@@ -155,6 +155,22 @@ build coral_renderer\CMakeFiles\coral_renderer.dir\vk_initializers.cpp.obj: CXX_
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_PDB = coral_renderer\coral_renderer.pdb
 
+build coral_renderer\CMakeFiles\coral_renderer.dir\coral_swapchain.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_swapchain.cpp || cmake_object_order_depends_target_coral_renderer
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /W4 /WX /w
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
+  OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
+  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
+  TARGET_PDB = coral_renderer\coral_renderer.pdb
+
+build coral_renderer\CMakeFiles\coral_renderer.dir\coral_mesh.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_mesh.cpp || cmake_object_order_depends_target_coral_renderer
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd /W4 /WX /w
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
+  OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
+  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
+  TARGET_PDB = coral_renderer\coral_renderer.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target coral_renderer
@@ -163,7 +179,7 @@ build coral_renderer\CMakeFiles\coral_renderer.dir\vk_initializers.cpp.obj: CXX_
 #############################################
 # Link the executable coral_renderer\coral_renderer.exe
 
-build coral_renderer\coral_renderer.exe: CXX_EXECUTABLE_LINKER__coral_renderer_Debug coral_renderer\CMakeFiles\coral_renderer.dir\main.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_window.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\first_app.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_pipeline.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_device.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\vk_initializers.cpp.obj | C$:\VulkanSDK\1.3.250.0\Lib\vulkan-1.lib third_party\GLFW\src\glfw3.lib third_party\vkbootstrap.lib third_party\tinyobjloader.lib C$:\VulkanSDK\1.3.250.0\Lib\vulkan-1.lib || coral_renderer\Shaders third_party\GLFW\src\glfw3.lib third_party\tinyobjloader.lib third_party\vkbootstrap.lib
+build coral_renderer\coral_renderer.exe: CXX_EXECUTABLE_LINKER__coral_renderer_Debug coral_renderer\CMakeFiles\coral_renderer.dir\main.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_window.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\first_app.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_pipeline.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_device.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\vk_initializers.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_swapchain.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_mesh.cpp.obj | C$:\VulkanSDK\1.3.250.0\Lib\vulkan-1.lib third_party\GLFW\src\glfw3.lib third_party\vkbootstrap.lib third_party\tinyobjloader.lib C$:\VulkanSDK\1.3.250.0\Lib\vulkan-1.lib || coral_renderer\Shaders third_party\GLFW\src\glfw3.lib third_party\tinyobjloader.lib third_party\vkbootstrap.lib
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd
   LINK_FLAGS = /machine:x64 /debug /INCREMENTAL /subsystem:console
   LINK_LIBRARIES = C:\VulkanSDK\1.3.250.0\Lib\vulkan-1.lib  third_party\GLFW\src\glfw3.lib  third_party\vkbootstrap.lib  third_party\tinyobjloader.lib  C:\VulkanSDK\1.3.250.0\Lib\vulkan-1.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
@@ -179,7 +195,7 @@ build coral_renderer\coral_renderer.exe: CXX_EXECUTABLE_LINKER__coral_renderer_D
 #############################################
 # Utility command for Shaders
 
-build coral_renderer\Shaders: phony coral_renderer\CMakeFiles\Shaders C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.frag.spv C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.vert.spv
+build coral_renderer\Shaders: phony coral_renderer\CMakeFiles\Shaders C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.frag.spv C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.vert.spv C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.frag.spv C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.vert.spv
 
 
 #############################################
@@ -238,7 +254,7 @@ build coral_renderer\install\local: phony coral_renderer\CMakeFiles\install\loca
 #############################################
 # Phony custom command for coral_renderer\CMakeFiles\Shaders
 
-build coral_renderer\CMakeFiles\Shaders | ${cmake_ninja_workdir}coral_renderer\CMakeFiles\Shaders: phony C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.frag.spv C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.vert.spv
+build coral_renderer\CMakeFiles\Shaders | ${cmake_ninja_workdir}coral_renderer\CMakeFiles\Shaders: phony C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.frag.spv C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.vert.spv C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.frag.spv C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.vert.spv
 
 
 #############################################
@@ -256,6 +272,24 @@ build C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\P
 build C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.vert.spv: CUSTOM_COMMAND C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\PosNormCol.vert
   COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Debug\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/" && C:\VulkanSDK\1.3.250.0\Bin\glslangValidator.exe -V "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/PosNormCol.vert" -o "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.vert.spv""
   DESC = Generating C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.vert.spv
+  restat = 1
+
+
+#############################################
+# Custom command for C:\Game Development\Visual Studio Solutions\Coral3D\shaders\compiled\simple_shader.frag.spv
+
+build C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.frag.spv: CUSTOM_COMMAND C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\simple_shader.frag
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Debug\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/" && C:\VulkanSDK\1.3.250.0\Bin\glslangValidator.exe -V "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/simple_shader.frag" -o "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv""
+  DESC = Generating C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv
+  restat = 1
+
+
+#############################################
+# Custom command for C:\Game Development\Visual Studio Solutions\Coral3D\shaders\compiled\simple_shader.vert.spv
+
+build C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.vert.spv: CUSTOM_COMMAND C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\simple_shader.vert
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Debug\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/" && C:\VulkanSDK\1.3.250.0\Bin\glslangValidator.exe -V "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/simple_shader.vert" -o "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv""
+  DESC = Generating C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv
   restat = 1
 
 # =============================================================================

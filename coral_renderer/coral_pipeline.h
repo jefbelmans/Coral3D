@@ -12,7 +12,6 @@ namespace coral_3d
 	{
 		VkViewport viewport;
 		VkRect2D scissor;
-		VkPipelineViewportStateCreateInfo viewport_info;
 		VkPipelineInputAssemblyStateCreateInfo input_assembly_info;
 		VkPipelineRasterizationStateCreateInfo rasterization_info;
 		VkPipelineMultisampleStateCreateInfo multisample_info;
@@ -37,6 +36,8 @@ namespace coral_3d
 
 		coral_pipeline(const coral_pipeline&) = delete;
 		coral_pipeline& operator=(const coral_pipeline&) = delete;
+
+		void bind(VkCommandBuffer command_buffer);
 
 		static PipelineConfigInfo default_pipeline_config_info(uint32_t width, uint32_t height);
 

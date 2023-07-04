@@ -11,6 +11,10 @@ add_executable(coral_renderer
     "vk_initializers.h"
     "vk_initializers.cpp"
     "vk_types.h"
+    "coral_swapchain.h"
+    "coral_swapchain.cpp"
+    "coral_mesh.h"
+    "coral_mesh.cpp"
 )
 
 add_dependencies(coral_renderer Shaders)

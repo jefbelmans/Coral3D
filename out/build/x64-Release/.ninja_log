@@ -6,8 +6,8 @@
 48	533	7100855575363947	third_party/GLFW/src/CMakeFiles/glfw.dir/vulkan.c.obj	50112318efae01fe
 52	556	7100855575942714	third_party/GLFW/src/CMakeFiles/glfw.dir/window.c.obj	b267b6f52b0557e
 216	674	7100855577256160	third_party/GLFW/src/CMakeFiles/glfw.dir/osmesa_context.c.obj	2663e4857ff8180d
-2305	2550	7100855595549284	coral_renderer/coral_renderer.exe	ccfd0e35dba99ec9
-241	1289	7100855583386832	coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj	b04a92f83a26ca98
+1017	1323	7101756922529644	coral_renderer/coral_renderer.exe	a6395eeb94f36c43
+154	1219	7101751385543458	coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj	b04a92f83a26ca98
 73	503	7100855575293922	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_thread.c.obj	6c2cec83621ddafc
 57	578	7100855576238736	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_init.c.obj	68f7b915a77efee8
 69	507	7100855575379068	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_time.c.obj	884400c2fc506c25
@@ -20,28 +20,35 @@
 674	715	7100855577635956	third_party/GLFW/src/glfw3.lib	90fe5d3bf3988c3
 18	258	7100852038349954	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_initializers.cpp.obj	1a23cbea97f95bc8
 77	616	7100855576629194	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_window.c.obj	527eb72162ba2c60
-10	215	7100855572447129	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.frag.spv	448936cb354b7e2
+12	153	7101751374871499	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.frag.spv	448936cb354b7e2
+175	871	7101751382025806	coral_renderer/CMakeFiles/coral_renderer.dir/vk_initializers.cpp.obj	aa9d2c8a14870cfd
 20	1886	7100855589315037	third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.obj	862a6e5bff7e48ac
 1886	1925	7100855589753305	third_party/vkbootstrap.lib	b339a5cc36d209fb
 24	2270	7100855593137340	third_party/CMakeFiles/tinyobjloader.dir/tinyobjloader/tiny_obj_loader.cc.obj	7e86ec27a38d2d6c
 2270	2305	7100855593551870	third_party/tinyobjloader.lib	c2812261322ebfda
 16	241	7100855572697851	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.vert.spv	565da56699a6ae9f
 6	20	0	clean	21a4d0550fd2b6b1
+167	1218	7101751385543458	coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj	547825035d4ce491
 22	1341	7100852049212694	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_pipeline.cpp.obj	f2ccefde0539b7f9
 26	1697	7100852052759820	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_mesh.cpp.obj	19e27ee69060c408
 14	4028	7100852076065734	vk_renderer/CMakeFiles/vulkan_renderer.dir/vk_engine.cpp.obj	2c2e8f4c68659d3e
 4028	4204	7100852077869201	vk_renderer/vulkan_renderer.exe	4a4de8c4dd150dc4
-16	431	7100883227198099	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	f6aa697f38bcc8c1
-8	631	7100883229193345	coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj	b04a92f83a26ca98
-18	426	7100883456482019	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	f6aa697f38bcc8c1
-11	608	7100883458285043	coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj	b04a92f83a26ca98
-19	422	7100883721539116	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	f6aa697f38bcc8c1
-11	604	7100883723332169	coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj	b04a92f83a26ca98
-19	374	7100884215580013	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	f6aa697f38bcc8c1
-15	395	7100884215800054	coral_renderer/CMakeFiles/coral_renderer.dir/coral_window.cpp.obj	8f70bdc66a8c898
-11	605	7100884217890634	coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj	b04a92f83a26ca98
-606	861	7100884219977107	coral_renderer/coral_renderer.exe	468e142b22d91fbf
-12	509	7100885537069055	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	f6aa697f38bcc8c1
-8	526	7100885537229128	coral_renderer/CMakeFiles/coral_renderer.dir/coral_window.cpp.obj	8f70bdc66a8c898
-4	759	7100885539562039	coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj	b04a92f83a26ca98
-759	1045	7100885541911992	coral_renderer/coral_renderer.exe	468e142b22d91fbf
+163	1061	7101751383959997	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	f6aa697f38bcc8c1
+158	892	7101751382273133	coral_renderer/CMakeFiles/coral_renderer.dir/coral_window.cpp.obj	8f70bdc66a8c898
+23	147	7101751374786118	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	8117d59f521bfb38
+17	154	7101751374871499	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c6f90537dba2deae
+11	1016	7101756919953863	coral_renderer/CMakeFiles/coral_renderer.dir/coral_swapchain.cpp.obj	73d0ad4b7fd6b8be
+171	2252	7101751395848258	coral_renderer/CMakeFiles/coral_renderer.dir/coral_device.cpp.obj	54ea3dd64d178489
+13	1241	7101796482428884	coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj	b04a92f83a26ca98
+18	1297	7101796483005446	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	f6aa697f38bcc8c1
+23	1317	7101796483196618	coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj	547825035d4ce491
+13	1106	7101796697760818	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	c9cebafec58901df
+1106	1464	7101796700787466	coral_renderer/coral_renderer.exe	46b48affdb39d636
+21	134	7101828950014594	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	8117d59f521bfb38
+134	1435	7101828962610616	coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj	b04a92f83a26ca98
+138	1484	7101828963429522	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	f6aa697f38bcc8c1
+151	1510	7101828963709605	coral_renderer/CMakeFiles/coral_renderer.dir/coral_swapchain.cpp.obj	73d0ad4b7fd6b8be
+143	1543	7101828964050193	coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj	547825035d4ce491
+155	1641	7101828965056591	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	c9cebafec58901df
+147	2319	7101828971832944	coral_renderer/CMakeFiles/coral_renderer.dir/coral_device.cpp.obj	54ea3dd64d178489
+2319	2618	7101828974349382	coral_renderer/coral_renderer.exe	46b48affdb39d636
