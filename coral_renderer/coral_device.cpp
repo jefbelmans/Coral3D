@@ -17,6 +17,7 @@ coral_device::coral_device(coral_window& window) : window_{ window }
 {
     create_instance();
     create_command_pool();
+    create_sync_structures();
     create_command_buffers();
 }
 
@@ -270,6 +271,19 @@ void coral_device::create_command_pool()
 
     deletion_queue_.deletors.emplace_back([=]() {
         vkDestroyCommandPool(device_, upload_context_.command_pool, nullptr);
+        });
+}
+
+void coral_device::create_sync_structures()
+{
+    // Upload fence
+    VkFenceCreateInfo upload_fence_info{ vkinit::fence_ci() };
+
+    if (vkCreateFence(device_, &upload_fence_info, nullptr, &upload_context_.upload_fence) != VK_SUCCESS)
+        throw std::runtime_error("ERROR! coral_device::create_sync_structures() >> Failed to create upload fence!");
+
+    deletion_queue_.deletors.emplace_back([=]() {
+        vkDestroyFence(device_, upload_context_.upload_fence, nullptr);
         });
 }
 

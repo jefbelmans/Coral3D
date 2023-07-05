@@ -31,9 +31,6 @@ void render_system::render_gameobjects(VkCommandBuffer command_buffer, std::vect
 
 	for (auto& obj : gameobjects)
 	{
-		obj.transform_.rotation.y = glm::mod(obj.transform_.rotation.y + 0.001f, glm::two_pi<float>());
-		obj.transform_.rotation.x = glm::mod(obj.transform_.rotation.x + 0.0005f, glm::two_pi<float>());
-
 		PushConstant push{};
 		push.color = obj.color_;
 		push.transform = view_projection * obj.transform_.mat4();

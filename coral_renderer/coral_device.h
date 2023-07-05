@@ -80,6 +80,7 @@ namespace coral_3d
 		void create_instance();
 		void create_surface();
 		void create_command_pool();
+		void create_sync_structures();
 		void create_command_buffers();
 
 		// Helper methods

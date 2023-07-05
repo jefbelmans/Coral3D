@@ -20,6 +20,7 @@ namespace coral_3d
 		VkExtent2D get_extent() const { return { static_cast<uint32_t>(width_), static_cast<uint32_t>(height_)}; }
 		bool was_window_resized() const { return is_framebuffer_resized_; }
 		void reset_window_resized() { is_framebuffer_resized_ = false; }
+		GLFWwindow* get_glfw_window() const { return pWindow_; }
 
 		void create_window_surface(VkInstance instance, VkSurfaceKHR* surface);
 
