@@ -10,6 +10,7 @@
 #include <chrono>
 
 #include "vk_initializers.h"
+#include "coral_texture.h"
 
 using namespace coral_3d;
 
@@ -31,6 +32,8 @@ void first_app::run()
     KeyboardController camera_controller{};
 
     auto last_time{ std::chrono::high_resolution_clock::now() };
+
+    vkutil::load_image_from_file(device_, "textures/uv_checker.jpg", test_texture);
 
 	while (!window_.should_close())
 	{
@@ -61,7 +64,7 @@ void first_app::run()
 
 void first_app::load_gameobjects()
 {
-    std::shared_ptr<coral_mesh> mesh {coral_mesh::create_mesh_from_file(device_, "Meshes/colored_cube.obj")};
+    std::shared_ptr<coral_mesh> mesh {coral_mesh::create_mesh_from_file(device_, "meshes/teapot.obj")};
 
     auto gameobject { coral_gameobject::create_gameobject() };
     gameobject.mesh_ = mesh;

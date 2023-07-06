@@ -287,7 +287,7 @@ void coral_device::create_sync_structures()
         });
 }
 
-void coral_3d::coral_device::create_command_buffers()
+void coral_device::create_command_buffers()
 {
     // Allocate default command buffer that we will use for immediate commands
     VkCommandBufferAllocateInfo alloc_info {

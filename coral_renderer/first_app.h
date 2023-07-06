@@ -32,6 +32,8 @@ namespace coral_3d
 		coral_device device_{ window_ };
 		coral_renderer renderer_{ window_, device_ };
 
+		AllocatedImage test_texture;
+
 		std::vector<coral_gameobject> gameobjects_;
 	};
 }

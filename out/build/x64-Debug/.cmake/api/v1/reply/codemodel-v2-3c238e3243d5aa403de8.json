@@ -1,0 +1,202 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1,
+						2
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"projectIndex" : 0,
+					"source" : "."
+				},
+				{
+					"build" : "coral_renderer",
+					"jsonFile" : "directory-coral_renderer-Debug-5392f6549fb2d15b5d89.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "coral_renderer",
+					"targetIndexes" : 
+					[
+						0,
+						1
+					]
+				},
+				{
+					"build" : "third_party",
+					"childIndexes" : 
+					[
+						3
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-third_party-Debug-a2e0515af5b7021cdaa7.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.22"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "third_party",
+					"targetIndexes" : 
+					[
+						3,
+						6
+					]
+				},
+				{
+					"build" : "third_party/GLFW",
+					"childIndexes" : 
+					[
+						4
+					],
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-third_party.GLFW-Debug-44546723a91b3dfe8b7e.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 2,
+					"projectIndex" : 1,
+					"source" : "third_party/GLFW",
+					"targetIndexes" : 
+					[
+						4
+					]
+				},
+				{
+					"build" : "third_party/GLFW/src",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-third_party.GLFW.src-Debug-e72c77e1531284212406.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.0"
+					},
+					"parentIndex" : 3,
+					"projectIndex" : 1,
+					"source" : "third_party/GLFW/src",
+					"targetIndexes" : 
+					[
+						2,
+						5
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"childIndexes" : 
+					[
+						1
+					],
+					"directoryIndexes" : 
+					[
+						0,
+						1,
+						2
+					],
+					"name" : "Coral3D",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						3,
+						6
+					]
+				},
+				{
+					"directoryIndexes" : 
+					[
+						3,
+						4
+					],
+					"name" : "GLFW",
+					"parentIndex" : 0,
+					"targetIndexes" : 
+					[
+						2,
+						4,
+						5
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 1,
+					"id" : "Shaders::@189d46817749ee15bd40",
+					"jsonFile" : "target-Shaders-Debug-0526d41e47d9a0ffc811.json",
+					"name" : "Shaders",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 1,
+					"id" : "coral_renderer::@189d46817749ee15bd40",
+					"jsonFile" : "target-coral_renderer-Debug-1f8c1b5f9d0fde12e416.json",
+					"name" : "coral_renderer",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "glfw::@6b3fa3a0e2a82742d65f",
+					"jsonFile" : "target-glfw-Debug-fceebe9b85099bb3004f.json",
+					"name" : "glfw",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "tinyobjloader::@037116246cbfaaeb5504",
+					"jsonFile" : "target-tinyobjloader-Debug-018503b781f6d2959873.json",
+					"name" : "tinyobjloader",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 3,
+					"id" : "uninstall::@b66b4eee910d15aad27b",
+					"jsonFile" : "target-uninstall-Debug-1b49ba37cfe0ecec38f3.json",
+					"name" : "uninstall",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 4,
+					"id" : "update_mappings::@6b3fa3a0e2a82742d65f",
+					"jsonFile" : "target-update_mappings-Debug-80736d08c085980836ac.json",
+					"name" : "update_mappings",
+					"projectIndex" : 1
+				},
+				{
+					"directoryIndex" : 2,
+					"id" : "vkbootstrap::@037116246cbfaaeb5504",
+					"jsonFile" : "target-vkbootstrap-Debug-fffe57e99de593f176ea.json",
+					"name" : "vkbootstrap",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug",
+		"source" : "C:/Game Development/Visual Studio Solutions/Coral3D"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 5
+	}
+}

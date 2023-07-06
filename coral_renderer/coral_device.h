@@ -58,6 +58,7 @@ namespace coral_3d
 		VkPhysicalDevice physical_device() { return physical_device_; }
 		VmaAllocator allocator() { return allocator_; }
 		VkSurfaceKHR surface() { return surface_; }
+		DeletionQueue& deletion_queue() { return deletion_queue_; }
 		VkQueue graphics_queue() { return graphics_queue_; }
 		VkQueue present_queue() { return present_queue_; }
 
