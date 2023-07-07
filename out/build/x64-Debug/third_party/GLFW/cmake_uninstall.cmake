@@ -1,9 +1,9 @@
 
-if (NOT EXISTS "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/third_party/GLFW/install_manifest.txt")
-  message(FATAL_ERROR "Cannot find install manifest: \"C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/third_party/GLFW/install_manifest.txt\"")
+if (NOT EXISTS "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/third_party/GLFW/install_manifest.txt")
+  message(FATAL_ERROR "Cannot find install manifest: \"E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/third_party/GLFW/install_manifest.txt\"")
 endif()
 
-file(READ "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/third_party/GLFW/install_manifest.txt" files)
+file(READ "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/third_party/GLFW/install_manifest.txt" files)
 string(REGEX REPLACE "\n" ";" files "${files}")
 
 foreach (file ${files})

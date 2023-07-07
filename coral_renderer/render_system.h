@@ -4,6 +4,7 @@
 #include "coral_device.h"
 #include "coral_pipeline.h"
 #include "coral_gameobject.h"
+#include "coral_frame_info.h"
 
 // STD
 #include <memory>
@@ -20,10 +21,7 @@ namespace coral_3d
 		render_system(const render_system&) = delete;
 		render_system& operator=(const render_system&) = delete;
 
-		void render_gameobjects(
-			VkCommandBuffer command_buffer,
-			std::vector<coral_gameobject>& gameobjects,
-			const coral_camera& camera);
+		void render_gameobjects(FrameInfo& frame_info, std::vector<coral_gameobject>& gameobjects);
 
 	private:
 		void create_pipeline_layout();

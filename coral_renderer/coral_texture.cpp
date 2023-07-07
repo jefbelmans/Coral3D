@@ -111,11 +111,6 @@ bool vkutil::load_image_from_file(coral_device& device, const std::string& file_
 				0, 0, nullptr, 0, nullptr, 1, &readable_img_barrier);
 		});
 
-	device.deletion_queue().deletors.emplace_back([&]()
-		{
-			vmaDestroyImage(device.allocator(), new_img.image, new_img.allocation);
-		});
-
 	vmaDestroyBuffer(device.allocator(), staging_buffer.buffer, staging_buffer.allocation);
 
 	std::cout << "Texture loaded successfully " << file_name << std::endl;

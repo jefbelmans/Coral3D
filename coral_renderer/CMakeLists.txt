@@ -28,7 +28,12 @@ add_executable(coral_renderer
     "coral_utils.h"
     "coral_utils.cpp"
     "coral_texture.h"
-    "coral_texture.cpp")
+    "coral_texture.cpp"
+    "coral_buffer.h"
+    "coral_buffer.cpp"
+    "coral_frame_info.h"
+    "coral_frame_info.cpp"
+)
 
 add_dependencies(coral_renderer Shaders)
 
@@ -76,12 +81,17 @@ add_dependencies(coral_renderer Shaders)
 
 # add shaders to output dir
 add_custom_command(TARGET coral_renderer POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:coral_renderer>/shaders/"
+    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:coral_renderer>/assets/"
+    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:coral_renderer>/assets/shaders/"
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         "${PROJECT_SOURCE_DIR}/shaders/compiled/"
-        "$<TARGET_FILE_DIR:coral_renderer>/shaders"
-    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:coral_renderer>/meshes/"
+        "$<TARGET_FILE_DIR:coral_renderer>/assets/shaders"
+    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:coral_renderer>/assets/meshes/"
     COMMAND ${CMAKE_COMMAND} -E copy_directory
         "${PROJECT_SOURCE_DIR}/assets/meshes"
-        "$<TARGET_FILE_DIR:coral_renderer>/meshes"
-        )
+        "$<TARGET_FILE_DIR:coral_renderer>/assets/meshes"
+        COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:coral_renderer>/assets/textures/"
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        "${PROJECT_SOURCE_DIR}/assets/textures"
+        "$<TARGET_FILE_DIR:coral_renderer>/assets/textures"
+)

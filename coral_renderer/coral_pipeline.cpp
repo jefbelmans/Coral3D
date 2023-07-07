@@ -31,7 +31,7 @@ void coral_pipeline::bind(VkCommandBuffer command_buffer)
 	vkCmdBindPipeline(command_buffer, VK_PIPELINE_BIND_POINT_GRAPHICS, graphics_pipeline_);
 }
 
-void coral_3d::coral_pipeline::default_pipeline_config_info(PipelineConfigInfo& config_info)
+void coral_pipeline::default_pipeline_config_info(PipelineConfigInfo& config_info)
 {
 	// IA
 	config_info.input_assembly_info = vkinit::input_assembly_ci(VK_PRIMITIVE_TOPOLOGY_TRIANGLE_LIST);

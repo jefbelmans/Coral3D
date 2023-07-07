@@ -69,7 +69,7 @@ namespace coral_3d
 			const std::vector<VkFormat>& candidates, VkImageTiling tiling, VkFormatFeatureFlags features);
 
 		// Buffer helpers
-		AllocatedBuffer create_buffer(VkDeviceSize alloc_size, VkBufferUsageFlags usage, VmaMemoryUsage memory_usage);
+		AllocatedBuffer create_buffer(VkDeviceSize alloc_size, VkBufferUsageFlags usage, VmaMemoryUsage memory_usage, VmaAllocationCreateFlags flags = 0);
 		AllocatedImage create_image(const VkImageCreateInfo& image_info,VmaMemoryUsage memory_usage);
 		void immediate_submit(std::function<void(VkCommandBuffer cmd)>&& function);
 		void copy_buffer(AllocatedBuffer src_buffer, AllocatedBuffer dst_buffer, VkDeviceSize size);

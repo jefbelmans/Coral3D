@@ -11,6 +11,7 @@
 
 #include "vk_types.h"
 #include "coral_device.h"
+#include "coral_buffer.h"
 
 namespace coral_3d
 {
@@ -72,9 +73,9 @@ namespace coral_3d
 		coral_device& device_;
 
 		uint32_t vertex_count_;
-		AllocatedBuffer vertex_buffer_;
+		std::unique_ptr<coral_buffer> vertex_buffer_;
 
 		uint32_t index_count_;
-		AllocatedBuffer index_buffer_;
+		std::unique_ptr<coral_buffer> index_buffer_;
 	};
 }

@@ -1,8 +1,8 @@
-# Install script for directory: C:/Game Development/Visual Studio Solutions/Coral3D
+# Install script for directory: E:/Game Development/Visual Studio Solutions/Coral3D
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "C:/Game Development/Visual Studio Solutions/Coral3D/out/install/x64-Debug")
+  set(CMAKE_INSTALL_PREFIX "E:/Game Development/Visual Studio Solutions/Coral3D/out/install/x64-Debug")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,12 +34,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/coral_renderer/cmake_install.cmake")
+  include("E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/coral_renderer/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/third_party/cmake_install.cmake")
+  include("E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/third_party/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

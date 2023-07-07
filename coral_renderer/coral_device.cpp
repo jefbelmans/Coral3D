@@ -8,8 +8,6 @@
 #include <VkBootstrap.h>
 #include "vk_initializers.h"
 
-#define VMA_IMPLEMENTATION
-#include "vk_mem_alloc.h"
 
 using namespace coral_3d;
 
@@ -73,7 +71,7 @@ VkFormat coral_device::find_supported_format(const std::vector<VkFormat>& candid
     throw std::runtime_error("failed to find supported format!");
 }
 
-AllocatedBuffer coral_device::create_buffer(VkDeviceSize alloc_size, VkBufferUsageFlags usage, VmaMemoryUsage memory_usage)
+AllocatedBuffer coral_device::create_buffer(VkDeviceSize alloc_size, VkBufferUsageFlags usage, VmaMemoryUsage memory_usage, VmaAllocationCreateFlags flags)
 {
     VkBufferCreateInfo info{};
     info.sType = VK_STRUCTURE_TYPE_BUFFER_CREATE_INFO;
@@ -84,6 +82,7 @@ AllocatedBuffer coral_device::create_buffer(VkDeviceSize alloc_size, VkBufferUsa
 
     VmaAllocationCreateInfo vma_alloc_info{};
     vma_alloc_info.usage = memory_usage;
+    vma_alloc_info.flags = flags;
 
     AllocatedBuffer new_buffer;
 

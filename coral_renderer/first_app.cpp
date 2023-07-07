@@ -3,6 +3,7 @@
 #include "KeyboardController.h"
 #include "render_system.h"
 #include "coral_camera.h"
+#include "coral_buffer.h"
 
 // STD
 #include <stdexcept>
@@ -14,6 +15,12 @@
 
 using namespace coral_3d;
 
+struct GlobalUBO
+{
+    glm::mat4 view_projeciton{1.f};
+    glm::vec3 light_direction{ glm::normalize(glm::vec3{ -.457f, -.457f, .457f })};
+};
+
 first_app::first_app()
 {
 	load_gameobjects();
@@ -21,10 +28,23 @@ first_app::first_app()
 
 first_app::~first_app()
 {
+    vmaDestroyImage(device_.allocator(), test_texture.image, test_texture.allocation);
 }
 
 void first_app::run()
 {
+    coral_buffer global_ubo
+    {
+        device_,
+		sizeof(GlobalUBO),
+		coral_swapchain::MAX_FRAMES_IN_FLIGHT,
+		VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT,
+		VMA_MEMORY_USAGE_CPU_ONLY,
+        0,
+        device_.properties.limits.minUniformBufferOffsetAlignment
+	};
+    global_ubo.map();
+
 	render_system render_system{ device_, renderer_.get_swapchain_render_pass() };
     coral_camera camera{};
   
@@ -33,7 +53,7 @@ void first_app::run()
 
     auto last_time{ std::chrono::high_resolution_clock::now() };
 
-    vkutil::load_image_from_file(device_, "textures/uv_checker.jpg", test_texture);
+    vkutil::load_image_from_file(device_, "assets/textures/uv_checker.jpg", test_texture);
 
 	while (!window_.should_close())
 	{
@@ -52,8 +72,25 @@ void first_app::run()
 
 		if (auto command_buffer = renderer_.begin_frame())
 		{
+            const int frame_index{ renderer_.get_frame_index() };
+
+            FrameInfo frame_info
+            {
+                frame_index,
+                frame_time,
+                command_buffer,
+                camera
+            };
+
+            // UPDATE GLOBAL UBO
+            GlobalUBO ubo{};
+            ubo.view_projeciton = camera.get_projection() * camera.get_view();
+            global_ubo.write_to_index(&ubo, frame_index);
+            global_ubo.flush_index(frame_index);
+
+            // RENDER
 			renderer_.begin_swapchain_render_pass(command_buffer);
-			render_system.render_gameobjects(command_buffer, gameobjects_, camera);
+			render_system.render_gameobjects(frame_info, gameobjects_);
 			renderer_.end_swapchain_render_pass(command_buffer);
 			renderer_.end_frame();
 		}
@@ -64,7 +101,7 @@ void first_app::run()
 
 void first_app::load_gameobjects()
 {
-    std::shared_ptr<coral_mesh> mesh {coral_mesh::create_mesh_from_file(device_, "meshes/teapot.obj")};
+    std::shared_ptr<coral_mesh> mesh {coral_mesh::create_mesh_from_file(device_, "assets/meshes/colored_cube.obj")};
 
     auto gameobject { coral_gameobject::create_gameobject() };
     gameobject.mesh_ = mesh;

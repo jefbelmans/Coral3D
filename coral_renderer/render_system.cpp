@@ -23,11 +23,11 @@ render_system::~render_system()
 	vkDestroyPipelineLayout(device_.device(), pipeline_layout_, nullptr);
 }
 
-void render_system::render_gameobjects(VkCommandBuffer command_buffer, std::vector<coral_gameobject>& gameobjects, const coral_camera& camera)
+void render_system::render_gameobjects(FrameInfo& frame_info, std::vector<coral_gameobject>& gameobjects)
 {
-	pipeline_->bind(command_buffer);
+	pipeline_->bind(frame_info.command_buffer);
 
-	auto view_projection{ camera.get_projection() * camera.get_view() };
+	auto view_projection{ frame_info.camera.get_projection() * frame_info.camera.get_view() };
 
 	for (auto& obj : gameobjects)
 	{
@@ -36,13 +36,13 @@ void render_system::render_gameobjects(VkCommandBuffer command_buffer, std::vect
 		push.transform = view_projection * obj.transform_.mat4();
 
 		vkCmdPushConstants(
-			command_buffer,
+			frame_info.command_buffer,
 			pipeline_layout_,
 			VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT,
 			0, sizeof(PushConstant), &push);
 
-		obj.mesh_->bind(command_buffer);
-		obj.mesh_->draw(command_buffer);
+		obj.mesh_->bind(frame_info.command_buffer);
+		obj.mesh_->draw(frame_info.command_buffer);
 	}
 }
 
@@ -77,8 +77,8 @@ void render_system::create_pipeline(VkRenderPass render_pass)
 		device_,
 		// "shaders/PosNormCol.vert.spv",
 		// "shaders/PosNormCol.frag.spv",
-		"shaders/simple_shader.vert.spv",
-		"shaders/simple_shader.frag.spv",
+		"assets/shaders/simple_shader.vert.spv",
+		"assets/shaders/simple_shader.frag.spv",
 		pipeline_config
 	);
 }
