@@ -7,6 +7,7 @@
 
 // STD
 #include <memory>
+#include <unordered_map>
 
 namespace coral_3d
 {
@@ -50,12 +51,18 @@ namespace coral_3d
 				{ translation.x, translation.y, translation.z, 1.0f }
 			};
 		}
+
+		glm::mat4 noraml_matrix()
+		{
+			return glm::transpose(glm::inverse(mat4()));
+		}
 	};
 
 	class coral_gameobject final
 	{
 	public:
 		using id_t = unsigned int;
+		using Map = std::unordered_map<id_t, coral_gameobject>;
 
 		static coral_gameobject create_gameobject()
 		{

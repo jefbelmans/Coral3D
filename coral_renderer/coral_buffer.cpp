@@ -62,7 +62,7 @@ void coral_buffer::unmap()
 }
 
 /**
- * Copies the specified data to the mapped buffer. Default value writes whole buffer range
+ * Copies the specified data to the mapped buffer. Default value writes_ whole buffer range
  *
  * @param data Pointer to the data to copy
  * @param size (Optional) Size of the data to copy. Pass VK_WHOLE_SIZE to flush the complete buffer

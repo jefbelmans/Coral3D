@@ -18,11 +18,23 @@ using namespace coral_3d;
 struct GlobalUBO
 {
     glm::mat4 view_projeciton{1.f};
-    glm::vec3 light_direction{ glm::normalize(glm::vec3{ -.457f, -.457f, .457f })};
+
+    // GLOBAL LIGHT
+    glm::vec4 global_light_direction{ glm::normalize(glm::vec4{ -.457f, -.457f, -.457f, 0.f})}; // w is ignored
+    glm::vec4 ambient_light_color{.4f, .1f, .1f, 0.05f}; // w is intensity
+
+    // POINT LIGHT
+    glm::vec4 light_position{0.f, -0.5f, -0.5f, 0.f}; // w is ignored
+    glm::vec4 light_color{1.f}; // w is intensity
 };
 
 first_app::first_app()
 {
+    global_descriptor_pool_ = coral_descriptor_pool::Builder(device_)
+        .set_max_sets(coral_swapchain::MAX_FRAMES_IN_FLIGHT)
+        .add_pool_size(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, coral_swapchain::MAX_FRAMES_IN_FLIGHT)
+        .build();
+
 	load_gameobjects();
 }
 
@@ -45,10 +57,24 @@ void first_app::run()
 	};
     global_ubo.map();
 
-	render_system render_system{ device_, renderer_.get_swapchain_render_pass() };
+    auto global_set_layout = coral_descriptor_set_layout::Builder(device_)
+		.add_binding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_ALL_GRAPHICS)
+		.build(); 
+
+    std::vector<VkDescriptorSet> global_descriptor_sets{coral_swapchain::MAX_FRAMES_IN_FLIGHT};
+    for (int i = 0; i < global_descriptor_sets.size(); i++)
+    {
+        auto buffer_info = global_ubo.descriptor_info_index(i);
+        coral_descriptor_writer(*global_set_layout, *global_descriptor_pool_)
+            .write_buffer(0, &buffer_info)
+            .build(global_descriptor_sets[i]);
+    }
+
+	render_system render_system{ device_, renderer_.get_swapchain_render_pass(), global_set_layout->get_descriptor_set_layout() };
     coral_camera camera{};
   
     auto camera_object{ coral_gameobject::create_gameobject() };
+    camera_object.transform_.translation.z = -3.5f;
     KeyboardController camera_controller{};
 
     auto last_time{ std::chrono::high_resolution_clock::now() };
@@ -79,7 +105,9 @@ void first_app::run()
                 frame_index,
                 frame_time,
                 command_buffer,
-                camera
+                camera,
+                global_descriptor_sets[frame_index],
+                gameobjects_
             };
 
             // UPDATE GLOBAL UBO
@@ -90,7 +118,7 @@ void first_app::run()
 
             // RENDER
 			renderer_.begin_swapchain_render_pass(command_buffer);
-			render_system.render_gameobjects(frame_info, gameobjects_);
+			render_system.render_gameobjects(frame_info);
 			renderer_.end_swapchain_render_pass(command_buffer);
 			renderer_.end_frame();
 		}
@@ -101,12 +129,27 @@ void first_app::run()
 
 void first_app::load_gameobjects()
 {
-    std::shared_ptr<coral_mesh> mesh {coral_mesh::create_mesh_from_file(device_, "assets/meshes/colored_cube.obj")};
+    std::shared_ptr<coral_mesh> mesh {coral_mesh::create_mesh_from_file(device_, "assets/meshes/smooth_vase.obj")};
 
-    auto gameobject { coral_gameobject::create_gameobject() };
-    gameobject.mesh_ = mesh;
-    gameobject.transform_.translation = { 0.f, 0.f, 2.5f };
-    gameobject.transform_.scale = { .5f, .5f, .5f };
+    auto smooth_vase { coral_gameobject::create_gameobject() };
+    smooth_vase.mesh_ = mesh;
+    smooth_vase.transform_.translation = { 0.5f, 0.5f, 0.f };
+    smooth_vase.transform_.scale = { 3.f, 3.f, 3.f};
+    gameobjects_.emplace(smooth_vase.get_id(), std::move(smooth_vase));
 
-    gameobjects_.emplace_back(std::move(gameobject));
+    mesh = coral_mesh::create_mesh_from_file(device_, "assets/meshes/flat_vase.obj");
+    
+    auto vase = coral_gameobject::create_gameobject();
+    vase.mesh_ = mesh;
+    vase.transform_.translation = { -0.5f, 0.5f, 0.f };
+    vase.transform_.scale = { 3.f, 3.f, 3.f };
+    gameobjects_.emplace(vase.get_id(), std::move(vase));
+
+    mesh = coral_mesh::create_mesh_from_file(device_, "assets/meshes/quad.obj");
+
+    auto floor = coral_gameobject::create_gameobject();
+    floor.mesh_ = mesh;
+    floor.transform_.translation = { 0.f, 0.5f, 0.f };
+    floor.transform_.scale = { 3.f, 1.f, 3.f };
+    gameobjects_.emplace(floor.get_id(), std::move(floor));
 }

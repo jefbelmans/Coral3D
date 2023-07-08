@@ -17,7 +17,7 @@ namespace coral_3d
 {
 	struct VertexInputDescription
 	{
-		std::vector<VkVertexInputBindingDescription> bindings;
+		std::vector<VkVertexInputBindingDescription> bindings_;
 		std::vector<VkVertexInputAttributeDescription> attributes;
 
 		VkPipelineVertexInputStateCreateFlags flags = 0;

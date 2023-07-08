@@ -33,7 +33,7 @@ add_executable(coral_renderer
     "coral_buffer.cpp"
     "coral_frame_info.h"
     "coral_frame_info.cpp"
-)
+ "coral_descriptors.h" "coral_descriptors.cpp")
 
 add_dependencies(coral_renderer Shaders)
 

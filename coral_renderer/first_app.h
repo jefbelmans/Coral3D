@@ -4,6 +4,7 @@
 #include "coral_window.h"
 #include "coral_gameobject.h"
 #include "coral_renderer.h"
+#include "coral_descriptors.h"
 
 // STD
 #include <memory>
@@ -33,6 +34,7 @@ namespace coral_3d
 		coral_renderer renderer_{ window_, device_ };
 
 		AllocatedImage test_texture;
-		std::vector<coral_gameobject> gameobjects_;
+		std::unique_ptr<coral_descriptor_pool> global_descriptor_pool_{};
+		coral_gameobject::Map gameobjects_;
 	};
 }

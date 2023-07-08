@@ -4185,7 +4185,7 @@ GLFWAPI int glfwRawMouseMotionSupported(void);
  *
  *  This function returns the name of the specified printable key, encoded as
  *  UTF-8.  This is typically the character that key would produce without any
- *  modifier keys, intended for displaying key bindings to the user.  For dead
+ *  modifier keys, intended for displaying key bindings_ to the user.  For dead
  *  keys, it is typically the diacritic it would add to a character.
  *
  *  __Do not use this function__ for [text input](@ref input_char).  You will

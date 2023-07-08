@@ -40,7 +40,7 @@ VertexInputDescription Vertex::get_vert_desc()
     main_binding.stride = sizeof(Vertex);
     main_binding.inputRate = VK_VERTEX_INPUT_RATE_VERTEX;
 
-    desc.bindings.emplace_back(main_binding);
+    desc.bindings_.emplace_back(main_binding);
 
     // Position will be stored at Location 0
     VkVertexInputAttributeDescription position_attrib{};
@@ -123,7 +123,7 @@ bool Builder::load_from_obj(const std::string& file_path)
                 vertex.position = 
                 { 
                     attrib.vertices[3 * index.vertex_index + 0],
-                    -attrib.vertices[3 * index.vertex_index + 1],
+                    attrib.vertices[3 * index.vertex_index + 1],
                     attrib.vertices[3 * index.vertex_index + 2]
                 };
 
@@ -220,7 +220,8 @@ void coral_mesh::create_vertex_buffers(const std::vector<Vertex>& vertices)
 		vertex_size,
         vertex_count_,
 		VK_BUFFER_USAGE_TRANSFER_SRC_BIT,
-		VMA_MEMORY_USAGE_CPU_ONLY
+		VMA_MEMORY_USAGE_AUTO,
+        VMA_ALLOCATION_CREATE_HOST_ACCESS_SEQUENTIAL_WRITE_BIT
     };
 
     vertex_buffer_ = std::make_unique<coral_buffer>(
@@ -253,8 +254,8 @@ void coral_mesh::create_index_buffers(const std::vector<uint32_t>& indices)
 		index_size,
 		index_count_,
 		VK_BUFFER_USAGE_TRANSFER_SRC_BIT,
-		VMA_MEMORY_USAGE_CPU_ONLY,
-        VMA_ALLOCATION_CREATE_HOST_ACCESS_SEQUENTIAL_WRITE_BIT | VMA_ALLOCATION_CREATE_MAPPED_BIT
+		VMA_MEMORY_USAGE_AUTO,
+        VMA_ALLOCATION_CREATE_HOST_ACCESS_SEQUENTIAL_WRITE_BIT
     };
 
     staging_buffer.map();

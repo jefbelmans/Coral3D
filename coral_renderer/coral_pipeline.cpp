@@ -139,8 +139,8 @@ void coral_pipeline::create_graphics_pipeline(
 	vertex_input_info.vertexAttributeDescriptionCount = static_cast<uint32_t>(vertex_desc.attributes.size());
 	vertex_input_info.pVertexAttributeDescriptions = vertex_desc.attributes.data();
 
-	vertex_input_info.vertexBindingDescriptionCount = static_cast<uint32_t>(vertex_desc.bindings.size());
-	vertex_input_info.pVertexBindingDescriptions = vertex_desc.bindings.data();
+	vertex_input_info.vertexBindingDescriptionCount = static_cast<uint32_t>(vertex_desc.bindings_.size());
+	vertex_input_info.pVertexBindingDescriptions = vertex_desc.bindings_.data();
 
 	VkGraphicsPipelineCreateInfo pipeline_info{};
 	pipeline_info.sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO;
