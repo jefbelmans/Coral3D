@@ -219,6 +219,8 @@ VkImageCreateInfo vkinit::image_ci(VkFormat format, VkImageUsageFlags usageFlags
 	info.tiling = VK_IMAGE_TILING_OPTIMAL;
 	info.usage = usageFlags;
 
+	info.sharingMode = VK_SHARING_MODE_EXCLUSIVE;
+
 	return info;
 }
 

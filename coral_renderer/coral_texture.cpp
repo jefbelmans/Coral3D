@@ -9,6 +9,7 @@
 
 #include "vk_initializers.h"
 #include "coral_device.h"
+#include "coral_buffer.h"
 
 bool vkutil::load_image_from_file(coral_device& device, const std::string& file_name, AllocatedImage& out_image)
 {
@@ -29,13 +30,19 @@ bool vkutil::load_image_from_file(coral_device& device, const std::string& file_
 	VkFormat img_format{ VK_FORMAT_R8G8B8A8_SRGB };
 
 	// Holds texture data to upload to GPU
-	AllocatedBuffer staging_buffer{ device.create_buffer(img_size, VK_BUFFER_USAGE_TRANSFER_SRC_BIT, VMA_MEMORY_USAGE_CPU_ONLY) };
+	coral_buffer staging_buffer
+	{
+		device,
+		img_size,
+		1,
+		VK_BUFFER_USAGE_TRANSFER_SRC_BIT,
+		VMA_MEMORY_USAGE_AUTO,
+		VMA_ALLOCATION_CREATE_HOST_ACCESS_SEQUENTIAL_WRITE_BIT
+	};
 
 	// Copy data to buffer
-	void* data;
-	vmaMapMemory(device.allocator(), staging_buffer.allocation, &data);
-	memcpy(data, pPixels, static_cast<size_t>(img_size));
-	vmaUnmapMemory(device.allocator(), staging_buffer.allocation);
+	staging_buffer.map();
+	staging_buffer.write_to_buffer(pPixels);
 
 	// Free the pixels
 	stbi_image_free(img);
@@ -55,63 +62,10 @@ bool vkutil::load_image_from_file(coral_device& device, const std::string& file_
 	vmaCreateImage(device.allocator(), &image_ci, &image_ai,
 		&new_img.image, &new_img.allocation, nullptr);
 
-	device.immediate_submit([&](VkCommandBuffer cmd)
-		{
-			VkImageSubresourceRange range{};
-			range.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
-			range.baseMipLevel = 0;
-			range.levelCount = 1;
-			range.baseArrayLayer = 0;
-			range.layerCount = 1;
-
-			VkImageMemoryBarrier transfer_img_barrier{};
-			transfer_img_barrier.sType = VK_STRUCTURE_TYPE_IMAGE_MEMORY_BARRIER;
-			transfer_img_barrier.pNext = nullptr;
-
-			// Defines the pipeline layout before and after this barrier
-			transfer_img_barrier.oldLayout = VK_IMAGE_LAYOUT_UNDEFINED;
-			transfer_img_barrier.newLayout = VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL;
-			transfer_img_barrier.image = new_img.image;
-			transfer_img_barrier.subresourceRange = range;
-
-			transfer_img_barrier.srcAccessMask = 0;
-			transfer_img_barrier.dstAccessMask = VK_ACCESS_TRANSFER_WRITE_BIT;
-
-			// Barrier the image into the transfer layout
-			vkCmdPipelineBarrier(cmd, VK_PIPELINE_STAGE_TOP_OF_PIPE_BIT, VK_PIPELINE_STAGE_TRANSFER_BIT,
-				0, 0, nullptr, 0, nullptr, 1, &transfer_img_barrier);
-
-			// Image is ready to receive pixel data at this point
-			VkBufferImageCopy copy_region{};
-			copy_region.bufferOffset = 0;
-			copy_region.bufferRowLength = 0;
-			copy_region.bufferImageHeight = 0;
-
-			copy_region.imageSubresource.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
-			copy_region.imageSubresource.mipLevel = 0;
-			copy_region.imageSubresource.baseArrayLayer = 0;
-			copy_region.imageSubresource.layerCount = 1;
-			copy_region.imageExtent = img_extent;
-
-			// Copy buffer to image
-			vkCmdCopyBufferToImage(cmd, staging_buffer.buffer, new_img.image, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, 1, &copy_region);
-
-			// Turn image into shader readable layout
-			VkImageMemoryBarrier readable_img_barrier{ transfer_img_barrier };
-
-			readable_img_barrier.oldLayout = transfer_img_barrier.newLayout;
-			readable_img_barrier.newLayout = VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL;
-
-			readable_img_barrier.srcAccessMask = VK_ACCESS_TRANSFER_WRITE_BIT;
-			readable_img_barrier.dstAccessMask = VK_ACCESS_SHADER_READ_BIT;
-
-			// Barrier the image into the readable layout
-			// TODO: OPTIMIZE GPU BUBBLE
-			vkCmdPipelineBarrier(cmd, VK_PIPELINE_STAGE_ALL_GRAPHICS_BIT, VK_PIPELINE_STAGE_FRAGMENT_SHADER_BIT,
-				0, 0, nullptr, 0, nullptr, 1, &readable_img_barrier);
-		});
-
-	vmaDestroyBuffer(device.allocator(), staging_buffer.buffer, staging_buffer.allocation);
+	// Transition layout using barries and copy buffer to image
+	device.transition_image_layout(new_img.image, img_format, VK_IMAGE_LAYOUT_UNDEFINED, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL);
+	device.copy_buffer_to_image(staging_buffer.get_buffer(), new_img, img_extent.width, img_extent.height, 1);
+	device.transition_image_layout(new_img.image, img_format, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL);
 
 	std::cout << "Texture loaded successfully " << file_name << std::endl;
 
