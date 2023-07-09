@@ -177,14 +177,14 @@ void coral_device::copy_buffer_to_image(AllocatedBuffer buffer, AllocatedImage i
         });
 }
 
-void coral_device::transition_image_layout(VkImage image, VkFormat format, VkImageLayout old_layout, VkImageLayout new_layout, uint32_t layer_count)
+void coral_device::transition_image_layout(VkImage image, VkFormat format, VkImageLayout old_layout, VkImageLayout new_layout, uint32_t layer_count, uint32_t mip_levels)
 {
     immediate_submit([&](VkCommandBuffer cmd)
     {
             VkImageSubresourceRange range{};
             range.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
             range.baseMipLevel = 0;
-            range.levelCount = 1;
+            range.levelCount = mip_levels;
             range.baseArrayLayer = 0;
             range.layerCount = layer_count;
 
@@ -254,7 +254,8 @@ void coral_device::create_instance()
     create_surface();
 
     VkPhysicalDeviceFeatures feats{};
-    feats.multiDrawIndirect = true;
+    feats.multiDrawIndirect = VK_TRUE;
+    feats.samplerAnisotropy = VK_TRUE;
 
     vkb::PhysicalDeviceSelector selector{vkb_instance};
     selector.set_required_features(feats);

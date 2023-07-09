@@ -9,6 +9,8 @@
 #include <stdexcept>
 #include <array>
 #include <chrono>
+#include <iostream>
+#include <iomanip>
 
 #include "vk_initializers.h"
 #include "coral_texture.h"
@@ -20,11 +22,11 @@ struct GlobalUBO
     glm::mat4 view_projeciton{1.f};
 
     // GLOBAL LIGHT
-    glm::vec4 global_light_direction{ glm::normalize(glm::vec4{ -.457f, -.457f, -.457f, 0.f})}; // w is ignored
+    glm::vec4 global_light_direction{ glm::normalize(glm::vec4{ 0.577f, 0.377f, -0.577f, 0.f})}; // w is ignored
     glm::vec4 ambient_light_color{.4f, .1f, .1f, 0.05f}; // w is intensity
 
     // POINT LIGHT
-    glm::vec4 light_position{0.f, -0.5f, -0.5f, 0.f}; // w is ignored
+    glm::vec4 light_position{0.f, -0.85f, 0.f, 0.f}; // w is ignored
     glm::vec4 light_color{1.f}; // w is intensity
 };
 
@@ -33,15 +35,14 @@ first_app::first_app()
     global_descriptor_pool_ = coral_descriptor_pool::Builder(device_)
         .set_max_sets(coral_swapchain::MAX_FRAMES_IN_FLIGHT)
         .add_pool_size(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, coral_swapchain::MAX_FRAMES_IN_FLIGHT)
+        .add_pool_size(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, coral_swapchain::MAX_FRAMES_IN_FLIGHT)
         .build();
 
 	load_gameobjects();
 }
 
 first_app::~first_app()
-{
-    vmaDestroyImage(device_.allocator(), test_texture.image, test_texture.allocation);
-}
+{}
 
 void first_app::run()
 {
@@ -59,27 +60,31 @@ void first_app::run()
 
     auto global_set_layout = coral_descriptor_set_layout::Builder(device_)
 		.add_binding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_ALL_GRAPHICS)
+        .add_binding(1, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
 		.build(); 
 
     std::vector<VkDescriptorSet> global_descriptor_sets{coral_swapchain::MAX_FRAMES_IN_FLIGHT};
     for (int i = 0; i < global_descriptor_sets.size(); i++)
     {
         auto buffer_info = global_ubo.descriptor_info_index(i);
+        auto image_info = test_texture->get_descriptor_info();
+
         coral_descriptor_writer(*global_set_layout, *global_descriptor_pool_)
             .write_buffer(0, &buffer_info)
+            .write_image(1, &image_info)
             .build(global_descriptor_sets[i]);
     }
 
 	render_system render_system{ device_, renderer_.get_swapchain_render_pass(), global_set_layout->get_descriptor_set_layout() };
     coral_camera camera{};
-  
+   
     auto camera_object{ coral_gameobject::create_gameobject() };
-    camera_object.transform_.translation.z = -3.5f;
+    camera_object.transform_.translation = glm::vec3{ -1.5f, -1.5f, -1.5f };
+    camera_object.transform_.rotation = glm::vec3{ glm::radians(-25.f), glm::radians(45.f), 0.f};
+
     KeyboardController camera_controller{};
 
     auto last_time{ std::chrono::high_resolution_clock::now() };
-
-    vkutil::load_image_from_file(device_, "assets/textures/uv_checker.jpg", test_texture);
 
 	while (!window_.should_close())
 	{
@@ -94,7 +99,7 @@ void first_app::run()
         camera.set_view_yxz(camera_object.transform_.translation, camera_object.transform_.rotation);
 
         float aspect{ renderer_.get_aspect_ratio() };
-        camera.set_perspective_projection(glm::radians(60.f), aspect, 0.1f, 10.f);
+        camera.set_perspective_projection(glm::radians(60.f), aspect, 0.1f, 1000.f);
 
 		if (auto command_buffer = renderer_.begin_frame())
 		{
@@ -129,27 +134,31 @@ void first_app::run()
 
 void first_app::load_gameobjects()
 {
-    std::shared_ptr<coral_mesh> mesh {coral_mesh::create_mesh_from_file(device_, "assets/meshes/smooth_vase.obj")};
+    constexpr uint32_t NUM_INSTANCES{ 125 };
 
-    auto smooth_vase { coral_gameobject::create_gameobject() };
-    smooth_vase.mesh_ = mesh;
-    smooth_vase.transform_.translation = { 0.5f, 0.5f, 0.f };
-    smooth_vase.transform_.scale = { 3.f, 3.f, 3.f};
-    gameobjects_.emplace(smooth_vase.get_id(), std::move(smooth_vase));
+    std::shared_ptr<coral_mesh> smooth_mesh {coral_mesh::create_mesh_from_file(device_, "assets/meshes/smooth_vase.obj")};
+    std::shared_ptr<coral_mesh> flat_mesh {coral_mesh::create_mesh_from_file(device_, "assets/meshes/flat_vase.obj")};
 
-    mesh = coral_mesh::create_mesh_from_file(device_, "assets/meshes/flat_vase.obj");
+    for (size_t x = 0; x < NUM_INSTANCES * 0.5f; x++)
+    {
+        for (size_t z = 0; z < NUM_INSTANCES * 0.5f; z++)
+        {
+            auto vase{ coral_gameobject::create_gameobject() };
+            vase.mesh_ = z < NUM_INSTANCES * 0.25f ? smooth_mesh : flat_mesh;
+            vase.transform_.translation = { 0.6f * x, 0.75f, 0.6f * z };
+            vase.transform_.scale = { 3.f, 3.f, 3.f };
+            gameobjects_.emplace(vase.get_id(), std::move(vase));
+        }
+    }
     
-    auto vase = coral_gameobject::create_gameobject();
-    vase.mesh_ = mesh;
-    vase.transform_.translation = { -0.5f, 0.5f, 0.f };
-    vase.transform_.scale = { 3.f, 3.f, 3.f };
-    gameobjects_.emplace(vase.get_id(), std::move(vase));
-
-    mesh = coral_mesh::create_mesh_from_file(device_, "assets/meshes/quad.obj");
-
-    auto floor = coral_gameobject::create_gameobject();
-    floor.mesh_ = mesh;
-    floor.transform_.translation = { 0.f, 0.5f, 0.f };
-    floor.transform_.scale = { 3.f, 1.f, 3.f };
-    gameobjects_.emplace(floor.get_id(), std::move(floor));
+    std::cout << "\nNumber of instances: " << gameobjects_.size() << std::endl;
+    std::cout << std::setprecision(8) << "Number of vertices: " << smooth_mesh->get_vertex_count() * gameobjects_.size() * 0.5f + flat_mesh->get_vertex_count() * gameobjects_.size() * 0.5f << std::endl;
+    std::cout << std::setprecision(8) << "Number of indices: " << smooth_mesh->get_index_count() * gameobjects_.size() + flat_mesh->get_index_count() * gameobjects_.size() * 0.5f << std::endl;
+    
+    // LOAD TEXTURES
+    test_texture = coral_texture::create_texture_from_file(
+        device_,
+        "assets/textures/uv_checker.jpg",
+        VK_FORMAT_R8G8B8A8_SRGB
+    );
 }

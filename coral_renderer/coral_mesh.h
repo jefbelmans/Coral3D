@@ -42,17 +42,17 @@ namespace coral_3d
 		}
 	};
 
-	struct Builder
-	{
-		std::vector<Vertex> vertices{};
-		std::vector<uint32_t> indices{};
-
-		bool load_from_obj(const std::string& file_path);
-	};
-
 	class coral_mesh final
 	{
 	public:
+		struct Builder
+		{
+			std::vector<Vertex> vertices{};
+			std::vector<uint32_t> indices{};
+
+			bool load_from_obj(const std::string& file_path);
+		};
+
 		coral_mesh(coral_device& device, const Builder& builder);
 		~coral_mesh();
 		
@@ -63,6 +63,9 @@ namespace coral_3d
 
 		void bind(VkCommandBuffer command_buffer);
 		void draw(VkCommandBuffer command_buffer);
+
+		uint32_t get_index_count() const { return index_count_; }
+		uint32_t get_vertex_count() const { return vertex_count_; }
 
 	private:
 		void create_vertex_buffers(const std::vector<Vertex>& vertices);

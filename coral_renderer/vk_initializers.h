@@ -26,7 +26,7 @@ namespace vkinit
 	VkImageCreateInfo image_ci(VkFormat format, VkImageUsageFlags usageFlags, VkExtent3D extent);
 	VkImageViewCreateInfo image_view_ci(VkFormat format, VkImage image, VkImageAspectFlags aspectFlags);
 	VkPipelineDepthStencilStateCreateInfo depth_stencil_ci(bool bDepthTest, bool bDepthWrite, VkCompareOp compareOp);
-	VkSamplerCreateInfo sampler_ci(VkFilter filters, VkSamplerAddressMode samplerAddressMode = VK_SAMPLER_ADDRESS_MODE_REPEAT);
+	VkSamplerCreateInfo sampler_ci(VkFilter filters, float max_anisotropy = 1.f, VkSamplerAddressMode samplerAddressMode = VK_SAMPLER_ADDRESS_MODE_REPEAT);
 
 	// Descriptor set initializers
 	VkDescriptorSetLayoutBinding descriptor_set_layout_binding(VkDescriptorType type, VkShaderStageFlags stageFlags, uint32_t binding);

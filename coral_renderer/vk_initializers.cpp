@@ -260,7 +260,7 @@ VkPipelineDepthStencilStateCreateInfo vkinit::depth_stencil_ci(bool bDepthTest, 
 	return info;
 }
 
-VkSamplerCreateInfo vkinit::sampler_ci(VkFilter filters, VkSamplerAddressMode samplerAddressMode)
+VkSamplerCreateInfo vkinit::sampler_ci(VkFilter filters, float max_anisotropy, VkSamplerAddressMode samplerAddressMode)
 {
 	VkSamplerCreateInfo info{};
 	info.sType = VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO;
@@ -271,6 +271,14 @@ VkSamplerCreateInfo vkinit::sampler_ci(VkFilter filters, VkSamplerAddressMode sa
 	info.addressModeU = samplerAddressMode;
 	info.addressModeV = samplerAddressMode;
 	info.addressModeW = samplerAddressMode;
+
+	info.anisotropyEnable = VK_TRUE;
+	info.maxAnisotropy = max_anisotropy;
+
+	info.mipmapMode = VK_SAMPLER_MIPMAP_MODE_LINEAR;
+	info.mipLodBias = 0.0f;
+	info.minLod = 0.0f;
+	info.maxLod = 0.0f;
 
 	return info;
 }

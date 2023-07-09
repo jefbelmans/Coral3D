@@ -74,7 +74,7 @@ namespace coral_3d
 		void immediate_submit(std::function<void(VkCommandBuffer cmd)>&& function);
 		void copy_buffer(AllocatedBuffer src_buffer, AllocatedBuffer dst_buffer, VkDeviceSize size);
 		void copy_buffer_to_image(AllocatedBuffer buffer, AllocatedImage image, uint32_t width, uint32_t height, uint32_t layer_count);
-		void transition_image_layout(VkImage image, VkFormat format, VkImageLayout old_layout, VkImageLayout new_layout, uint32_t layer_count = 1);
+		void transition_image_layout(VkImage image, VkFormat format, VkImageLayout old_layout, VkImageLayout new_layout, uint32_t layer_count = 1, uint32_t mip_levels = 1);
 
 		VkPhysicalDeviceProperties properties;
 

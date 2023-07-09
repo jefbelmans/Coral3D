@@ -6,18 +6,23 @@
 
 using namespace coral_3d;
 
+// *************** Descriptor Set Layout Builder *********************
+
 coral_descriptor_set_layout::Builder& coral_descriptor_set_layout::Builder::add_binding(
     uint32_t binding,
     VkDescriptorType descriptorType,
     VkShaderStageFlags stageFlags,
-    uint32_t count) {
+    uint32_t count)
+{
     assert(bindings_.count(binding) == 0 && "Binding already in use");
+
     VkDescriptorSetLayoutBinding layout_binding{};
     layout_binding.binding = binding;
     layout_binding.descriptorType = descriptorType;
     layout_binding.descriptorCount = count;
     layout_binding.stageFlags = stageFlags;
     bindings_[binding] = layout_binding;
+
     return *this;
 }
 

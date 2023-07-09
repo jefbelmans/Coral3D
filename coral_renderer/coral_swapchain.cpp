@@ -194,24 +194,11 @@ void coral_swapchain::create_image_views()
 
 	for (size_t i = 0; i < swapchain_images_.size(); i++)
 	{
-		VkImageViewCreateInfo viewInfo{};
-		viewInfo.sType = VK_STRUCTURE_TYPE_IMAGE_VIEW_CREATE_INFO;
-		viewInfo.image = swapchain_images_[i];
-		viewInfo.viewType = VK_IMAGE_VIEW_TYPE_2D;
-		viewInfo.format = swapchain_image_format_;
-		viewInfo.subresourceRange.aspectMask = VK_IMAGE_ASPECT_COLOR_BIT;
-		viewInfo.subresourceRange.baseMipLevel = 0;
-		viewInfo.subresourceRange.levelCount = 1;
-		viewInfo.subresourceRange.baseArrayLayer = 0;
-		viewInfo.subresourceRange.layerCount = 1;
+		VkImageViewCreateInfo viewInfo{ vkinit::image_view_ci(swapchain_image_format_, swapchain_images_[i], VK_IMAGE_ASPECT_COLOR_BIT)};
 
 		if (vkCreateImageView(device_.device(), &viewInfo, nullptr, &swapchain_image_views_[i]) != VK_SUCCESS)
 			throw std::runtime_error("ERROR! coral_swapchain::create_image_views() >> Failed to create image view!");
 	}
-
-	deletion_queue_.deletors.emplace_back([=]() {
-		// swapchain_image_views_.clear();
-		});
 }
 
 void coral_swapchain::create_render_pass()

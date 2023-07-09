@@ -79,7 +79,7 @@ VertexInputDescription Vertex::get_vert_desc()
     return desc;
 }
 
-bool Builder::load_from_obj(const std::string& file_path)
+bool coral_mesh::Builder::load_from_obj(const std::string& file_path)
 {
     // attrib will contain the vertex arrays of the file
     tinyobj::attrib_t attrib;
@@ -150,7 +150,7 @@ bool Builder::load_from_obj(const std::string& file_path)
                 vertex.uv =
                 {
                     attrib.texcoords[2 * index.texcoord_index + 0],
-                    attrib.texcoords[2 * index.texcoord_index + 1]
+                    1.f - attrib.texcoords[2 * index.texcoord_index + 1]
                 };
             }
 

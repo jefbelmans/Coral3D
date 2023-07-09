@@ -36,6 +36,7 @@ void render_system::render_gameobjects(FrameInfo& frame_info)
 		0, nullptr
 	);
 
+	coral_mesh* last_mesh{nullptr};
 	for (auto& kv : frame_info.gameobjects)
 	{
 		auto& obj{ kv.second };
@@ -52,8 +53,13 @@ void render_system::render_gameobjects(FrameInfo& frame_info)
 			VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT,
 			0, sizeof(PushConstant), &push);
 
-		obj.mesh_->bind(frame_info.command_buffer);
+		if(obj.mesh_.get() != last_mesh)
+			obj.mesh_->bind(frame_info.command_buffer);
+
+		// obj.mesh_->bind(frame_info.command_buffer);
 		obj.mesh_->draw(frame_info.command_buffer);
+
+		last_mesh = obj.mesh_.get();
 	}
 }
 

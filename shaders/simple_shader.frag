@@ -3,6 +3,7 @@
 layout (location = 0) in vec3 fragColor;
 layout (location = 1) in vec3 fragPosWorld;
 layout (location = 2) in vec3 fragNormalWorld;
+layout (location = 3) in vec2 fragUV;
 
 layout (location = 0) out vec4 outColor;
 
@@ -19,24 +20,36 @@ layout (set = 0, binding = 0) uniform GlobalUBO
 	vec4 lightColor;
 } ubo;
 
+layout (binding = 1) uniform sampler2D texSampler;
+
 layout (push_constant) uniform Push
 {
 	mat4 worldMatrix;
 	mat4 normalMatrix;
 } push;
 
+// HELPERS
+vec3 calculate_diffuse(vec3 col, vec3 norm)
+{
+	float diffuseStrength = dot(norm, -ubo.globalLightDirection.xyz);
+
+	// HALF-LAMBERT
+	diffuseStrength = diffuseStrength * 0.5f + 0.5f;
+	diffuseStrength = clamp(diffuseStrength, 0.f, 1.f);
+
+	return col * diffuseStrength;
+}
+
 void main()
 {
-	vec3 directionToLight = ubo.lightPosition.xyz - fragPosWorld;
-	float attenuation = 1.0f / dot(directionToLight, directionToLight);
+	// POINT LIGHT
+	// vec3 directionToLight = ubo.lightPosition.xyz - fragPosWorld;
+	// float attenuation = 1.0f / dot(directionToLight, directionToLight);
+	// vec3 lightColor = ubo.lightColor.xyz * ubo.lightColor.w * attenuation;
 
-	vec3 lightColor = ubo.lightColor.xyz * ubo.lightColor.w * attenuation;
 	vec3 ambient = ubo.ambientLightColor.xyz * ubo.ambientLightColor.w;
+	vec3 color = texture(texSampler, fragUV).xyz;
+	vec3 diffuse = calculate_diffuse(color, fragNormalWorld);
 
-	// HALF-LAMBERT DIFFUSE
-	float lightIntensity = max(dot(normalize(fragNormalWorld), normalize(directionToLight)), 0.0f);
-	lightIntensity = lightIntensity * 0.5f + 0.5f;
-	vec3 diffuse = lightColor * lightIntensity;
-
-	outColor = vec4((diffuse + ambient) * fragColor, 1.0f);
+	outColor = vec4(diffuse, 1.0f);
 }
