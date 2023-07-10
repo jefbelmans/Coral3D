@@ -26,9 +26,8 @@ namespace coral_3d
 	struct Vertex
 	{
 		glm::vec3 position;
+		glm::vec2 tex_coord;
 		glm::vec3 normal;
-		glm::vec2 uv;
-		glm::vec3 color;
 
 		static VertexInputDescription get_vert_desc();
 
@@ -37,8 +36,7 @@ namespace coral_3d
 			return
 				position == other.position &&
 				normal == other.normal &&
-				uv == other.uv &&
-				color == other.color;
+				tex_coord == other.tex_coord;
 		}
 	};
 
@@ -60,6 +58,7 @@ namespace coral_3d
 		coral_mesh& operator=(const coral_mesh&) = delete;
 
 		static std::unique_ptr<coral_mesh> create_mesh_from_file(coral_device& device, const std::string& file_path);
+		static std::unique_ptr<coral_mesh> create_mesh_from_vertices(coral_device& device, const std::vector<Vertex> vertices, const std::vector<uint32_t> indices);
 
 		void bind(VkCommandBuffer command_buffer);
 		void draw(VkCommandBuffer command_buffer);

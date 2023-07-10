@@ -56,7 +56,6 @@ void render_system::render_gameobjects(FrameInfo& frame_info)
 		if(obj.mesh_.get() != last_mesh)
 			obj.mesh_->bind(frame_info.command_buffer);
 
-		// obj.mesh_->bind(frame_info.command_buffer);
 		obj.mesh_->draw(frame_info.command_buffer);
 
 		last_mesh = obj.mesh_.get();

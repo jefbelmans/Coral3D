@@ -24,7 +24,7 @@ namespace std
         size_t operator()(coral_3d::Vertex const &vertex) const
         {
             size_t seed = 0;
-            coral_3d::utils::hash_combine(seed, vertex.position, vertex.color, vertex.normal, vertex.uv);
+            coral_3d::utils::hash_combine(seed, vertex.position, vertex.tex_coord, vertex.normal);
             return seed;
         }
     };
@@ -49,32 +49,23 @@ VertexInputDescription Vertex::get_vert_desc()
     position_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
     position_attrib.offset = offsetof(Vertex, position);
 
-    //// Normal will be stored at Location 1
+    // UV will be stored at Location 1
+    VkVertexInputAttributeDescription texcoord_attrib{};
+    texcoord_attrib.binding = 0;
+    texcoord_attrib.location = 1;
+    texcoord_attrib.format = VK_FORMAT_R32G32_SFLOAT;
+    texcoord_attrib.offset = offsetof(Vertex, tex_coord);
+
+    // Normal will be stored at Location 2
     VkVertexInputAttributeDescription normal_attrib{};
     normal_attrib.binding = 0;
-    normal_attrib.location = 1;
+    normal_attrib.location = 2;
     normal_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
     normal_attrib.offset = offsetof(Vertex, normal);
 
-    //// UV will be stored at Location 2
-    VkVertexInputAttributeDescription texcoord_attrib{};
-    texcoord_attrib.binding = 0;
-    texcoord_attrib.location = 2;
-    texcoord_attrib.format = VK_FORMAT_R32G32_SFLOAT;
-    texcoord_attrib.offset = offsetof(Vertex, uv);
-
-    // Color will be stored at Location 3
-    VkVertexInputAttributeDescription color_attrib{};
-    color_attrib.binding = 0;
-    color_attrib.location = 3;
-    color_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
-    color_attrib.offset = offsetof(Vertex, color);
-
-
     desc.attributes.emplace_back(position_attrib);
-    desc.attributes.emplace_back(normal_attrib);
     desc.attributes.emplace_back(texcoord_attrib);
-    desc.attributes.emplace_back(color_attrib);
+    desc.attributes.emplace_back(normal_attrib);
 
     return desc;
 }
@@ -126,13 +117,6 @@ bool coral_mesh::Builder::load_from_obj(const std::string& file_path)
                     attrib.vertices[3 * index.vertex_index + 1],
                     attrib.vertices[3 * index.vertex_index + 2]
                 };
-
-                vertex.color =
-                {
-                    attrib.colors[3 * index.vertex_index + 0],
-                    attrib.colors[3 * index.vertex_index + 1],
-                    attrib.colors[3 * index.vertex_index + 2]
-                };
             }
 
             if (index.normal_index >= 0)
@@ -147,7 +131,7 @@ bool coral_mesh::Builder::load_from_obj(const std::string& file_path)
 
             if (index.texcoord_index >= 0)
             {
-                vertex.uv =
+                vertex.tex_coord =
                 {
                     attrib.texcoords[2 * index.texcoord_index + 0],
                     1.f - attrib.texcoords[2 * index.texcoord_index + 1]
@@ -182,6 +166,17 @@ std::unique_ptr<coral_mesh> coral_mesh::create_mesh_from_file(coral_device& devi
     builder.load_from_obj(file_path);
     std::cout << "[" << file_path << "] vertex count: " << builder.vertices.size() << "\n";
     std::cout << "[" << file_path << "] index count: " << builder.indices.size() << "\n";
+
+    return std::make_unique<coral_mesh>(device, builder);
+}
+
+std::unique_ptr<coral_mesh> coral_mesh::create_mesh_from_vertices(coral_device& device, const std::vector<Vertex> vertices, const std::vector<uint32_t> indices)
+{
+    Builder builder{};
+    builder.vertices = vertices;
+    builder.indices = indices;
+
+    std::cout << "Loaded mesh with " << builder.vertices.size() << " vertices and " << builder.indices.size() << " indices\n";
 
     return std::make_unique<coral_mesh>(device, builder);
 }

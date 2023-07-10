@@ -14,11 +14,13 @@ find_package(Vulkan REQUIRED)
 # New renderer
 add_subdirectory(coral_renderer)
 
+add_subdirectory(minecraft_clone)
+
 # Third party libraries
 add_subdirectory(third_party)
 
 # Link libs
-target_link_libraries(coral_renderer PRIVATE
+target_link_libraries(coral_renderer
 	Vulkan::Vulkan
 	glfw
 	glm
@@ -26,4 +28,12 @@ target_link_libraries(coral_renderer PRIVATE
 	tinyobjloader
 	vma
 	stb_image
+)
+
+target_link_libraries(minecraft_clone PUBLIC
+	coral_renderer
+)
+
+target_include_directories(minecraft_clone PUBLIC
+	"${RendererIncludeDir}"
 )

@@ -142,7 +142,7 @@ VkPipelineRasterizationStateCreateInfo vkinit::rasterization_state_ci(VkPolygonM
 	info.lineWidth = 1.0f;
 
 	// No backface culling
-	info.cullMode = VK_CULL_MODE_NONE;
+	info.cullMode = VK_CULL_MODE_BACK_BIT;
 	info.frontFace = VK_FRONT_FACE_CLOCKWISE;
 
 	// No depth bias

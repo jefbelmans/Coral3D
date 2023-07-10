@@ -1,14 +1,12 @@
 #version 450
 
 layout (location = 0) in vec3 position;
-layout (location = 1) in vec3 normal;
-layout (location = 2) in vec2 uv;
-layout (location = 3) in vec3 color;
+layout (location = 1) in vec2 texcoord;
+layout (location = 2) in vec3 normal;
 
-layout (location = 0) out vec3 fragColor;
-layout (location = 1) out vec3 fragPosWorld;
+layout (location = 0) out vec3 fragPosWorld;
+layout (location = 1) out vec2 fragTexcoord;
 layout (location = 2) out vec3 fragNormalWorld;
-layout (location = 3) out vec2 fragUV;
 
 layout (set = 0, binding = 0) uniform GlobalUBO
 {
@@ -34,8 +32,7 @@ void main()
 	vec4 worldPos = push.worldMatrix * vec4(position, 1.0f);
 	gl_Position = ubo.viewProjection * worldPos;
 
-	fragColor = color;
 	fragPosWorld = worldPos.xyz;
 	fragNormalWorld = normalize(mat3(push.normalMatrix) * normal);
-	fragUV = uv;
+	fragTexcoord = texcoord;
 }

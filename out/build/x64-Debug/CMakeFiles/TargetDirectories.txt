@@ -10,6 +10,12 @@ E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/coral_re
 E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/coral_renderer/CMakeFiles/list_install_components.dir
 E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/coral_renderer/CMakeFiles/install.dir
 E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/coral_renderer/CMakeFiles/install/local.dir
+E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/minecraft_clone/CMakeFiles/minecraft_clone.dir
+E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/minecraft_clone/CMakeFiles/edit_cache.dir
+E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/minecraft_clone/CMakeFiles/rebuild_cache.dir
+E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/minecraft_clone/CMakeFiles/list_install_components.dir
+E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/minecraft_clone/CMakeFiles/install.dir
+E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/minecraft_clone/CMakeFiles/install/local.dir
 E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/third_party/CMakeFiles/vkbootstrap.dir
 E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/third_party/CMakeFiles/tinyobjloader.dir
 E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug/third_party/CMakeFiles/edit_cache.dir

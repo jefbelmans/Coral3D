@@ -39,6 +39,11 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
+  include("E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/minecraft_clone/cmake_install.cmake")
+endif()
+
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
   include("E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/cmake_install.cmake")
 endif()
 

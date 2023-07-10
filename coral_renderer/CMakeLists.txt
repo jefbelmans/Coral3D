@@ -1,9 +1,6 @@
-add_executable(coral_renderer 
-    "main.cpp"
+add_library(coral_renderer
     "coral_window.h"
     "coral_window.cpp"
-    "first_app.h"
-    "first_app.cpp"
     "coral_pipeline.h"
     "coral_pipeline.cpp"
     "coral_device.h"
@@ -35,9 +32,9 @@ add_executable(coral_renderer
     "coral_descriptors.cpp"
 )
 
-add_dependencies(coral_renderer Shaders)
+set(RendererIncludeDir "${CMAKE_CURRENT_SOURCE_DIR}" PARENT_SCOPE)
 
-set_property(TARGET coral_renderer PROPERTY VS_DEBUGGER_WORKING_DIRECTORY "$<TARGET_FILE_DIR:coral_renderer>")
+add_dependencies(coral_renderer Shaders)
 
 ## Shader compilation
 # GLSL
@@ -78,20 +75,3 @@ add_custom_target(
     )
 
 add_dependencies(coral_renderer Shaders)
-
-# add shaders to output dir
-add_custom_command(TARGET coral_renderer POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:coral_renderer>/assets/"
-    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:coral_renderer>/assets/shaders/"
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-        "${PROJECT_SOURCE_DIR}/shaders/compiled/"
-        "$<TARGET_FILE_DIR:coral_renderer>/assets/shaders"
-    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:coral_renderer>/assets/meshes/"
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-        "${PROJECT_SOURCE_DIR}/assets/meshes"
-        "$<TARGET_FILE_DIR:coral_renderer>/assets/meshes"
-        COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:coral_renderer>/assets/textures/"
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-        "${PROJECT_SOURCE_DIR}/assets/textures"
-        "$<TARGET_FILE_DIR:coral_renderer>/assets/textures"
-)

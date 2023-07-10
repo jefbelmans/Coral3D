@@ -78,7 +78,6 @@ namespace coral_3d
 		id_t get_id() const { return id_; }
 
 		std::shared_ptr<coral_mesh> mesh_;
-		glm::vec3 color_{};
 		TransformComponent transform_{};
 
 	private:
