@@ -8,6 +8,7 @@
 
 #include "coral_mesh.h"
 #include "voxel_data.h"
+#include "atlas_generator.h"
 
 class coral_3d::coral_device;
 class chunk final
@@ -22,10 +23,12 @@ public:
 	glm::vec3 get_position() const { return position_; }
 
 private:
-	void add_voxel(glm::vec3 position);
+	void add_block(glm::vec3 position);
 	void build_mesh(coral_3d::coral_device& device);
 
-	std::vector<voxel_data::VoxelFace> faces_{};
+	atlas_generator atlas_generator_{};
+	std::vector<Block> blocks_{};
+	uint32_t num_faces_{};
 
 	std::unordered_map<glm::vec3, bool> voxel_map_;
 

@@ -1,61 +1,78 @@
 # ninja log v5
-65	461	7106873835679722	third_party/GLFW/src/CMakeFiles/glfw.dir/wgl_context.c.obj	3afd0e43a8a16dc7
-13	159	7106873832651373	E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.vert.spv	9a4b34331b5d0f2
-9	147	7106873832513277	E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.frag.spv	ba83fc1d44361fa5
-15	111	7107004432761100	E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/voxel_shader.vert.spv	16847f469f0def3c
-167	1622	7106867895721270	coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj	5b91ae9e0709491
-59	444	7106873835403360	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_thread.c.obj	bff58b93f2a56d1b
+12	161	7107288537240059	E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.vert.spv	9a4b34331b5d0f2
+79	503	7107288540659696	third_party/GLFW/src/CMakeFiles/glfw.dir/wgl_context.c.obj	3afd0e43a8a16dc7
+9	149	7107288537088261	E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.frag.spv	ba83fc1d44361fa5
 2285	2793	7106867905360948	coral_renderer/coral_renderer.exe	92864a5f2f7c8346
-71	442	7106873835433406	third_party/GLFW/src/CMakeFiles/glfw.dir/osmesa_context.c.obj	c429fa4f29a15e5f
-15	113	7106883634974401	E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	319095c1d4500e9c
-11	111	7106883634949393	E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	182e19d82932b3f8
-56	465	7106873835720319	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_time.c.obj	406eae6337b59224
-47	457	7106873835573883	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_init.c.obj	aee4bdf0f24be977
-38	475	7106873835755383	third_party/GLFW/src/CMakeFiles/glfw.dir/monitor.c.obj	c00f6f9bbf18e104
-8	1681	7107060063878665	minecraft_clone/CMakeFiles/minecraft_clone.dir/first_app.cpp.obj	e1882e4a9647373b
-28	467	7106873835694786	third_party/GLFW/src/CMakeFiles/glfw.dir/context.c.obj	1ba1283f035e00a8
-31	488	7106873835942108	third_party/GLFW/src/CMakeFiles/glfw.dir/init.c.obj	5f4a50f3267d8484
-53	473	7106873835735340	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_monitor.c.obj	e5281a6601c9ad8f
-203	1193	7106873843024082	coral_renderer/CMakeFiles/coral_renderer.dir/coral_descriptors.cpp.obj	c662391e5a2d5cb6
-41	474	7106873835730328	third_party/GLFW/src/CMakeFiles/glfw.dir/vulkan.c.obj	d687613254603224
-44	478	7106873835765868	third_party/GLFW/src/CMakeFiles/glfw.dir/window.c.obj	b83095e4b715bc19
-68	492	7106873836027688	third_party/GLFW/src/CMakeFiles/glfw.dir/egl_context.c.obj	720789878af83506
-50	490	7106873835992216	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_joystick.c.obj	155a4d402b926fee
-493	547	7106873836521219	third_party/GLFW/src/glfw3.lib	72cb3f0d3bdbe8a5
-34	488	7106873835922095	third_party/GLFW/src/CMakeFiles/glfw.dir/input.c.obj	ad4c648576f9cac1
-115	846	7107004440106489	coral_renderer/CMakeFiles/coral_renderer.dir/vk_initializers.cpp.obj	eb8072b4ba836b9d
-62	487	7106873835927119	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_window.c.obj	b606f65291c42a2c
-11	111	7107004432761100	E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/voxel_shader.frag.spv	c206f4c21516b9b
-191	774	7106873838839511	coral_renderer/CMakeFiles/coral_renderer.dir/coral_utils.cpp.obj	ad940dc42cf88241
-161	839	7106873839493842	coral_renderer/CMakeFiles/coral_renderer.dir/coral_window.cpp.obj	64bd5f7418955876
-194	1419	7106873845271209	coral_renderer/CMakeFiles/coral_renderer.dir/coral_texture.cpp.obj	794b98674d4a018b
-182	1138	7106873842460186	coral_renderer/CMakeFiles/coral_renderer.dir/coral_renderer.cpp.obj	b604da246ced7299
-188	1087	7106873841959988	coral_renderer/CMakeFiles/coral_renderer.dir/coral_camera.cpp.obj	614c49925260397
-12	1058	7107076961273571	minecraft_clone/CMakeFiles/minecraft_clone.dir/chunk.cpp.obj	785a504661cf292a
-14	869	7107060055781675	minecraft_clone/CMakeFiles/minecraft_clone.dir/voxel_renderer.cpp.obj	51e1bcde404a6192
-120	1547	7107004447127943	coral_renderer/CMakeFiles/coral_renderer.dir/coral_gameobject.cpp.obj	e91c1daf7373c0cf
-22	1560	7106873846680141	third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.obj	90b228a58cfb5773
-127	1594	7107004447604242	coral_renderer/CMakeFiles/coral_renderer.dir/coral_frame_info.cpp.obj	fca11dbf4e05b9f0
-174	1367	7106873844749053	coral_renderer/CMakeFiles/coral_renderer.dir/coral_swapchain.cpp.obj	4b8d23051f1c25e2
-124	1629	7107004447946552	coral_renderer/CMakeFiles/coral_renderer.dir/render_system.cpp.obj	4e458661fcddbdb1
-1058	1352	7107076962311414	minecraft_clone/minecraft_clone.exe	460837c13bca11c9
-25	1447	7106873845564210	third_party/CMakeFiles/tinyobjloader.dir/tinyobjloader/tiny_obj_loader.cc.obj	cc3766067532a1e2
-2188	2263	7107004454020049	coral_renderer/coral_renderer.lib	22d45a2543ff0fdf
-197	1505	7106873846126476	coral_renderer/CMakeFiles/coral_renderer.dir/coral_buffer.cpp.obj	465bd8d331e5d360
-1447	1501	7106873846012140	third_party/tinyobjloader.lib	49f56a18b656ab21
-168	1542	7106873846512945	coral_renderer/CMakeFiles/coral_renderer.dir/coral_device.cpp.obj	83f3a71b3d1f619b
-2	15	0	clean	21a4d0550fd2b6b1
-112	1720	7107004448846566	coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj	2ad3b241ec9556b6
-1560	1603	7106873847053153	third_party/vkbootstrap.lib	70c0e9f308a489de
-117	2187	7107004453509938	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	1dd7ba116b7c3ece
+86	477	7107288540382786	third_party/GLFW/src/CMakeFiles/glfw.dir/osmesa_context.c.obj	c429fa4f29a15e5f
+25	208	7107288537738902	E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/voxel_shader.vert.spv	16847f469f0def3c
+167	1622	7106867895721270	coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj	5b91ae9e0709491
+73	502	7107288540573430	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_thread.c.obj	bff58b93f2a56d1b
+18	174	7107288537381042	E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	319095c1d4500e9c
+16	169	7107288537340967	E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	182e19d82932b3f8
+58	487	7107288540423196	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_init.c.obj	aee4bdf0f24be977
+69	501	7107288540372733	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_time.c.obj	406eae6337b59224
+48	504	7107288540664690	third_party/GLFW/src/CMakeFiles/glfw.dir/monitor.c.obj	c00f6f9bbf18e104
+37	510	7107288540797296	third_party/GLFW/src/CMakeFiles/glfw.dir/context.c.obj	1ba1283f035e00a8
+258	2814	7107288563802728	minecraft_clone/CMakeFiles/minecraft_clone.dir/first_app.cpp.obj	e1882e4a9647373b
+65	507	7107288540725523	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_monitor.c.obj	e5281a6601c9ad8f
+40	495	7107288540573430	third_party/GLFW/src/CMakeFiles/glfw.dir/init.c.obj	5f4a50f3267d8484
+51	508	7107288540755549	third_party/GLFW/src/CMakeFiles/glfw.dir/vulkan.c.obj	d687613254603224
+252	1532	7107288551019040	coral_renderer/CMakeFiles/coral_renderer.dir/coral_descriptors.cpp.obj	c662391e5a2d5cb6
+54	506	7107288540669694	third_party/GLFW/src/CMakeFiles/glfw.dir/window.c.obj	b83095e4b715bc19
+62	509	7107288540765554	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_joystick.c.obj	155a4d402b926fee
+83	509	7107288540785908	third_party/GLFW/src/CMakeFiles/glfw.dir/egl_context.c.obj	720789878af83506
+44	505	7107288540649678	third_party/GLFW/src/CMakeFiles/glfw.dir/input.c.obj	ad4c648576f9cac1
+510	562	7107288541269874	third_party/GLFW/src/glfw3.lib	72cb3f0d3bdbe8a5
+76	507	7107288540674702	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_window.c.obj	b606f65291c42a2c
+218	988	7107288545567689	coral_renderer/CMakeFiles/coral_renderer.dir/vk_initializers.cpp.obj	eb8072b4ba836b9d
+240	824	7107288543940361	coral_renderer/CMakeFiles/coral_renderer.dir/coral_utils.cpp.obj	ad940dc42cf88241
+22	184	7107288537509478	E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/voxel_shader.frag.spv	c206f4c21516b9b
+208	960	7107288545286906	coral_renderer/CMakeFiles/coral_renderer.dir/coral_window.cpp.obj	64bd5f7418955876
+231	1453	7107288550216125	coral_renderer/CMakeFiles/coral_renderer.dir/coral_renderer.cpp.obj	b604da246ced7299
+243	1806	7107288553738257	coral_renderer/CMakeFiles/coral_renderer.dir/coral_texture.cpp.obj	794b98674d4a018b
+237	1361	7107288549301268	coral_renderer/CMakeFiles/coral_renderer.dir/coral_camera.cpp.obj	614c49925260397
+228	1848	7107288554126990	coral_renderer/CMakeFiles/coral_renderer.dir/coral_gameobject.cpp.obj	e91c1daf7373c0cf
+495	2064	7107288556344285	minecraft_clone/CMakeFiles/minecraft_clone.dir/voxel_renderer.cpp.obj	51e1bcde404a6192
+4	1096	7107289336984598	minecraft_clone/CMakeFiles/minecraft_clone.dir/chunk.cpp.obj	785a504661cf292a
+249	1810	7107288553801995	coral_renderer/CMakeFiles/coral_renderer.dir/coral_frame_info.cpp.obj	fca11dbf4e05b9f0
+29	1996	7107288555648430	third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.obj	90b228a58cfb5773
+221	1813	7107288553827021	coral_renderer/CMakeFiles/coral_renderer.dir/coral_swapchain.cpp.obj	4b8d23051f1c25e2
+234	1917	7107288554871224	coral_renderer/CMakeFiles/coral_renderer.dir/render_system.cpp.obj	4e458661fcddbdb1
+32	1842	7107288554091961	third_party/CMakeFiles/tinyobjloader.dir/tinyobjloader/tiny_obj_loader.cc.obj	cc3766067532a1e2
+1096	1381	7107289338007391	minecraft_clone/minecraft_clone.exe	460837c13bca11c9
+246	1903	7107288554724973	coral_renderer/CMakeFiles/coral_renderer.dir/coral_buffer.cpp.obj	465bd8d331e5d360
+2495	2569	7107288561127295	coral_renderer/coral_renderer.lib	22d45a2543ff0fdf
+1842	1893	7107288554544902	third_party/tinyobjloader.lib	49f56a18b656ab21
+215	1990	7107288555597969	coral_renderer/CMakeFiles/coral_renderer.dir/coral_device.cpp.obj	83f3a71b3d1f619b
+212	2036	7107288556063384	coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj	2ad3b241ec9556b6
+9	25	0	clean	21a4d0550fd2b6b1
+1996	2040	7107288556038040	third_party/vkbootstrap.lib	70c0e9f308a489de
+225	2495	7107288560624438	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	1dd7ba116b7c3ece
 174	2285	7106867902328919	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	8a161ac1b163f960
-5	1032	7107060057418415	minecraft_clone/CMakeFiles/minecraft_clone.dir/main.cpp.obj	838eede5482a47f8
-17	911	7107057878183817	minecraft_clone/CMakeFiles/minecraft_clone.dir/voxel_data.cpp.obj	c95e59058c69337d
-13	934	7107077071629002	minecraft_clone/CMakeFiles/minecraft_clone.dir/chunk.cpp.obj	785a504661cf292a
-934	1222	7107077072651982	minecraft_clone/minecraft_clone.exe	460837c13bca11c9
-4	934	7107079413307576	minecraft_clone/CMakeFiles/minecraft_clone.dir/chunk.cpp.obj	785a504661cf292a
-934	1222	7107079414348089	minecraft_clone/minecraft_clone.exe	460837c13bca11c9
-12	958	7107079721677759	minecraft_clone/CMakeFiles/minecraft_clone.dir/chunk.cpp.obj	785a504661cf292a
-958	1247	7107079722718995	minecraft_clone/minecraft_clone.exe	460837c13bca11c9
-12	1046	7107079994429230	minecraft_clone/CMakeFiles/minecraft_clone.dir/chunk.cpp.obj	785a504661cf292a
-1046	1342	7107079995525286	minecraft_clone/minecraft_clone.exe	460837c13bca11c9
+255	2156	7107288557266742	minecraft_clone/CMakeFiles/minecraft_clone.dir/main.cpp.obj	838eede5482a47f8
+477	1970	7107288555405988	minecraft_clone/CMakeFiles/minecraft_clone.dir/voxel_data.cpp.obj	c95e59058c69337d
+31	1183	7107310309297224	minecraft_clone/CMakeFiles/minecraft_clone.dir/atlas_generator.cpp.obj	8a773b33d95615c3
+28	1189	7107310309362811	minecraft_clone/CMakeFiles/minecraft_clone.dir/voxel_renderer.cpp.obj	51e1bcde404a6192
+22	1191	7107310309405719	minecraft_clone/CMakeFiles/minecraft_clone.dir/voxel_data.cpp.obj	c95e59058c69337d
+12	1200	7107310309471718	coral_renderer/CMakeFiles/coral_renderer.dir/coral_texture.cpp.obj	794b98674d4a018b
+1200	1283	7107310309995961	coral_renderer/coral_renderer.lib	22d45a2543ff0fdf
+15	1321	7107310310694988	minecraft_clone/CMakeFiles/minecraft_clone.dir/main.cpp.obj	838eede5482a47f8
+25	1441	7107310311887125	minecraft_clone/CMakeFiles/minecraft_clone.dir/chunk.cpp.obj	785a504661cf292a
+19	1978	7107310317247033	minecraft_clone/CMakeFiles/minecraft_clone.dir/first_app.cpp.obj	e1882e4a9647373b
+1978	2322	7107310318725198	minecraft_clone/minecraft_clone.exe	9271f52edfef5f8b
+12	706	7107311061913934	minecraft_clone/CMakeFiles/minecraft_clone.dir/atlas_generator.cpp.obj	8a773b33d95615c3
+707	983	7107311062809042	minecraft_clone/minecraft_clone.exe	9271f52edfef5f8b
+19	743	7107315874668665	minecraft_clone/CMakeFiles/minecraft_clone.dir/atlas_generator.cpp.obj	8a773b33d95615c3
+743	1107	7107315875619558	minecraft_clone/minecraft_clone.exe	9271f52edfef5f8b
+12	709	7107316621833973	minecraft_clone/CMakeFiles/minecraft_clone.dir/atlas_generator.cpp.obj	8a773b33d95615c3
+710	984	7107316622712774	minecraft_clone/minecraft_clone.exe	9271f52edfef5f8b
+4	707	7107318368774359	minecraft_clone/CMakeFiles/minecraft_clone.dir/atlas_generator.cpp.obj	8a773b33d95615c3
+707	992	7107318369736678	minecraft_clone/minecraft_clone.exe	9271f52edfef5f8b
+13	724	7107318571352924	minecraft_clone/CMakeFiles/minecraft_clone.dir/atlas_generator.cpp.obj	8a773b33d95615c3
+725	1009	7107318572252060	minecraft_clone/minecraft_clone.exe	9271f52edfef5f8b
+11	821	7107318746307527	minecraft_clone/CMakeFiles/minecraft_clone.dir/atlas_generator.cpp.obj	8a773b33d95615c3
+821	1115	7107318747312207	minecraft_clone/minecraft_clone.exe	9271f52edfef5f8b
+12	723	7107319171122319	minecraft_clone/CMakeFiles/minecraft_clone.dir/atlas_generator.cpp.obj	8a773b33d95615c3
+723	1009	7107319172021208	minecraft_clone/minecraft_clone.exe	9271f52edfef5f8b
+12	700	7107319460038087	minecraft_clone/CMakeFiles/minecraft_clone.dir/atlas_generator.cpp.obj	8a773b33d95615c3
+700	960	7107319460894853	minecraft_clone/minecraft_clone.exe	9271f52edfef5f8b

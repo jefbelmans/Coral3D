@@ -418,6 +418,14 @@ build minecraft_clone\CMakeFiles\minecraft_clone.dir\voxel_renderer.cpp.obj: CXX
   TARGET_COMPILE_PDB = minecraft_clone\CMakeFiles\minecraft_clone.dir\
   TARGET_PDB = minecraft_clone\minecraft_clone.pdb
 
+build minecraft_clone\CMakeFiles\minecraft_clone.dir\atlas_generator.cpp.obj: CXX_COMPILER__minecraft_clone_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\minecraft_clone\atlas_generator.cpp || cmake_object_order_depends_target_minecraft_clone
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
+  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\coral_renderer" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  OBJECT_DIR = minecraft_clone\CMakeFiles\minecraft_clone.dir
+  OBJECT_FILE_DIR = minecraft_clone\CMakeFiles\minecraft_clone.dir
+  TARGET_COMPILE_PDB = minecraft_clone\CMakeFiles\minecraft_clone.dir\
+  TARGET_PDB = minecraft_clone\minecraft_clone.pdb
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target minecraft_clone
@@ -426,7 +434,7 @@ build minecraft_clone\CMakeFiles\minecraft_clone.dir\voxel_renderer.cpp.obj: CXX
 #############################################
 # Link the executable minecraft_clone\minecraft_clone.exe
 
-build minecraft_clone\minecraft_clone.exe: CXX_EXECUTABLE_LINKER__minecraft_clone_Release minecraft_clone\CMakeFiles\minecraft_clone.dir\main.cpp.obj minecraft_clone\CMakeFiles\minecraft_clone.dir\first_app.cpp.obj minecraft_clone\CMakeFiles\minecraft_clone.dir\voxel_data.cpp.obj minecraft_clone\CMakeFiles\minecraft_clone.dir\chunk.cpp.obj minecraft_clone\CMakeFiles\minecraft_clone.dir\voxel_renderer.cpp.obj | coral_renderer\coral_renderer.lib third_party\GLFW\src\glfw3.lib third_party\vkbootstrap.lib C$:\VulkanSDK\1.3.250.0\Lib\vulkan-1.lib third_party\tinyobjloader.lib || coral_renderer\coral_renderer.lib third_party\GLFW\src\glfw3.lib third_party\tinyobjloader.lib third_party\vkbootstrap.lib
+build minecraft_clone\minecraft_clone.exe: CXX_EXECUTABLE_LINKER__minecraft_clone_Release minecraft_clone\CMakeFiles\minecraft_clone.dir\main.cpp.obj minecraft_clone\CMakeFiles\minecraft_clone.dir\first_app.cpp.obj minecraft_clone\CMakeFiles\minecraft_clone.dir\voxel_data.cpp.obj minecraft_clone\CMakeFiles\minecraft_clone.dir\chunk.cpp.obj minecraft_clone\CMakeFiles\minecraft_clone.dir\voxel_renderer.cpp.obj minecraft_clone\CMakeFiles\minecraft_clone.dir\atlas_generator.cpp.obj | coral_renderer\coral_renderer.lib third_party\GLFW\src\glfw3.lib third_party\vkbootstrap.lib C$:\VulkanSDK\1.3.250.0\Lib\vulkan-1.lib third_party\tinyobjloader.lib || coral_renderer\coral_renderer.lib third_party\GLFW\src\glfw3.lib third_party\tinyobjloader.lib third_party\vkbootstrap.lib
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -MD
   LINK_FLAGS = /machine:x64 /INCREMENTAL:NO /subsystem:console
   LINK_LIBRARIES = coral_renderer\coral_renderer.lib  third_party\GLFW\src\glfw3.lib  third_party\vkbootstrap.lib  C:\VulkanSDK\1.3.250.0\Lib\vulkan-1.lib  third_party\tinyobjloader.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib

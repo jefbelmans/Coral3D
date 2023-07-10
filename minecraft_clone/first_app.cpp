@@ -125,7 +125,7 @@ void first_app::load_chunks()
 
     atlas_texture_ = coral_texture::create_texture_from_file(
         device_,
-        "assets/textures/uv_checker.jpg",
+        "assets/textures/atlas_texture.png",
         VK_FORMAT_R8G8B8A8_SRGB
     ); 
 }
