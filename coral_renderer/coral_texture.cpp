@@ -188,7 +188,7 @@ void coral_texture::create_image_view(VkFormat format)
 
 void coral_texture::create_texture_sampler()
 {
-	VkSamplerCreateInfo sampler_info{ vkinit::sampler_ci(VK_FILTER_NEAREST, device_.properties.limits.maxSamplerAnisotropy) };
+	VkSamplerCreateInfo sampler_info{ vkinit::sampler_ci(VK_FILTER_NEAREST, 1) };
 	sampler_info.maxLod = static_cast<float>(mip_levels_);
 
 	if (vkCreateSampler(device_.device(), &sampler_info, nullptr, &sampler_) != VK_SUCCESS)

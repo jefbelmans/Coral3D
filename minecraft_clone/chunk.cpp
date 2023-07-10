@@ -37,7 +37,15 @@ void chunk::load(coral_device& device)
 
 void chunk::add_block(glm::vec3 position)
 {
-	auto block = voxel_data::get_block();
+	Block block{};
+
+	if (position.y == 0)
+		block = voxel_data::get_block(BlockType::GRASS_BLOCK);
+	else if (position.y < 4)
+		block = voxel_data::get_block(BlockType::DIRT);
+	else
+		block = voxel_data::get_block(BlockType::STONE);
+
 	int num_deleted_faces{ 0 };
 
 	auto it = block.faces.begin();

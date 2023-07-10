@@ -1,10 +1,47 @@
 #include "voxel_data.h"
 
-Block voxel_data::get_block()
+std::unordered_map<BlockType, std::unordered_map<FaceOrientation, FaceType>> voxel_data::block_face_map_ =
+{
+	{
+		BlockType::GRASS_BLOCK,
+		{
+			{FaceOrientation::FRONT, FaceType::GRASS_SIDE},
+			{FaceOrientation::BACK, FaceType::GRASS_SIDE},
+			{FaceOrientation::LEFT, FaceType::GRASS_SIDE},
+			{FaceOrientation::RIGHT, FaceType::GRASS_SIDE},
+			{FaceOrientation::TOP, FaceType::GRASS_TOP},
+			{FaceOrientation::BOTTOM, FaceType::DIRT}
+		}
+	},
+	{
+		BlockType::OAK_LOG,
+		{
+			{FaceOrientation::FRONT, FaceType::OAK_LOG_SIDE},
+			{FaceOrientation::BACK, FaceType::OAK_LOG_SIDE},
+			{FaceOrientation::LEFT, FaceType::OAK_LOG_SIDE},
+			{FaceOrientation::RIGHT, FaceType::OAK_LOG_SIDE},
+			{FaceOrientation::TOP, FaceType::OAK_LOG_TOP},
+			{FaceOrientation::BOTTOM, FaceType::OAK_LOG_TOP}
+		}
+	},
+	{
+		BlockType::SANDSTONE,
+		{
+			{FaceOrientation::FRONT, FaceType::SANDSTONE_SIDE},
+			{FaceOrientation::BACK, FaceType::SANDSTONE_SIDE},
+			{FaceOrientation::LEFT, FaceType::SANDSTONE_SIDE},
+			{FaceOrientation::RIGHT, FaceType::SANDSTONE_SIDE},
+			{FaceOrientation::TOP, FaceType::SANDSTONE_TOP},
+			{FaceOrientation::BOTTOM, FaceType::SANDSTONE_BOTTOM}
+		}
+	}
+};
+
+Block voxel_data::get_block(const BlockType& block_type)
 {
 	Block block;
-	block.faces = get_faces(FaceType::DIRT);
-	block.type = BlockType::STONE;
+	block.faces = get_faces(block_type);
+	block.type = block_type;
 	return block;
 }
 
@@ -65,11 +102,12 @@ std::vector<uint32_t> voxel_data::get_indices()
 	};
 }
 
-std::vector<VoxelFace> voxel_data::get_faces(FaceType face_type)
+std::vector<VoxelFace> voxel_data::get_faces(const BlockType& block_type)
 {
 	auto verts = get_vertices();
 	auto indices = get_indices();
 
+	// Copy the vertices and indices for each face
 	std::vector<VoxelFace> faces{6};
 	for (int i = 0; i < 6; i++)
 	{
@@ -79,7 +117,13 @@ std::vector<VoxelFace> voxel_data::get_faces(FaceType face_type)
 		faces[i].indices =
 			std::vector<uint32_t>(indices.begin() + (i * 6), indices.begin() + (i * 6) + 6);
 
-		faces[i].type = face_type;
+		if (block_face_map_.find(block_type) == block_face_map_.end())
+		{
+			faces[i].type = static_cast<FaceType>(block_type);
+			continue;
+		}
+
+		faces[i].type = block_face_map_[block_type][static_cast<FaceOrientation>(i)];
 	}
 	return faces;
 }
