@@ -1,6 +1,5 @@
 #include "first_app.h"
 
-#include "KeyboardController.h"
 #include "render_system.h"
 #include "coral_camera.h"
 #include "coral_buffer.h"
@@ -76,13 +75,7 @@ void first_app::run()
     }
 
 	render_system render_system{ device_, renderer_.get_swapchain_render_pass(), global_set_layout->get_descriptor_set_layout() };
-    coral_camera camera{};
-   
-    auto camera_object{ coral_gameobject::create_gameobject() };
-    camera_object.transform_.translation = glm::vec3{ -1.5f, -1.5f, -1.5f };
-    camera_object.transform_.rotation = glm::vec3{ glm::radians(-25.f), glm::radians(45.f), 0.f};
-
-    KeyboardController camera_controller{};
+    coral_camera camera{ {-1.5f, -1.5f, -1.5f} };
 
     auto last_time{ std::chrono::high_resolution_clock::now() };
 
@@ -95,8 +88,7 @@ void first_app::run()
         last_time = current_time;
 
         // MOVE CAMERA
-        camera_controller.move_in_plane_xz(window_.get_glfw_window(), frame_time, camera_object);
-        camera.set_view_yxz(camera_object.transform_.translation, camera_object.transform_.rotation);
+        camera.update_input(window_.get_glfw_window(), frame_time);
 
         float aspect{ renderer_.get_aspect_ratio() };
         camera.set_perspective_projection(glm::radians(60.f), aspect, 0.1f, 1000.f);

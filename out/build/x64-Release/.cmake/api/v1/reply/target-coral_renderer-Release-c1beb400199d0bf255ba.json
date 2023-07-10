@@ -63,7 +63,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd"
+					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD"
 				},
 				{
 					"backtrace" : 5,
@@ -137,8 +137,7 @@
 				27,
 				29,
 				31,
-				33,
-				35
+				33
 			]
 		}
 	],
@@ -150,11 +149,11 @@
 		},
 		{
 			"backtrace" : 3,
-			"id" : "tinyobjloader::@037116246cbfaaeb5504"
+			"id" : "vkbootstrap::@037116246cbfaaeb5504"
 		},
 		{
 			"backtrace" : 3,
-			"id" : "vkbootstrap::@037116246cbfaaeb5504"
+			"id" : "tinyobjloader::@037116246cbfaaeb5504"
 		},
 		{
 			"backtrace" : 3,
@@ -167,11 +166,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd",
+				"fragment" : "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -MD",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
+				"fragment" : "/machine:x64 /INCREMENTAL:NO /subsystem:console",
 				"role" : "flags"
 			},
 			{
@@ -235,8 +234,7 @@
 				27,
 				29,
 				31,
-				33,
-				35
+				33
 			]
 		},
 		{
@@ -259,8 +257,7 @@
 				26,
 				28,
 				30,
-				32,
-				34
+				32
 			]
 		}
 	],
@@ -396,17 +393,6 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "coral_renderer/coral_camera.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "coral_renderer/KeyboardController.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "coral_renderer/KeyboardController.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

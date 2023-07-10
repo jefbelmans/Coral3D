@@ -23,8 +23,6 @@ add_executable(coral_renderer
     "render_system.cpp"
     "coral_camera.h"
     "coral_camera.cpp"
-    "KeyboardController.h"
-    "KeyboardController.cpp"
     "coral_utils.h"
     "coral_utils.cpp"
     "coral_texture.h"
@@ -33,7 +31,9 @@ add_executable(coral_renderer
     "coral_buffer.cpp"
     "coral_frame_info.h"
     "coral_frame_info.cpp"
- "coral_descriptors.h" "coral_descriptors.cpp")
+    "coral_descriptors.h"
+    "coral_descriptors.cpp"
+)
 
 add_dependencies(coral_renderer Shaders)
 

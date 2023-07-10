@@ -36,8 +36,13 @@ void coral_window::init_window()
 	glfwWindowHint(GLFW_RESIZABLE, GLFW_TRUE);
 
 	pWindow_ = glfwCreateWindow(width_, height_, window_name_.c_str(), nullptr, nullptr);
+
+	// Set window user pointer
 	glfwSetWindowUserPointer(pWindow_, this);
 	glfwSetFramebufferSizeCallback(pWindow_, framebuffer_resize_callback);
+
+	// Set mouse input mode
+	glfwSetInputMode(pWindow_, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 }
 
 void coral_window::create_window_surface(VkInstance instance, VkSurfaceKHR* surface)
