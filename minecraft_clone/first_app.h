@@ -7,7 +7,7 @@
 #include "coral_descriptors.h"
 #include "coral_texture.h"
 
-#include "chunk.h"
+#include "world_generator.h"
 
 // STD
 #include <memory>
@@ -30,7 +30,7 @@ namespace coral_3d
 		void run();
 
 	private:
-		void load_chunks();
+		void generate_world();
 
 		coral_window window_{ WIDTH, HEIGHT, "Coral Renderer" };
 		coral_device device_{ window_ };
@@ -39,6 +39,6 @@ namespace coral_3d
 		std::unique_ptr<coral_texture> atlas_texture_;
 		std::unique_ptr<coral_descriptor_pool> global_descriptor_pool_{};
 
-		std::vector<chunk> chunks_;
+		world_generator world_generator_{device_};
 	};
 }

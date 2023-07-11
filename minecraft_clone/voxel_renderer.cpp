@@ -10,7 +10,7 @@ using namespace coral_3d;
 
 struct PushConstant
 {
-	glm::vec3 position;
+	glm::vec2 position;
 };
 
 voxel_renderer::voxel_renderer(coral_device& device, VkRenderPass render_pass, VkDescriptorSetLayout global_set_layout)
@@ -42,7 +42,7 @@ void voxel_renderer::render_chunks(VoxelRenderInfo& render_info)
 
 	for (auto& chunk : render_info.chunks)
 	{
-		PushConstant push{ chunk.get_position() };
+		PushConstant push{ chunk.get_world_position() };
 		vkCmdPushConstants(
 			render_info.command_buffer,
 			pipeline_layout_,

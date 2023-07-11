@@ -8,7 +8,8 @@
 
 using namespace coral_3d;
 
-chunk::chunk(coral_3d::coral_device& device)
+chunk::chunk(coral_3d::coral_device& device, ChunkPosition position)
+	: position_{ position }
 {
 	load(device);
 }
@@ -18,7 +19,7 @@ void chunk::load(coral_device& device)
 	for (int y = 0; y < chunk_height_; y++)
 		for (int x = 0; x < chunk_width_; x++)
 			for (int z = 0; z < chunk_width_; z++)
-				voxel_map_[{ x,y,z }] = true;
+				voxel_map_[{ x,y,z }] = BlockType::STONE;
 
 	for (int y = 0; y < chunk_height_; y++)
 		for (int x = 0; x < chunk_width_; x++)
@@ -27,12 +28,10 @@ void chunk::load(coral_device& device)
 
 	build_mesh(device);
 
-	std::cout << "Built chunk with:\n\t"
-		<< num_faces_ << " faces\n\t"
-		<< num_faces_ * 2 << " triangles\n\t"
-		<< blocks_.size() << " blocks\n";
-
-	position_ = glm::vec3{ 0.f };
+	//std::cout << "Built chunk with:\n\t"
+	//	<< num_faces_ << " faces\n\t"
+	//	<< num_faces_ * 2 << " triangles\n\t"
+	//	<< blocks_.size() << " blocks\n";
 }
 
 void chunk::add_block(glm::vec3 position)
@@ -52,7 +51,7 @@ void chunk::add_block(glm::vec3 position)
 	while (it != block.faces.end())
 	{
 		// Check if there is a voxel adjecent to this face
-		if (voxel_map_.contains(position + it->vertices[0].normal))
+		if (voxel_map_.contains(position + it->vertices[0].normal) && voxel_map_[position + it->vertices[0].normal] != BlockType::AIR)
 		{
 			// If there is, delete this face
 			it = block.faces.erase(it);
@@ -73,7 +72,7 @@ void chunk::add_block(glm::vec3 position)
 		++it;
 	}
 
-	atlas_generator_.calculate_uvs(block);
+	atlas_generator::calculate_uvs(block);
 
 	num_faces_ += block.faces.size();
 	blocks_.emplace_back(block);
@@ -81,17 +80,14 @@ void chunk::add_block(glm::vec3 position)
 
 void chunk::build_mesh(coral_device& device)
 {
-	std::vector<Vertex> vertices;
-	std::vector<uint32_t> indices;
-
 	for (const auto& block : blocks_)
 	{
 		for (const auto& face : block.faces)
 		{
-			vertices.insert(vertices.end(), face.vertices.begin(), face.vertices.end());
-			indices.insert(indices.end(), face.indices.begin(), face.indices.end());
+			vertices_.insert(vertices_.end(), face.vertices.begin(), face.vertices.end());
+			indices_.insert(indices_.end(), face.indices.begin(), face.indices.end());
 		}
 	}
 
-	mesh_ = coral_mesh::create_mesh_from_vertices(device, vertices, indices);
+	mesh_ = coral_mesh::create_mesh_from_vertices(device, vertices_, indices_);
 }

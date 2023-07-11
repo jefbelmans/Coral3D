@@ -10,31 +10,40 @@
 #include "voxel_data.h"
 #include "atlas_generator.h"
 
+struct ChunkPosition
+{
+	glm::vec2 position{ 0, 0 };
+};
+
 class coral_3d::coral_device;
 class chunk final
 {
 public:
-	chunk(coral_3d::coral_device& device);
+	chunk(coral_3d::coral_device& device, ChunkPosition position);
 	~chunk() = default;
 
 	void load(coral_3d::coral_device& device);
 
 	coral_3d::coral_mesh* get_mesh() const { return mesh_.get(); }
-	glm::vec3 get_position() const { return position_; }
+	glm::vec2 get_world_position() const { return { position_.position.x * chunk_width_, position_.position.y * chunk_width_ }; }
+
+	std::vector<coral_3d::Vertex> get_vertices() const { return vertices_; }
+	std::vector<uint32_t> get_indices() const { return indices_; }
 
 private:
 	void add_block(glm::vec3 position);
 	void build_mesh(coral_3d::coral_device& device);
 
-	atlas_generator atlas_generator_{};
 	std::vector<Block> blocks_{};
 	uint32_t num_faces_{};
 
-	std::unordered_map<glm::vec3, bool> voxel_map_;
-
 	std::shared_ptr<coral_3d::coral_mesh> mesh_;
-	glm::vec3 position_{0.f};
+	std::unordered_map<glm::vec3, BlockType> voxel_map_;
+	ChunkPosition position_{};
+
+	std::vector<coral_3d::Vertex> vertices_{};
+	std::vector<uint32_t> indices_{};
 
 	const uint16_t chunk_width_{ 16 };
-	const uint16_t chunk_height_{ 64 };
+	const uint16_t chunk_height_{ 32 };
 };

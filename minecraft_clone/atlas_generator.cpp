@@ -2,6 +2,8 @@
 
 #include "voxel_data.h"
 
+const float atlas_generator::tile_size_{ 1.f / blocks_per_row_ };
+
 void atlas_generator::calculate_uvs(Block& block)
 {
 	for (auto& face : block.faces)

@@ -15,12 +15,12 @@ layout(set = 0, binding = 0) uniform GlobalUBO
 
 layout (push_constant) uniform Push
 {
-   vec3 position;
+   vec2 position;
 } push;
 
 void main()
 {
-	gl_Position = ubo.viewProjection * vec4(posistion + push.position, 1.f);
+	gl_Position = ubo.viewProjection * vec4(posistion + vec3(push.position.x, 0.f, push.position.y), 1.f);
 
 	fragTexCoord = texCoord;
 	fragNormal = normal;

@@ -32,7 +32,7 @@ first_app::first_app()
         .add_pool_size(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, coral_swapchain::MAX_FRAMES_IN_FLIGHT)
         .build();
 
-	load_chunks();
+	generate_world();
 }
 
 first_app::~first_app()
@@ -94,11 +94,11 @@ void first_app::run()
 
             VoxelRenderInfo render_info
             {
-				frame_index,
-				frame_time,
-				command_buffer,
-				global_descriptor_sets[frame_index],
-                chunks_
+                frame_index,
+                frame_time,
+                command_buffer,
+                global_descriptor_sets[frame_index],
+                world_generator_.get_chunks()
 			};
 
             // UPDATE GLOBAL UBO
@@ -118,10 +118,9 @@ void first_app::run()
 	vkDeviceWaitIdle(device_.device());
 }
 
-void first_app::load_chunks()
+void first_app::generate_world()
 {
-    chunk chunk{ device_ };
-    chunks_.emplace_back(chunk);
+    world_generator_.generate_world();
 
     atlas_texture_ = coral_texture::create_texture_from_file(
         device_,
