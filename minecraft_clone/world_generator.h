@@ -18,5 +18,5 @@ private:
 	coral_3d::coral_device& device_;
 	std::vector<chunk> chunks_{};
 
-	const uint32_t world_size_{ 2 };
+	const uint32_t world_size_{ 32 };
 };

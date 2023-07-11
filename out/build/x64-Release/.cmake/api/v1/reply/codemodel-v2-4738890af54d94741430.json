@@ -164,7 +164,7 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "coral_renderer::@189d46817749ee15bd40",
-					"jsonFile" : "target-coral_renderer-Release-50efa119b4f0c302455f.json",
+					"jsonFile" : "target-coral_renderer-Release-0c8d8dbe26c9123fbc60.json",
 					"name" : "coral_renderer",
 					"projectIndex" : 0
 				},
@@ -178,7 +178,7 @@
 				{
 					"directoryIndex" : 2,
 					"id" : "minecraft_clone::@c307b48454f3344e687f",
-					"jsonFile" : "target-minecraft_clone-Release-653a7aceb6a21919938f.json",
+					"jsonFile" : "target-minecraft_clone-Release-e61fe1c7b926adbbfa1d.json",
 					"name" : "minecraft_clone",
 					"projectIndex" : 0
 				},

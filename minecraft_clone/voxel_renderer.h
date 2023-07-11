@@ -18,7 +18,7 @@ struct VoxelRenderInfo
 	float frame_time{};
 	VkCommandBuffer command_buffer{};
 	VkDescriptorSet global_descriptor_set{};
-	std::vector<chunk> chunks{};
+	std::vector<chunk>& chunks;
 };
 
 class voxel_renderer final

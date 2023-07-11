@@ -52,9 +52,7 @@ VkFormat coral_swapchain::find_depth_format()
 
 VkResult coral_swapchain::aqcuire_next_image(uint32_t* image_index)
 {
-	// NOTE: as of 04/07, vkDeviceWaitIdle is about 3% faster when rendering a single triangle.
-	vkDeviceWaitIdle(device_.device());
-	// vkWaitForFences(device_.device(), 1, &get_current_frame().render_fence, VK_TRUE, UINT64_MAX);
+	vkWaitForFences(device_.device(), 1, &get_current_frame().render_fence, VK_TRUE, UINT64_MAX);
 	vkResetFences(device_.device(), 1, &get_current_frame().render_fence);
 
 	VkResult result = vkAcquireNextImageKHR(
@@ -400,7 +398,7 @@ VkPresentModeKHR coral_swapchain::choose_present_mode(const std::vector<VkPresen
 		if (available_present_mode == VK_PRESENT_MODE_MAILBOX_KHR)
 		{
 			std::cout << "Present mode: Mailbox" << std::endl;
-			return available_present_mode;
+			return VK_PRESENT_MODE_MAILBOX_KHR;
 		}
 	}
 }

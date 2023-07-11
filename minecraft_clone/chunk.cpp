@@ -46,7 +46,6 @@ void chunk::add_block(glm::vec3 position)
 		block = voxel_data::get_block(BlockType::STONE);
 
 	int num_deleted_faces{ 0 };
-
 	auto it = block.faces.begin();
 	while (it != block.faces.end())
 	{
@@ -67,27 +66,21 @@ void chunk::add_block(glm::vec3 position)
 
 		for (auto& index : it->indices)
 		{
-			index += (num_faces_ * 4) - (num_deleted_faces * 4);
+			index += vertices_.size() - (num_deleted_faces * 4);
 		}
 		++it;
 	}
 
 	atlas_generator::calculate_uvs(block);
-
-	num_faces_ += block.faces.size();
-	blocks_.emplace_back(block);
+	for (auto& face : block.faces)
+	{
+		vertices_.insert(vertices_.end(), face.vertices.begin(), face.vertices.end());
+		indices_.insert(indices_.end(), face.indices.begin(), face.indices.end());
+	}
 }
 
 void chunk::build_mesh(coral_device& device)
 {
-	for (const auto& block : blocks_)
-	{
-		for (const auto& face : block.faces)
-		{
-			vertices_.insert(vertices_.end(), face.vertices.begin(), face.vertices.end());
-			indices_.insert(indices_.end(), face.indices.begin(), face.indices.end());
-		}
-	}
-
+	// mesh_ = coral_mesh::create_mesh_from_file(device, "assets/meshes/room.obj");
 	mesh_ = coral_mesh::create_mesh_from_vertices(device, vertices_, indices_);
 }

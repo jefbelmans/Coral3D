@@ -34,16 +34,14 @@ private:
 	void add_block(glm::vec3 position);
 	void build_mesh(coral_3d::coral_device& device);
 
-	std::vector<Block> blocks_{};
-	uint32_t num_faces_{};
-
 	std::shared_ptr<coral_3d::coral_mesh> mesh_;
-	std::unordered_map<glm::vec3, BlockType> voxel_map_;
-	ChunkPosition position_{};
-
 	std::vector<coral_3d::Vertex> vertices_{};
 	std::vector<uint32_t> indices_{};
 
+	std::unordered_map<glm::vec3, BlockType> voxel_map_;
+
+	ChunkPosition position_{};
+	
 	const uint16_t chunk_width_{ 16 };
 	const uint16_t chunk_height_{ 32 };
 };
