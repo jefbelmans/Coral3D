@@ -3,45 +3,24 @@
 // STD
 #include <unordered_map>
 
+// Libs
 #define GLM_ENABLE_EXPERIMENTAL
 #include <gtx/hash.hpp>
 
+// Coral
 #include "coral_mesh.h"
 #include "voxel_data.h"
-#include "atlas_generator.h"
 
-struct ChunkPosition
+struct Chunk
 {
-	glm::vec2 position{ 0, 0 };
-};
+	glm::ivec2 coord{};
+	glm::vec2 world_position{};
 
-class coral_3d::coral_device;
-class chunk final
-{
-public:
-	chunk(coral_3d::coral_device& device, ChunkPosition position);
-	~chunk() = default;
+	bool is_active{ false };
 
-	void load(coral_3d::coral_device& device);
+	std::shared_ptr<coral_3d::coral_mesh> mesh{};
+	std::vector<coral_3d::Vertex> vertices{};
+	std::vector<uint32_t> indices{};
 
-	coral_3d::coral_mesh* get_mesh() const { return mesh_.get(); }
-	glm::vec2 get_world_position() const { return { position_.position.x * chunk_width_, position_.position.y * chunk_width_ }; }
-
-	std::vector<coral_3d::Vertex> get_vertices() const { return vertices_; }
-	std::vector<uint32_t> get_indices() const { return indices_; }
-
-private:
-	void add_block(glm::vec3 position);
-	void build_mesh(coral_3d::coral_device& device);
-
-	std::shared_ptr<coral_3d::coral_mesh> mesh_;
-	std::vector<coral_3d::Vertex> vertices_{};
-	std::vector<uint32_t> indices_{};
-
-	std::unordered_map<glm::vec3, BlockType> voxel_map_;
-
-	ChunkPosition position_{};
-	
-	const uint16_t chunk_width_{ 16 };
-	const uint16_t chunk_height_{ 32 };
+	std::unordered_map<glm::vec3, Block> block_map{};
 };

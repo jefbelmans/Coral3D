@@ -176,8 +176,6 @@ std::unique_ptr<coral_mesh> coral_mesh::create_mesh_from_vertices(coral_device& 
     builder.vertices = vertices;
     builder.indices = indices;
 
-    std::cout << "Loaded mesh with " << builder.vertices.size() << " vertices and " << builder.indices.size() << " indices\n";
-
     return std::make_unique<coral_mesh>(device, builder);
 }
 

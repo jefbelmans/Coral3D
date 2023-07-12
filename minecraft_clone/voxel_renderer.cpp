@@ -42,15 +42,17 @@ void voxel_renderer::render_chunks(VoxelRenderInfo& render_info)
 
 	for (auto& chunk : render_info.chunks)
 	{
-		PushConstant push{ chunk.get_world_position() };
+		if (!chunk.is_active) continue;
+
+		PushConstant push{ chunk.world_position };
 		vkCmdPushConstants(
 			render_info.command_buffer,
 			pipeline_layout_,
 			VK_SHADER_STAGE_VERTEX_BIT,
 			0, sizeof(PushConstant), &push);
 
-		chunk.get_mesh()->bind(render_info.command_buffer);
-		chunk.get_mesh()->draw(render_info.command_buffer);
+		chunk.mesh->bind(render_info.command_buffer);
+		chunk.mesh->draw(render_info.command_buffer);
 	}
 }
 

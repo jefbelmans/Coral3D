@@ -69,7 +69,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD"
+					"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -std:c++latest -MDd"
 				},
 				{
 					"backtrace" : 5,
@@ -134,10 +134,9 @@
 				0,
 				2,
 				4,
-				6,
-				8,
-				10,
-				12
+				7,
+				9,
+				11
 			]
 		}
 	],
@@ -145,19 +144,19 @@
 	[
 		{
 			"backtrace" : 3,
-			"id" : "coral_renderer::@189d46817749ee15bd40"
-		},
-		{
-			"backtrace" : 3,
 			"id" : "vkbootstrap::@037116246cbfaaeb5504"
 		},
 		{
 			"backtrace" : 3,
-			"id" : "glfw::@6b3fa3a0e2a82742d65f"
+			"id" : "tinyobjloader::@037116246cbfaaeb5504"
 		},
 		{
 			"backtrace" : 3,
-			"id" : "tinyobjloader::@037116246cbfaaeb5504"
+			"id" : "coral_renderer::@189d46817749ee15bd40"
+		},
+		{
+			"backtrace" : 3,
+			"id" : "glfw::@6b3fa3a0e2a82742d65f"
 		}
 	],
 	"id" : "minecraft_clone::@c307b48454f3344e687f",
@@ -166,11 +165,11 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "/DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -MD",
+				"fragment" : "/DWIN32 /D_WINDOWS /EHsc /Zi /Ob0 /Od /RTC1 -MDd",
 				"role" : "flags"
 			},
 			{
-				"fragment" : "/machine:x64 /INCREMENTAL:NO /subsystem:console",
+				"fragment" : "/machine:x64 /debug /INCREMENTAL /subsystem:console",
 				"role" : "flags"
 			},
 			{
@@ -221,10 +220,9 @@
 				0,
 				2,
 				4,
-				6,
-				8,
-				10,
-				12
+				7,
+				9,
+				11
 			]
 		},
 		{
@@ -234,9 +232,9 @@
 				1,
 				3,
 				5,
-				7,
-				9,
-				11
+				6,
+				8,
+				10
 			]
 		}
 	],
@@ -274,12 +272,6 @@
 			"backtrace" : 1,
 			"path" : "minecraft_clone/chunk.h",
 			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "minecraft_clone/chunk.cpp",
-			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,

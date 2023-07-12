@@ -13,7 +13,7 @@
 						3
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.22"
@@ -23,7 +23,7 @@
 				},
 				{
 					"build" : "coral_renderer",
-					"jsonFile" : "directory-coral_renderer-Debug-5392f6549fb2d15b5d89.json",
+					"jsonFile" : "directory-coral_renderer-Release-5392f6549fb2d15b5d89.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.22"
@@ -39,7 +39,7 @@
 				},
 				{
 					"build" : "minecraft_clone",
-					"jsonFile" : "directory-minecraft_clone-Debug-a007271c6433468493b1.json",
+					"jsonFile" : "directory-minecraft_clone-Release-a007271c6433468493b1.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.22"
@@ -59,7 +59,7 @@
 						4
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-third_party-Debug-a2e0515af5b7021cdaa7.json",
+					"jsonFile" : "directory-third_party-Release-a2e0515af5b7021cdaa7.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.22"
@@ -80,7 +80,7 @@
 						5
 					],
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-third_party.GLFW-Debug-44546723a91b3dfe8b7e.json",
+					"jsonFile" : "directory-third_party.GLFW-Release-965f373e01ef804ee2f6.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.0"
@@ -96,7 +96,7 @@
 				{
 					"build" : "third_party/GLFW/src",
 					"hasInstallRule" : true,
-					"jsonFile" : "directory-third_party.GLFW.src-Debug-e72c77e1531284212406.json",
+					"jsonFile" : "directory-third_party.GLFW.src-Release-e72c77e1531284212406.json",
 					"minimumCMakeVersion" : 
 					{
 						"string" : "3.0"
@@ -111,7 +111,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "Release",
 			"projects" : 
 			[
 				{
@@ -157,56 +157,56 @@
 				{
 					"directoryIndex" : 1,
 					"id" : "Shaders::@189d46817749ee15bd40",
-					"jsonFile" : "target-Shaders-Debug-2ea7061bc60c9cc182c4.json",
+					"jsonFile" : "target-Shaders-Release-9fbfdd16956a504e159a.json",
 					"name" : "Shaders",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 1,
 					"id" : "coral_renderer::@189d46817749ee15bd40",
-					"jsonFile" : "target-coral_renderer-Debug-03cce6e0f82ddabac0e3.json",
+					"jsonFile" : "target-coral_renderer-Release-50efa119b4f0c302455f.json",
 					"name" : "coral_renderer",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "glfw::@6b3fa3a0e2a82742d65f",
-					"jsonFile" : "target-glfw-Debug-4875d76217a3cc3e16bd.json",
+					"jsonFile" : "target-glfw-Release-08ea47fc045d9da24acc.json",
 					"name" : "glfw",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 2,
 					"id" : "minecraft_clone::@c307b48454f3344e687f",
-					"jsonFile" : "target-minecraft_clone-Debug-cf87973255a4fbf113ee.json",
+					"jsonFile" : "target-minecraft_clone-Release-d9c1a49af7651be1ed8d.json",
 					"name" : "minecraft_clone",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "tinyobjloader::@037116246cbfaaeb5504",
-					"jsonFile" : "target-tinyobjloader-Debug-1049ff0768a9616ac03c.json",
+					"jsonFile" : "target-tinyobjloader-Release-c2164b8c0a3851f7d16a.json",
 					"name" : "tinyobjloader",
 					"projectIndex" : 0
 				},
 				{
 					"directoryIndex" : 4,
 					"id" : "uninstall::@b66b4eee910d15aad27b",
-					"jsonFile" : "target-uninstall-Debug-1b49ba37cfe0ecec38f3.json",
+					"jsonFile" : "target-uninstall-Release-eb8d1b23628a7a9f5c2e.json",
 					"name" : "uninstall",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 5,
 					"id" : "update_mappings::@6b3fa3a0e2a82742d65f",
-					"jsonFile" : "target-update_mappings-Debug-80736d08c085980836ac.json",
+					"jsonFile" : "target-update_mappings-Release-f980ad85bed044e3fba9.json",
 					"name" : "update_mappings",
 					"projectIndex" : 1
 				},
 				{
 					"directoryIndex" : 3,
 					"id" : "vkbootstrap::@037116246cbfaaeb5504",
-					"jsonFile" : "target-vkbootstrap-Debug-440335b4e785be7f7df4.json",
+					"jsonFile" : "target-vkbootstrap-Release-7043cbe4b1535d8ba85d.json",
 					"name" : "vkbootstrap",
 					"projectIndex" : 0
 				}
@@ -216,7 +216,7 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Debug",
+		"build" : "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release",
 		"source" : "E:/Game Development/Visual Studio Solutions/Coral3D"
 	},
 	"version" : 

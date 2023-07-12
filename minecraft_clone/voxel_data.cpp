@@ -42,6 +42,7 @@ Block voxel_data::get_block(const BlockType& block_type)
 	Block block;
 	block.faces = get_faces(block_type);
 	block.type = block_type;
+	block.is_transparent = block_type == BlockType::AIR || block_type == BlockType::WATER;
 	return block;
 }
 
@@ -117,13 +118,15 @@ std::vector<VoxelFace> voxel_data::get_faces(const BlockType& block_type)
 		faces[i].indices =
 			std::vector<uint32_t>(indices.begin() + (i * 6), indices.begin() + (i * 6) + 6);
 
+		// If the block type is not in the map, it has the same texture on all faces
 		if (block_face_map_.find(block_type) == block_face_map_.end())
 		{
 			faces[i].type = static_cast<FaceType>(block_type);
 			continue;
 		}
 
+		// If the block type is in the map, use the face types from the map
 		faces[i].type = block_face_map_[block_type][static_cast<FaceOrientation>(i)];
 	}
-	return faces;
+	return std::move(faces);
 }

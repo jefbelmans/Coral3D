@@ -21,8 +21,8 @@
 		"commands" : 
 		[
 			"add_library",
-			"add_dependencies",
 			"target_link_libraries",
+			"add_dependencies",
 			"add_compile_options"
 		],
 		"files" : 
@@ -42,25 +42,25 @@
 				"parent" : 0
 			},
 			{
+				"file" : 1
+			},
+			{
 				"command" : 1,
+				"file" : 1,
+				"line" : 23,
+				"parent" : 2
+			},
+			{
+				"command" : 2,
 				"file" : 0,
 				"line" : 37,
 				"parent" : 0
 			},
 			{
-				"file" : 1
-			},
-			{
-				"command" : 2,
-				"file" : 1,
-				"line" : 23,
-				"parent" : 3
-			},
-			{
 				"command" : 3,
 				"file" : 1,
 				"line" : 9,
-				"parent" : 3
+				"parent" : 2
 			}
 		]
 	},
@@ -81,38 +81,38 @@
 					"fragment" : "/WX"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"fragment" : "/w"
 				}
 			],
 			"includes" : 
 			[
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "E:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "E:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "E:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "E:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "E:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"path" : "E:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
 				},
 				{
-					"backtrace" : 4,
+					"backtrace" : 3,
 					"isSystem" : true,
 					"path" : "C:/VulkanSDK/1.3.250.0/Include"
 				}
@@ -149,19 +149,19 @@
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 2,
-			"id" : "Shaders::@189d46817749ee15bd40"
-		},
-		{
-			"backtrace" : 4,
+			"backtrace" : 3,
 			"id" : "vkbootstrap::@037116246cbfaaeb5504"
 		},
 		{
-			"backtrace" : 4,
+			"backtrace" : 3,
 			"id" : "tinyobjloader::@037116246cbfaaeb5504"
 		},
 		{
 			"backtrace" : 4,
+			"id" : "Shaders::@189d46817749ee15bd40"
+		},
+		{
+			"backtrace" : 3,
 			"id" : "glfw::@6b3fa3a0e2a82742d65f"
 		}
 	],

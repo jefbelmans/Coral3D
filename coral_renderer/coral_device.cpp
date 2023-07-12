@@ -234,7 +234,7 @@ void coral_device::transition_image_layout(VkImage image, VkFormat format, VkIma
 
 void coral_device::create_instance()
 {
-    std::cout << "Creating instance...\n";
+    std::cout << "Booting up Vulkan...\n\n";
 
     vkb::InstanceBuilder builder;
     auto instance_desc = builder.set_app_name("coral_renderer")
@@ -444,21 +444,21 @@ void coral_device::has_glfw_required_instance_extensions()
     std::vector<VkExtensionProperties> extensions(extension_count);
     vkEnumerateInstanceExtensionProperties(nullptr, &extension_count, extensions.data());
 
-    std::cout << "available extensions:" << std::endl;
+    // std::cout << "available extensions:" << std::endl;
     std::unordered_set<std::string> available;
 
     for (const auto& extension : extensions)
     {
-        std::cout << "\t" << extension.extensionName << std::endl;
+        // std::cout << "\t" << extension.extensionName << std::endl;
         available.insert(extension.extensionName);
     }
 
-    std::cout << "required extensions:" << std::endl;
+    // std::cout << "required extensions:" << std::endl;
     auto required_extensions = get_required_extensions();
 
     for (const auto& required : required_extensions)
     {
-        std::cout << "\t" << required << std::endl;
+       //  std::cout << "\t" << required << std::endl;
         if (available.find(required) == available.end())
         {
             throw std::runtime_error(

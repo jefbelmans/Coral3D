@@ -84,8 +84,8 @@ void coral_camera::update_input(GLFWwindow* pWindow, float dt)
 	if(glfwGetKey(pWindow, keys_.move_left) == GLFW_PRESS) position_ -= right_ * velocity;
 	if(glfwGetKey(pWindow, keys_.move_right) == GLFW_PRESS) position_ += right_ * velocity;
 
-	if(glfwGetKey(pWindow, keys_.move_up) == GLFW_PRESS) position_ += up_ * velocity;
-	if(glfwGetKey(pWindow, keys_.move_down) == GLFW_PRESS) position_ -= up_ * velocity;
+	if(glfwGetKey(pWindow, keys_.move_up) == GLFW_PRESS) position_ -= up_ * velocity;
+	if(glfwGetKey(pWindow, keys_.move_down) == GLFW_PRESS) position_ += up_ * velocity;
 }
 
 void coral_camera::update_camera_vectors()

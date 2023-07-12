@@ -13,10 +13,26 @@ public:
 
 	void generate_world();
 
-	std::vector<chunk>& get_chunks() { return chunks_; }
+	std::vector<Chunk>& get_chunks() { return chunks_; }
 private:
-	coral_3d::coral_device& device_;
-	std::vector<chunk> chunks_{};
 
-	const uint32_t world_size_{ 32 };
+	Chunk generate_chunk(const glm::ivec2& coord);
+	Block generate_block(const glm::vec3& position);
+	void build_chunk(const glm::ivec2& coord, Chunk& chunk);
+
+	bool calculate_block_faces(const glm::vec3& position, Chunk& chunk);
+	void build_chunk_mesh(Chunk& chunk);
+
+	Chunk* get_chunk_at_coord(const glm::ivec2& coord);
+	Chunk* get_chunk_at_position(const glm::vec3& position);
+
+	Block* get_block_at_position(const glm::vec3& position);
+
+	coral_3d::coral_device& device_;
+	std::vector<Chunk> chunks_{};
+
+	const uint32_t world_size_{ 16 };
+	const uint16_t render_distance_{ 2 }; // In chunks, in each direction (render_distance * 2 + 1)
+	const uint16_t chunk_size_{ 16 };
+	const uint16_t world_height_{ 32 };
 };

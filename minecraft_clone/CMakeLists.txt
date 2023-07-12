@@ -5,10 +5,13 @@ add_executable(minecraft_clone
     "voxel_data.h"
     "voxel_data.cpp"
     "chunk.h"
-    "chunk.cpp"
     "voxel_renderer.h"
     "voxel_renderer.cpp"
- "atlas_generator.h" "atlas_generator.cpp" "world_generator.h" "world_generator.cpp")
+    "atlas_generator.h"
+    "atlas_generator.cpp"
+    "world_generator.h"
+    "world_generator.cpp"
+)
 
 set_property(TARGET coral_renderer PROPERTY VS_DEBUGGER_WORKING_DIRECTORY "$<TARGET_FILE_DIR:minecraft_clone>")
 

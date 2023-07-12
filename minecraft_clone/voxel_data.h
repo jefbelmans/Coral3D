@@ -71,6 +71,7 @@ struct Block
 class voxel_data final
 {
 public:
+
 	static Block get_block(const BlockType& block_type);
 
 private:

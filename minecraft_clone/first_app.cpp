@@ -70,7 +70,7 @@ void first_app::run()
     }
 
 	voxel_renderer render_system{ device_, renderer_.get_swapchain_render_pass(), global_set_layout->get_descriptor_set_layout() };
-    coral_camera camera{ {0.f, 0.f, -2.f} };
+    coral_camera camera{ {0.f, -2.f, 0.f} };
 
     auto last_time{ std::chrono::high_resolution_clock::now() };
 
@@ -106,6 +106,9 @@ void first_app::run()
             ubo.view_projeciton = camera.get_projection() * camera.get_view();
             global_ubo.write_to_index(&ubo, frame_index);
             global_ubo.flush_index(frame_index);
+
+            // UPDATE CHUNKS
+           // world_generator_.update_chunks(camera.get_position());
 
             // RENDER
 			renderer_.begin_swapchain_render_pass(command_buffer);

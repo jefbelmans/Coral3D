@@ -158,11 +158,11 @@
 		},
 		{
 			"backtrace" : 4,
-			"id" : "glfw::@6b3fa3a0e2a82742d65f"
+			"id" : "tinyobjloader::@037116246cbfaaeb5504"
 		},
 		{
 			"backtrace" : 4,
-			"id" : "tinyobjloader::@037116246cbfaaeb5504"
+			"id" : "glfw::@6b3fa3a0e2a82742d65f"
 		}
 	],
 	"id" : "coral_renderer::@189d46817749ee15bd40",
