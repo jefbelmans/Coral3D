@@ -14,7 +14,7 @@
 struct Chunk
 {
 	glm::ivec2 coord{};
-	glm::vec2 world_position{};
+	glm::ivec2 world_position{};
 
 	bool is_active{ false };
 

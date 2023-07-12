@@ -12,6 +12,7 @@ public:
 	~world_generator() = default;
 
 	void generate_world();
+	void update_world(const glm::vec3& position);
 
 	std::vector<Chunk>& get_chunks() { return chunks_; }
 private:
@@ -32,7 +33,7 @@ private:
 	std::vector<Chunk> chunks_{};
 
 	const uint32_t world_size_{ 16 };
-	const uint16_t render_distance_{ 2 }; // In chunks, in each direction (render_distance * 2 + 1)
+	const uint16_t render_distance_{ 2w }; // In chunks, in each direction (render_distance * 2 + 1)
 	const uint16_t chunk_size_{ 16 };
 	const uint16_t world_height_{ 32 };
 };
