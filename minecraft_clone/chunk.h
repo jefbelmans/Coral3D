@@ -22,5 +22,5 @@ struct Chunk
 	std::vector<coral_3d::Vertex> vertices{};
 	std::vector<uint32_t> indices{};
 
-	std::unordered_map<glm::vec3, Block> block_map{};
+	std::unordered_map<glm::vec3, BlockType> block_map{};
 };

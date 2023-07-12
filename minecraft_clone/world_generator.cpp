@@ -20,31 +20,18 @@ void world_generator::generate_world()
 	
 	// First generate all the chunks
 	for (int x = -render_distance_; x <= render_distance_; x++)
-	{
 		for (int z = -render_distance_; z <= render_distance_; z++)
-		{
 			chunks_.emplace_back(generate_chunk({ x,z }));
-		}
-	}
 
 	// Then build all the chunks
-	uint32_t vertex_count{};
-	uint32_t index_count{};
 	for (auto& chunk : chunks_)
-	{
-		build_chunk(chunk.coord, chunk);
-		vertex_count += chunk.vertices.size();
-		index_count += chunk.indices.size();
-	}
+		build_chunk(chunk);
 
 	auto end = std::chrono::high_resolution_clock::now();
 	auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 
 	std::cout << "\nGenerated world with:\n\t"
 		<< chunks_.size() << " chunks\n\t"
-		<< vertex_count << " vertices\n\t"
-		<< index_count << " indices\n\t"
-		<< index_count / 3 << " triangles\n"
 		<< "Took: " << duration << "ms\n\n";
 }
 
@@ -69,17 +56,24 @@ void world_generator::update_world(const glm::vec3& position)
 		{
 			glm::ivec2 chunk_coord{ player_chunk->coord.x + x, player_chunk->coord.y + z };
 			Chunk* chunk = get_chunk_at_coord(chunk_coord);
+
 			if (chunk)
 				chunk->is_active = true;
 			else
 				chunks_.emplace_back(generate_chunk(chunk_coord));
 		}
 	}
-	// Build the chunks around the player
+
+	// Build the new chunks around the player
 	for (int i = num_chunks; i < chunks_.size(); i++)
 	{
 		std::cout << "Building new chunk: " << chunks_[i].coord.x << ", " << chunks_[i].coord.y << "\n";
-		build_chunk(chunks_[i].coord, chunks_[i]);
+
+		// First rebuild the surrounding chunks
+		rebuild_surrounding_chunks(chunks_[i]);
+
+		// Then build the new chunk
+		build_chunk(chunks_[i]);
 	}
 }
 
@@ -97,24 +91,24 @@ Chunk world_generator::generate_chunk(const glm::ivec2& coord)
 	return chunk;
 }
 
-Block world_generator::generate_block(const glm::vec3& position)
+BlockType world_generator::generate_block(const glm::vec3& position)
 {
 	if (position.y == 0)
-		return voxel_data::get_block(BlockType::GRASS_BLOCK);
+		return BlockType::GRASS_BLOCK;
 	if (position.y == world_height_ - 1)
-		return voxel_data::get_block(BlockType::BEDROCK);
+		return BlockType::BEDROCK;
 	if (position.y < 4)
-		return voxel_data::get_block(BlockType::DIRT);
+		return BlockType::DIRT;
 	else
-		return voxel_data::get_block(BlockType::STONE);
+		return BlockType::STONE;
 }
 
-void world_generator::build_chunk(const glm::ivec2& coord, Chunk& chunk)
+void world_generator::build_chunk(Chunk& chunk)
 {
 	for (int x = 0; x < chunk_size_; x++)
 		for (int y = 0; y < world_height_; y++)
 			for (int z = 0; z < chunk_size_; z++)
-				calculate_block_faces({ x,y,z }, chunk);
+				add_block_vertices_to_chunk({ x,y,z }, chunk);
 
 	build_chunk_mesh(chunk);
 
@@ -123,12 +117,39 @@ void world_generator::build_chunk(const glm::ivec2& coord, Chunk& chunk)
 }
 
 /// <summary>
-/// Calculates the faces of a block in the chunk and adds them to the chunk.
+/// Rebuilds the chunks north, east, south, and west of the given chunk.
+/// </summary>
+/// <param name="coord">Coord of the center chunk</param>
+void world_generator::rebuild_surrounding_chunks(const Chunk& chunk)
+{
+	// Recalculate bordering faces of chunk north
+	Chunk* north_chunk = get_chunk_at_coord({ chunk.coord.x, chunk.coord.y + 1 });
+	if (north_chunk && north_chunk->is_active)
+		build_chunk(*north_chunk);
+
+	// Recalculate bordering faces of chunk east
+	Chunk* east_chunk = get_chunk_at_coord({ chunk.coord.x + 1, chunk.coord.y });
+	if (east_chunk && east_chunk->is_active)
+		build_chunk(*east_chunk);
+
+	// Recalculate bordering faces of chunk south
+	Chunk* south_chunk = get_chunk_at_coord({ chunk.coord.x, chunk.coord.y - 1 });
+	if (south_chunk && south_chunk->is_active)
+		build_chunk(*south_chunk);
+
+	// Recalculate bordering faces of chunk west
+	Chunk* west_chunk = get_chunk_at_coord({ chunk.coord.x - 1, chunk.coord.y });
+	if (west_chunk && west_chunk->is_active)
+		build_chunk(*west_chunk);
+}
+
+/// <summary>
+/// Calculates the visible faces of a block in the chunk and adds them to the chunk.
 /// </summary>
 /// <param name="position">Relative chunk position of the block</param>
 /// <param name="chunk">Chunk the block is in</param>
 /// <returns>Returns false if the block is not in the chunk, returns true otherwise</returns>
-bool world_generator::calculate_block_faces(const glm::vec3& position, Chunk& chunk)
+bool world_generator::add_block_vertices_to_chunk(const glm::vec3& position, Chunk& chunk)
 {
 	// If we are trying to add a block outside of the chunk, return false
 	if(	position.x < 0 || position.x >= chunk_size_ ||
@@ -136,18 +157,18 @@ bool world_generator::calculate_block_faces(const glm::vec3& position, Chunk& ch
 		position.z < 0 || position.z >= chunk_size_)
 		return false;
 
-	Block& block{ chunk.block_map[position] };
+	Block block{ voxel_data::get_block(chunk.block_map[position]) };
 
 	int num_deleted_faces{ 0 };
 	auto it = block.faces.begin();
 	while (it != block.faces.end())
 	{
 		// Get block at world position
-		Block* adjecent_block = get_block_at_position((position + it->vertices[0].normal) + 
+		BlockType adjecent_block = get_block_at_position((position + it->vertices[0].normal) + 
 			glm::vec3{chunk.world_position.x, 0.f, chunk.world_position.y});
 
 		// Check if there is a block and if it is solid, if so, don't add this face
-		if (adjecent_block && !adjecent_block->is_transparent)
+		if (voxel_data::is_block_solid(adjecent_block))
 		{
 			// If there is, delete this face
 			it = block.faces.erase(it);
@@ -183,6 +204,8 @@ bool world_generator::calculate_block_faces(const glm::vec3& position, Chunk& ch
 void world_generator::build_chunk_mesh(Chunk& chunk)
 {
 	chunk.mesh = coral_3d::coral_mesh::create_mesh_from_vertices(device_, chunk.vertices, chunk.indices);
+	chunk.vertices.clear();
+	chunk.indices.clear();
 }
 
 /*======================== Chunk Getters ========================*/
@@ -206,11 +229,13 @@ Chunk* world_generator::get_chunk_at_position(const glm::vec3& position)
 	return get_chunk_at_coord(coord);
 }
 
-Block* world_generator::get_block_at_position(const glm::vec3& position)
+BlockType world_generator::get_block_at_position(const glm::vec3& position)
 {
 	Chunk* chunk{ get_chunk_at_position(position) };
 
-	if (!chunk) return nullptr;
+	// If there is no chunk, return air
+	if (!chunk) return BlockType::AIR;
+
 	// Get chunk relative position
 	glm::vec3 chunk_relative_position
 	{
@@ -221,7 +246,7 @@ Block* world_generator::get_block_at_position(const glm::vec3& position)
 
 	// Position lies outside of the world if chunk is null
 	// or if the chunk does not contain the position
-	if (!chunk->block_map.contains(chunk_relative_position)) return nullptr;
+	if (!chunk->block_map.contains(chunk_relative_position)) return BlockType::AIR;
 		
-	return &chunk->block_map[position];
+	return chunk->block_map[chunk_relative_position];
 }

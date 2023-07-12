@@ -59,7 +59,6 @@ namespace coral_3d
 
 		static std::unique_ptr<coral_mesh> create_mesh_from_file(coral_device& device, const std::string& file_path);
 		static std::unique_ptr<coral_mesh> create_mesh_from_vertices(coral_device& device, const std::vector<Vertex> vertices, const std::vector<uint32_t> indices);
-
 		void bind(VkCommandBuffer command_buffer);
 		void draw(VkCommandBuffer command_buffer);
 

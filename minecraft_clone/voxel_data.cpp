@@ -37,13 +37,37 @@ std::unordered_map<BlockType, std::unordered_map<FaceOrientation, FaceType>> vox
 	}
 };
 
+std::vector<VoxelFace> voxel_data::block_faces_{};
+
 Block voxel_data::get_block(const BlockType& block_type)
 {
 	Block block;
-	block.faces = get_faces(block_type);
 	block.type = block_type;
-	block.is_transparent = block_type == BlockType::AIR || block_type == BlockType::WATER;
+	block.is_solid = is_block_solid(block_type);
+	
+	block.faces = get_faces();
+
+	// Calculate the face types for the block
+	for (int i = 0; i < 6; i++)
+	{
+		// If the block type is not in the map, it has the same texture on all faces
+		if (block_face_map_.find(block_type) == block_face_map_.end())
+		{
+			block.faces[i].type = static_cast<FaceType>(block_type);
+			continue;
+		}
+
+		// If the block type is in the map, use the face types from the map
+		block.faces[i].type = block_face_map_[block_type][static_cast<FaceOrientation>(i)];
+	}
+
 	return block;
+}
+
+bool voxel_data::is_block_solid(const BlockType& block_type)
+{
+	// TODO: Improve by using a lookup table
+	return block_type != BlockType::AIR && block_type != BlockType::WATER;
 }
 
 std::vector<coral_3d::Vertex> voxel_data::get_vertices()
@@ -103,30 +127,27 @@ std::vector<uint32_t> voxel_data::get_indices()
 	};
 }
 
-std::vector<VoxelFace> voxel_data::get_faces(const BlockType& block_type)
+std::vector<VoxelFace> voxel_data::get_faces()
 {
+	if (!block_faces_.empty()) return block_faces_;
+
 	auto verts = get_vertices();
 	auto indices = get_indices();
 
 	// Copy the vertices and indices for each face
-	std::vector<VoxelFace> faces{6};
 	for (int i = 0; i < 6; i++)
 	{
-		faces[i].vertices =
+		VoxelFace block_face;
+		block_face.vertices =
 			std::vector<coral_3d::Vertex>(verts.begin() + (i * 4), verts.begin() + (i * 4) + 4);
 
-		faces[i].indices =
+		block_face.indices =
 			std::vector<uint32_t>(indices.begin() + (i * 6), indices.begin() + (i * 6) + 6);
 
-		// If the block type is not in the map, it has the same texture on all faces
-		if (block_face_map_.find(block_type) == block_face_map_.end())
-		{
-			faces[i].type = static_cast<FaceType>(block_type);
-			continue;
-		}
+		block_face.type = FaceType::AIR;
 
-		// If the block type is in the map, use the face types from the map
-		faces[i].type = block_face_map_[block_type][static_cast<FaceOrientation>(i)];
+		block_faces_.emplace_back(block_face);
 	}
-	return std::move(faces);
+
+	return block_faces_;
 }

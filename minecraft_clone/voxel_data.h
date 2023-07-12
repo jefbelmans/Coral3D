@@ -65,7 +65,7 @@ struct Block
 {
 	BlockType type{ BlockType::STONE };
 	std::vector<VoxelFace> faces;
-	bool is_transparent;
+	bool is_solid;
 };
 
 class voxel_data final
@@ -73,11 +73,13 @@ class voxel_data final
 public:
 
 	static Block get_block(const BlockType& block_type);
+	static bool is_block_solid(const BlockType& block_type);
 
 private:
 	static std::vector<coral_3d::Vertex> get_vertices();
 	static std::vector<uint32_t> get_indices();
-	static std::vector<VoxelFace> get_faces(const BlockType& block_type);
+	static std::vector<VoxelFace> get_faces();
 
 	static std::unordered_map<BlockType, std::unordered_map<FaceOrientation, FaceType>> block_face_map_;
+	static std::vector<VoxelFace> block_faces_;
 };
