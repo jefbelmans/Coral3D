@@ -32,10 +32,13 @@ private:
 	BlockType get_block_at_position(const glm::vec3& position);
 
 	coral_3d::coral_device& device_;
-	std::vector<Chunk> chunks_{};
 
-	const uint32_t world_size_{ 16 };
-	const uint16_t render_distance_{ 2 }; // In chunks, in each direction (render_distance * 2 + 1)
+	const uint16_t render_distance_{ 1 }; // In chunks, in each direction (render_distance * 2 + 1)
 	const uint16_t chunk_size_{ 16 };
 	const uint16_t world_height_{ 32 };
+
+	std::vector<Chunk> chunks_{};
+	std::vector<glm::ivec2> chunks_to_generate_{};
+
+	glm::ivec2 old_player_chunk_coord{0};
 };

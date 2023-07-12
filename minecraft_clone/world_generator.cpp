@@ -38,17 +38,20 @@ void world_generator::generate_world()
 void world_generator::update_world(const glm::vec3& position)
 {
 	// Get the chunk the player is in
+	auto start = std::chrono::high_resolution_clock::now();
 	Chunk* player_chunk = get_chunk_at_position(position);
 
-	if (!player_chunk)
+	if(!player_chunk || old_player_chunk_coord == player_chunk->coord)
 		return;
 
-	// Get the chunks around the player
+	old_player_chunk_coord = player_chunk->coord;
+
 	for (auto& chunk : chunks_)
 	{
 		chunk.is_active = false;
 	}
 
+	// Get the chunks around the player
 	uint64_t num_chunks = static_cast<uint64_t>(chunks_.size());
 	for (int x = -render_distance_; x <= render_distance_; x++)
 	{
@@ -60,21 +63,31 @@ void world_generator::update_world(const glm::vec3& position)
 			if (chunk)
 				chunk->is_active = true;
 			else
-				chunks_.emplace_back(generate_chunk(chunk_coord));
+				chunks_to_generate_.emplace_back(chunk_coord);
 		}
 	}
 
-	// Build the new chunks around the player
-	for (int i = num_chunks; i < chunks_.size(); i++)
+	// Generate the new chunks around the player
+	for (const glm::ivec2& coord : chunks_to_generate_)
 	{
-		std::cout << "Building new chunk: " << chunks_[i].coord.x << ", " << chunks_[i].coord.y << "\n";
+		std::cout << "Building new chunk: " << coord.x << ", " << coord.y << "\n";
+		auto start = std::chrono::high_resolution_clock::now();
 
-		// First rebuild the surrounding chunks
-		rebuild_surrounding_chunks(chunks_[i]);
+		auto& chunk = chunks_.emplace_back(generate_chunk(coord));
+		rebuild_surrounding_chunks(chunk);
+		build_chunk(chunk);
 
-		// Then build the new chunk
-		build_chunk(chunks_[i]);
+		auto end = std::chrono::high_resolution_clock::now();
+		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+
+		std::cout << "\tTook: " << duration << "ms\n\n";
 	}
+
+	chunks_to_generate_.clear();
+
+	auto end = std::chrono::high_resolution_clock::now();
+	auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
+	std::cout << "Updating entire world took: " << duration << "ms\n\n";
 }
 
 Chunk world_generator::generate_chunk(const glm::ivec2& coord)
@@ -163,9 +176,13 @@ bool world_generator::add_block_vertices_to_chunk(const glm::vec3& position, Chu
 	auto it = block.faces.begin();
 	while (it != block.faces.end())
 	{
+		BlockType adjecent_block{};
 		// Get block at world position
-		BlockType adjecent_block = get_block_at_position((position + it->vertices[0].normal) + 
-			glm::vec3{chunk.world_position.x, 0.f, chunk.world_position.y});
+		if(position.x == chunk_size_ - 1 || position.x == 0 || position.z == chunk_size_ - 1 || position.z == 0) 
+			adjecent_block = get_block_at_position((position + it->vertices[0].normal) + 
+				glm::vec3{chunk.world_position.x, 0.f, chunk.world_position.y});
+		else
+			adjecent_block = chunk.block_map[position + it->vertices[0].normal];
 
 		// Check if there is a block and if it is solid, if so, don't add this face
 		if (voxel_data::is_block_solid(adjecent_block))

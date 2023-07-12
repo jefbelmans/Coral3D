@@ -108,7 +108,7 @@ void first_app::run()
             global_ubo.flush_index(frame_index);
 
             // UPDATE CHUNKS
-            // world_generator_.update_world(camera.get_position());
+            world_generator_.update_world(camera.get_position());
 
             // RENDER
 			renderer_.begin_swapchain_render_pass(command_buffer);
