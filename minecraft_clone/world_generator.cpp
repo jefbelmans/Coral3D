@@ -12,13 +12,23 @@
 world_generator::world_generator(coral_3d::coral_device& device)
 	: device_{ device }
 {
-	update_thread_ = std::jthread(&world_generator::update_thread, this);
+	thread_count_ = std::thread::hardware_concurrency() - 1;
+	worker_threads_.reserve(thread_count_);
+	command_pools_.reserve(thread_count_);
+	for (size_t i = 0; i < thread_count_; i++)
+	{
+		command_pools_.emplace_back(device_.create_command_pool(VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT));
+		worker_threads_.emplace_back(std::jthread(
+			worker_thread(threads_finished_, work_queue_, i, device_.create_command_buffer(command_pools_[i]))
+		));
+	}
 }
 
 world_generator::~world_generator()
 {
-	update_thread_running_ = false;
-	cv_.notify_all();
+	threads_finished_ = true;
+	for (size_t i = 0; i < thread_count_; i++)
+		worker_threads_[i].join();
 }
 
 /*======================== World Generation ========================*/
@@ -50,68 +60,36 @@ void world_generator::update_world(const glm::vec3& position)
 
 	if(old_player_chunk_coord == player_chunk_coord) return;
 
+	old_player_chunk_coord = player_chunk_coord;
+	for (auto& chunk : chunks_)
 	{
-		std::lock_guard<std::mutex> lock(cv_mutex_);
-		old_player_chunk_coord = player_chunk_coord;
-		for (auto& chunk : chunks_)
-		{
-			chunk.is_active = false;
-		}
+		chunk.is_active = false;
+	}
 
-		// Get the chunks around the player
-		uint64_t num_chunks = static_cast<uint64_t>(chunks_.size());
-		for (int x = -render_distance_; x <= render_distance_; x++)
+	// Get the chunks around the player
+	uint64_t num_chunks = static_cast<uint64_t>(chunks_.size());
+	for (int x = -render_distance_; x <= render_distance_; x++)
+	{
+		for (int z = -render_distance_; z <= render_distance_; z++)
 		{
-			for (int z = -render_distance_; z <= render_distance_; z++)
-			{
-				glm::ivec2 chunk_coord{ old_player_chunk_coord.x + x, old_player_chunk_coord.y + z };
-				Chunk* chunk = get_chunk_at_coord(chunk_coord);
+			glm::ivec2 chunk_coord{ old_player_chunk_coord.x + x, old_player_chunk_coord.y + z };
+			Chunk* chunk = get_chunk_at_coord(chunk_coord);
 
-				if (chunk)
-					chunk->is_active = true;
-				else
-					chunks_to_generate_.emplace_back(chunk_coord);
-			}
+			if (chunk)
+				chunk->is_active = true;
+			else
+				work_queue_.push(new GenerateChunk(device_, *this, chunk_coord));
 		}
 	}
 
-	cv_.notify_all();
-}
+	work_queue_.job_flag_.notify_all();
+	std::unique_lock<std::mutex> lock(work_queue_.mutex_);
+	work_queue_.job_done_flag_.wait(lock, [&] {return work_queue_.done(); });
 
-void world_generator::update_thread()
-{
-	while (true)
-	{
-		std::unique_lock<std::mutex> lock(cv_mutex_);
-		cv_.wait(lock, [&] {return !chunks_to_generate_.empty() || !update_thread_running_; });
+	// TODO: get command buffers from worker threads and execute them to the main buffer
+	// Then submit the main buffer to the graphics queue
 
-		if(!update_thread_running_) return;
 
-		auto start = std::chrono::high_resolution_clock::now();
-	
-		// Generate the new chunks around the player
-		for (const glm::ivec2& coord : chunks_to_generate_)
-		{
-			std::cout << "Building new chunk: " << coord.x << ", " << coord.y << "\n";
-			auto start = std::chrono::high_resolution_clock::now();
-
-			auto& chunk = chunks_.emplace_back(generate_chunk(coord));
-			rebuild_surrounding_chunks(chunk);
-			build_chunk(chunk);
-
-			auto end = std::chrono::high_resolution_clock::now();
-			auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
-
-			std::cout << "\tTook: " << duration << "ms\n\n";
-		}
-
-		chunks_to_generate_.clear();
-		lock.unlock();
-
-		auto end = std::chrono::high_resolution_clock::now();
-		auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
-		std::cout << "Updating entire world took: " << duration << "ms\n\n";
-	}
 }
 
 Chunk world_generator::generate_chunk(const glm::ivec2& coord)
@@ -250,6 +228,7 @@ void world_generator::build_chunk_mesh(Chunk& chunk)
 }
 
 /*======================== Chunk Getters ========================*/
+#pragma region Chunk Getters
 glm::ivec2 world_generator::get_coord(const glm::vec3& position)
 {
 	return
@@ -296,3 +275,17 @@ BlockType world_generator::get_block_at_position(const glm::vec3& position)
 		
 	return chunk->block_map[chunk_relative_position];
 }
+#pragma endregion
+
+/* ======================================================= Jobs ======================================================= */
+#pragma region Jobs
+GenerateChunk::GenerateChunk(coral_3d::coral_device& device, world_generator& generator, const glm::ivec2& chunk_coord)
+	: device_{ device }, generator_{ generator }, chunk_coord_{ chunk_coord } {}
+
+void GenerateChunk::execute(VkCommandBuffer command_buffer)
+{
+	Chunk& chunk = generator_.chunks_.emplace_back(generator_.generate_chunk(chunk_coord_));
+	generator_.rebuild_surrounding_chunks(chunk);
+	generator_.build_chunk(chunk);
+}
+#pragma endregion

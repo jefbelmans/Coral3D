@@ -30,7 +30,7 @@ add_library(coral_renderer
     "coral_frame_info.cpp"
     "coral_descriptors.h"
     "coral_descriptors.cpp"
-)
+ "vk_job.h" "vk_job.cpp")
 
 set(RendererIncludeDir "${CMAKE_CURRENT_SOURCE_DIR}" PARENT_SCOPE)
 

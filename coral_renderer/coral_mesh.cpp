@@ -228,7 +228,6 @@ void coral_mesh::create_vertex_buffers(const std::vector<Vertex>& vertices)
     staging_buffer.write_to_buffer((void*)vertices.data());
 
     device_.copy_buffer(staging_buffer.get_buffer(), vertex_buffer_->get_buffer(), buffer_size);
-
 }
 
 void coral_mesh::create_index_buffers(const std::vector<uint32_t>& indices)

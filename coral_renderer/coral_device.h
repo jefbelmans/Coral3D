@@ -76,12 +76,15 @@ namespace coral_3d
 		void copy_buffer_to_image(AllocatedBuffer buffer, AllocatedImage image, uint32_t width, uint32_t height, uint32_t layer_count);
 		void transition_image_layout(VkImage image, VkFormat format, VkImageLayout old_layout, VkImageLayout new_layout, uint32_t layer_count = 1, uint32_t mip_levels = 1);
 
+		VkCommandPool create_command_pool(VkCommandPoolCreateFlags create_flags = 0);
+		VkCommandBuffer create_command_buffer(VkCommandPool command_pool, VkCommandBufferLevel level = VK_COMMAND_BUFFER_LEVEL_PRIMARY);
+
 		VkPhysicalDeviceProperties properties;
 
 	private:
 		void create_instance();
 		void create_surface();
-		void create_command_pool();
+		void create_command_pools();
 		void create_sync_structures();
 		void create_command_buffers();
 

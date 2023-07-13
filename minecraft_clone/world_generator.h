@@ -4,7 +4,9 @@
 #include <condition_variable>
 #include <thread>
 
+#include "vk_job.h"
 #include "chunk.h"
+
 
 
 class coral_3d::coral_device;
@@ -18,6 +20,7 @@ public:
 	void update_world(const glm::vec3& position);
 
 	std::vector<Chunk>& get_chunks() { return chunks_; }
+
 private:
 
 	Chunk generate_chunk(const glm::ivec2& coord);
@@ -35,21 +38,36 @@ private:
 
 	BlockType get_block_at_position(const glm::vec3& position);
 
-	void update_thread();
-
 	coral_3d::coral_device& device_;
 
-	const uint16_t render_distance_{ 5 }; // In chunks, in each direction (render_distance * 2 + 1)
+	const uint16_t render_distance_{ 1 }; // In chunks, in each direction (render_distance * 2 + 1)
 	const uint16_t chunk_size_{ 16 };
 	const uint16_t world_height_{ 32 };
 
 	std::vector<Chunk> chunks_{};
 	std::vector<glm::ivec2> chunks_to_generate_{};
-
+	std::vector<Chunk*> chunks_to_build_{};
 	glm::ivec2 old_player_chunk_coord{0};
 
-	std::condition_variable cv_{}; // Condition variable for the update thread
-	std::mutex cv_mutex_{}; // Mutex for the condition variable
-	std::jthread update_thread_{};
-	bool update_thread_running_{ true };
+	// Multithreading
+	size_t thread_count_{ 0 };
+	std::vector<VkCommandPool> command_pools_{};
+	std::vector<std::jthread> worker_threads_{};
+	bool threads_finished_{ false };
+	vk_work_queue work_queue_{};
+
+	friend class GenerateChunk;
+};
+
+/* ================ Jobs ================ */
+class GenerateChunk final : public vk_job
+{
+public:
+	GenerateChunk(coral_3d::coral_device& device, world_generator& generator, const glm::ivec2& chunk_coord);
+	virtual void execute(VkCommandBuffer command_buffer) override;
+
+private:
+	coral_3d::coral_device& device_;
+	world_generator& generator_;
+	const glm::ivec2& chunk_coord_;
 };

@@ -14,7 +14,7 @@ using namespace coral_3d;
 coral_device::coral_device(coral_window& window) : window_{ window }
 {
     create_instance();
-    create_command_pool();
+    create_command_pools();
     create_sync_structures();
     create_command_buffers();
 }
@@ -232,6 +232,41 @@ void coral_device::transition_image_layout(VkImage image, VkFormat format, VkIma
     });
 }
 
+VkCommandPool coral_device::create_command_pool(VkCommandPoolCreateFlags create_flags)
+{
+    auto indices{ find_physical_queue_families() };
+
+    VkCommandPoolCreateInfo graphics_pool_info{
+        vkinit::command_pool_ci(indices.graphics_family, create_flags) };
+
+    VkCommandPool command_pool{};
+
+    // Create general pool
+    if (vkCreateCommandPool(device_, &graphics_pool_info, nullptr, &command_pool) != VK_SUCCESS)
+        throw std::runtime_error("ERROR! coral_device::create_command_pool() >> Failed to create command pool!");
+
+    deletion_queue_.deletors.emplace_front([=]() {
+        vkDestroyCommandPool(device_, command_pool, nullptr);
+        });
+
+    return command_pool;
+}
+
+VkCommandBuffer coral_device::create_command_buffer(VkCommandPool command_pool, VkCommandBufferLevel level)
+{
+    VkCommandBuffer command_buffer{};
+    VkCommandBufferAllocateInfo info{ vkinit::command_buffer_ai(command_pool, 1, level) };
+
+    if (vkAllocateCommandBuffers(device_, &info, &command_buffer)
+        != VK_SUCCESS)
+    {
+        throw std::runtime_error(
+            "ERROR! coral_device::create_command_buffers() >> Failed to create upload command buffer!");
+    }
+
+    return command_buffer;
+}
+
 void coral_device::create_instance()
 {
     std::cout << "Booting up Vulkan...\n\n";
@@ -301,7 +336,7 @@ void coral_device::create_surface()
     window_.create_window_surface(instance_, &surface_);
 }
 
-void coral_device::create_command_pool()
+void coral_device::create_command_pools()
 {
     auto indices { find_physical_queue_families() };
 
