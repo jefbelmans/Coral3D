@@ -1,6 +1,7 @@
 #include "coral_buffer.h"
 
 #include <cassert>
+#include <iostream>
 
 #define VMA_IMPLEMENTATION
 #include "vk_mem_alloc.h"

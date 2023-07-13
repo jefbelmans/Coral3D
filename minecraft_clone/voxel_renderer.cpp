@@ -42,7 +42,7 @@ void voxel_renderer::render_chunks(VoxelRenderInfo& render_info)
 
 	for (auto& chunk : render_info.chunks)
 	{
-		if (!chunk.is_active) continue;
+		if (!chunk.is_active && chunk.mesh.get() == nullptr) continue;
 
 		PushConstant push{ chunk.world_position };
 		vkCmdPushConstants(

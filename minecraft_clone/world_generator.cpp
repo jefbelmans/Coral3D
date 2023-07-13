@@ -12,16 +12,7 @@
 world_generator::world_generator(coral_3d::coral_device& device)
 	: device_{ device }
 {
-	thread_count_ = std::thread::hardware_concurrency() - 1;
-	worker_threads_.reserve(thread_count_);
-	command_pools_.reserve(thread_count_);
-	for (size_t i = 0; i < thread_count_; i++)
-	{
-		command_pools_.emplace_back(device_.create_command_pool(VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT));
-		worker_threads_.emplace_back(std::jthread(
-			worker_thread(threads_finished_, work_queue_, i, device_.create_command_buffer(command_pools_[i]))
-		));
-	}
+	start_worker_threads();
 }
 
 world_generator::~world_generator()
@@ -81,15 +72,12 @@ void world_generator::update_world(const glm::vec3& position)
 				work_queue_.push(new GenerateChunk(device_, *this, chunk_coord));
 		}
 	}
+}
 
-	work_queue_.job_flag_.notify_all();
-	std::unique_lock<std::mutex> lock(work_queue_.mutex_);
-	work_queue_.job_done_flag_.wait(lock, [&] {return work_queue_.done(); });
-
-	// TODO: get command buffers from worker threads and execute them to the main buffer
-	// Then submit the main buffer to the graphics queue
-
-
+Chunk& world_generator::add_chunk(const glm::ivec2& chunk_coord)
+{
+	chunks_.emplace_back(generate_chunk(chunk_coord));
+	return chunks_.back();
 }
 
 Chunk world_generator::generate_chunk(const glm::ivec2& coord)
@@ -279,12 +267,29 @@ BlockType world_generator::get_block_at_position(const glm::vec3& position)
 
 /* ======================================================= Jobs ======================================================= */
 #pragma region Jobs
+void world_generator::start_worker_threads()
+{
+	thread_count_ = 1;
+	worker_threads_.reserve(thread_count_);
+	command_pools_.reserve(thread_count_);
+
+	for (size_t i = 0; i < thread_count_; i++)
+	{
+		command_pools_.emplace_back(device_.create_command_pool(VK_COMMAND_POOL_CREATE_RESET_COMMAND_BUFFER_BIT));
+		command_buffers_.emplace_back(device_.create_command_buffer(command_pools_[i], VK_COMMAND_BUFFER_LEVEL_SECONDARY));
+
+		worker_threads_.emplace_back(std::jthread(
+			worker_thread(threads_finished_, work_queue_, i, command_buffers_.back())
+		));
+	}
+}
+
 GenerateChunk::GenerateChunk(coral_3d::coral_device& device, world_generator& generator, const glm::ivec2& chunk_coord)
 	: device_{ device }, generator_{ generator }, chunk_coord_{ chunk_coord } {}
 
 void GenerateChunk::execute(VkCommandBuffer command_buffer)
 {
-	Chunk& chunk = generator_.chunks_.emplace_back(generator_.generate_chunk(chunk_coord_));
+	auto& chunk = generator_.add_chunk(chunk_coord_);
 	generator_.rebuild_surrounding_chunks(chunk);
 	generator_.build_chunk(chunk);
 }

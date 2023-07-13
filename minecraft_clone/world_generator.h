@@ -19,6 +19,8 @@ public:
 	void generate_world();
 	void update_world(const glm::vec3& position);
 
+	Chunk& add_chunk(const glm::ivec2& chunk_coord);
+
 	std::vector<Chunk>& get_chunks() { return chunks_; }
 
 private:
@@ -45,13 +47,15 @@ private:
 	const uint16_t world_height_{ 32 };
 
 	std::vector<Chunk> chunks_{};
-	std::vector<glm::ivec2> chunks_to_generate_{};
-	std::vector<Chunk*> chunks_to_build_{};
 	glm::ivec2 old_player_chunk_coord{0};
 
 	// Multithreading
+	void start_worker_threads();
+
 	size_t thread_count_{ 0 };
-	std::vector<VkCommandPool> command_pools_{};
+	std::mutex chunk_mutex_{};
+	std::vector<VkCommandPool> command_pools_{}; // One for each thread
+	std::vector<VkCommandBuffer> command_buffers_{}; // One for each thread
 	std::vector<std::jthread> worker_threads_{};
 	bool threads_finished_{ false };
 	vk_work_queue work_queue_{};
@@ -69,5 +73,5 @@ public:
 private:
 	coral_3d::coral_device& device_;
 	world_generator& generator_;
-	const glm::ivec2& chunk_coord_;
+	glm::ivec2 chunk_coord_;
 };
