@@ -28,6 +28,7 @@ To use this Vulkan graphics engine and voxel terrain generator, follow these ste
 The coral_device class provides the main interface for the Vulkan graphics engine. It handles device initialization, command buffer creation, buffer and image management, and more. Refer to the coral_device.h header for a quick look of the available methods.
 The coral_buffer class provides buffer management for efficient handling of data. Refer to the coral_buffer.h header for a quick look of the available methods.
 ## Voxel Terrain Generator (WIP)
+![Screenshot of a 9x9 chunk world generated on the fly](https://github.com/jefbelmans/Coral3D/blob/voxel-terrain-generator/images/Voxel_Terrain_Generator_Screenshot01.png)
 
 The voxel terrain generator is being developed on a separate branch from the main engine. You can switch to the branch and explore the code to understand the implementation.
 It is still very much a work in progress and is actively being developed.
