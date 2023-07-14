@@ -181,7 +181,6 @@ std::unique_ptr<coral_mesh> coral_mesh::create_mesh_from_vertices(coral_device& 
 
 void coral_mesh::bind(VkCommandBuffer command_buffer)
 {
-    if (vertex_buffer_->get_buffer_size() <= 0) return;
     VkBuffer buffers[]{ vertex_buffer_->get_buffer().buffer };
     VkDeviceSize offsets[]{ 0 };
     vkCmdBindVertexBuffers(command_buffer, 0, 1, buffers, offsets);
@@ -194,8 +193,6 @@ void coral_mesh::bind(VkCommandBuffer command_buffer)
 
 void coral_mesh::draw(VkCommandBuffer command_buffer)
 {
-    if (vertex_buffer_->get_buffer_size() <= 0) return;
-
     if (has_index_buffer())
         vkCmdDrawIndexed(command_buffer, index_count_, 1, 0, 0, 0);
     else

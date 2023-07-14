@@ -17,6 +17,7 @@ struct Chunk
 	glm::ivec2 world_position{};
 
 	bool is_active{ false };
+	bool is_initialized{ false };
 
 	std::shared_ptr<coral_3d::coral_mesh> mesh{};
 	std::vector<coral_3d::Vertex> vertices{};

@@ -107,3 +107,11 @@
 30	2670	7109881972606659	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	7f5e366fb42bc0ab
 2670	2721	7109881973109978	coral_renderer/coral_renderer.lib	d7c728ab0ac7332
 2721	3046	7109881974967150	minecraft_clone/minecraft_clone.exe	506eec639b450a47
+31	859	7110305449916685	minecraft_clone/CMakeFiles/minecraft_clone.dir/voxel_renderer.cpp.obj	ea894ddbb51e986f
+25	1113	7110305452456721	minecraft_clone/CMakeFiles/minecraft_clone.dir/main.cpp.obj	ca275f79d188cf8f
+23	1330	7110305454585861	coral_renderer/CMakeFiles/coral_renderer.dir/coral_buffer.cpp.obj	77b1cf6059c01a73
+29	1772	7110305459031329	minecraft_clone/CMakeFiles/minecraft_clone.dir/first_app.cpp.obj	3a8e8f25ac5a3595
+35	1869	7110305460010213	minecraft_clone/CMakeFiles/minecraft_clone.dir/world_generator.cpp.obj	3c460ce3743f64dd
+19	2017	7110305461464865	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	7f5e366fb42bc0ab
+2017	2084	7110305462057123	coral_renderer/coral_renderer.lib	d7c728ab0ac7332
+2084	2434	7110305464098537	minecraft_clone/minecraft_clone.exe	506eec639b450a47

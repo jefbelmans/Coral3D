@@ -47,6 +47,7 @@ private:
 	const uint16_t world_height_{ 32 };
 
 	std::vector<Chunk> chunks_{};
+	std::vector<Chunk*> chunks_to_build_{};
 	glm::ivec2 old_player_chunk_coord{0};
 
 	// Multithreading

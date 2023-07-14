@@ -36,6 +36,11 @@ void world_generator::generate_world()
 	for (auto& chunk : chunks_)
 		build_chunk(chunk);
 
+	for (auto chunk : chunks_to_build_)
+		build_chunk_mesh(*chunk);
+
+	chunks_to_build_.clear();
+
 	auto end = std::chrono::high_resolution_clock::now();
 	auto duration = std::chrono::duration_cast<std::chrono::milliseconds>(end - start).count();
 
@@ -66,10 +71,15 @@ void world_generator::update_world(const glm::vec3& position)
 			glm::ivec2 chunk_coord{ old_player_chunk_coord.x + x, old_player_chunk_coord.y + z };
 			Chunk* chunk = get_chunk_at_coord(chunk_coord);
 
-			if (chunk)
+			if (chunk && chunk->is_initialized)
 				chunk->is_active = true;
 			else
-				work_queue_.push(new GenerateChunk(device_, *this, chunk_coord));
+			{
+				chunks_.emplace_back(generate_chunk(chunk_coord));
+				build_chunk(chunks_.back());
+				build_chunk_mesh(chunks_.back());
+			}
+				
 		}
 	}
 }
@@ -113,10 +123,7 @@ void world_generator::build_chunk(Chunk& chunk)
 			for (int z = 0; z < chunk_size_; z++)
 				add_block_vertices_to_chunk({ x,y,z }, chunk);
 
-	build_chunk_mesh(chunk);
-
-	// After the chunk is built, we can set it active for rendering
-	chunk.is_active = true;
+	chunks_to_build_.emplace_back(&chunk);
 }
 
 /// <summary>
@@ -213,6 +220,10 @@ void world_generator::build_chunk_mesh(Chunk& chunk)
 	chunk.mesh = coral_3d::coral_mesh::create_mesh_from_vertices(device_, chunk.vertices, chunk.indices);
 	chunk.vertices.clear();
 	chunk.indices.clear();
+
+	// After the chunk is built, we can set it active for rendering
+	chunk.is_active = true;
+	chunk.is_initialized = true;
 }
 
 /*======================== Chunk Getters ========================*/
