@@ -2,6 +2,7 @@
 ### Vulkan Graphics Engine with Voxel Terrain Generator
 
 This repository contains a basic Vulkan graphics engine implemented in C++ using CMake. It provides abstractions for common Vulkan logic, making it easier to develop graphics applications. Additionally, a branch has been created to develop a small voxel terrain generator using the engine from the main branch.
+Everything is still very much work in progress and will continue being developed over the summer of 2023.
 Features
 - Abstractions for common Vulkan logic, including surface creation, command pools, synchronization structures, and command buffers.
 - Support for validation layers in debug builds.
@@ -24,10 +25,18 @@ To use this Vulkan graphics engine and voxel terrain generator, follow these ste
 
 ## Engine Usage
 
-The coral_device class provides the main interface for the Vulkan graphics engine. It handles device initialization, command buffer creation, buffer and image management, and more. Refer to the coral_device.h header for detailed documentation of the available methods.
-Voxel Terrain Generator
+The coral_device class provides the main interface for the Vulkan graphics engine. It handles device initialization, command buffer creation, buffer and image management, and more. Refer to the coral_device.h header for a quick look of the available methods.
+The coral_buffer class provides buffer management for efficient handling of data. Refer to the coral_buffer.h header for a quick look of the available methods.
+## Voxel Terrain Generator (WIP)
 
-The voxel terrain generator is being developed on a separate branch from the main engine. You can switch to the branch and explore the code to understand the implementation. The coral_buffer class provides buffer management for efficient handling of voxel data. Refer to the coral_buffer.h header for detailed documentation of the available methods.
+The voxel terrain generator is being developed on a separate branch from the main engine. You can switch to the branch and explore the code to understand the implementation.
+It is still very much a work in progress and is actively being developed.
+### Roadmap:
+- A definitive world generation algorithm using perlin noise (it only generates flat chunks as of now).
+- Async chunk generation.
+- Chunk manipulation (you cannot place or destroy blocks as of now).
+- Multiple, configurable biomes for use in the world gen. algorithm.
+
 ## Contributing
 
 Contributions to this project are welcome. If you find any issues or want to add new features, feel free to open a pull request.
