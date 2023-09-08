@@ -2,7 +2,9 @@
 
 // LIBS
 #define TINYOBJLOADER_IMPLEMENTATION
+#define TINYOBJLOADER_USE_MAPBOX_EARCUT // Ensures robust triangulation
 #include <tiny_obj_loader.h>
+
 #define GLM_ENABLE_EXPERIMENTAL
 #include <gtx/hash.hpp>
 
@@ -12,7 +14,6 @@
 #include <unordered_map>
 
 #include "coral_utils.h"
-
 
 using namespace coral_3d;
 
@@ -81,39 +82,40 @@ VertexInputDescription Vertex::get_vert_desc()
 
 bool coral_mesh::Builder::load_from_obj(const std::string& file_path)
 {
+    tinyobj::ObjReaderConfig reader_config;
+    reader_config.mtl_search_path = "assets/textures";
+
+    tinyobj::ObjReader reader;
+
+    if (!reader.ParseFromFile(file_path, reader_config))
+    {
+        // If there is an error loading the mesh, output it to the console and return false
+        // This most likely happens when the file can't be found or is corrupted / malformed
+        if (!reader.Error().empty())
+        {
+            std::cerr << "ERROR! coral_mesh::load_from_obj() >> " << reader.Error() << std::endl;
+            return false;
+        }
+    }
+
+    // Output any warnings to the console
+    if (!reader.Warning().empty())
+    {
+        std::cout << "WARNING! coral_mesh::load_from_obj() >> " << reader.Warning() << std::endl;
+    }
+
     // attrib will contain the vertex arrays of the file
-    tinyobj::attrib_t attrib;
+    auto& attrib = reader.GetAttrib();
     // shapes contains the info for each separate object in the file
-    std::vector<tinyobj::shape_t> shapes;
+    auto& shapes = reader.GetShapes();
     // materials contains the information about the material of each shape, not yet used.
-    std::vector<tinyobj::material_t> materials;
-
-    // error and warning output from the load function
-    std::string warn;
-    std::string err;
-
-    // load the OBJ file
-    tinyobj::LoadObj(&attrib, &shapes, &materials, &warn, &err, file_path.c_str());
-
-    //make sure to output the warnings to the console, in case there are issues with the file
-    if (!warn.empty())
-    {
-        std::cout << "WARNING! coral_mesh::load_from_obj() >> " << warn << std::endl;
-    }
-
-    //if we have any error, print it to the console, and break the mesh loading.
-    //This happens if the file can't be found or is malformed
-    if (!err.empty())
-    {
-        std::cerr << err << std::endl;
-        return false;
-    }
+    auto& materials = reader.GetMaterials();
 
     std::unordered_map<Vertex, uint32_t> unique_verticies{};
 
     // Loop over shapes
     for (const auto& shape : shapes)
-    {
+    {                        
         for (const auto& index : shape.mesh.indices)
         {
             Vertex vertex{};
@@ -133,7 +135,7 @@ bool coral_mesh::Builder::load_from_obj(const std::string& file_path)
                     attrib.colors[3 * index.vertex_index + 1],
                     attrib.colors[3 * index.vertex_index + 2]
                 };
-            }
+            }                                                                      
 
             if (index.normal_index >= 0)
             {

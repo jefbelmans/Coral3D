@@ -1,8 +1,8 @@
-# Install script for directory: E:/Game Development/Visual Studio Solutions/Coral3D/coral_renderer
+# Install script for directory: C:/Game Development/Visual Studio Solutions/Coral3D/coral_renderer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "E:/Game Development/Visual Studio Solutions/Coral3D/out/install/x64-Release")
+  set(CMAKE_INSTALL_PREFIX "C:/Game Development/Visual Studio Solutions/Coral3D/out/install/x64-Release")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

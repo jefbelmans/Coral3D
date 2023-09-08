@@ -15,13 +15,16 @@ namespace coral_3d
 	class render_system final
 	{
 	public:
+		render_system(coral_device& device) : device_{ device } {};
 		render_system(coral_device& device, VkRenderPass render_pass, VkDescriptorSetLayout global_set_layout);
 		~render_system();
-
 		render_system(const render_system&) = delete;
 		render_system& operator=(const render_system&) = delete;
 
 		void render_gameobjects(FrameInfo& frame_info);
+
+		VkPipelineLayout pipeline_layout() const { return pipeline_layout_; }
+		VkPipeline pipeline() const { return pipeline_->pipeline(); }
 
 	private:
 		void create_pipeline_layout(VkDescriptorSetLayout global_set_layout);

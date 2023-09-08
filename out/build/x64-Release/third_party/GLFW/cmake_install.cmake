@@ -1,8 +1,8 @@
-# Install script for directory: E:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW
+# Install script for directory: C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "E:/Game Development/Visual Studio Solutions/Coral3D/out/install/x64-Release")
+  set(CMAKE_INSTALL_PREFIX "C:/Game Development/Visual Studio Solutions/Coral3D/out/install/x64-Release")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,17 +34,17 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/src/cmake_install.cmake")
+  include("C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/src/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "E:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include/GLFW" FILES_MATCHING REGEX "/glfw3\\.h$" REGEX "/glfw3native\\.h$")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include/GLFW" FILES_MATCHING REGEX "/glfw3\\.h$" REGEX "/glfw3native\\.h$")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3" TYPE FILE FILES
-    "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/src/glfw3Config.cmake"
-    "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/src/glfw3ConfigVersion.cmake"
+    "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/src/glfw3Config.cmake"
+    "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/src/glfw3ConfigVersion.cmake"
     )
 endif()
 
@@ -52,7 +52,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3/glfw3Targets.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3/glfw3Targets.cmake"
-         "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/CMakeFiles/Export/f367bd07922f2ecfc14cf5547f1f7c4e/glfw3Targets.cmake")
+         "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/CMakeFiles/Export/f367bd07922f2ecfc14cf5547f1f7c4e/glfw3Targets.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3/glfw3Targets-*.cmake")
       if(_cmake_old_config_files)
@@ -65,13 +65,13 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3" TYPE FILE FILES "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/CMakeFiles/Export/f367bd07922f2ecfc14cf5547f1f7c4e/glfw3Targets.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3" TYPE FILE FILES "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/CMakeFiles/Export/f367bd07922f2ecfc14cf5547f1f7c4e/glfw3Targets.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3" TYPE FILE FILES "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/CMakeFiles/Export/f367bd07922f2ecfc14cf5547f1f7c4e/glfw3Targets-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/glfw3" TYPE FILE FILES "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/CMakeFiles/Export/f367bd07922f2ecfc14cf5547f1f7c4e/glfw3Targets-release.cmake")
   endif()
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/src/glfw3.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/src/glfw3.pc")
 endif()
 

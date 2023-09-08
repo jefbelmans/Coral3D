@@ -12,7 +12,7 @@ coral_camera::coral_camera(glm::vec3 position, float movement_speed, float mouse
 {
 }
 
-void coral_camera::set_ortographic_projection(float left, float right, float top, float bottom, float near, float far)
+void coral_camera::set_orthographic_projection(float left, float right, float top, float bottom, float near, float far)
 {
 	projection_matrix_ = glm::orthoLH(left, right, bottom, top, near, far);
 }

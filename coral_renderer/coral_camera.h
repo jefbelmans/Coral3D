@@ -26,7 +26,7 @@ namespace coral_3d
 		coral_camera(glm::vec3 position, float movement_speed = 3.f, float mouse_sensitivity = 0.1f);
 		~coral_camera() = default;
 
-		void set_ortographic_projection(
+		void set_orthographic_projection(
 			float left, float right, float top, float bottom, float near, float far);
 		void set_perspective_projection(float fovy, float aspect, float near, float far);
 

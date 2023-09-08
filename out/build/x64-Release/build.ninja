@@ -39,13 +39,13 @@ include CMakeFiles\rules.ninja
 #############################################
 # Logical path to working directory; prefix for absolute paths.
 
-cmake_ninja_workdir = E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\out\build\x64-Release\
+cmake_ninja_workdir = C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\out\build\x64-Release\
 
 #############################################
 # Utility command for edit_cache
 
 build CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -56,7 +56,7 @@ build edit_cache: phony CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"E:\Game Development\Visual Studio Solutions\Coral3D" -B"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release""
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Game Development\Visual Studio Solutions\Coral3D" -B"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -74,7 +74,7 @@ build list_install_components: phony
 # Utility command for install
 
 build CMakeFiles\install.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -86,7 +86,7 @@ build install: phony CMakeFiles\install.util
 # Utility command for install/local
 
 build CMakeFiles\install\local.util: CUSTOM_COMMAND all
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -95,7 +95,7 @@ build install\local: phony CMakeFiles\install\local.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# E:/Game Development/Visual Studio Solutions/Coral3D/CMakeLists.txt
+# C:/Game Development/Visual Studio Solutions/Coral3D/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -107,137 +107,145 @@ build install\local: phony CMakeFiles\install\local.util
 
 build cmake_object_order_depends_target_coral_renderer: phony || cmake_object_order_depends_target_glfw cmake_object_order_depends_target_tinyobjloader cmake_object_order_depends_target_vkbootstrap coral_renderer\Shaders
 
-build coral_renderer\CMakeFiles\coral_renderer.dir\main.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\main.cpp || cmake_object_order_depends_target_coral_renderer
+build coral_renderer\CMakeFiles\coral_renderer.dir\main.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\main.cpp || cmake_object_order_depends_target_coral_renderer
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_PDB = coral_renderer\coral_renderer.pdb
 
-build coral_renderer\CMakeFiles\coral_renderer.dir\coral_window.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_window.cpp || cmake_object_order_depends_target_coral_renderer
+build coral_renderer\CMakeFiles\coral_renderer.dir\coral_window.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_window.cpp || cmake_object_order_depends_target_coral_renderer
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_PDB = coral_renderer\coral_renderer.pdb
 
-build coral_renderer\CMakeFiles\coral_renderer.dir\first_app.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\first_app.cpp || cmake_object_order_depends_target_coral_renderer
+build coral_renderer\CMakeFiles\coral_renderer.dir\first_app.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\first_app.cpp || cmake_object_order_depends_target_coral_renderer
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_PDB = coral_renderer\coral_renderer.pdb
 
-build coral_renderer\CMakeFiles\coral_renderer.dir\coral_pipeline.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_pipeline.cpp || cmake_object_order_depends_target_coral_renderer
+build coral_renderer\CMakeFiles\coral_renderer.dir\coral_pipeline.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_pipeline.cpp || cmake_object_order_depends_target_coral_renderer
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_PDB = coral_renderer\coral_renderer.pdb
 
-build coral_renderer\CMakeFiles\coral_renderer.dir\coral_device.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_device.cpp || cmake_object_order_depends_target_coral_renderer
+build coral_renderer\CMakeFiles\coral_renderer.dir\coral_device.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_device.cpp || cmake_object_order_depends_target_coral_renderer
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_PDB = coral_renderer\coral_renderer.pdb
 
-build coral_renderer\CMakeFiles\coral_renderer.dir\vk_initializers.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\vk_initializers.cpp || cmake_object_order_depends_target_coral_renderer
+build coral_renderer\CMakeFiles\coral_renderer.dir\vk_initializers.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\vk_initializers.cpp || cmake_object_order_depends_target_coral_renderer
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_PDB = coral_renderer\coral_renderer.pdb
 
-build coral_renderer\CMakeFiles\coral_renderer.dir\coral_swapchain.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_swapchain.cpp || cmake_object_order_depends_target_coral_renderer
+build coral_renderer\CMakeFiles\coral_renderer.dir\coral_swapchain.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_swapchain.cpp || cmake_object_order_depends_target_coral_renderer
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_PDB = coral_renderer\coral_renderer.pdb
 
-build coral_renderer\CMakeFiles\coral_renderer.dir\coral_mesh.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_mesh.cpp || cmake_object_order_depends_target_coral_renderer
+build coral_renderer\CMakeFiles\coral_renderer.dir\coral_mesh.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_mesh.cpp || cmake_object_order_depends_target_coral_renderer
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_PDB = coral_renderer\coral_renderer.pdb
 
-build coral_renderer\CMakeFiles\coral_renderer.dir\coral_gameobject.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_gameobject.cpp || cmake_object_order_depends_target_coral_renderer
+build coral_renderer\CMakeFiles\coral_renderer.dir\coral_gameobject.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_gameobject.cpp || cmake_object_order_depends_target_coral_renderer
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_PDB = coral_renderer\coral_renderer.pdb
 
-build coral_renderer\CMakeFiles\coral_renderer.dir\coral_renderer.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_renderer.cpp || cmake_object_order_depends_target_coral_renderer
+build coral_renderer\CMakeFiles\coral_renderer.dir\coral_renderer.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_renderer.cpp || cmake_object_order_depends_target_coral_renderer
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_PDB = coral_renderer\coral_renderer.pdb
 
-build coral_renderer\CMakeFiles\coral_renderer.dir\render_system.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\render_system.cpp || cmake_object_order_depends_target_coral_renderer
+build coral_renderer\CMakeFiles\coral_renderer.dir\render_system.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\render_system.cpp || cmake_object_order_depends_target_coral_renderer
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_PDB = coral_renderer\coral_renderer.pdb
 
-build coral_renderer\CMakeFiles\coral_renderer.dir\coral_camera.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_camera.cpp || cmake_object_order_depends_target_coral_renderer
+build coral_renderer\CMakeFiles\coral_renderer.dir\coral_camera.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_camera.cpp || cmake_object_order_depends_target_coral_renderer
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_PDB = coral_renderer\coral_renderer.pdb
 
-build coral_renderer\CMakeFiles\coral_renderer.dir\coral_utils.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_utils.cpp || cmake_object_order_depends_target_coral_renderer
+build coral_renderer\CMakeFiles\coral_renderer.dir\coral_utils.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_utils.cpp || cmake_object_order_depends_target_coral_renderer
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_PDB = coral_renderer\coral_renderer.pdb
 
-build coral_renderer\CMakeFiles\coral_renderer.dir\coral_texture.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_texture.cpp || cmake_object_order_depends_target_coral_renderer
+build coral_renderer\CMakeFiles\coral_renderer.dir\coral_texture.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_texture.cpp || cmake_object_order_depends_target_coral_renderer
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_PDB = coral_renderer\coral_renderer.pdb
 
-build coral_renderer\CMakeFiles\coral_renderer.dir\coral_buffer.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_buffer.cpp || cmake_object_order_depends_target_coral_renderer
+build coral_renderer\CMakeFiles\coral_renderer.dir\coral_buffer.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_buffer.cpp || cmake_object_order_depends_target_coral_renderer
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_PDB = coral_renderer\coral_renderer.pdb
 
-build coral_renderer\CMakeFiles\coral_renderer.dir\coral_frame_info.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_frame_info.cpp || cmake_object_order_depends_target_coral_renderer
+build coral_renderer\CMakeFiles\coral_renderer.dir\coral_frame_info.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_frame_info.cpp || cmake_object_order_depends_target_coral_renderer
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_PDB = coral_renderer\coral_renderer.pdb
 
-build coral_renderer\CMakeFiles\coral_renderer.dir\coral_descriptors.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_descriptors.cpp || cmake_object_order_depends_target_coral_renderer
+build coral_renderer\CMakeFiles\coral_renderer.dir\coral_descriptors.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_descriptors.cpp || cmake_object_order_depends_target_coral_renderer
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
+  OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
+  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
+  TARGET_PDB = coral_renderer\coral_renderer.pdb
+
+build coral_renderer\CMakeFiles\coral_renderer.dir\coral_material.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\coral_material.cpp || cmake_object_order_depends_target_coral_renderer
+  FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX /w
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\glm" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vma" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\stb_image" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
@@ -251,12 +259,12 @@ build coral_renderer\CMakeFiles\coral_renderer.dir\coral_descriptors.cpp.obj: CX
 #############################################
 # Link the executable coral_renderer\coral_renderer.exe
 
-build coral_renderer\coral_renderer.exe: CXX_EXECUTABLE_LINKER__coral_renderer_Release coral_renderer\CMakeFiles\coral_renderer.dir\main.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_window.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\first_app.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_pipeline.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_device.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\vk_initializers.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_swapchain.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_mesh.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_gameobject.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_renderer.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\render_system.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_camera.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_utils.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_texture.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_buffer.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_frame_info.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_descriptors.cpp.obj | C$:\VulkanSDK\1.3.250.0\Lib\vulkan-1.lib third_party\GLFW\src\glfw3.lib third_party\vkbootstrap.lib third_party\tinyobjloader.lib C$:\VulkanSDK\1.3.250.0\Lib\vulkan-1.lib || coral_renderer\Shaders third_party\GLFW\src\glfw3.lib third_party\tinyobjloader.lib third_party\vkbootstrap.lib
+build coral_renderer\coral_renderer.exe: CXX_EXECUTABLE_LINKER__coral_renderer_Release coral_renderer\CMakeFiles\coral_renderer.dir\main.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_window.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\first_app.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_pipeline.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_device.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\vk_initializers.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_swapchain.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_mesh.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_gameobject.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_renderer.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\render_system.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_camera.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_utils.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_texture.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_buffer.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_frame_info.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_descriptors.cpp.obj coral_renderer\CMakeFiles\coral_renderer.dir\coral_material.cpp.obj | C$:\VulkanSDK\1.3.250.0\Lib\vulkan-1.lib third_party\GLFW\src\glfw3.lib third_party\vkbootstrap.lib third_party\tinyobjloader.lib C$:\VulkanSDK\1.3.250.0\Lib\vulkan-1.lib || coral_renderer\Shaders third_party\GLFW\src\glfw3.lib third_party\tinyobjloader.lib third_party\vkbootstrap.lib
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -MD
   LINK_FLAGS = /machine:x64 /INCREMENTAL:NO /subsystem:console
   LINK_LIBRARIES = C:\VulkanSDK\1.3.250.0\Lib\vulkan-1.lib  third_party\GLFW\src\glfw3.lib  third_party\vkbootstrap.lib  third_party\tinyobjloader.lib  C:\VulkanSDK\1.3.250.0\Lib\vulkan-1.lib  kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  POST_BUILD = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/coral_renderer/assets/" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/coral_renderer/assets/shaders/" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_directory "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/" "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/coral_renderer/assets/shaders" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/coral_renderer/assets/meshes/" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_directory "E:/Game Development/Visual Studio Solutions/Coral3D/assets/meshes" "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/coral_renderer/assets/meshes" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/coral_renderer/assets/textures/" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_directory "E:/Game Development/Visual Studio Solutions/Coral3D/assets/textures" "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/coral_renderer/assets/textures""
+  POST_BUILD = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/coral_renderer/assets/" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/coral_renderer/assets/shaders/" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_directory "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/" "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/coral_renderer/assets/shaders" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/coral_renderer/assets/meshes/" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_directory "C:/Game Development/Visual Studio Solutions/Coral3D/assets/meshes" "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/coral_renderer/assets/meshes" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/coral_renderer/assets/textures/" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E copy_directory "C:/Game Development/Visual Studio Solutions/Coral3D/assets/textures" "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/coral_renderer/assets/textures""
   PRE_LINK = cd .
   TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_FILE = coral_renderer\coral_renderer.exe
@@ -267,14 +275,14 @@ build coral_renderer\coral_renderer.exe: CXX_EXECUTABLE_LINKER__coral_renderer_R
 #############################################
 # Utility command for Shaders
 
-build coral_renderer\Shaders: phony coral_renderer\CMakeFiles\Shaders E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.frag.spv E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.vert.spv E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.frag.spv E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.vert.spv
+build coral_renderer\Shaders: phony coral_renderer\CMakeFiles\Shaders C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.frag.spv C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.vert.spv C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.frag.spv C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.vert.spv
 
 
 #############################################
 # Utility command for edit_cache
 
 build coral_renderer\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -285,7 +293,7 @@ build coral_renderer\edit_cache: phony coral_renderer\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build coral_renderer\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"E:\Game Development\Visual Studio Solutions\Coral3D" -B"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release""
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Game Development\Visual Studio Solutions\Coral3D" -B"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -303,7 +311,7 @@ build coral_renderer\list_install_components: phony
 # Utility command for install
 
 build coral_renderer\CMakeFiles\install.util: CUSTOM_COMMAND coral_renderer\all
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -315,7 +323,7 @@ build coral_renderer\install: phony coral_renderer\CMakeFiles\install.util
 # Utility command for install/local
 
 build coral_renderer\CMakeFiles\install\local.util: CUSTOM_COMMAND coral_renderer\all
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -326,47 +334,47 @@ build coral_renderer\install\local: phony coral_renderer\CMakeFiles\install\loca
 #############################################
 # Phony custom command for coral_renderer\CMakeFiles\Shaders
 
-build coral_renderer\CMakeFiles\Shaders | ${cmake_ninja_workdir}coral_renderer\CMakeFiles\Shaders: phony E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.frag.spv E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.vert.spv E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.frag.spv E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.vert.spv
+build coral_renderer\CMakeFiles\Shaders | ${cmake_ninja_workdir}coral_renderer\CMakeFiles\Shaders: phony C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.frag.spv C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.vert.spv C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.frag.spv C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.vert.spv
 
 
 #############################################
-# Custom command for E:\Game Development\Visual Studio Solutions\Coral3D\shaders\compiled\PosNormCol.frag.spv
+# Custom command for C:\Game Development\Visual Studio Solutions\Coral3D\shaders\compiled\PosNormCol.frag.spv
 
-build E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.frag.spv: CUSTOM_COMMAND E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\PosNormCol.frag
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/" && C:\VulkanSDK\1.3.250.0\Bin\glslangValidator.exe -V "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/PosNormCol.frag" -o "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.frag.spv""
-  DESC = Generating E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.frag.spv
+build C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.frag.spv: CUSTOM_COMMAND C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\PosNormCol.frag
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/" && C:\VulkanSDK\1.3.250.0\Bin\glslangValidator.exe -V "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/PosNormCol.frag" -o "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.frag.spv""
+  DESC = Generating C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.frag.spv
   restat = 1
 
 
 #############################################
-# Custom command for E:\Game Development\Visual Studio Solutions\Coral3D\shaders\compiled\PosNormCol.vert.spv
+# Custom command for C:\Game Development\Visual Studio Solutions\Coral3D\shaders\compiled\PosNormCol.vert.spv
 
-build E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.vert.spv: CUSTOM_COMMAND E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\PosNormCol.vert
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/" && C:\VulkanSDK\1.3.250.0\Bin\glslangValidator.exe -V "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/PosNormCol.vert" -o "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.vert.spv""
-  DESC = Generating E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.vert.spv
+build C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\PosNormCol.vert.spv: CUSTOM_COMMAND C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\PosNormCol.vert
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/" && C:\VulkanSDK\1.3.250.0\Bin\glslangValidator.exe -V "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/PosNormCol.vert" -o "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.vert.spv""
+  DESC = Generating C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.vert.spv
   restat = 1
 
 
 #############################################
-# Custom command for E:\Game Development\Visual Studio Solutions\Coral3D\shaders\compiled\simple_shader.frag.spv
+# Custom command for C:\Game Development\Visual Studio Solutions\Coral3D\shaders\compiled\simple_shader.frag.spv
 
-build E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.frag.spv: CUSTOM_COMMAND E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\simple_shader.frag
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/" && C:\VulkanSDK\1.3.250.0\Bin\glslangValidator.exe -V "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/simple_shader.frag" -o "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv""
-  DESC = Generating E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv
+build C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.frag.spv: CUSTOM_COMMAND C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\simple_shader.frag
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/" && C:\VulkanSDK\1.3.250.0\Bin\glslangValidator.exe -V "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/simple_shader.frag" -o "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv""
+  DESC = Generating C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv
   restat = 1
 
 
 #############################################
-# Custom command for E:\Game Development\Visual Studio Solutions\Coral3D\shaders\compiled\simple_shader.vert.spv
+# Custom command for C:\Game Development\Visual Studio Solutions\Coral3D\shaders\compiled\simple_shader.vert.spv
 
-build E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.vert.spv: CUSTOM_COMMAND E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\simple_shader.vert
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/" && C:\VulkanSDK\1.3.250.0\Bin\glslangValidator.exe -V "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/simple_shader.vert" -o "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv""
-  DESC = Generating E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv
+build C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\simple_shader.vert.spv: CUSTOM_COMMAND C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\simple_shader.vert
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\coral_renderer" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E make_directory "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/" && C:\VulkanSDK\1.3.250.0\Bin\glslangValidator.exe -V "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/simple_shader.vert" -o "C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv""
+  DESC = Generating C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv
   restat = 1
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# E:/Game Development/Visual Studio Solutions/Coral3D/CMakeLists.txt
+# C:/Game Development/Visual Studio Solutions/Coral3D/CMakeLists.txt
 # =============================================================================
 
 # =============================================================================
@@ -378,9 +386,9 @@ build E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\shaders\compiled\s
 
 build cmake_object_order_depends_target_vkbootstrap: phony || third_party\CMakeFiles\vkbootstrap.dir
 
-build third_party\CMakeFiles\vkbootstrap.dir\vkbootstrap\VkBootstrap.cpp.obj: CXX_COMPILER__vkbootstrap_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\vkbootstrap\VkBootstrap.cpp || cmake_object_order_depends_target_vkbootstrap
+build third_party\CMakeFiles\vkbootstrap.dir\vkbootstrap\VkBootstrap.cpp.obj: CXX_COMPILER__vkbootstrap_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\vkbootstrap\VkBootstrap.cpp || cmake_object_order_depends_target_vkbootstrap
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\vkbootstrap" -external:IC:\VulkanSDK\1.3.250.0\Include -external:W0
   OBJECT_DIR = third_party\CMakeFiles\vkbootstrap.dir
   OBJECT_FILE_DIR = third_party\CMakeFiles\vkbootstrap.dir\vkbootstrap
   TARGET_COMPILE_PDB = third_party\CMakeFiles\vkbootstrap.dir\vkbootstrap.pdb
@@ -413,9 +421,9 @@ build third_party\vkbootstrap.lib: CXX_STATIC_LIBRARY_LINKER__vkbootstrap_Releas
 
 build cmake_object_order_depends_target_tinyobjloader: phony || third_party\CMakeFiles\tinyobjloader.dir
 
-build third_party\CMakeFiles\tinyobjloader.dir\tinyobjloader\tiny_obj_loader.cc.obj: CXX_COMPILER__tinyobjloader_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\tinyobjloader\tiny_obj_loader.cc || cmake_object_order_depends_target_tinyobjloader
+build third_party\CMakeFiles\tinyobjloader.dir\tinyobjloader\tiny_obj_loader.cc.obj: CXX_COMPILER__tinyobjloader_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\tinyobjloader\tiny_obj_loader.cc || cmake_object_order_depends_target_tinyobjloader
   FLAGS = /DWIN32 /D_WINDOWS /EHsc /O2 /Ob2 /DNDEBUG -std:c++latest -MD /W4 /WX
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader"
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\tinyobjloader"
   OBJECT_DIR = third_party\CMakeFiles\tinyobjloader.dir
   OBJECT_FILE_DIR = third_party\CMakeFiles\tinyobjloader.dir\tinyobjloader
   TARGET_COMPILE_PDB = third_party\CMakeFiles\tinyobjloader.dir\tinyobjloader.pdb
@@ -444,7 +452,7 @@ build third_party\tinyobjloader.lib: CXX_STATIC_LIBRARY_LINKER__tinyobjloader_Re
 # Utility command for edit_cache
 
 build third_party\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -455,7 +463,7 @@ build third_party\edit_cache: phony third_party\CMakeFiles\edit_cache.util
 # Utility command for rebuild_cache
 
 build third_party\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"E:\Game Development\Visual Studio Solutions\Coral3D" -B"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release""
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Game Development\Visual Studio Solutions\Coral3D" -B"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -473,7 +481,7 @@ build third_party\list_install_components: phony
 # Utility command for install
 
 build third_party\CMakeFiles\install.util: CUSTOM_COMMAND third_party\all
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -485,7 +493,7 @@ build third_party\install: phony third_party\CMakeFiles\install.util
 # Utility command for install/local
 
 build third_party\CMakeFiles\install\local.util: CUSTOM_COMMAND third_party\all
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -494,7 +502,7 @@ build third_party\install\local: phony third_party\CMakeFiles\install\local.util
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# E:/Game Development/Visual Studio Solutions/Coral3D/third_party/CMakeLists.txt
+# C:/Game Development/Visual Studio Solutions/Coral3D/third_party/CMakeLists.txt
 # =============================================================================
 
 
@@ -508,7 +516,7 @@ build third_party\GLFW\uninstall: phony third_party\GLFW\CMakeFiles\uninstall
 # Utility command for edit_cache
 
 build third_party\GLFW\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -519,7 +527,7 @@ build third_party\GLFW\edit_cache: phony third_party\GLFW\CMakeFiles\edit_cache.
 # Utility command for rebuild_cache
 
 build third_party\GLFW\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"E:\Game Development\Visual Studio Solutions\Coral3D" -B"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release""
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Game Development\Visual Studio Solutions\Coral3D" -B"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -537,7 +545,7 @@ build third_party\GLFW\list_install_components: phony
 # Utility command for install
 
 build third_party\GLFW\CMakeFiles\install.util: CUSTOM_COMMAND third_party\GLFW\all
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -549,7 +557,7 @@ build third_party\GLFW\install: phony third_party\GLFW\CMakeFiles\install.util
 # Utility command for install/local
 
 build third_party\GLFW\CMakeFiles\install\local.util: CUSTOM_COMMAND third_party\GLFW\all
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -561,11 +569,11 @@ build third_party\GLFW\install\local: phony third_party\GLFW\CMakeFiles\install\
 # Custom command for third_party\GLFW\CMakeFiles\uninstall
 
 build third_party\GLFW\CMakeFiles\uninstall | ${cmake_ninja_workdir}third_party\GLFW\CMakeFiles\uninstall: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P "E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/cmake_uninstall.cmake""
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P "C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/cmake_uninstall.cmake""
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
-# E:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/CMakeLists.txt
+# C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/CMakeLists.txt
 # =============================================================================
 
 
@@ -583,136 +591,136 @@ build third_party\GLFW\src\update_mappings: phony third_party\GLFW\src\CMakeFile
 
 build cmake_object_order_depends_target_glfw: phony || third_party\GLFW\src\CMakeFiles\glfw.dir
 
-build third_party\GLFW\src\CMakeFiles\glfw.dir\context.c.obj: C_COMPILER__glfw_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\context.c || cmake_object_order_depends_target_glfw
+build third_party\GLFW\src\CMakeFiles\glfw.dir\context.c.obj: C_COMPILER__glfw_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE
   FLAGS = /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MD /W4 /WX /W3
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
   TARGET_PDB = third_party\GLFW\src\glfw3.pdb
 
-build third_party\GLFW\src\CMakeFiles\glfw.dir\init.c.obj: C_COMPILER__glfw_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\init.c || cmake_object_order_depends_target_glfw
+build third_party\GLFW\src\CMakeFiles\glfw.dir\init.c.obj: C_COMPILER__glfw_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE
   FLAGS = /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MD /W4 /WX /W3
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
   TARGET_PDB = third_party\GLFW\src\glfw3.pdb
 
-build third_party\GLFW\src\CMakeFiles\glfw.dir\input.c.obj: C_COMPILER__glfw_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\input.c || cmake_object_order_depends_target_glfw
+build third_party\GLFW\src\CMakeFiles\glfw.dir\input.c.obj: C_COMPILER__glfw_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\input.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE
   FLAGS = /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MD /W4 /WX /W3
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
   TARGET_PDB = third_party\GLFW\src\glfw3.pdb
 
-build third_party\GLFW\src\CMakeFiles\glfw.dir\monitor.c.obj: C_COMPILER__glfw_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\monitor.c || cmake_object_order_depends_target_glfw
+build third_party\GLFW\src\CMakeFiles\glfw.dir\monitor.c.obj: C_COMPILER__glfw_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE
   FLAGS = /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MD /W4 /WX /W3
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
   TARGET_PDB = third_party\GLFW\src\glfw3.pdb
 
-build third_party\GLFW\src\CMakeFiles\glfw.dir\vulkan.c.obj: C_COMPILER__glfw_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\vulkan.c || cmake_object_order_depends_target_glfw
+build third_party\GLFW\src\CMakeFiles\glfw.dir\vulkan.c.obj: C_COMPILER__glfw_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\vulkan.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE
   FLAGS = /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MD /W4 /WX /W3
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
   TARGET_PDB = third_party\GLFW\src\glfw3.pdb
 
-build third_party\GLFW\src\CMakeFiles\glfw.dir\window.c.obj: C_COMPILER__glfw_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\window.c || cmake_object_order_depends_target_glfw
+build third_party\GLFW\src\CMakeFiles\glfw.dir\window.c.obj: C_COMPILER__glfw_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE
   FLAGS = /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MD /W4 /WX /W3
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
   TARGET_PDB = third_party\GLFW\src\glfw3.pdb
 
-build third_party\GLFW\src\CMakeFiles\glfw.dir\win32_init.c.obj: C_COMPILER__glfw_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\win32_init.c || cmake_object_order_depends_target_glfw
+build third_party\GLFW\src\CMakeFiles\glfw.dir\win32_init.c.obj: C_COMPILER__glfw_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\win32_init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE
   FLAGS = /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MD /W4 /WX /W3
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
   TARGET_PDB = third_party\GLFW\src\glfw3.pdb
 
-build third_party\GLFW\src\CMakeFiles\glfw.dir\win32_joystick.c.obj: C_COMPILER__glfw_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\win32_joystick.c || cmake_object_order_depends_target_glfw
+build third_party\GLFW\src\CMakeFiles\glfw.dir\win32_joystick.c.obj: C_COMPILER__glfw_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\win32_joystick.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE
   FLAGS = /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MD /W4 /WX /W3
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
   TARGET_PDB = third_party\GLFW\src\glfw3.pdb
 
-build third_party\GLFW\src\CMakeFiles\glfw.dir\win32_monitor.c.obj: C_COMPILER__glfw_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\win32_monitor.c || cmake_object_order_depends_target_glfw
+build third_party\GLFW\src\CMakeFiles\glfw.dir\win32_monitor.c.obj: C_COMPILER__glfw_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\win32_monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE
   FLAGS = /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MD /W4 /WX /W3
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
   TARGET_PDB = third_party\GLFW\src\glfw3.pdb
 
-build third_party\GLFW\src\CMakeFiles\glfw.dir\win32_time.c.obj: C_COMPILER__glfw_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\win32_time.c || cmake_object_order_depends_target_glfw
+build third_party\GLFW\src\CMakeFiles\glfw.dir\win32_time.c.obj: C_COMPILER__glfw_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\win32_time.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE
   FLAGS = /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MD /W4 /WX /W3
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
   TARGET_PDB = third_party\GLFW\src\glfw3.pdb
 
-build third_party\GLFW\src\CMakeFiles\glfw.dir\win32_thread.c.obj: C_COMPILER__glfw_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\win32_thread.c || cmake_object_order_depends_target_glfw
+build third_party\GLFW\src\CMakeFiles\glfw.dir\win32_thread.c.obj: C_COMPILER__glfw_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\win32_thread.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE
   FLAGS = /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MD /W4 /WX /W3
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
   TARGET_PDB = third_party\GLFW\src\glfw3.pdb
 
-build third_party\GLFW\src\CMakeFiles\glfw.dir\win32_window.c.obj: C_COMPILER__glfw_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\win32_window.c || cmake_object_order_depends_target_glfw
+build third_party\GLFW\src\CMakeFiles\glfw.dir\win32_window.c.obj: C_COMPILER__glfw_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\win32_window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE
   FLAGS = /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MD /W4 /WX /W3
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
   TARGET_PDB = third_party\GLFW\src\glfw3.pdb
 
-build third_party\GLFW\src\CMakeFiles\glfw.dir\wgl_context.c.obj: C_COMPILER__glfw_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\wgl_context.c || cmake_object_order_depends_target_glfw
+build third_party\GLFW\src\CMakeFiles\glfw.dir\wgl_context.c.obj: C_COMPILER__glfw_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\wgl_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE
   FLAGS = /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MD /W4 /WX /W3
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
   TARGET_PDB = third_party\GLFW\src\glfw3.pdb
 
-build third_party\GLFW\src\CMakeFiles\glfw.dir\egl_context.c.obj: C_COMPILER__glfw_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\egl_context.c || cmake_object_order_depends_target_glfw
+build third_party\GLFW\src\CMakeFiles\glfw.dir\egl_context.c.obj: C_COMPILER__glfw_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\egl_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE
   FLAGS = /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MD /W4 /WX /W3
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
   TARGET_PDB = third_party\GLFW\src\glfw3.pdb
 
-build third_party\GLFW\src\CMakeFiles\glfw.dir\osmesa_context.c.obj: C_COMPILER__glfw_unscanned_Release E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\osmesa_context.c || cmake_object_order_depends_target_glfw
+build third_party\GLFW\src\CMakeFiles\glfw.dir\osmesa_context.c.obj: C_COMPILER__glfw_unscanned_Release C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\osmesa_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -D_CRT_SECURE_NO_WARNINGS -D_GLFW_USE_CONFIG_H -D_UNICODE
   FLAGS = /DWIN32 /D_WINDOWS /O2 /Ob2 /DNDEBUG -MD /W4 /WX /W3
-  INCLUDES = -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
+  INCLUDES = -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\include" -I"C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" -I"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
@@ -741,7 +749,7 @@ build third_party\GLFW\src\glfw3.lib: C_STATIC_LIBRARY_LINKER__glfw_Release thir
 # Utility command for edit_cache
 
 build third_party\GLFW\src\CMakeFiles\edit_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -E echo "No interactive CMake dialog available.""
   DESC = No interactive CMake dialog available...
   restat = 1
 
@@ -752,7 +760,7 @@ build third_party\GLFW\src\edit_cache: phony third_party\GLFW\src\CMakeFiles\edi
 # Utility command for rebuild_cache
 
 build third_party\GLFW\src\CMakeFiles\rebuild_cache.util: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"E:\Game Development\Visual Studio Solutions\Coral3D" -B"E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release""
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" --regenerate-during-build -S"C:\Game Development\Visual Studio Solutions\Coral3D" -B"C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release""
   DESC = Running CMake to regenerate build system...
   pool = console
   restat = 1
@@ -770,7 +778,7 @@ build third_party\GLFW\src\list_install_components: phony
 # Utility command for install
 
 build third_party\GLFW\src\CMakeFiles\install.util: CUSTOM_COMMAND third_party\GLFW\src\all
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P cmake_install.cmake"
   DESC = Install the project...
   pool = console
   restat = 1
@@ -782,7 +790,7 @@ build third_party\GLFW\src\install: phony third_party\GLFW\src\CMakeFiles\instal
 # Utility command for install/local
 
 build third_party\GLFW\src\CMakeFiles\install\local.util: CUSTOM_COMMAND third_party\GLFW\src\all
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\out\build\x64-Release\third_party\GLFW\src" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake"
   DESC = Installing only the local directory...
   pool = console
   restat = 1
@@ -794,7 +802,7 @@ build third_party\GLFW\src\install\local: phony third_party\GLFW\src\CMakeFiles\
 # Custom command for third_party\GLFW\src\CMakeFiles\update_mappings
 
 build third_party\GLFW\src\CMakeFiles\update_mappings | ${cmake_ninja_workdir}third_party\GLFW\src\CMakeFiles\update_mappings: CUSTOM_COMMAND
-  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P "E:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/CMake/GenerateMappings.cmake" mappings.h.in mappings.h"
+  COMMAND = cmd.exe /C "cd /D "C:\Game Development\Visual Studio Solutions\Coral3D\third_party\GLFW\src" && "C:\Program Files\Microsoft Visual Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\bin\cmake.exe" -P "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/CMake/GenerateMappings.cmake" mappings.h.in mappings.h"
   DESC = Updating gamepad mappings from upstream repository
 
 # =============================================================================
@@ -828,35 +836,35 @@ build vkbootstrap.lib: phony third_party\vkbootstrap.lib
 # =============================================================================
 
 #############################################
-# Folder: E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release
+# Folder: C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release
 
 build all: phony coral_renderer\all third_party\all
 
 # =============================================================================
 
 #############################################
-# Folder: E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/coral_renderer
+# Folder: C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/coral_renderer
 
 build coral_renderer\all: phony coral_renderer\coral_renderer.exe
 
 # =============================================================================
 
 #############################################
-# Folder: E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party
+# Folder: C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party
 
 build third_party\all: phony third_party\vkbootstrap.lib third_party\tinyobjloader.lib third_party\GLFW\all
 
 # =============================================================================
 
 #############################################
-# Folder: E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW
+# Folder: C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW
 
 build third_party\GLFW\all: phony third_party\GLFW\src\all
 
 # =============================================================================
 
 #############################################
-# Folder: E:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/src
+# Folder: C:/Game Development/Visual Studio Solutions/Coral3D/out/build/x64-Release/third_party/GLFW/src
 
 build third_party\GLFW\src\all: phony third_party\GLFW\src\glfw3.lib
 
@@ -867,14 +875,14 @@ build third_party\GLFW\src\all: phony third_party\GLFW\src\glfw3.lib
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeDependentOption.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\FindThreads.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\FindVulkan.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\GNUInstallDirs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles\3.26.0-msvc3\CMakeCCompiler.cmake CMakeFiles\3.26.0-msvc3\CMakeCXXCompiler.cmake CMakeFiles\3.26.0-msvc3\CMakeRCCompiler.cmake CMakeFiles\3.26.0-msvc3\CMakeSystem.cmake E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\CMakeLists.txt E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\CMakeLists.txt E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\CMakeLists.txt E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\CMakeLists.txt E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\cmake_uninstall.cmake.in E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\CMakeLists.txt E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\glfw3.pc.in E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\glfw3Config.cmake.in E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\glfw_config.h.in
+build build.ninja: RERUN_CMAKE | C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\CMakeLists.txt C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\CMakeLists.txt C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\CMakeLists.txt C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\CMakeLists.txt C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\cmake_uninstall.cmake.in C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\CMakeLists.txt C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\glfw3.pc.in C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\glfw3Config.cmake.in C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\glfw_config.h.in C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeDependentOption.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\FindThreads.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\FindVulkan.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\GNUInstallDirs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles\3.26.4-msvc4\CMakeCCompiler.cmake CMakeFiles\3.26.4-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.26.4-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.26.4-msvc4\CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeDependentOption.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\FindThreads.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\FindVulkan.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\GNUInstallDirs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles\3.26.0-msvc3\CMakeCCompiler.cmake CMakeFiles\3.26.0-msvc3\CMakeCXXCompiler.cmake CMakeFiles\3.26.0-msvc3\CMakeRCCompiler.cmake CMakeFiles\3.26.0-msvc3\CMakeSystem.cmake E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\CMakeLists.txt E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\CMakeLists.txt E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\CMakeLists.txt E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\CMakeLists.txt E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\cmake_uninstall.cmake.in E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\CMakeLists.txt E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\glfw3.pc.in E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\glfw3Config.cmake.in E$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\glfw_config.h.in: phony
+build C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\CMakeLists.txt C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\coral_renderer\CMakeLists.txt C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\CMakeLists.txt C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\CMakeLists.txt C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\cmake_uninstall.cmake.in C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\CMakeLists.txt C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\glfw3.pc.in C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\glfw3Config.cmake.in C$:\Game$ Development\Visual$ Studio$ Solutions\Coral3D\third_party\GLFW\src\glfw_config.h.in C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\BasicConfigVersion-SameMajorVersion.cmake.in C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeCXXInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeCommonLanguageInclude.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeDependentOption.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeGenericSystem.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeInitializeConfigs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeLanguageInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakePackageConfigHelpers.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeRCInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInformation.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CMakeSystemSpecificInitialize.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CheckCSourceCompiles.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CheckIncludeFile.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\CheckLibraryExists.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Compiler\CMakeCommonCompilerMacros.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Compiler\MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Compiler\MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Compiler\MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\FindPackageHandleStandardArgs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\FindPackageMessage.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\FindThreads.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\FindVulkan.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\GNUInstallDirs.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Internal\CheckSourceCompiles.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-C.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC-CXX.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\Windows-MSVC.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\Windows.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\Platform\WindowsPaths.cmake C$:\Program$ Files\Microsoft$ Visual$ Studio\2022\Enterprise\Common7\IDE\CommonExtensions\Microsoft\CMake\CMake\share\cmake-3.26\Modules\WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles\3.26.4-msvc4\CMakeCCompiler.cmake CMakeFiles\3.26.4-msvc4\CMakeCXXCompiler.cmake CMakeFiles\3.26.4-msvc4\CMakeRCCompiler.cmake CMakeFiles\3.26.4-msvc4\CMakeSystem.cmake: phony
 
 
 #############################################

@@ -167,7 +167,7 @@ void coral_pipeline::create_graphics_pipeline(
 		throw std::runtime_error("ERROR! coral_pipeline::create_graphics_pipeline() >> Failed to create graphics pipeline!");
 }
 
-void coral_3d::coral_pipeline::create_shader_module(const std::vector<char>& code, VkShaderModule* shader_module)
+void coral_pipeline::create_shader_module(const std::vector<char>& code, VkShaderModule* shader_module)
 {
 	VkShaderModuleCreateInfo create_info{};
 	create_info.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;

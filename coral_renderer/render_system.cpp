@@ -97,8 +97,6 @@ void render_system::create_pipeline(VkRenderPass render_pass)
 
 	pipeline_ = std::make_unique<coral_pipeline>(
 		device_,
-		// "shaders/PosNormCol.vert.spv",
-		// "shaders/PosNormCol.frag.spv",
 		"assets/shaders/simple_shader.vert.spv",
 		"assets/shaders/simple_shader.frag.spv",
 		pipeline_config

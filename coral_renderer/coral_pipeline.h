@@ -44,6 +44,8 @@ namespace coral_3d
 
 		void bind(VkCommandBuffer command_buffer);
 
+		VkPipeline pipeline() const { return graphics_pipeline_; }
+
 		static void default_pipeline_config_info(PipelineConfigInfo& config_info);
 
 	private:

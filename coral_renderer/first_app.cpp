@@ -22,7 +22,7 @@ struct GlobalUBO
 
     // GLOBAL LIGHT
     glm::vec4 global_light_direction{ glm::normalize(glm::vec4{ 0.577f, 0.377f, -0.577f, 0.f})}; // w is ignored
-    glm::vec4 ambient_light_color{.4f, .1f, .1f, 0.05f}; // w is intensity
+    glm::vec4 ambient_light_color{1.4f, .1f, .1f, 0.05f}; // w is intensity
 
     // POINT LIGHT
     glm::vec4 light_position{0.f, -0.85f, 0.f, 0.f}; // w is ignored
@@ -126,31 +126,28 @@ void first_app::run()
 
 void first_app::load_gameobjects()
 {
-    constexpr uint32_t NUM_INSTANCES{ 125 };
+#pragma region Multiple instances
+    constexpr uint32_t NUM_INSTANCES{ 1 };
 
-    std::shared_ptr<coral_mesh> smooth_mesh {coral_mesh::create_mesh_from_file(device_, "assets/meshes/smooth_vase.obj")};
-    std::shared_ptr<coral_mesh> flat_mesh {coral_mesh::create_mesh_from_file(device_, "assets/meshes/flat_vase.obj")};
+    std::shared_ptr<coral_mesh> flat_mesh {coral_mesh::create_mesh_from_file(device_, "assets/meshes/sponza.obj")};
 
-    for (size_t x = 0; x < NUM_INSTANCES * 0.5f; x++)
-    {
-        for (size_t z = 0; z < NUM_INSTANCES * 0.5f; z++)
-        {
-            auto vase{ coral_gameobject::create_gameobject() };
-            vase.mesh_ = z < NUM_INSTANCES * 0.25f ? smooth_mesh : flat_mesh;
-            vase.transform_.translation = { 0.6f * x, 0.75f, 0.6f * z };
-            vase.transform_.scale = { 3.f, 3.f, 3.f };
-            gameobjects_.emplace(vase.get_id(), std::move(vase));
-        }
-    }
+    auto sponza{ coral_gameobject::create_gameobject() };
+    sponza.mesh_ = flat_mesh;
+    sponza.transform_.translation = { 0, 0.75f, 0.f };
+    sponza.transform_.scale = { 0.2f, 0.2f, 0.2f };
+    gameobjects_.emplace(sponza.get_id(), std::move(sponza));
     
     std::cout << "\nNumber of instances: " << gameobjects_.size() << std::endl;
-    std::cout << std::setprecision(8) << "Number of vertices: " << smooth_mesh->get_vertex_count() * gameobjects_.size() * 0.5f + flat_mesh->get_vertex_count() * gameobjects_.size() * 0.5f << std::endl;
-    std::cout << std::setprecision(8) << "Number of indices: " << smooth_mesh->get_index_count() * gameobjects_.size() + flat_mesh->get_index_count() * gameobjects_.size() * 0.5f << std::endl;
+    std::cout << std::setprecision(8) << "Number of vertices: " << flat_mesh->get_vertex_count() * gameobjects_.size() << std::endl;
+    std::cout << std::setprecision(8) << "Number of indices: " << flat_mesh->get_index_count() * gameobjects_.size() << std::endl;
+    std::cout << std::setprecision(8) << "Number of triangles: " << (flat_mesh->get_index_count() * gameobjects_.size()) / 3.f << std::endl;
     
     // LOAD TEXTURES
     test_texture = coral_texture::create_texture_from_file(
         device_,
-        "assets/textures/uv_checker.jpg",
+        "assets/textures/background.tga",
         VK_FORMAT_R8G8B8A8_SRGB
     );
+
+#pragma endregion
 }

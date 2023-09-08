@@ -1,7 +1,7 @@
-prefix=E:/Game Development/Visual Studio Solutions/Coral3D/out/install/x64-Release
+prefix=C:/Game Development/Visual Studio Solutions/Coral3D/out/install/x64-Release
 exec_prefix=${prefix}
-includedir=E:/Game Development/Visual Studio Solutions/Coral3D/out/install/x64-Release/include
-libdir=E:/Game Development/Visual Studio Solutions/Coral3D/out/install/x64-Release/lib
+includedir=C:/Game Development/Visual Studio Solutions/Coral3D/out/install/x64-Release/include
+libdir=C:/Game Development/Visual Studio Solutions/Coral3D/out/install/x64-Release/lib
 
 Name: GLFW
 Description: A multi-platform library for OpenGL, window and input
