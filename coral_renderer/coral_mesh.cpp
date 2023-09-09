@@ -110,6 +110,7 @@ bool coral_mesh::Builder::load_from_obj(const std::string& file_path)
     // materials contains the information about the material of each shape, not yet used.
     auto& materials = reader.GetMaterials();
 
+    std::cout << "[" << file_path << "] shape count: " << shapes.size() << std::endl;
     std::cout << "[" << file_path << "] material count: " << materials.size() << std::endl;
 
     std::unordered_map<Vertex, uint32_t> unique_vertices{};
@@ -117,6 +118,9 @@ bool coral_mesh::Builder::load_from_obj(const std::string& file_path)
     // Loop over shapes
     for (const auto& shape : shapes)
     {
+        const int material_id {shape.mesh.material_ids[0]};
+        std::cout << "[" << file_path << "] >> shape [" << shape.name << "] has material [" << material_id << ": \"" << materials[material_id].name << "\"]" << std::endl;
+
         for (const auto& index : shape.mesh.indices)
         {
             Vertex vertex{};

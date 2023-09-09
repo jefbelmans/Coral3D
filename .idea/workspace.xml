@@ -32,203 +32,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2ea9cb6-a6b7-419f-9266-e5263673b6e6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Coral3D.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza.mtl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/debug/third_party/GLFW/src/glfw_config.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/release/third_party/GLFW/src/glfw_config.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeSettings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/materials/sponza.mtl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_buffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_buffer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_camera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_camera.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_descriptors.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_descriptors.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_device.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_device.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/sponza.mtl" beforeDir="false" afterPath="$PROJECT_DIR$/assets/meshes/sponza.mtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza.mtl" beforeDir="false" afterPath="$PROJECT_DIR$/assets/textures/sponza.mtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/coral_renderer/assets/meshes/sponza.mtl" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/coral_renderer/assets/meshes/sponza.mtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_material.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_material.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_material.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_material.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/coral_mesh.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_mesh.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_renderer.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_swapchain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_swapchain.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_texture.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_texture.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/first_app.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/first_app.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/first_app.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/first_app.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/query/client-MicrosoftVS/query.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/cache-v2-2bbef37c6c9a77ce63ab.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/cmakeFiles-v1-20cafe552a801ddebb8e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/codemodel-v2-e04bf7556d7660a2fd8d.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/directory-.-Debug-d0094a50bb2071803777.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/directory-coral_renderer-Debug-5392f6549fb2d15b5d89.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/directory-third_party-Debug-a2e0515af5b7021cdaa7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/directory-third_party.GLFW-Debug-44546723a91b3dfe8b7e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/directory-third_party.GLFW.src-Debug-e72c77e1531284212406.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/index-2023-09-08T13-49-15-0585.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/target-Shaders-Debug-f49fa5a1684641caaa37.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/target-coral_renderer-Debug-b079a1b8bea17affa67c.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/target-glfw-Debug-fceebe9b85099bb3004f.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/target-tinyobjloader-Debug-018503b781f6d2959873.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/target-uninstall-Debug-1b49ba37cfe0ecec38f3.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/target-update_mappings-Debug-80736d08c085980836ac.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/target-vkbootstrap-Debug-fffe57e99de593f176ea.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.cmake/api/v1/reply/toolchains-v1-fd44c7370e20dfd3df0e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.ninja_deps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/.ninja_log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.26.4-msvc4/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.26.4-msvc4/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.26.4-msvc4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.26.4-msvc4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.26.4-msvc4/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.26.4-msvc4/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.26.4-msvc4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/3.26.4-msvc4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/ShowIncludes/foo.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/ShowIncludes/main.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/CMakeFiles/rules.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/Testing/Temporary/LastTest.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/VSInheritEnvironments.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/build.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/coral_renderer/CMakeFiles/coral_renderer.dir/embed.manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/coral_renderer/CMakeFiles/coral_renderer.dir/intermediate.manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/coral_renderer/CMakeFiles/coral_renderer.dir/manifest.rc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/coral_renderer/CMakeFiles/coral_renderer.dir/manifest.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/coral_renderer/CMakeFiles/coral_renderer.dir/vc140.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/coral_renderer/assets/shaders/PosNormCol.frag.spv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/coral_renderer/assets/shaders/PosNormCol.vert.spv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/coral_renderer/assets/shaders/simple_shader.frag.spv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/coral_renderer/assets/shaders/simple_shader.vert.spv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/coral_renderer/assets/textures/lost_empire-RGBA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/coral_renderer/assets/textures/room.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/coral_renderer/assets/textures/uv_checker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/coral_renderer/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/coral_renderer/coral_renderer.ilk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/coral_renderer/coral_renderer.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/third_party/CMakeFiles/tinyobjloader.dir/tinyobjloader.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/third_party/GLFW/CMakeFiles/Export/f367bd07922f2ecfc14cf5547f1f7c4e/glfw3Targets-debug.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/third_party/GLFW/CMakeFiles/Export/f367bd07922f2ecfc14cf5547f1f7c4e/glfw3Targets.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/third_party/GLFW/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/third_party/GLFW/cmake_uninstall.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/third_party/GLFW/src/CMakeFiles/glfw.dir/glfw.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/third_party/GLFW/src/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/third_party/GLFW/src/glfw3.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/third_party/GLFW/src/glfw3Config.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/third_party/GLFW/src/glfw3ConfigVersion.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/third_party/GLFW/src/glfw_config.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Debug/third_party/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/query/client-MicrosoftVS/query.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/reply/cache-v2-7d4ca4ebd9318ec6ed3b.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/reply/cmakeFiles-v1-b92e8a4ce7262fa23d2e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/reply/codemodel-v2-418e2d3c799d35dc3773.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/reply/directory-.-Release-d0094a50bb2071803777.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/reply/directory-coral_renderer-Release-5392f6549fb2d15b5d89.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/reply/directory-third_party-Release-a2e0515af5b7021cdaa7.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/reply/directory-third_party.GLFW-Release-965f373e01ef804ee2f6.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/reply/directory-third_party.GLFW.src-Release-e72c77e1531284212406.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/reply/index-2023-09-08T14-24-07-0571.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/reply/target-Shaders-Release-5178335d8d1b34612586.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/reply/target-coral_renderer-Release-b621aa916bc58ffa7d83.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/reply/target-glfw-Release-e073b0a26d9a568b7622.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/reply/target-tinyobjloader-Release-b679486b85970d2fad71.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/reply/target-uninstall-Release-eb8d1b23628a7a9f5c2e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/reply/target-update_mappings-Release-f980ad85bed044e3fba9.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/reply/target-vkbootstrap-Release-fd3ac6758b6a3ce4f227.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.cmake/api/v1/reply/toolchains-v1-fd44c7370e20dfd3df0e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.ninja_deps" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/.ninja_log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/CMakeCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/CMakeFiles/3.26.4-msvc4/CMakeCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/CMakeFiles/3.26.4-msvc4/CMakeCXXCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/CMakeFiles/3.26.4-msvc4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/CMakeFiles/3.26.4-msvc4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/CMakeFiles/3.26.4-msvc4/CMakeRCCompiler.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/CMakeFiles/3.26.4-msvc4/CMakeSystem.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/CMakeFiles/3.26.4-msvc4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/CMakeFiles/3.26.4-msvc4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/CMakeFiles/ShowIncludes/foo.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/CMakeFiles/ShowIncludes/main.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/CMakeFiles/cmake.check_cache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/CMakeFiles/rules.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/Testing/Temporary/LastTest.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/VSInheritEnvironments.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/build.ninja" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/meshes/sponza.mtl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/shaders/PosNormCol.frag.spv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/shaders/PosNormCol.vert.spv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/shaders/simple_shader.frag.spv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/shaders/simple_shader.vert.spv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/background.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/background_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/chain_texture.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/chain_texture_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/lion.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/lion2_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/lion_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/lost_empire-RGBA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/room.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/spnza_bricks_a_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/spnza_bricks_a_diff.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza.mtl" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_arch_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_arch_diff.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_ceiling_a_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_ceiling_a_diff.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_column_a_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_column_a_diff.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_column_b_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_column_b_diff.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_column_c_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_column_c_diff.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_curtain_blue_diff.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_curtain_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_curtain_diff.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_curtain_green_diff.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_details_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_details_diff.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_fabric_blue_diff.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_fabric_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_fabric_diff.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_fabric_green_diff.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_flagpole_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_flagpole_diff.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_floor_a_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_floor_a_diff.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_roof_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_roof_diff.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_thorn_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/sponza_thorn_diff.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/uv_checker.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/vase_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/vase_dif.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/vase_hanging.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/vase_hanging_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/vase_plant.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/vase_round.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/assets/textures/vase_round_ddn.tga" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/coral_renderer/coral_renderer.exe.manifest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/third_party/GLFW/CMakeFiles/Export/f367bd07922f2ecfc14cf5547f1f7c4e/glfw3Targets-release.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/third_party/GLFW/CMakeFiles/Export/f367bd07922f2ecfc14cf5547f1f7c4e/glfw3Targets.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/third_party/GLFW/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/third_party/GLFW/cmake_uninstall.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/third_party/GLFW/src/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/third_party/GLFW/src/glfw3.pc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/third_party/GLFW/src/glfw3Config.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/third_party/GLFW/src/glfw3ConfigVersion.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/third_party/GLFW/src/glfw_config.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/build/x64-Release/third_party/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shaders/compiled/simple_shader.frag.spv" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/compiled/simple_shader.frag.spv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shaders/simple_shader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.frag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/third_party/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -238,7 +51,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -309,6 +122,8 @@
       <workItem from="1694202669650" duration="4223000" />
       <workItem from="1694253216270" duration="1426000" />
       <workItem from="1694254738758" duration="1000" />
+      <workItem from="1694254782205" duration="798000" />
+      <workItem from="1694256926033" duration="3362000" />
     </task>
     <servers />
   </component>

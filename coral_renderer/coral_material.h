@@ -12,14 +12,14 @@ public:
 
 	void bind(VkCommandBuffer command_buffer);
 
+    VkPipeline pipeline() const { return pipeline_; }
 	VkPipelineLayout pipeline_layout() const { return pipeline_layout_; }
-	VkPipeline pipeline() const { return pipeline_; }
 	VkDescriptorSet texture_desc_set() const { return texture_desc_set_; }
 private:
 	
 	std::shared_ptr<coral_texture> texture_;
 
+    VkPipeline pipeline_;
+    VkPipelineLayout pipeline_layout_;
 	VkDescriptorSet texture_desc_set_{ VK_NULL_HANDLE };
-	VkPipelineLayout pipeline_layout_;
-	VkPipeline pipeline_;
 };
