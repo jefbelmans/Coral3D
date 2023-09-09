@@ -23,9 +23,7 @@ target_link_libraries(vkbootstrap PUBLIC Vulkan::Vulkan $<$<BOOL:UNIX>:${CMAKE_D
 
 # VMA
 add_library(vma INTERFACE)
-target_include_directories(vma INTERFACE vma)
-
-target_compile_options(vma INTERFACE /w)
+target_include_directories(vma SYSTEM INTERFACE vma)
 
 # tinyobjloader
 add_library(tinyobjloader STATIC)

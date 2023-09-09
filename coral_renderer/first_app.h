@@ -20,7 +20,6 @@ namespace coral_3d
 		static constexpr int HEIGHT{ 600 };
 
 		first_app();
-		~first_app();
 
 		first_app(const first_app&) = delete;
 		first_app& operator=(const first_app&) = delete;

@@ -6,7 +6,6 @@ Project(Coral3D VERSION 0.0.1)
 # Project settings
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-add_compile_options(/W4 /WX)
 
 # Vulkan
 find_package(Vulkan REQUIRED)

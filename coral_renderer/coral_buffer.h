@@ -51,8 +51,8 @@ namespace coral_3d
 		AllocatedBuffer buffer_{};
 
 		VkDeviceSize buffer_size_{0};
+        VkDeviceSize instance_size_{0};
 		uint32_t instance_count_{ 0 };
-		VkDeviceSize instance_size_{0};
 		VkDeviceSize alignment_size_{ 0 };
 		VmaMemoryUsage usage_{VMA_MEMORY_USAGE_AUTO};
 		VkBufferUsageFlags usage_flags_{0};

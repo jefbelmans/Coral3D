@@ -50,14 +50,14 @@ VertexInputDescription Vertex::get_vert_desc()
     position_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
     position_attrib.offset = offsetof(Vertex, position);
 
-    //// Normal will be stored at Location 1
+    // Normal will be stored at Location 1
     VkVertexInputAttributeDescription normal_attrib{};
     normal_attrib.binding = 0;
     normal_attrib.location = 1;
     normal_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
     normal_attrib.offset = offsetof(Vertex, normal);
 
-    //// UV will be stored at Location 2
+    // UV will be stored at Location 2
     VkVertexInputAttributeDescription texcoord_attrib{};
     texcoord_attrib.binding = 0;
     texcoord_attrib.location = 2;
@@ -70,7 +70,6 @@ VertexInputDescription Vertex::get_vert_desc()
     color_attrib.location = 3;
     color_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
     color_attrib.offset = offsetof(Vertex, color);
-
 
     desc.attributes.emplace_back(position_attrib);
     desc.attributes.emplace_back(normal_attrib);
@@ -111,15 +110,17 @@ bool coral_mesh::Builder::load_from_obj(const std::string& file_path)
     // materials contains the information about the material of each shape, not yet used.
     auto& materials = reader.GetMaterials();
 
-    std::unordered_map<Vertex, uint32_t> unique_verticies{};
+    std::cout << "[" << file_path << "] material count: " << materials.size() << std::endl;
+
+    std::unordered_map<Vertex, uint32_t> unique_vertices{};
 
     // Loop over shapes
     for (const auto& shape : shapes)
-    {                        
+    {
         for (const auto& index : shape.mesh.indices)
         {
             Vertex vertex{};
-            
+
             if (index.vertex_index >= 0)
             {
                 vertex.position = 
@@ -156,12 +157,12 @@ bool coral_mesh::Builder::load_from_obj(const std::string& file_path)
                 };
             }
 
-            if (unique_verticies.count(vertex) == 0)
+            if (unique_vertices.count(vertex) == 0)
             {
-                unique_verticies[vertex] = static_cast<uint32_t>(vertices.size());
+                unique_vertices[vertex] = static_cast<uint32_t>(vertices.size());
                 vertices.emplace_back(vertex);
             }
-            indices.emplace_back(unique_verticies[vertex]);
+            indices.emplace_back(unique_vertices[vertex]);
         }
     }
 

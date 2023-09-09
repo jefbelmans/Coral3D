@@ -1,0 +1,46 @@
+# ninja log v5
+4	103	7159049027402153	E:/Game Development/CLion Solutions/Coral3D/shaders/compiled/PosNormCol.frag.spv	ac7219847b18fcbf
+49	478	7159075873515452	coral_renderer/CMakeFiles/coral_renderer.dir/coral_utils.cpp.obj	c91de9060c288f8e
+8	109	7159049027465262	E:/Game Development/CLion Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	7c0e84dbcda9ddc3
+5	91	7159089857100579	E:/Game Development/CLion Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	cf69b20f9202215
+29	758	7159076525832877	coral_renderer/CMakeFiles/coral_renderer.dir/coral_camera.cpp.obj	56c2db84c65d4d4b
+4	1156	7159082978426971	coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj	f4c535aba44ed72e
+14	113	7159049027520323	E:/Game Development/CLion Solutions/Coral3D/shaders/compiled/PosNormCol.vert.spv	905aaffcf66e2629
+13	512	7159075873850729	coral_renderer/CMakeFiles/coral_renderer.dir/coral_window.cpp.obj	a99ed7ff35a9a157
+23	583	7159075874556404	coral_renderer/CMakeFiles/coral_renderer.dir/vk_initializers.cpp.obj	fae14d375b6ad879
+98	1794	7159070874149540	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_window.c.obj	3f9b7c7076917c50
+41	1461	7159070870801492	third_party/GLFW/src/CMakeFiles/glfw.dir/init.c.obj	39e3e36d72c0316
+54	1503	7159070871236882	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_monitor.c.obj	65fa02e663e707d8
+87	1421	7159070870396079	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_thread.c.obj	a60386ea372ba283
+4	1002	7159084618610996	coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj	792fa02ddfadf532
+93	1404	7159070870233177	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_time.c.obj	4a80b8650230c584
+59	1464	7159070870841529	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_init.c.obj	22c567f10e70b7b0
+64	1442	7159070870611274	third_party/GLFW/src/CMakeFiles/glfw.dir/vulkan.c.obj	5cce8941b8bc891f
+27	1060	7159078508127373	coral_renderer/CMakeFiles/coral_renderer.dir/coral_descriptors.cpp.obj	ea42b424126a2ab6
+109	1495	7159070871156797	third_party/GLFW/src/CMakeFiles/glfw.dir/osmesa_context.c.obj	5e4e9550c4800599
+3824	3945	7159576436476487	coral_renderer/coral_renderer.exe	366c0e985f1ffd52
+50	1508	7159070871286911	third_party/GLFW/src/CMakeFiles/glfw.dir/context.c.obj	6f5b80de15c556b0
+73	1557	7159070871777386	third_party/GLFW/src/CMakeFiles/glfw.dir/monitor.c.obj	23f6d43af06bd826
+69	1583	7159070872047627	third_party/GLFW/src/CMakeFiles/glfw.dir/window.c.obj	652470944f1d74f8
+83	1556	7159070871762377	third_party/GLFW/src/CMakeFiles/glfw.dir/egl_context.c.obj	454d27304ae7efce
+78	1558	7159070871787397	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_joystick.c.obj	f2ea9a9233a071de
+103	1611	7159070872332874	third_party/GLFW/src/CMakeFiles/glfw.dir/wgl_context.c.obj	3b33c7737118c57d
+20	967	7159077901268773	coral_renderer/CMakeFiles/coral_renderer.dir/coral_renderer.cpp.obj	1dd8741277160127
+8	3603	7159084153857659	coral_renderer/CMakeFiles/coral_renderer.dir/coral_texture.cpp.obj	f05bdc147641585b
+45	1666	7159070872873382	third_party/GLFW/src/CMakeFiles/glfw.dir/input.c.obj	874f45c3ff348e57
+16	1020	7159082977065775	coral_renderer/CMakeFiles/coral_renderer.dir/coral_gameobject.cpp.obj	938b18ddef4a2cd
+80	167	7159072972274230	third_party/GLFW/src/libglfw3.a	fc48f5f1f632859b
+57	713	7159075875868529	coral_renderer/CMakeFiles/coral_renderer.dir/coral_material.cpp.obj	c5f8306c259f691f
+4	3824	7159576435290410	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	e30d4711cbb60392
+8	1278	7159079788420663	coral_renderer/CMakeFiles/coral_renderer.dir/coral_swapchain.cpp.obj	e7a906445be27d10
+19	1167	7159082978537072	coral_renderer/CMakeFiles/coral_renderer.dir/render_system.cpp.obj	d371ca561cdf6e44
+25	1019	7159082977055768	coral_renderer/CMakeFiles/coral_renderer.dir/coral_frame_info.cpp.obj	1b079c08d0ca170c
+34	4182	7159070898030970	third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.obj	6016b8c576ca5ebe
+8	1424	7159080655193341	coral_renderer/CMakeFiles/coral_renderer.dir/coral_device.cpp.obj	a501b3a3fce1a5ed
+6	1813	7159564214064744	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	7b48bc5d85eb6f8a
+38	3530	7159070891512226	third_party/CMakeFiles/tinyobjloader.dir/tinyobjloader/tiny_obj_loader.cc.obj	8616220216a9664e
+75	166	7159072972264218	third_party/libtinyobjloader.a	99fa9adb75ddfe5c
+69	167	7159072972269223	third_party/libvkbootstrap.a	c71ed427a7b8907
+29	3158	7159082998439167	coral_renderer/CMakeFiles/coral_renderer.dir/coral_buffer.cpp.obj	5b13968e723208be
+1	301	0	coral_renderer/CMakeFiles/copy_assets	63c8c46ba7e3ec22
+1	168	7159579444453976	build.ninja	c6c9153b457a0267

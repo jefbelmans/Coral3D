@@ -1,4 +1,4 @@
-add_executable(coral_renderer 
+add_executable(coral_renderer
     "main.cpp"
     "coral_window.h"
     "coral_window.cpp"
@@ -33,11 +33,15 @@ add_executable(coral_renderer
     "coral_frame_info.cpp"
     "coral_descriptors.h"
     "coral_descriptors.cpp"
- "coral_material.h" "coral_material.cpp")
+    "coral_material.h"
+    "coral_material.cpp"
+)
 
-add_dependencies(coral_renderer Shaders)
-
-set_property(TARGET coral_renderer PROPERTY VS_DEBUGGER_WORKING_DIRECTORY "$<TARGET_FILE_DIR:coral_renderer>")
+if(MSVC)
+    target_compile_options(coral_renderer PRIVATE /W4 /WX)
+else()
+    target_compile_options(coral_renderer PRIVATE -Wall -Wextra -Wpedantic -Werror)
+endif()
 
 ## Shader compilation
 # GLSL
@@ -63,35 +67,47 @@ foreach(GLSL ${GLSL_SOURCE_FILES})
   get_filename_component(FILE_NAME ${GLSL} NAME)
   set(SPIRV "${PROJECT_SOURCE_DIR}/shaders/compiled/${FILE_NAME}.spv")
   message(STATUS ${GLSL})
+
   # execute glslang command to compile that specific shader
   add_custom_command(
     OUTPUT ${SPIRV}
 	COMMAND ${CMAKE_COMMAND} -E make_directory "${PROJECT_SOURCE_DIR}/shaders/compiled/"
     COMMAND ${GLSL_VALIDATOR} -V ${GLSL} -o ${SPIRV}
-    DEPENDS ${GLSL})
+    DEPENDS ${GLSL}
+  )
   list(APPEND SPIRV_BINARY_FILES ${SPIRV})
 endforeach(GLSL)
 
 add_custom_target(
-    Shaders 
+    Shaders
     DEPENDS ${SPIRV_BINARY_FILES}
     )
 
 add_dependencies(coral_renderer Shaders)
 
-# add shaders to output dir
-add_custom_command(TARGET coral_renderer POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:coral_renderer>/assets/"
-    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:coral_renderer>/assets/shaders/"
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
+set(source_dir "${CMAKE_SOURCE_DIR}/shaders/compiled")
+set(target_dir "${CMAKE_BINARY_DIR}/assets/shaders")
+file(COPY ${source_dir} DESTINATION ${target_dir})
+
+# Define a custom target to copy files
+add_custom_target(copy_assets ALL
+        COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:coral_renderer>/assets/"
+
+        # Shaders
+        COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:coral_renderer>/assets/shaders/"
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
         "${PROJECT_SOURCE_DIR}/shaders/compiled/"
         "$<TARGET_FILE_DIR:coral_renderer>/assets/shaders"
-    COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:coral_renderer>/assets/meshes/"
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
+
+        # Meshes
+        COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:coral_renderer>/assets/meshes/"
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
         "${PROJECT_SOURCE_DIR}/assets/meshes"
         "$<TARGET_FILE_DIR:coral_renderer>/assets/meshes"
+
+        # Textures
         COMMAND ${CMAKE_COMMAND} -E make_directory "$<TARGET_FILE_DIR:coral_renderer>/assets/textures/"
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
+        COMMAND ${CMAKE_COMMAND} -E copy_directory
         "${PROJECT_SOURCE_DIR}/assets/textures"
         "$<TARGET_FILE_DIR:coral_renderer>/assets/textures"
 )

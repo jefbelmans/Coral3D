@@ -5,7 +5,6 @@
 #include "coral_buffer.h"
 
 // STD
-#include <stdexcept>
 #include <array>
 #include <chrono>
 #include <iostream>
@@ -18,11 +17,11 @@ using namespace coral_3d;
 
 struct GlobalUBO
 {
-    glm::mat4 view_projeciton{1.f};
+    glm::mat4 view_projection{1.f};
 
     // GLOBAL LIGHT
-    glm::vec4 global_light_direction{ glm::normalize(glm::vec4{ 0.577f, 0.377f, -0.577f, 0.f})}; // w is ignored
-    glm::vec4 ambient_light_color{1.4f, .1f, .1f, 0.05f}; // w is intensity
+    glm::vec4 global_light_direction{ glm::normalize(glm::vec4{ 0.577f, -0.577f, -0.577f, 0.f})}; // w is ignored
+    glm::vec4 ambient_light_color{1.f, .82f, .863f, .01f}; // w is intensity
 
     // POINT LIGHT
     glm::vec4 light_position{0.f, -0.85f, 0.f, 0.f}; // w is ignored
@@ -39,9 +38,6 @@ first_app::first_app()
 
 	load_gameobjects();
 }
-
-first_app::~first_app()
-{}
 
 void first_app::run()
 {
@@ -63,7 +59,7 @@ void first_app::run()
 		.build(); 
 
     std::vector<VkDescriptorSet> global_descriptor_sets{coral_swapchain::MAX_FRAMES_IN_FLIGHT};
-    for (int i = 0; i < global_descriptor_sets.size(); i++)
+    for (size_t i = 0; i < global_descriptor_sets.size(); i++)
     {
         auto buffer_info = global_ubo.descriptor_info_index(i);
         auto image_info = test_texture->get_descriptor_info();
@@ -75,7 +71,7 @@ void first_app::run()
     }
 
 	render_system render_system{ device_, renderer_.get_swapchain_render_pass(), global_set_layout->get_descriptor_set_layout() };
-    coral_camera camera{ {-1.5f, -1.5f, -1.5f} };
+    coral_camera camera{ {0.f, 2.5f, 0.f} };
 
     auto last_time{ std::chrono::high_resolution_clock::now() };
 
@@ -109,7 +105,7 @@ void first_app::run()
 
             // UPDATE GLOBAL UBO
             GlobalUBO ubo{};
-            ubo.view_projeciton = camera.get_projection() * camera.get_view();
+            ubo.view_projection = camera.get_projection() * camera.get_view();
             global_ubo.write_to_index(&ubo, frame_index);
             global_ubo.flush_index(frame_index);
 
@@ -126,9 +122,7 @@ void first_app::run()
 
 void first_app::load_gameobjects()
 {
-#pragma region Multiple instances
-    constexpr uint32_t NUM_INSTANCES{ 1 };
-
+#pragma region Sponza
     std::shared_ptr<coral_mesh> flat_mesh {coral_mesh::create_mesh_from_file(device_, "assets/meshes/sponza.obj")};
 
     auto sponza{ coral_gameobject::create_gameobject() };
@@ -140,12 +134,13 @@ void first_app::load_gameobjects()
     std::cout << "\nNumber of instances: " << gameobjects_.size() << std::endl;
     std::cout << std::setprecision(8) << "Number of vertices: " << flat_mesh->get_vertex_count() * gameobjects_.size() << std::endl;
     std::cout << std::setprecision(8) << "Number of indices: " << flat_mesh->get_index_count() * gameobjects_.size() << std::endl;
-    std::cout << std::setprecision(8) << "Number of triangles: " << (flat_mesh->get_index_count() * gameobjects_.size()) / 3.f << std::endl;
+    std::cout << std::setprecision(8) << "Number of triangles: " << flat_mesh->get_index_count() * gameobjects_.size() /
+                                                                    3.f << std::endl;
     
     // LOAD TEXTURES
     test_texture = coral_texture::create_texture_from_file(
         device_,
-        "assets/textures/background.tga",
+        "assets/textures/sponza_floor_a_diff.png",
         VK_FORMAT_R8G8B8A8_SRGB
     );
 

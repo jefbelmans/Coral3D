@@ -4,10 +4,10 @@
 #include <iostream>
 #include <set>
 #include <unordered_set>
+#include <cstring>
 
 #include <VkBootstrap.h>
 #include "vk_initializers.h"
-
 
 using namespace coral_3d;
 
@@ -177,7 +177,7 @@ void coral_device::copy_buffer_to_image(AllocatedBuffer buffer, AllocatedImage i
         });
 }
 
-void coral_device::transition_image_layout(VkImage image, VkFormat format, VkImageLayout old_layout, VkImageLayout new_layout, uint32_t layer_count, uint32_t mip_levels)
+void coral_device::transition_image_layout(VkImage image, VkFormat, VkImageLayout old_layout, VkImageLayout new_layout, uint32_t layer_count, uint32_t mip_levels)
 {
     immediate_submit([&](VkCommandBuffer cmd)
     {
@@ -288,7 +288,7 @@ void coral_device::create_instance()
     allocator_info.instance = instance_;
     vmaCreateAllocator(&allocator_info, &allocator_);
 
-    deletion_queue_.deletors.emplace_back([=]() {
+    deletion_queue_.deletors.emplace_back([&]() {
         vmaDestroyAllocator(allocator_);
         });
 
@@ -312,7 +312,7 @@ void coral_device::create_command_pool()
     if (vkCreateCommandPool(device_, &graphics_pool_info, nullptr, &command_pool_) != VK_SUCCESS)
         throw std::runtime_error("ERROR! coral_device::create_command_pool() >> Failed to create command pool!");
 
-    deletion_queue_.deletors.emplace_front([=]() {
+    deletion_queue_.deletors.emplace_front([&]() {
         vkDestroyCommandPool(device_, command_pool_, nullptr);
         });
 
@@ -324,7 +324,7 @@ void coral_device::create_command_pool()
             "ERROR! coral_device::create_command_pool() >> Failed to create upload command pool!");
     }
 
-    deletion_queue_.deletors.emplace_back([=]() {
+    deletion_queue_.deletors.emplace_back([&]() {
         vkDestroyCommandPool(device_, upload_context_.command_pool, nullptr);
         });
 }
@@ -337,7 +337,7 @@ void coral_device::create_sync_structures()
     if (vkCreateFence(device_, &upload_fence_info, nullptr, &upload_context_.upload_fence) != VK_SUCCESS)
         throw std::runtime_error("ERROR! coral_device::create_sync_structures() >> Failed to create upload fence!");
 
-    deletion_queue_.deletors.emplace_back([=]() {
+    deletion_queue_.deletors.emplace_back([&]() {
         vkDestroyFence(device_, upload_context_.upload_fence, nullptr);
         });
 }

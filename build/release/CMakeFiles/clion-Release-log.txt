@@ -1,0 +1,39 @@
+"C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S "E:\Game Development\Visual Studio Solutions\Coral3D" -B "E:\Game Development\Visual Studio Solutions\Coral3D\build\release"
+-- The C compiler identification is GNU 13.1.0
+-- The CXX compiler identification is GNU 13.1.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/gcc.exe - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/g++.exe - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found Vulkan: C:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib (found version "1.3.250") found components: glslc glslangValidator 
+-- BUILDING SHADER
+-- E:/Game Development/Visual Studio Solutions/Coral3D/shaders/PosNormCol.frag
+-- BUILDING SHADER
+-- E:/Game Development/Visual Studio Solutions/Coral3D/shaders/PosNormCol.vert
+-- BUILDING SHADER
+-- E:/Game Development/Visual Studio Solutions/Coral3D/shaders/simple_shader.frag
+-- BUILDING SHADER
+-- E:/Game Development/Visual Studio Solutions/Coral3D/shaders/simple_shader.vert
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE  
+-- Looking for dinput.h
+-- Looking for dinput.h - found
+-- Looking for xinput.h
+-- Looking for xinput.h - found
+-- Performing Test _GLFW_HAS_DEP
+-- Performing Test _GLFW_HAS_DEP - Success
+-- Performing Test _GLFW_HAS_ASLR
+-- Performing Test _GLFW_HAS_ASLR - Success
+-- Performing Test _GLFW_HAS_64ASLR
+-- Performing Test _GLFW_HAS_64ASLR - Success
+-- Using Win32 for window creation
+-- Configuring done (5.2s)
+-- Generating done (0.0s)
+-- Build files have been written to: E:/Game Development/Visual Studio Solutions/Coral3D/build/release

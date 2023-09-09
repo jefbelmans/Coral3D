@@ -40,8 +40,8 @@ namespace coral_3d
 
     private:
         coral_device& device_;
-        VkDescriptorSetLayout descriptor_set_layout_;
         std::unordered_map<uint32_t, VkDescriptorSetLayoutBinding> bindings_;
+        VkDescriptorSetLayout descriptor_set_layout_;
 
         friend class coral_descriptor_writer;
     };

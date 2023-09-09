@@ -51,5 +51,5 @@ void main()
 	vec3 color = texture(texSampler, fragUV).xyz;
 	vec3 diffuse = calculate_diffuse(color, fragNormalWorld);
 
-	outColor = vec4(diffuse, 1.0f);
+	outColor = vec4(diffuse + ambient, 1.0f);
 }

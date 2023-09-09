@@ -78,9 +78,6 @@ void coral_renderer::begin_swapchain_render_pass(VkCommandBuffer command_buffer)
 	assert(command_buffer == get_current_command_buffer() &&
 		"ERROR! first_app::begin_swapchain_render_pass() >> Can't begin render pass on a buffer from a different frame");
 
-	VkCommandBufferBeginInfo begin_info{};
-	begin_info.sType = VK_STRUCTURE_TYPE_COMMAND_BUFFER_BEGIN_INFO;
-
 	VkRenderPassBeginInfo render_pass_info{};
 	render_pass_info.sType = VK_STRUCTURE_TYPE_RENDER_PASS_BEGIN_INFO;
 	render_pass_info.renderPass = swapchain_->get_render_pass();
@@ -90,7 +87,7 @@ void coral_renderer::begin_swapchain_render_pass(VkCommandBuffer command_buffer)
 	render_pass_info.renderArea.extent = swapchain_->get_swapchain_extent();
 
 	std::array<VkClearValue, 2> clear_values{};
-	clear_values[0].color = { 0.02f, 0.02f, 0.02f, 1.0f };
+	clear_values[0].color = { {0.02f, 0.02f, 0.02f, 1.0f} };
 	clear_values[1].depthStencil = { 1.0f, 0 };
 	render_pass_info.clearValueCount = static_cast<uint32_t>(clear_values.size());
 	render_pass_info.pClearValues = clear_values.data();
