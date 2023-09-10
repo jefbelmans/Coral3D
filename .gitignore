@@ -46,3 +46,4 @@
 out/
 build/
 cmake-build-*/
+/build/
