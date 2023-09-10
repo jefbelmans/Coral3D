@@ -285,7 +285,7 @@ void coral_swapchain::create_render_pass()
 	if (vkCreateRenderPass(device_.device(), &render_pass_info, nullptr, &render_pass_) != VK_SUCCESS)
 		throw std::runtime_error("ERROR! coral_swapchain::create_render_pass() >> Failed to create render pass!");
 
-	deletion_queue_.deletors.emplace_back([&]() {
+	deletion_queue_.deletors.emplace_back([=, this]() {
 		vkDestroyRenderPass(device_.device(), render_pass_, nullptr);
 		});
 }
@@ -315,7 +315,7 @@ void coral_swapchain::create_depth_resources()
 		if (vkCreateImageView(device_.device(), &image_view_info, nullptr, &depth_image_views_[i]) != VK_SUCCESS)
 			throw std::runtime_error("ERROR! coral_swapchain::create_depth_resources() >> Failed to create texture image view!");
 
-		deletion_queue_.deletors.emplace_back([&]() {
+		deletion_queue_.deletors.emplace_back([=, this]() {
 			vkDestroyImageView(device_.device(), depth_image_views_[i], nullptr);
 			vmaDestroyImage(device_.allocator(), depth_images_[i].image, depth_images_[i].allocation);
 			});
@@ -343,7 +343,7 @@ void coral_swapchain::create_frame_buffers()
 		if (vkCreateFramebuffer(device_.device(), &fb_info, nullptr, &swapchain_frame_buffers_[i]) != VK_SUCCESS)
 			throw std::runtime_error("ERROR! coral_swapchain::create_frame_buffers() >> Failed to create framebuffer!");
 
-		deletion_queue_.deletors.emplace_back([&]() {
+		deletion_queue_.deletors.emplace_back([=, this]() {
 			vkDestroyFramebuffer(device_.device(), swapchain_frame_buffers_[i], nullptr);
 			// vkDestroyImageView(device_.device(), swapchain_image_views_[i], nullptr);
 			});
@@ -362,7 +362,7 @@ void coral_swapchain::create_sync_structures()
 		if (vkCreateFence(device_.device(), &fenceCreateInfo, nullptr, &frames_[i].render_fence) != VK_SUCCESS)
 			throw std::runtime_error("ERROR! coral_swapchain::create_sync_structures() >> Failed to create render fence!");
 
-		deletion_queue_.deletors.emplace_back([&]() {
+		deletion_queue_.deletors.emplace_back([=, this]() {
 			vkDestroyFence(device_.device(), frames_[i].render_fence, nullptr);
 			});
 
@@ -371,7 +371,7 @@ void coral_swapchain::create_sync_structures()
 		if(vkCreateSemaphore(device_.device(), &semaphoreCreateInfo, nullptr, &frames_[i].render_semaphore) != VK_SUCCESS)
 			throw std::runtime_error("ERROR! coral_swapchain::create_sync_structures() >> Failed to create render semaphore!");
 
-		deletion_queue_.deletors.emplace_back([&]()
+		deletion_queue_.deletors.emplace_back([=, this]()
 			{
 				vkDestroySemaphore(device_.device(), frames_[i].present_semaphore, nullptr);
 				vkDestroySemaphore(device_.device(), frames_[i].render_semaphore, nullptr);

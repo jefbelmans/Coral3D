@@ -31,3 +31,18 @@
 *.exe
 *.out
 *.app
+
+# CLion directories
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# VS directories
+.vs/
+
+# Build directories
+out/
+build/
+cmake-build-*/
