@@ -43,7 +43,5 @@
 .vs/
 
 # Build directories
-out/
-build/
-cmake-build-*/
 /build/
+/cmake-build-debug/
