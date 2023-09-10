@@ -33,7 +33,6 @@ namespace coral_3d
 		coral_device device_{ window_ };
 		coral_renderer renderer_{ window_, device_ };
 
-		std::unique_ptr<coral_texture> test_texture;
 		std::unique_ptr<coral_descriptor_pool> global_descriptor_pool_{};
 		coral_gameobject::Map gameobjects_;
 	};

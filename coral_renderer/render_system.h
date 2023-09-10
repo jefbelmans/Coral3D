@@ -5,6 +5,8 @@
 #include "coral_pipeline.h"
 #include "coral_gameobject.h"
 #include "coral_frame_info.h"
+#include "coral_descriptors.h"
+#include "coral_texture.h"
 
 // STD
 #include <memory>
@@ -35,5 +37,11 @@ namespace coral_3d
 		std::unique_ptr<coral_pipeline> pipeline_;
 		VkPipelineLayout pipeline_layout_;
 
+        std::unique_ptr<coral_texture> test_texture_;
+        std::unique_ptr<coral_texture> test_texture_2_;
+
+        std::unique_ptr<coral_descriptor_pool> material_descriptor_pool_{};
+        std::unique_ptr<coral_descriptor_set_layout> material_set_layout_{};
+        VkDescriptorSet material_descriptor_set{};
 	};
 }

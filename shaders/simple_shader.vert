@@ -7,7 +7,7 @@ layout (location = 3) in vec3 color;
 
 layout (location = 0) out vec3 fragColor;
 layout (location = 1) out vec3 fragPosWorld;
-layout (location = 2) out vec3 fragNormalWorld;
+layout (location = 2) out vec3 fragNormal;
 layout (location = 3) out vec2 fragUV;
 
 layout (set = 0, binding = 0) uniform GlobalUBO
@@ -17,10 +17,6 @@ layout (set = 0, binding = 0) uniform GlobalUBO
 	// GLOBAL LIGHT
 	vec4 globalLightDirection;
 	vec4 ambientLightColor;
-
-	// POINT LIGHT
-	vec4 lightPosition;
-	vec4 lightColor;
 } ubo;
 
 layout (push_constant) uniform Push
@@ -36,6 +32,6 @@ void main()
 
 	fragColor = color;
 	fragPosWorld = worldPos.xyz;
-	fragNormalWorld = normalize(mat3(push.normalMatrix) * normal);
+	fragNormal = normal;
 	fragUV = uv;
 }

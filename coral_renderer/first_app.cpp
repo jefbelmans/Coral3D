@@ -22,10 +22,6 @@ struct GlobalUBO
     // GLOBAL LIGHT
     glm::vec4 global_light_direction{ glm::normalize(glm::vec4{ 0.577f, -0.577f, -0.577f, 0.f})}; // w is ignored
     glm::vec4 ambient_light_color{1.f, .82f, .863f, .01f}; // w is intensity
-
-    // POINT LIGHT
-    glm::vec4 light_position{0.f, -0.85f, 0.f, 0.f}; // w is ignored
-    glm::vec4 light_color{1.f}; // w is intensity
 };
 
 first_app::first_app()
@@ -33,7 +29,6 @@ first_app::first_app()
     global_descriptor_pool_ = coral_descriptor_pool::Builder(device_)
         .set_max_sets(coral_swapchain::MAX_FRAMES_IN_FLIGHT)
         .add_pool_size(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, coral_swapchain::MAX_FRAMES_IN_FLIGHT)
-        .add_pool_size(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, coral_swapchain::MAX_FRAMES_IN_FLIGHT)
         .build();
 
 	load_gameobjects();
@@ -53,24 +48,22 @@ void first_app::run()
 	};
     global_ubo.map();
 
+    // Set 0: Global descriptor sets
     auto global_set_layout = coral_descriptor_set_layout::Builder(device_)
 		.add_binding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_ALL_GRAPHICS)
-        .add_binding(1, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
-		.build(); 
+        .build();
 
     std::vector<VkDescriptorSet> global_descriptor_sets{coral_swapchain::MAX_FRAMES_IN_FLIGHT};
     for (size_t i = 0; i < global_descriptor_sets.size(); i++)
     {
         auto buffer_info = global_ubo.descriptor_info_index(i);
-        auto image_info = test_texture->get_descriptor_info();
 
         coral_descriptor_writer(*global_set_layout, *global_descriptor_pool_)
             .write_buffer(0, &buffer_info)
-            .write_image(1, &image_info)
             .build(global_descriptor_sets[i]);
     }
 
-	render_system render_system{ device_, renderer_.get_swapchain_render_pass(), global_set_layout->get_descriptor_set_layout() };
+    render_system render_system{ device_, renderer_.get_swapchain_render_pass(), global_set_layout->get_descriptor_set_layout() };
     coral_camera camera{ {0.f, 2.5f, 0.f} };
 
     auto last_time{ std::chrono::high_resolution_clock::now() };
@@ -127,22 +120,8 @@ void first_app::load_gameobjects()
 
     auto sponza{ coral_gameobject::create_gameobject() };
     sponza.mesh_ = flat_mesh;
-    sponza.transform_.translation = { 0, 0.75f, 0.f };
-    sponza.transform_.scale = { 0.2f, 0.2f, 0.2f };
+    sponza.transform_.translation = { 0.f, 0.f, 0.f };
     gameobjects_.emplace(sponza.get_id(), std::move(sponza));
-    
-    std::cout << "\nNumber of instances: " << gameobjects_.size() << std::endl;
-    std::cout << std::setprecision(8) << "Number of vertices: " << flat_mesh->get_vertex_count() * gameobjects_.size() << std::endl;
-    std::cout << std::setprecision(8) << "Number of indices: " << flat_mesh->get_index_count() * gameobjects_.size() << std::endl;
-    std::cout << std::setprecision(8) << "Number of triangles: " << flat_mesh->get_index_count() * gameobjects_.size() /
-                                                                    3.f << std::endl;
-    
-    // LOAD TEXTURES
-    test_texture = coral_texture::create_texture_from_file(
-        device_,
-        "assets/textures/sponza_floor_a_diff.png",
-        VK_FORMAT_R8G8B8A8_SRGB
-    );
 
 #pragma endregion
 }

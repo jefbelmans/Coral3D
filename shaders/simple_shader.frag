@@ -2,7 +2,7 @@
 
 layout (location = 0) in vec3 fragColor;
 layout (location = 1) in vec3 fragPosWorld;
-layout (location = 2) in vec3 fragNormalWorld;
+layout (location = 2) in vec3 fragNormal;
 layout (location = 3) in vec2 fragUV;
 
 layout (location = 0) out vec4 outColor;
@@ -14,13 +14,9 @@ layout (set = 0, binding = 0) uniform GlobalUBO
 	// GLOBAL LIGHT
 	vec4 globalLightDirection;
 	vec4 ambientLightColor;
-
-	// POINT LIGHT
-	vec4 lightPosition;
-	vec4 lightColor;
 } ubo;
 
-layout (binding = 1) uniform sampler2D texSampler;
+layout (set = 1, binding = 0) uniform sampler2D texSampler;
 
 layout (push_constant) uniform Push
 {
@@ -42,14 +38,9 @@ vec3 calculate_diffuse(vec3 col, vec3 norm)
 
 void main()
 {
-	// POINT LIGHT
-	// vec3 directionToLight = ubo.lightPosition.xyz - fragPosWorld;
-	// float attenuation = 1.0f / dot(directionToLight, directionToLight);
-	// vec3 lightColor = ubo.lightColor.xyz * ubo.lightColor.w * attenuation;
-
 	vec3 ambient = ubo.ambientLightColor.xyz * ubo.ambientLightColor.w;
 	vec3 color = texture(texSampler, fragUV).xyz;
-	vec3 diffuse = calculate_diffuse(color, fragNormalWorld);
+	vec3 diffuse = calculate_diffuse(color, fragNormal);
 
 	outColor = vec4(diffuse + ambient, 1.0f);
 }
