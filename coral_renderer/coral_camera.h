@@ -59,8 +59,8 @@ namespace coral_3d
 		float yaw_{0.f};
 		float pitch_{0.f};
 
-		float movement_speed_{ 3.f };
-		float sprint_movement_speed_{ 8.f };
+		float movement_speed_{ 8.f };
+		float sprint_movement_speed_{ 14.f };
 		float mouse_sensitivity_{ 1.5f };
 
 		glm::mat4 projection_matrix_{ 1.f };

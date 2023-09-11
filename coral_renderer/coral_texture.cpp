@@ -70,9 +70,8 @@ bool coral_texture::Builder::load_image_from_file(coral_device& device, const st
 	device.copy_buffer_to_image(staging_buffer.get_buffer(), image, img_extent.width, img_extent.height, 1);
 	generate_mipmaps(device, tex_width, tex_height);
 
-	// device.transition_image_layout(image.image, img_format, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, 1, mip_levels);
+	device.transition_image_layout(image.image, img_format, VK_IMAGE_LAYOUT_TRANSFER_DST_OPTIMAL, VK_IMAGE_LAYOUT_SHADER_READ_ONLY_OPTIMAL, 1, mip_levels);
 
-	std::cout << "Texture loaded successfully " << file_name << std::endl;
 	return true;
 }
 

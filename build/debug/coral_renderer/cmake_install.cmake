@@ -1,4 +1,4 @@
-# Install script for directory: E:/Game Development/Visual Studio Solutions/Coral3D/coral_renderer
+# Install script for directory: C:/Game Development/Visual Studio Solutions/Coral3D/coral_renderer
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -34,6 +34,6 @@ endif()
 
 # Set default install directory permissions.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "C:/Program Files/JetBrains/CLion 2023.2/bin/mingw/bin/objdump.exe")
+  set(CMAKE_OBJDUMP "C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/objdump.exe")
 endif()
 

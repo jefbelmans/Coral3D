@@ -82,7 +82,7 @@ VertexInputDescription Vertex::get_vert_desc()
 bool coral_mesh::Builder::load_from_obj(coral_device& device, const std::string& file_path)
 {
     tinyobj::ObjReaderConfig reader_config;
-    reader_config.mtl_search_path = "assets/textures";
+    reader_config.mtl_search_path = "assets/materials";
 
     tinyobj::ObjReader reader;
 

@@ -206,10 +206,10 @@ void coral_swapchain::create_render_pass()
 	// Description of the image that we will be writing rendering commands to
 	VkAttachmentDescription color_attachment{};
 
-	// format should be the same as the swap chain images
-	color_attachment.format = swapchain_image_format_;
-	// MSAA samples, set to 1 (no MSAA) by default
-	color_attachment.samples = VK_SAMPLE_COUNT_1_BIT;
+    // format should be the same as the swap chain images
+    color_attachment.format = swapchain_image_format_;
+    // MSAA samples, set to 1 (no MSAA) by default
+    color_attachment.samples = VK_SAMPLE_COUNT_1_BIT;
 	// Clear when render pass begins
 	color_attachment.loadOp = VK_ATTACHMENT_LOAD_OP_CLEAR;
 	// Keep the attachment stored when render pass ends

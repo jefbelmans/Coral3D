@@ -7,6 +7,7 @@
 
 // STD
 #include <memory>
+#include <utility>
 #include "vulkan/vulkan.h"
 
 namespace coral_3d
@@ -14,7 +15,7 @@ namespace coral_3d
     class coral_material final
     {
     public:
-        coral_material(coral_device& device, const tinyobj::material_t& tiny_obj_material) : device_{device}, tiny_obj_material_{tiny_obj_material}
+        coral_material(coral_device& device, tinyobj::material_t tiny_obj_material) : device_{device}, tiny_obj_material_{std::move(tiny_obj_material)}
         {};
 
         coral_material(const coral_material&) = delete;
@@ -37,6 +38,6 @@ namespace coral_3d
         std::shared_ptr<coral_texture> texture_;
         VkDescriptorSet texture_desc_set_;
 
-        const tinyobj::material_t& tiny_obj_material_;
+        tinyobj::material_t tiny_obj_material_;
     };
 }

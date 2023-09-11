@@ -11,12 +11,10 @@ void coral_material::load(VkPipelineLayout pipeline_layout,
 {
     pipeline_layout_ = pipeline_layout;
 
-    std::cout << "Material path:" << tiny_obj_material_.diffuse_texname << std::endl;
-
     // LOAD TEXTURES
     texture_ = coral_texture::create_texture_from_file(
             device_,
-            "assets/textures/sponza_floor_a_diff.png",
+            "assets/textures/" + tiny_obj_material_.diffuse_texname,
             VK_FORMAT_R8G8B8A8_SRGB
     );
 
