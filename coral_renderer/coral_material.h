@@ -1,25 +1,42 @@
 #pragma once
 
+// CORAL
+#include "coral_descriptors.h"
+#include "coral_texture.h"
+#include "tiny_obj_loader.h"
+
+// STD
 #include <memory>
 #include "vulkan/vulkan.h"
 
-class coral_texture;
-class coral_material final
+namespace coral_3d
 {
-public:
-	coral_material(std::shared_ptr<coral_texture> texture, VkPipelineLayout pipeline_layout, VkPipeline pipeline);
-	~coral_material();
+    class coral_material final
+    {
+    public:
+        coral_material(coral_device& device, const tinyobj::material_t& tiny_obj_material) : device_{device}, tiny_obj_material_{tiny_obj_material}
+        {};
 
-	void bind(VkCommandBuffer command_buffer);
+        coral_material(const coral_material&) = delete;
+        coral_material& operator=(const coral_material&) = delete;
 
-    VkPipeline pipeline() const { return pipeline_; }
-	VkPipelineLayout pipeline_layout() const { return pipeline_layout_; }
-	VkDescriptorSet texture_desc_set() const { return texture_desc_set_; }
-private:
-	
-	std::shared_ptr<coral_texture> texture_;
+        void load(
+                VkPipelineLayout pipeline_layout,
+                coral_descriptor_set_layout& material_set_layout,
+                coral_descriptor_pool& material_set_pool);
 
-    VkPipeline pipeline_;
-    VkPipelineLayout pipeline_layout_;
-	VkDescriptorSet texture_desc_set_{ VK_NULL_HANDLE };
-};
+        void bind(VkCommandBuffer command_buffer);
+
+        VkPipelineLayout pipeline_layout() const { return pipeline_layout_; }
+        VkDescriptorSet texture_desc_set() const { return texture_desc_set_; }
+
+    private:
+        coral_device& device_;
+        VkPipelineLayout pipeline_layout_;
+
+        std::shared_ptr<coral_texture> texture_;
+        VkDescriptorSet texture_desc_set_;
+
+        const tinyobj::material_t& tiny_obj_material_;
+    };
+}

@@ -31,7 +31,10 @@ first_app::first_app()
         .add_pool_size(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, coral_swapchain::MAX_FRAMES_IN_FLIGHT)
         .build();
 
-	load_gameobjects();
+    material_descriptor_pool_ = coral_descriptor_pool::Builder(device_)
+            .set_max_sets(MAX_MATERIAL_SETS)
+            .add_pool_size(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, MAX_MATERIAL_SETS)
+            .build();
 }
 
 void first_app::run()
@@ -63,11 +66,24 @@ void first_app::run()
             .build(global_descriptor_sets[i]);
     }
 
-    render_system render_system{ device_, renderer_.get_swapchain_render_pass(), global_set_layout->get_descriptor_set_layout() };
+    // Set 1: Material descriptor set
+    auto material_set_layout = coral_descriptor_set_layout::Builder(device_)
+            .add_binding(0, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT, MAX_TEXTURES)
+            .build();
+
+    // Combined descriptor set layouts
+    std::vector<VkDescriptorSetLayout> desc_set_layouts
+    {
+        global_set_layout->get_descriptor_set_layout(),
+        material_set_layout->get_descriptor_set_layout()
+    };
+
+    render_system render_system{ device_, renderer_.get_swapchain_render_pass(), desc_set_layouts};
     coral_camera camera{ {0.f, 2.5f, 0.f} };
 
-    auto last_time{ std::chrono::high_resolution_clock::now() };
+    load_gameobjects(render_system.pipeline_layout(), *material_set_layout);
 
+    auto last_time{ std::chrono::high_resolution_clock::now() };
 	while (!window_.should_close())
 	{
 		glfwPollEvents();
@@ -113,15 +129,16 @@ void first_app::run()
 	vkDeviceWaitIdle(device_.device());
 }
 
-void first_app::load_gameobjects()
+void first_app::load_gameobjects(VkPipelineLayout pipeline_layout, coral_descriptor_set_layout& material_set_layout)
 {
 #pragma region Sponza
-    std::shared_ptr<coral_mesh> flat_mesh {coral_mesh::create_mesh_from_file(device_, "assets/meshes/sponza.obj")};
+    std::shared_ptr<coral_mesh> sponza_mesh{ coral_mesh::create_mesh_from_file(device_, "assets/meshes/sponza.obj") };
+    sponza_mesh->load_materials(pipeline_layout, material_set_layout, *material_descriptor_pool_);
 
-    auto sponza{ coral_gameobject::create_gameobject() };
-    sponza.mesh_ = flat_mesh;
-    sponza.transform_.translation = { 0.f, 0.f, 0.f };
-    gameobjects_.emplace(sponza.get_id(), std::move(sponza));
+    auto sponza_scene{ coral_gameobject::create_gameobject() };
+    sponza_scene.mesh_ = sponza_mesh;
+    sponza_scene.transform_.translation = { 0.f, 0.f, 0.f };
+    gameobjects_.emplace(sponza_scene.get_id(), std::move(sponza_scene));
 
 #pragma endregion
 }

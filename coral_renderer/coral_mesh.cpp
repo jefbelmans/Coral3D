@@ -79,7 +79,7 @@ VertexInputDescription Vertex::get_vert_desc()
     return desc;
 }
 
-bool coral_mesh::Builder::load_from_obj(const std::string& file_path)
+bool coral_mesh::Builder::load_from_obj(coral_device& device, const std::string& file_path)
 {
     tinyobj::ObjReaderConfig reader_config;
     reader_config.mtl_search_path = "assets/textures";
@@ -113,6 +113,8 @@ bool coral_mesh::Builder::load_from_obj(const std::string& file_path)
     std::cout << "[" << file_path << "] shape count: " << shapes.size() << std::endl;
     std::cout << "[" << file_path << "] material count: " << materials.size() << std::endl;
 
+    sub_meshes.reserve(shapes.size());
+
     std::unordered_map<Vertex, uint32_t> unique_vertices{};
 
     // Loop over shapes
@@ -120,6 +122,7 @@ bool coral_mesh::Builder::load_from_obj(const std::string& file_path)
     {
         const int material_id {shape.mesh.material_ids[0]};
         std::cout << "[" << file_path << "] >> shape [" << shape.name << "] has material [" << material_id << ": \"" << materials[material_id].name << "\"]" << std::endl;
+        uint32_t index_count{};
 
         for (const auto& index : shape.mesh.indices)
         {
@@ -167,7 +170,14 @@ bool coral_mesh::Builder::load_from_obj(const std::string& file_path)
                 vertices.emplace_back(vertex);
             }
             indices.emplace_back(unique_vertices[vertex]);
+            index_count++;
         }
+
+        sub_meshes.emplace_back(
+                index_count, indices.size() - index_count,
+                std::make_shared<coral_material>(device, materials[material_id]));
+
+        std::cout << "[" << file_path << "] Created sub mesh with " << sub_meshes.back().index_count  << " indices and a first index of " << sub_meshes.back().first_index << std::endl;
     }
 
     return true;
@@ -178,19 +188,25 @@ coral_mesh::coral_mesh(coral_device& device, const Builder& builder)
 {
     create_vertex_buffers(builder.vertices);
     create_index_buffers(builder.indices);
+    sub_meshes_ = builder.sub_meshes;
 }
-
-coral_mesh::~coral_mesh()
-{}
 
 std::unique_ptr<coral_mesh> coral_mesh::create_mesh_from_file(coral_device& device, const std::string& file_path)
 {
     Builder builder{};
-    builder.load_from_obj(file_path);
+    builder.load_from_obj(device, file_path);
     std::cout << "[" << file_path << "] vertex count: " << builder.vertices.size() << "\n";
     std::cout << "[" << file_path << "] index count: " << builder.indices.size() << "\n";
 
     return std::make_unique<coral_mesh>(device, builder);
+}
+
+void coral_mesh::load_materials(VkPipelineLayout pipeline_layout,
+                                coral_descriptor_set_layout& material_set_layout,
+                                coral_descriptor_pool& material_set_pool)
+{
+    for(auto& sub_mesh : sub_meshes_)
+        sub_mesh.material->load(pipeline_layout, material_set_layout, material_set_pool);
 }
 
 void coral_mesh::bind(VkCommandBuffer command_buffer)
@@ -208,7 +224,13 @@ void coral_mesh::bind(VkCommandBuffer command_buffer)
 void coral_mesh::draw(VkCommandBuffer command_buffer)
 {
     if (has_index_buffer())
-        vkCmdDrawIndexed(command_buffer, index_count_, 1, 0, 0, 0);
+    {
+        for(auto& sub_mesh : sub_meshes_)
+        {
+            sub_mesh.material->bind(command_buffer);
+            vkCmdDrawIndexed(command_buffer, sub_mesh.index_count, 1, sub_mesh.first_index, 0, 0);
+        }
+    }
     else
         vkCmdDraw(command_buffer, vertex_count_, 1, 0, 0);
 }

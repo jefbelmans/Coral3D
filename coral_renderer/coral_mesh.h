@@ -12,6 +12,7 @@
 #include "vk_types.h"
 #include "coral_device.h"
 #include "coral_buffer.h"
+#include "coral_material.h"
 
 namespace coral_3d
 {
@@ -42,6 +43,14 @@ namespace coral_3d
 		}
 	};
 
+    struct SubMesh
+    {
+        uint32_t index_count;
+        uint32_t first_index;
+
+        std::shared_ptr<coral_material> material;
+    };
+
 	class coral_mesh final
 	{
 	public:
@@ -49,18 +58,21 @@ namespace coral_3d
 		{
 			std::vector<Vertex> vertices{};
 			std::vector<uint32_t> indices{};
+            std::vector<SubMesh> sub_meshes{};
 
-			bool load_from_obj(const std::string& file_path);
+			bool load_from_obj(coral_device& device, const std::string& file_path);
 		};
 
 		coral_mesh(coral_device& device, const Builder& builder);
-		~coral_mesh();
 		
 		coral_mesh(const coral_mesh&) = delete;
 		coral_mesh& operator=(const coral_mesh&) = delete;
 
 		static std::unique_ptr<coral_mesh> create_mesh_from_file(coral_device& device, const std::string& file_path);
 
+        void load_materials(VkPipelineLayout pipeline_layout,
+                            coral_descriptor_set_layout& material_set_layout,
+                            coral_descriptor_pool& material_set_pool);
 		void bind(VkCommandBuffer command_buffer);
 		void draw(VkCommandBuffer command_buffer);
 
@@ -80,5 +92,7 @@ namespace coral_3d
 
 		uint32_t index_count_;
 		std::unique_ptr<coral_buffer> index_buffer_;
+
+        std::vector<SubMesh> sub_meshes_;
 	};
 }
