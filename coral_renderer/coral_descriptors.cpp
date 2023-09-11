@@ -169,14 +169,33 @@ coral_descriptor_writer& coral_descriptor_writer::write_buffer(uint32_t binding,
     return *this;
 }
 
+coral_descriptor_writer &coral_descriptor_writer::write_sampler(uint32_t binding, VkDescriptorImageInfo *sampler_info)
+{
+    assert(set_layout_.bindings_.count(binding) == 1 && "ERROR! coral_descriptor_writer::write_sampler() >> Layout does not contain specified binding");
+
+    auto& binding_description = set_layout_.bindings_[binding];
+
+    assert(binding_description.descriptorCount == 1 &&
+            "ERROR! coral_descriptor_writer::write_sampler() >> Binding single descriptor info, but binding expects multiple");
+
+    VkWriteDescriptorSet write{};
+    write.sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
+    write.descriptorType = binding_description.descriptorType;
+    write.dstBinding = binding;
+    write.pImageInfo = sampler_info;
+    write.descriptorCount = 1;
+
+    writes_.push_back(write);
+    return *this;
+}
+
 coral_descriptor_writer& coral_descriptor_writer::write_image(uint32_t binding, VkDescriptorImageInfo* image_info)
 {
     assert(set_layout_.bindings_.count(binding) == 1 && "ERROR! coral_descriptor_writer::write_image() >> Layout does not contain specified binding");
 
     auto& binding_description = set_layout_.bindings_[binding];
 
-    assert(
-        binding_description.descriptorCount == 1 &&
+    assert(binding_description.descriptorCount == 1 &&
         "ERROR! coral_descriptor_writer::write_image() >> Binding single descriptor info, but binding expects multiple");
 
     VkWriteDescriptorSet write{};

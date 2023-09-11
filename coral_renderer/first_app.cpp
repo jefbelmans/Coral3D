@@ -33,7 +33,8 @@ first_app::first_app()
 
     material_descriptor_pool_ = coral_descriptor_pool::Builder(device_)
             .set_max_sets(MAX_MATERIAL_SETS)
-            .add_pool_size(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, MAX_MATERIAL_SETS)
+            .add_pool_size(VK_DESCRIPTOR_TYPE_SAMPLER, 1)
+            .add_pool_size(VK_DESCRIPTOR_TYPE_SAMPLED_IMAGE, MAX_MATERIAL_SETS)
             .build();
 }
 
@@ -68,7 +69,8 @@ void first_app::run()
 
     // Set 1: Material descriptor set
     auto material_set_layout = coral_descriptor_set_layout::Builder(device_)
-            .add_binding(0, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT, MAX_TEXTURES)
+            .add_binding(0, VK_DESCRIPTOR_TYPE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
+            .add_binding(1, VK_DESCRIPTOR_TYPE_SAMPLED_IMAGE, VK_SHADER_STAGE_FRAGMENT_BIT, MAX_TEXTURES)
             .build();
 
     // Combined descriptor set layouts

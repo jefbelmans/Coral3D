@@ -23,6 +23,7 @@ namespace vkinit
 	VkPipelineLayoutCreateInfo pipeline_layout_ci();
 
 	// Image initializers
+    VkSamplerCreateInfo sampler_ci(VkFilter min_mag_filter, VkSamplerAddressMode address_mode, VkSamplerMipmapMode mip_map_mode, float max_anisotropic);
 	VkImageCreateInfo image_ci(VkFormat format, VkImageUsageFlags usageFlags, VkExtent3D extent);
 	VkImageViewCreateInfo image_view_ci(VkFormat format, VkImage image, VkImageAspectFlags aspectFlags);
 	VkPipelineDepthStencilStateCreateInfo depth_stencil_ci(bool bDepthTest, bool bDepthWrite, VkCompareOp compareOp);

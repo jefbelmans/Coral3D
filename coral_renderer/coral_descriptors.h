@@ -92,6 +92,7 @@ namespace coral_3d
         coral_descriptor_writer(coral_descriptor_set_layout& set_layout, coral_descriptor_pool& pool);
 
         coral_descriptor_writer& write_buffer(uint32_t binding, VkDescriptorBufferInfo* buffer_info);
+        coral_descriptor_writer& write_sampler(uint32_t binding, VkDescriptorImageInfo* sampler_info);
         coral_descriptor_writer& write_image(uint32_t binding, VkDescriptorImageInfo* image_info);
 
         bool build(VkDescriptorSet& set);

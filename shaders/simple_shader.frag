@@ -16,7 +16,8 @@ layout (set = 0, binding = 0) uniform GlobalUBO
 	vec4 ambientLightColor;
 } ubo;
 
-layout (set = 1, binding = 0) uniform sampler2D texSampler;
+layout (set = 1, binding = 0) uniform sampler samp;
+layout (set = 1, binding = 1) uniform texture2D textures;
 
 layout (push_constant) uniform Push
 {
@@ -39,8 +40,7 @@ vec3 calculate_diffuse(vec3 col, vec3 norm)
 void main()
 {
 	vec3 ambient = ubo.ambientLightColor.xyz * ubo.ambientLightColor.w;
-	vec3 color = texture(texSampler, fragUV).xyz;
-	// vec3 color = { 0.6f, 0.6f, 0.6f };
+	vec3 color = texture(sampler2D(textures, samp), fragUV).xyz;
 	vec3 diffuse = calculate_diffuse(color, fragNormal);
 
 	outColor = vec4(diffuse + ambient, 1.0f);

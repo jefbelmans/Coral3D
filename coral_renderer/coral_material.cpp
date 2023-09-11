@@ -1,5 +1,7 @@
 #include "coral_material.h"
+#include "vk_initializers.h"
 
+// STD
 #include <utility>
 #include <iostream>
 
@@ -18,10 +20,20 @@ void coral_material::load(VkPipelineLayout pipeline_layout,
             VK_FORMAT_R8G8B8A8_SRGB
     );
 
-    // WRITE TEXTURES TO DESCRIPTOR
+    // IMAGE SAMPLER
+    VkSamplerCreateInfo sampler_create_info{ vkinit::sampler_ci(VK_FILTER_NEAREST, VK_SAMPLER_ADDRESS_MODE_REPEAT, VK_SAMPLER_MIPMAP_MODE_LINEAR, 16.f)};
+
+    VkSampler sampler;
+    vkCreateSampler(device_.device(), &sampler_create_info, nullptr, &sampler);
+
+    // WRITE SAMPLER AND TEXTURES TO DESCRIPTOR
+    VkDescriptorImageInfo sampler_info{};
+    sampler_info.sampler = sampler;
     auto image_info = texture_->get_descriptor_info();
+
     coral_descriptor_writer(material_set_layout, material_set_pool)
-            .write_image(0, &image_info)
+            .write_sampler(0, &sampler_info)
+            .write_image(1, &image_info)
             .build(texture_desc_set_);
 }
 

@@ -325,3 +325,31 @@ VkWriteDescriptorSet vkinit::write_descriptor_image(VkDescriptorType type, VkDes
 
 	return write;
 }
+
+VkSamplerCreateInfo
+vkinit::sampler_ci(VkFilter min_mag_filter, VkSamplerAddressMode address_mode, VkSamplerMipmapMode mip_map_mode, float max_anisotropic)
+{
+    VkSamplerCreateInfo sampler_info = {};
+    sampler_info.sType = VK_STRUCTURE_TYPE_SAMPLER_CREATE_INFO;
+    sampler_info.magFilter = min_mag_filter;
+    sampler_info.minFilter = min_mag_filter;
+
+    sampler_info.addressModeU = address_mode;
+    sampler_info.addressModeV = address_mode;
+    sampler_info.addressModeW = address_mode;
+
+    sampler_info.anisotropyEnable = max_anisotropic > 0.01f ? VK_TRUE : VK_FALSE;
+    sampler_info.maxAnisotropy = max_anisotropic;
+    sampler_info.borderColor = VK_BORDER_COLOR_INT_OPAQUE_BLACK;
+    sampler_info.unnormalizedCoordinates = VK_FALSE;
+
+    sampler_info.compareEnable = VK_FALSE;
+    sampler_info.compareOp = VK_COMPARE_OP_ALWAYS;
+
+    sampler_info.mipmapMode = mip_map_mode;
+    sampler_info.mipLodBias = 0.0f;
+    sampler_info.minLod = 0.0f;
+    sampler_info.maxLod = 0.0f;
+
+    return sampler_info;
+}
