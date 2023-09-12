@@ -15,15 +15,6 @@
 
 using namespace coral_3d;
 
-struct GlobalUBO
-{
-    glm::mat4 view_projection{1.f};
-
-    // GLOBAL LIGHT
-    glm::vec4 global_light_direction{ glm::normalize(glm::vec4{ 0.577f, -0.577f, -0.577f, 0.f})}; // w is ignored
-    glm::vec4 ambient_light_color{1.f, .82f, .863f, .01f}; // w is intensity
-};
-
 first_app::first_app()
 {
     global_descriptor_pool_ = coral_descriptor_pool::Builder(device_)
@@ -35,6 +26,7 @@ first_app::first_app()
             .set_max_sets(MAX_MATERIAL_SETS)
             .add_pool_size(VK_DESCRIPTOR_TYPE_SAMPLER, 1)
             .add_pool_size(VK_DESCRIPTOR_TYPE_SAMPLED_IMAGE, MAX_MATERIAL_SETS)
+            .add_pool_size(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, 1)
             .build();
 }
 
@@ -71,6 +63,7 @@ void first_app::run()
     auto material_set_layout = coral_descriptor_set_layout::Builder(device_)
             .add_binding(0, VK_DESCRIPTOR_TYPE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
             .add_binding(1, VK_DESCRIPTOR_TYPE_SAMPLED_IMAGE, VK_SHADER_STAGE_FRAGMENT_BIT, MAX_TEXTURES)
+            .add_binding(2, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_FRAGMENT_BIT)
             .build();
 
     // Combined descriptor set layouts

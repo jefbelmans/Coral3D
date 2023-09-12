@@ -7,6 +7,8 @@ namespace coral_3d
 	class coral_buffer final
 	{
 	public:
+        explicit coral_buffer(coral_device& device) : device_{device}{};
+
 		coral_buffer(
 			coral_device& device,
 			VkDeviceSize instance_size,

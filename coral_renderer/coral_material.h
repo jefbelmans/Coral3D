@@ -3,6 +3,7 @@
 // CORAL
 #include "coral_descriptors.h"
 #include "coral_texture.h"
+#include "coral_buffer.h"
 #include "tiny_obj_loader.h"
 
 // STD
@@ -29,15 +30,27 @@ namespace coral_3d
         void bind(VkCommandBuffer command_buffer);
 
         VkPipelineLayout pipeline_layout() const { return pipeline_layout_; }
-        VkDescriptorSet texture_desc_set() const { return texture_desc_set_; }
+        VkDescriptorSet material_desc_set() const { return material_desc_set_; }
 
     private:
+        std::string name;
+
         coral_device& device_;
         VkPipelineLayout pipeline_layout_;
 
         std::shared_ptr<coral_texture> texture_;
-        VkDescriptorSet texture_desc_set_;
+        VkDescriptorSet material_desc_set_;
 
         tinyobj::material_t tiny_obj_material_;
+        coral_buffer material_ubo_
+        {
+            device_,
+            sizeof(MaterialUBO),
+            1,
+            VK_BUFFER_USAGE_UNIFORM_BUFFER_BIT,
+            VMA_MEMORY_USAGE_CPU_ONLY,
+            0,
+            device_.properties.limits.minUniformBufferOffsetAlignment
+        };
     };
 }
