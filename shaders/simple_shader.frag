@@ -54,13 +54,7 @@ vec3 calculate_diffuse(vec3 col, vec3 norm)
 void main()
 {
 	vec3 ambient = ubo.ambientLightColor.xyz * ubo.ambientLightColor.w;
-
-	vec3 color;
-	if(materialUbo.useOpacityMap)
-		color = materialUbo.diffuseColor;
-	else
-		color = texture(sampler2D(textures, samp), fragUV).xyz;
-
+	vec3 color = texture(sampler2D(textures, samp), fragUV).xyz;
 	vec3 diffuse = calculate_diffuse(color, fragNormal);
 
 	outColor = vec4(diffuse + ambient, 1.0f);

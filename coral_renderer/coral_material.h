@@ -38,7 +38,7 @@ namespace coral_3d
         coral_device& device_;
         VkPipelineLayout pipeline_layout_;
 
-        std::shared_ptr<coral_texture> texture_;
+        std::unique_ptr<coral_texture> texture_;
         VkDescriptorSet material_desc_set_;
 
         tinyobj::material_t tiny_obj_material_;

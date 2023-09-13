@@ -8,7 +8,7 @@
 #include "coral_descriptors.h"
 #include "coral_texture.h"
 #define MAX_MATERIAL_SETS 4096
-#define MAX_TEXTURES 1
+#define MAX_TEXTURES 8
 
 // STD
 #include <memory>

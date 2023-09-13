@@ -44,18 +44,18 @@ struct GlobalUBO
 struct MaterialUBO
 {
     // DIFFUSE
-    bool use_diff_map;
-    glm::vec3 diffuse_color;
+    alignas(4) bool use_diff_map;
+    alignas(16) glm::vec3 diffuse_color;
 
     // SPECULAR
-    bool use_specular_map;
-    glm::vec3 specular_color;
+    alignas(4) bool use_specular_map;
+    alignas(16) glm::vec3 specular_color;
     float shininess;
 
     // BUMP / NORMAL
-    bool use_bump_map;
+    alignas(4) bool use_bump_map;
 
     // ALPHA BLENDING
-    bool use_opacity_map;
+    alignas(4) bool use_opacity_map;
     float opacity_value;
 };
