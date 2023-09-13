@@ -13,18 +13,11 @@ void coral_material::load(VkPipelineLayout pipeline_layout,
 {
     pipeline_layout_ = pipeline_layout;
 
-    // LOAD TEXTURES
-    texture_ = coral_texture::create_texture_from_file(
-            device_,
-            "assets/textures/" + tiny_obj_material_.diffuse_texname,
-            VK_FORMAT_R8G8B8A8_SRGB
-    );
-
     // WRITE TO MATERIAL BUFFER
     MaterialUBO ubo{};
 
     // DIFFUSE
-    ubo.use_diff_map = !tiny_obj_material_.diffuse_texname.empty();
+    ubo.use_diffuse_map = !tiny_obj_material_.diffuse_texname.empty();
     ubo.diffuse_color.x = tiny_obj_material_.diffuse[0];
     ubo.diffuse_color.y = tiny_obj_material_.diffuse[1];
     ubo.diffuse_color.z = tiny_obj_material_.diffuse[2];
@@ -48,15 +41,64 @@ void coral_material::load(VkPipelineLayout pipeline_layout,
     material_ubo_.flush();
     material_ubo_.unmap();
 
+    textures_.resize(MAX_TEXTURES);
+
+    // LOAD TEXTURES
+    if(ubo.use_diffuse_map)
+    {
+        textures_[0] = coral_texture::create_texture_from_file(
+                device_,
+                "assets/textures/" + tiny_obj_material_.diffuse_texname,
+                VK_FORMAT_R8G8B8A8_SRGB
+        );
+    }
+
+    if(ubo.use_specular_map)
+    {
+        textures_[1] = coral_texture::create_texture_from_file(
+                device_,
+                "assets/textures/" + tiny_obj_material_.specular_texname,
+                VK_FORMAT_R8G8B8A8_SRGB
+        );
+    }
+
+    if(ubo.use_bump_map)
+    {
+        textures_[2] = coral_texture::create_texture_from_file(
+                device_,
+                "assets/textures/" + tiny_obj_material_.bump_texname,
+                VK_FORMAT_R8G8B8A8_SRGB
+        );
+    }
+
+    if(ubo.use_opacity_map)
+    {
+        textures_[3] = coral_texture::create_texture_from_file(
+                device_,
+                "assets/textures/" + tiny_obj_material_.alpha_texname,
+                VK_FORMAT_R8G8B8A8_SRGB
+        );
+    }
+
     // BUILD DESCRIPTOR
     VkDescriptorImageInfo sampler_info{};
-    sampler_info.sampler = texture_->sampler();
-    auto image_info = texture_->get_descriptor_info();
+    sampler_info.sampler = textures_[0]->sampler();
+
+    std::vector<VkDescriptorImageInfo> image_infos{};
+
+    for(size_t i = 0; i < MAX_TEXTURES; ++i)
+    {
+        if(textures_[i] != nullptr)
+            image_infos.emplace_back(textures_[i]->get_descriptor_info());
+        else
+            image_infos.emplace_back(textures_[0]->get_descriptor_info());
+    }
+
     auto buffer_info = material_ubo_.descriptor_info();
 
     coral_descriptor_writer(material_set_layout, material_set_pool)
             .write_sampler(0, &sampler_info)
-            .write_image(1, &image_info)
+            .write_images(1, image_infos)
             .write_buffer(2, &buffer_info)
             .build(material_desc_set_);
 }

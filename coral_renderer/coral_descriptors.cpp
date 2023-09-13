@@ -209,6 +209,47 @@ coral_descriptor_writer& coral_descriptor_writer::write_image(uint32_t binding, 
     return *this;
 }
 
+coral_descriptor_writer& coral_descriptor_writer::write_buffers(uint32_t binding, std::vector<VkDescriptorBufferInfo>& buffer_infos)
+{
+    assert(set_layout_.bindings_.count(binding) == 1 && "ERROR! coral_descriptor_writer::write_buffers() >> Layout does not contain specified binding.");
+
+    auto& binding_description = set_layout_.bindings_[binding];
+
+    assert(
+            binding_description.descriptorCount == 1 &&
+            "ERROR! coral_descriptor_writer::write_buffers() >> Binding single descriptor info, but binding expects multiple");
+
+    VkWriteDescriptorSet write{};
+    write.sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
+    write.descriptorType = binding_description.descriptorType;
+    write.dstBinding = binding;
+    write.pBufferInfo = buffer_infos.data();
+    write.descriptorCount = buffer_infos.size();
+
+    writes_.push_back(write);
+    return *this;
+}
+
+coral_descriptor_writer& coral_descriptor_writer::write_images(uint32_t binding, std::vector<VkDescriptorImageInfo>& image_infos)
+{
+    assert(set_layout_.bindings_.count(binding) == 1 && "ERROR! coral_descriptor_writer::write_images() >> Layout does not contain specified binding");
+
+    auto& binding_description = set_layout_.bindings_[binding];
+
+    assert(binding_description.descriptorCount != 1 &&
+           "ERROR! coral_descriptor_writer::write_images() >> Binding multiple descriptor info, but binding expects single");
+
+    VkWriteDescriptorSet write{};
+    write.sType = VK_STRUCTURE_TYPE_WRITE_DESCRIPTOR_SET;
+    write.descriptorType = binding_description.descriptorType;
+    write.dstBinding = binding;
+    write.pImageInfo = image_infos.data();
+    write.descriptorCount = image_infos.size();
+
+    writes_.push_back(write);
+    return *this;
+}
+
 bool coral_descriptor_writer::build(VkDescriptorSet& set)
 {
     if (!pool_.allocate_descriptor_set(set_layout_.get_descriptor_set_layout(), set))

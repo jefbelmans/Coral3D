@@ -34,6 +34,8 @@ struct DeletionQueue
 struct GlobalUBO
 {
     // MATRICES
+    glm::mat4 view{1.f};
+    glm::mat4 view_inverse{1.f};
     glm::mat4 view_projection{1.f};
 
     // GLOBAL LIGHT
@@ -44,7 +46,7 @@ struct GlobalUBO
 struct MaterialUBO
 {
     // DIFFUSE
-    alignas(4) bool use_diff_map;
+    alignas(4) bool use_diffuse_map;
     alignas(16) glm::vec3 diffuse_color;
 
     // SPECULAR

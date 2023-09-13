@@ -31,20 +31,74 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2ea9cb6-a6b7-419f-9266-e5263673b6e6" name="Changes" comment="">
+    <list default="true" id="e2ea9cb6-a6b7-419f-9266-e5263673b6e6" name="Changes" comment="Fixed MaterialUBO memory alignment. All variables are now correctly aligned and read in the shader.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/materials/sponza.mtl" beforeDir="false" afterPath="$PROJECT_DIR$/assets/materials/sponza.mtl" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/third_party/GLFW/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/third_party/GLFW/src/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/background_bump.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/textures/background_bump.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/chain_texture_bump.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/textures/chain_texture_bump.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/lion2_bump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/lion_bump.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/textures/lion_bump.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/lost_empire-RGBA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/room.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/spnza_bricks_a_bump.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/textures/spnza_bricks_a_bump.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_arch_bump.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/textures/sponza_arch_bump.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_column_a_bump.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/textures/sponza_column_a_bump.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_column_b_bump.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/textures/sponza_column_b_bump.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_column_c_bump.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/textures/sponza_column_c_bump.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_thorn_bump.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/textures/sponza_thorn_bump.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/uv_checker.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/vase_bump.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/textures/vase_bump.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/vase_round_bump.png" beforeDir="false" afterPath="$PROJECT_DIR$/assets/textures/vase_round_bump.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/assets/shaders/compiled/simple_shader.frag.spv" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/assets/shaders/compiled/simple_shader.frag.spv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/coral_renderer/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/coral_renderer/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/third_party/GLFW/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/third_party/GLFW/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/third_party/GLFW/cmake_uninstall.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/third_party/GLFW/cmake_uninstall.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/third_party/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/third_party/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/clion-Release-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/clion-Release-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/rules.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/release/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/third_party/GLFW/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/third_party/GLFW/src/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/coral_renderer/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/coral_renderer/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/third_party/GLFW/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/third_party/GLFW/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/third_party/GLFW/cmake_uninstall.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/third_party/GLFW/cmake_uninstall.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/third_party/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/third_party/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_descriptors.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_descriptors.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_descriptors.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_descriptors.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/coral_material.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_material.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/coral_material.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_material.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_texture.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_texture.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_mesh.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_mesh.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_mesh.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_mesh.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/first_app.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/first_app.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/render_system.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/render_system.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/vk_types.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/vk_types.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shaders/compiled/simple_shader.frag.spv" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/compiled/simple_shader.frag.spv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shaders/compiled/simple_shader.vert.spv" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/compiled/simple_shader.vert.spv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shaders/simple_shader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.frag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shaders/simple_shader.vert" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.vert" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,7 +217,7 @@
       <workItem from="1694463467367" duration="2649000" />
       <workItem from="1694466268807" duration="3395000" />
       <workItem from="1694542562809" duration="9653000" />
-      <workItem from="1694615302761" duration="3400000" />
+      <workItem from="1694615302761" duration="20430000" />
     </task>
     <task id="LOCAL-00001" summary="Have I forgotten how to git?">
       <option name="closed" value="true" />
@@ -173,7 +227,15 @@
       <option name="project" value="LOCAL" />
       <updated>1694375851505</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Fixed MaterialUBO memory alignment. All variables are now correctly aligned and read in the shader.">
+      <option name="closed" value="true" />
+      <created>1694619167890</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1694619167890</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -188,7 +250,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Have I forgotten how to git?" />
-    <option name="LAST_COMMIT_MESSAGE" value="Have I forgotten how to git?" />
+    <MESSAGE value="Fixed MaterialUBO memory alignment. All variables are now correctly aligned and read in the shader." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed MaterialUBO memory alignment. All variables are now correctly aligned and read in the shader." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

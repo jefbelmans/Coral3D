@@ -95,6 +95,9 @@ namespace coral_3d
         coral_descriptor_writer& write_sampler(uint32_t binding, VkDescriptorImageInfo* sampler_info);
         coral_descriptor_writer& write_image(uint32_t binding, VkDescriptorImageInfo* image_info);
 
+        coral_descriptor_writer& write_buffers(uint32_t binding, std::vector<VkDescriptorBufferInfo>& buffer_infos);
+        coral_descriptor_writer& write_images(uint32_t binding, std::vector<VkDescriptorImageInfo>& image_infos);
+
         bool build(VkDescriptorSet& set);
         void overwrite(VkDescriptorSet& set);
 

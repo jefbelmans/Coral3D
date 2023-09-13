@@ -109,6 +109,8 @@ void first_app::run()
 
             // UPDATE GLOBAL UBO
             GlobalUBO ubo{};
+            ubo.view = camera.get_view();
+            ubo.view_inverse = glm::inverse(camera.get_view());
             ubo.view_projection = camera.get_projection() * camera.get_view();
             global_ubo.write_to_index(&ubo, frame_index);
             global_ubo.flush_index(frame_index);

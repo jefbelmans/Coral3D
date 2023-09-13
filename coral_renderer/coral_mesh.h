@@ -28,8 +28,8 @@ namespace coral_3d
 	{
 		glm::vec3 position;
 		glm::vec3 normal;
+        glm::vec3 tangent;
 		glm::vec2 uv;
-		glm::vec3 color;
 
 		static VertexInputDescription get_vert_desc();
 
@@ -39,7 +39,7 @@ namespace coral_3d
 				position == other.position &&
 				normal == other.normal &&
 				uv == other.uv &&
-				color == other.color;
+				tangent == other.tangent;
 		}
 	};
 

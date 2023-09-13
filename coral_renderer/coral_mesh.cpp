@@ -25,7 +25,7 @@ namespace std
         size_t operator()(coral_3d::Vertex const &vertex) const
         {
             size_t seed = 0;
-            coral_3d::utils::hash_combine(seed, vertex.position, vertex.color, vertex.normal, vertex.uv);
+            coral_3d::utils::hash_combine(seed, vertex.position, vertex.tangent, vertex.normal, vertex.uv);
             return seed;
         }
     };
@@ -57,24 +57,24 @@ VertexInputDescription Vertex::get_vert_desc()
     normal_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
     normal_attrib.offset = offsetof(Vertex, normal);
 
-    // UV will be stored at Location 2
+    // Tangent will be stored at Location 2
+    VkVertexInputAttributeDescription tangent_attrib{};
+    tangent_attrib.binding = 0;
+    tangent_attrib.location = 2;
+    tangent_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
+    tangent_attrib.offset = offsetof(Vertex, tangent);
+
+    // UV will be stored at Location 3
     VkVertexInputAttributeDescription texcoord_attrib{};
     texcoord_attrib.binding = 0;
-    texcoord_attrib.location = 2;
+    texcoord_attrib.location = 3;
     texcoord_attrib.format = VK_FORMAT_R32G32_SFLOAT;
     texcoord_attrib.offset = offsetof(Vertex, uv);
 
-    // Color will be stored at Location 3
-    VkVertexInputAttributeDescription color_attrib{};
-    color_attrib.binding = 0;
-    color_attrib.location = 3;
-    color_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
-    color_attrib.offset = offsetof(Vertex, color);
-
     desc.attributes.emplace_back(position_attrib);
     desc.attributes.emplace_back(normal_attrib);
+    desc.attributes.emplace_back(tangent_attrib);
     desc.attributes.emplace_back(texcoord_attrib);
-    desc.attributes.emplace_back(color_attrib);
 
     return desc;
 }
@@ -136,13 +136,6 @@ bool coral_mesh::Builder::load_from_obj(coral_device& device, const std::string&
                     attrib.vertices[3 * index.vertex_index + 1],
                     attrib.vertices[3 * index.vertex_index + 2]
                 };
-
-                vertex.color =
-                {
-                    attrib.colors[3 * index.vertex_index + 0],
-                    attrib.colors[3 * index.vertex_index + 1],
-                    attrib.colors[3 * index.vertex_index + 2]
-                };
             }                                                                      
 
             if (index.normal_index >= 0)
@@ -179,6 +172,41 @@ bool coral_mesh::Builder::load_from_obj(coral_device& device, const std::string&
 
         std::cout << "[" << file_path << "] Created sub mesh with " << sub_meshes.back().index_count  << " indices and a first index of " << sub_meshes.back().first_index << std::endl;
     }
+
+    // Tangent calculation
+    for (uint32_t i = 0; i < indices.size(); i += 3)
+    {
+        uint32_t index0 = indices[i];
+        uint32_t index1 = indices[size_t(i) + 1];
+        uint32_t index2 = indices[size_t(i) + 2];
+
+        const glm::vec3& p0 = vertices[index0].position;
+        const glm::vec3& p1 = vertices[index1].position;
+        const glm::vec3& p2 = vertices[index2].position;
+        const glm::vec2& uv0 = vertices[index0].uv;
+        const glm::vec2& uv1 = vertices[index1].uv;
+        const glm::vec2& uv2 = vertices[index2].uv;
+
+        const glm::vec3 edge0 = p1 - p0;
+        const glm::vec3 edge1 = p2 - p0;
+        const glm::vec2 deltaUV0 = uv1 - uv0;
+        const glm::vec2 deltaUV1 = uv2 - uv0;
+
+        float r = 1.f / (deltaUV0.x * deltaUV1.y - deltaUV1.x * deltaUV0.y);
+
+        glm::vec3 tangent
+        {
+            r * (deltaUV1.y * edge0.x - deltaUV0.y * edge1.x),
+            r * (deltaUV1.y * edge0.y - deltaUV0.y * edge1.y),
+            r * (deltaUV1.y * edge0.z - deltaUV0.y * edge1.z),
+        };
+        vertices[index0].tangent = tangent;
+        vertices[index1].tangent = tangent;
+        vertices[index2].tangent = tangent;
+    }
+
+    //Fix the tangents per vertex now because we accumulated
+
 
     return true;
 }

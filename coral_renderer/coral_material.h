@@ -5,6 +5,7 @@
 #include "coral_texture.h"
 #include "coral_buffer.h"
 #include "tiny_obj_loader.h"
+#define MAX_TEXTURES 8
 
 // STD
 #include <memory>
@@ -33,12 +34,10 @@ namespace coral_3d
         VkDescriptorSet material_desc_set() const { return material_desc_set_; }
 
     private:
-        std::string name;
-
         coral_device& device_;
         VkPipelineLayout pipeline_layout_;
 
-        std::unique_ptr<coral_texture> texture_;
+        std::vector<std::unique_ptr<coral_texture>> textures_;
         VkDescriptorSet material_desc_set_;
 
         tinyobj::material_t tiny_obj_material_;
