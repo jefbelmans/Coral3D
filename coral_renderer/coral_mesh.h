@@ -9,6 +9,11 @@
 #define GLM_FORCE_DEPTH_ZERO_TO_ONE
 #include <glm.hpp>
 
+// TINY GLTF
+#define TINYGLTF_IMPLEMENTATION
+#define STB_IMAGE_WRITE_IMPLEMENTATION
+#include "tiny_gltf.h"
+
 #include "vk_types.h"
 #include "coral_device.h"
 #include "coral_buffer.h"
@@ -61,6 +66,7 @@ namespace coral_3d
             std::vector<SubMesh> sub_meshes{};
 
 			bool load_from_obj(coral_device& device, const std::string& file_path);
+            bool load_from_gltf(coral_device& device, const std::string& file_path);
 		};
 
 		coral_mesh(coral_device& device, const Builder& builder);

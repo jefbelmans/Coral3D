@@ -23,6 +23,7 @@ target_link_libraries(coral_renderer PRIVATE
 	glm
 	vkbootstrap
 	tinyobjloader
+		tinygltf
 	vma
 	stb_image
 )

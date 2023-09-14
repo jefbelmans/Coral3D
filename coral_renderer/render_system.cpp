@@ -47,7 +47,7 @@ void render_system::render_gameobjects(FrameInfo& frame_info)
 
 		PushConstant push{};
 		push.world_matrix =  obj.transform_.mat4();
-		push.normal_matrix = obj.transform_.noraml_matrix();
+		push.normal_matrix = obj.transform_.normal_matrix();
 
 		vkCmdPushConstants(
 			frame_info.command_buffer,

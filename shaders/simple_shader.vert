@@ -8,7 +8,9 @@ layout (location = 3) in vec2 uv;
 layout (location = 0) out vec3 fragPosWorld;
 layout (location = 1) out vec3 fragNormal;
 layout (location = 2) out vec3 fragTangent;
-layout (location = 3) out vec2 fragUV;
+layout (location = 3) out vec3 fragBitangent;
+layout (location = 4) out vec2 fragUV;
+layout (location = 5) out mat3 fragTBN;
 
 layout (set = 0, binding = 0) uniform GlobalUBO
 {
@@ -34,7 +36,11 @@ void main()
 	gl_Position = ubo.view_projection * worldPos;
 
 	fragPosWorld = worldPos.xyz;
-	fragNormal = normal;
-	fragTangent = tangent;
 	fragUV = uv;
+
+	// NORMALS
+	fragNormal = normalize(push.normal_matrix * vec4(normal, 0.f)).xyz;
+	fragTangent = normalize(push.normal_matrix * vec4(tangent, 0.f)).xyz;
+	fragBitangent = normalize(cross(normal, tangent));
+	fragTBN = mat3(fragTangent, fragBitangent, fragNormal);
 }

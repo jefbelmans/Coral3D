@@ -52,7 +52,7 @@ namespace coral_3d
 			};
 		}
 
-		glm::mat4 noraml_matrix()
+		glm::mat4 normal_matrix()
 		{
 			return glm::transpose(glm::inverse(mat4()));
 		}

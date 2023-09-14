@@ -211,6 +211,31 @@ bool coral_mesh::Builder::load_from_obj(coral_device& device, const std::string&
     return true;
 }
 
+bool coral_mesh::Builder::load_from_gltf(coral_device &device, const std::string &file_path)
+{
+    tinygltf::Model model;
+    tinygltf::TinyGLTF loader;
+    std::string err;
+    std::string warn;
+
+    if(!loader.LoadASCIIFromFile(&model, &err, &warn, file_path))
+    {
+        std::cerr << "ERROR! coral_mesh::load_from_gltf() >> failed to load glTF: " << file_path << std::endl;
+        if(!err.empty())
+        {
+            std::cerr << "ERROR! coral_mesh::load_from_gltf() >> " << err << std::endl;
+            return false;
+        }
+    }
+
+    if(!warn.empty())
+    {
+        std::cerr << "WARNOING! coral_mesh::load_from_gltf() >> " << warn << std::endl;
+    }
+
+    return true;
+}
+
 coral_mesh::coral_mesh(coral_device& device, const Builder& builder)
     : device_{device}
 {

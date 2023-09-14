@@ -3,7 +3,9 @@
 layout (location = 0) in vec3 frag_pos_world;
 layout (location = 1) in vec3 frag_normal;
 layout (location = 2) in vec3 frag_tangent;
-layout (location = 3) in vec2 frag_tex_coord;
+layout (location = 3) in vec3 frag_bitangent;
+layout (location = 4) in vec2 frag_tex_coord;
+layout (location = 5) in mat3 frag_TBN;
 
 layout (location = 0) out vec4 out_color;
 
@@ -69,7 +71,7 @@ vec3 calculate_normal(vec3 tangent, vec3 normal, vec2 tex_coord)
 
 	// SAMPLED NORMAL
 	vec3 sampled_normal = texture(sampler2D(textures[2], samp), tex_coord).xyz;
-	sampled_normal = normalize(sampled_normal * 2.0f - 1);
+	sampled_normal = normalize(sampled_normal * 2.0f - 1.f);
 	new_normal = sampled_normal * local_axis;
 
 	return new_normal;
@@ -77,14 +79,9 @@ vec3 calculate_normal(vec3 tangent, vec3 normal, vec2 tex_coord)
 
 vec3 calculate_normal()
 {
-	vec3 T = normalize(frag_tangent);
-	vec3 B = normalize(cross(frag_tangent, frag_normal));
-	vec3 N = normalize(frag_normal);
-	mat3 TBN = mat3(T, B, N);
-
 	vec3 normal = texture(sampler2D(textures[2], samp), frag_tex_coord).xyz;
-	// normal = normal * 2.0f - 1.0f;
-	normal = normalize(normal * TBN);
+	normal = normalize(normal * 2.0f - 1.0f);
+	normal = normalize(frag_TBN * normal);
 
 	return normal;
 }
@@ -128,10 +125,10 @@ void main()
 	float opacity = calculate_opacity(frag_tex_coord);
 	if(opacity < 0.1) discard; // early discard
 
-	vec3 normal = calculate_normal();
-
 	// VIEW DIRECTION
 	vec3 view_direction = frag_pos_world - global_ubo.view_inverse[3].xyz;
+
+	vec3 normal = calculate_normal(frag_tangent, frag_normal, frag_tex_coord);
 
 	// DIFFUSE
 	vec3 color = material_ubo.diffuse_color;
