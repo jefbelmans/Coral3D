@@ -2,8 +2,14 @@
 
 // LIBS
 #define TINYOBJLOADER_IMPLEMENTATION
-#define TINYOBJLOADER_USE_MAPBOX_EARCUT // Ensures robust triangulation
 #include <tiny_obj_loader.h>
+
+
+// TINY GLTF
+#define TINYGLTF_IMPLEMENTATION
+#define STB_IMAGE_IMPLEMENTATION
+#define STB_IMAGE_WRITE_IMPLEMENTATION
+#include "tiny_gltf.h"
 
 #define GLM_ENABLE_EXPERIMENTAL
 #include <gtx/hash.hpp>
@@ -211,12 +217,14 @@ bool coral_mesh::Builder::load_from_obj(coral_device& device, const std::string&
     return true;
 }
 
-bool coral_mesh::Builder::load_from_gltf(coral_device &device, const std::string &file_path)
+bool coral_mesh::Builder::load_from_gltf(coral_device&, const std::string &file_path)
 {
     tinygltf::Model model;
     tinygltf::TinyGLTF loader;
     std::string err;
     std::string warn;
+
+    std::cout<< "INFO! coral_mesh::load_from_gltf() >> Loading mesh..." << std::endl;
 
     if(!loader.LoadASCIIFromFile(&model, &err, &warn, file_path))
     {
@@ -233,6 +241,7 @@ bool coral_mesh::Builder::load_from_gltf(coral_device &device, const std::string
         std::cerr << "WARNOING! coral_mesh::load_from_gltf() >> " << warn << std::endl;
     }
 
+    std::cout << "INFO! coral_mesh::load_from_gltf() >> Finished loading mesh!" << std::endl;
     return true;
 }
 
@@ -247,7 +256,7 @@ coral_mesh::coral_mesh(coral_device& device, const Builder& builder)
 std::unique_ptr<coral_mesh> coral_mesh::create_mesh_from_file(coral_device& device, const std::string& file_path)
 {
     Builder builder{};
-    builder.load_from_obj(device, file_path);
+    builder.load_from_gltf(device, file_path);
     std::cout << "[" << file_path << "] vertex count: " << builder.vertices.size() << "\n";
     std::cout << "[" << file_path << "] index count: " << builder.indices.size() << "\n";
 

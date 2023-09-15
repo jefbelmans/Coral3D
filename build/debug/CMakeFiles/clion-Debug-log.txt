@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.2/bin/ninja/win/x64/ninja.exe" -DVCPKG_TRACE_FIND_PACKAGE:BOOL=ON -DX_VCPKG_APPLOCAL_DEPS_INSTALL:BOOL=ON -G Ninja -S "E:\Game Development\Visual Studio Solutions\Coral3D" -B "E:\Game Development\Visual Studio Solutions\Coral3D\build\debug"
+"C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S "E:\Game Development\Visual Studio Solutions\Coral3D" -B "E:\Game Development\Visual Studio Solutions\Coral3D\build\debug"
 -- BUILDING SHADER
 -- E:/Game Development/Visual Studio Solutions/Coral3D/shaders/PosNormCol.frag
 -- BUILDING SHADER

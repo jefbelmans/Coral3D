@@ -9,11 +9,6 @@
 #define GLM_FORCE_DEPTH_ZERO_TO_ONE
 #include <glm.hpp>
 
-// TINY GLTF
-#define TINYGLTF_IMPLEMENTATION
-#define STB_IMAGE_WRITE_IMPLEMENTATION
-#include "tiny_gltf.h"
-
 #include "vk_types.h"
 #include "coral_device.h"
 #include "coral_buffer.h"

@@ -344,9 +344,6 @@ GLFW_VULKAN_STATIC:BOOL=OFF
 //Path to a program.
 GLSL_VALIDATOR:FILEPATH=C:/VulkanSDK/1.3.250.0/Bin/glslangValidator.exe
 
-//No help, variable specified on the command line.
-VCPKG_TRACE_FIND_PACKAGE:BOOL=ON
-
 //Path to a program.
 Vulkan_GLSLANG_VALIDATOR_EXECUTABLE:FILEPATH=C:/VulkanSDK/1.3.250.0/Bin/glslangValidator.exe
 
@@ -358,9 +355,6 @@ Vulkan_INCLUDE_DIR:PATH=C:/VulkanSDK/1.3.250.0/Include
 
 //Path to a library.
 Vulkan_LIBRARY:FILEPATH=C:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib
-
-//No help, variable specified on the command line.
-X_VCPKG_APPLOCAL_DEPS_INSTALL:BOOL=ON
 
 
 ########################

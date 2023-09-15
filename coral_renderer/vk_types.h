@@ -55,7 +55,7 @@ struct MaterialUBO
     float shininess;
 
     // BUMP / NORMAL
-    alignas(4) bool use_bump_map;
+    alignas(4) bool use_normal_map;
 
     // ALPHA BLENDING
     alignas(4) bool use_opacity_map;

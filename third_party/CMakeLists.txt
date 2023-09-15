@@ -40,4 +40,4 @@ target_include_directories(tinygltf INTERFACE tinygltf)
 
 # STB
 add_library(stb_image INTERFACE)
-target_include_directories(stb_image INTERFACE stb_image)
+target_include_directories(stb_image SYSTEM INTERFACE stb_image)

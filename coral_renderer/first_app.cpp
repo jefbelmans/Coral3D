@@ -7,11 +7,8 @@
 // STD
 #include <array>
 #include <chrono>
-#include <iostream>
-#include <iomanip>
 
 #include "vk_initializers.h"
-#include "coral_texture.h"
 
 using namespace coral_3d;
 
@@ -129,7 +126,7 @@ void first_app::run()
 void first_app::load_gameobjects(VkPipelineLayout pipeline_layout, coral_descriptor_set_layout& material_set_layout)
 {
 #pragma region Sponza
-    std::shared_ptr<coral_mesh> sponza_mesh{ coral_mesh::create_mesh_from_file(device_, "assets/meshes/sponza.obj") };
+    std::shared_ptr<coral_mesh> sponza_mesh{ coral_mesh::create_mesh_from_file(device_, "assets/meshes/Sponza/Sponza.gltf") };
     sponza_mesh->load_materials(pipeline_layout, material_set_layout, *material_descriptor_pool_);
 
     auto sponza_scene{ coral_gameobject::create_gameobject() };
