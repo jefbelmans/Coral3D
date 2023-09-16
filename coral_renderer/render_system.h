@@ -18,7 +18,7 @@ namespace coral_3d
 	class render_system final
 	{
 	public:
-		render_system(coral_device& device, VkRenderPass render_pass, std::vector<VkDescriptorSetLayout> desc_set_layouts);
+		render_system(coral_device& device, VkPipelineLayout pipeline_layout);
 		~render_system();
 
 		render_system(const render_system&) = delete;
@@ -30,8 +30,6 @@ namespace coral_3d
 		VkPipeline pipeline() const { return pipeline_->pipeline(); }
 
 	private:
-		void create_pipeline_layout(std::vector<VkDescriptorSetLayout> desc_set_layouts);
-		void create_pipeline(VkRenderPass render_pass);
 
 		coral_device& device_;
 

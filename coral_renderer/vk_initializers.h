@@ -21,6 +21,23 @@ namespace vkinit
 	VkPipelineMultisampleStateCreateInfo multisample_state_ci();
 	VkPipelineColorBlendAttachmentState color_blend_attachment_state();
 	VkPipelineLayoutCreateInfo pipeline_layout_ci();
+    inline VkSpecializationMapEntry specialization_map_entry(uint32_t constant_id, uint32_t offset, size_t size)
+    {
+        VkSpecializationMapEntry specialization_map_entry{};
+        specialization_map_entry.constantID = constant_id;
+        specialization_map_entry.offset = offset;
+        specialization_map_entry.size = size;
+        return specialization_map_entry;
+    }
+    inline VkSpecializationInfo specialization_info(const std::vector<VkSpecializationMapEntry>& map_entries, size_t data_size, const void* data)
+    {
+        VkSpecializationInfo specialization_info{};
+        specialization_info.mapEntryCount = static_cast<uint32_t>(map_entries.size());
+        specialization_info.pMapEntries = map_entries.data();
+        specialization_info.dataSize = data_size;
+        specialization_info.pData = data;
+        return specialization_info;
+    }
 
 	// Image initializers
 	VkImageCreateInfo image_ci(VkFormat format, VkImageUsageFlags usageFlags, VkExtent3D extent);

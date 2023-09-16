@@ -104,7 +104,6 @@ void coral_renderer::begin_swapchain_render_pass(VkCommandBuffer command_buffer)
 	VkRect2D scissor{ {0, 0}, swapchain_->get_swapchain_extent() };
 	vkCmdSetViewport(command_buffer, 0, 1, &viewport);
 	vkCmdSetScissor(command_buffer, 0, 1, &scissor);
-
 }
 
 void coral_renderer::end_swapchain_render_pass(VkCommandBuffer command_buffer)

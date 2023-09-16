@@ -110,8 +110,8 @@ void coral_pipeline::create_graphics_pipeline(
 	auto vert_code = read_file(vert_file_path);
 	auto frag_code = read_file(frag_file_path);
 
-	create_shader_module(vert_code, &vert_shader_module_);
-	create_shader_module(frag_code, &frag_shader_module_);
+	create_shader_module(device_, vert_code, &vert_shader_module_);
+	create_shader_module(device_, frag_code, &frag_shader_module_);
 
 	VkPipelineShaderStageCreateInfo shader_stages[2];
 
@@ -167,7 +167,8 @@ void coral_pipeline::create_graphics_pipeline(
 		throw std::runtime_error("ERROR! coral_pipeline::create_graphics_pipeline() >> Failed to create graphics pipeline!");
 }
 
-void coral_pipeline::create_shader_module(const std::vector<char>& code, VkShaderModule* shader_module)
+
+void coral_pipeline::create_shader_module(coral_device& device, const std::vector<char>& code, VkShaderModule* shader_module)
 {
 	VkShaderModuleCreateInfo create_info{};
 	create_info.sType = VK_STRUCTURE_TYPE_SHADER_MODULE_CREATE_INFO;
@@ -176,6 +177,6 @@ void coral_pipeline::create_shader_module(const std::vector<char>& code, VkShade
 	create_info.codeSize = code.size();
 	create_info.pCode = reinterpret_cast<const uint32_t*>(code.data());
 
-	if(vkCreateShaderModule(device_.device(), &create_info, nullptr, shader_module) != VK_SUCCESS)
+	if(vkCreateShaderModule(device.device(), &create_info, nullptr, shader_module) != VK_SUCCESS)
 		throw std::runtime_error("ERROR! coral_pipeline::create_shader_module() >> Failed to create shader module!");
 }

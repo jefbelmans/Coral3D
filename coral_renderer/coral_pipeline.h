@@ -1,6 +1,7 @@
 #pragma once
 
 #include "coral_device.h"
+#include "coral_mesh.h"
 
 // STD
 #include <string>
@@ -47,17 +48,16 @@ namespace coral_3d
 		VkPipeline pipeline() const { return graphics_pipeline_; }
 
 		static void default_pipeline_config_info(PipelineConfigInfo& config_info);
+        static std::vector<char> read_file(const std::string& file_path);
+        static void create_shader_module(  coral_device& device, const std::vector<char>& code, VkShaderModule* shader_module);
 
-	private:
-		static std::vector<char> read_file(const std::string& file_path);
-		
+    private:
 		void create_graphics_pipeline(
 			const std::string& vert_file_path,
 			const std::string& frag_file_path,
 			const PipelineConfigInfo& config_info
 		);
 
-		void create_shader_module(const std::vector<char>& code, VkShaderModule* shader_module);
 
 		coral_device& device_;
 		VkPipeline graphics_pipeline_;

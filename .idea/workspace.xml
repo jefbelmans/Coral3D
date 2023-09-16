@@ -32,155 +32,478 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2ea9cb6-a6b7-419f-9266-e5263673b6e6" name="Changes" comment="Fixed MaterialUBO memory alignment. All variables are now correctly aligned and read in the shader.">
+      <change afterPath="$PROJECT_DIR$/assets/meshes/10381718147657362067.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/10388182081421875623.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/11474523244911310074.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/11490520546946913238.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/11872827283454512094.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/11968150294050148237.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/1219024358953944284.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/12501374198249454378.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/13196865903111448057.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/13824894030729245199.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/13982482287905699490.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/14118779221266351425.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/14170708867020035030.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/14267839433702832875.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/14650633544276105767.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/15295713303328085182.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/15722799267630235092.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/16275776544635328252.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/16299174074766089871.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/16885566240357350108.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/17556969131407844942.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/17876391417123941155.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/2051777328469649772.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/2185409758123873465.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/2299742237651021498.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/2374361008830720677.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/2411100444841994089.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/2775690330959970771.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/2969916736137545357.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/332936164838540657.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/3371964815757888145.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/3455394979645218238.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/3628158980083700836.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/3827035219084910048.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/4477655471536070370.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/4601176305987539675.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/466164707995436622.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/4675343432951571524.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/4871783166746854860.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/4910669866631290573.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/4975155472559461469.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/5061699253647017043.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/5792855332885324923.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/5823059166183034438.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/6047387724914829168.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/6151467286084645207.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/6593109234861095314.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/6667038893015345571.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/6772804448157695701.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/7056944414013900257.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/715093869573992647.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/7268504077753552595.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/7441062115984513793.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/755318871556304029.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/759203620573749278.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/7645212358685992005.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/7815564343179553343.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/8006627369776289000.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/8051790464816141987.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/8114461559286000061.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/8481240838833932244.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/8503262930880235456.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/8747919177698443163.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/8750083169368950601.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/8773302468495022225.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/8783994986360286082.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/9288698199695299068.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/9916269861720640319.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/NewSponza_Main_glTF_002.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/NewSponza_Main_glTF_002.gltf" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/assets/meshes/Sponza.bin" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/assets/meshes/Sponza.gltf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/arch_stone_wall_01_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/arch_stone_wall_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/arch_stone_wall_01_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/arch_stone_wall_01_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/arch_stone_wall_01_Roughnessarch_stone_wall_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/brickwall_01_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/brickwall_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/brickwall_01_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/brickwall_01_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/brickwall_01_Roughnessbrickwall_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/brickwall_02_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/brickwall_02_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/brickwall_02_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/brickwall_02_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/brickwall_02_Roughnessbrickwall_02_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/ceiling_plaster_01_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/ceiling_plaster_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/ceiling_plaster_01_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/ceiling_plaster_01_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/ceiling_plaster_01_Roughnessceiling_plaster_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/ceiling_plaster_02_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/ceiling_plaster_02_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/ceiling_plaster_02_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/ceiling_plaster_02_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/ceiling_plaster_02_Roughnessceiling_plaster_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_1stfloor_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_1stfloor_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_1stfloor_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_1stfloor_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_1stfloor_Roughnesscol_1stfloor_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_brickwall_01_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_brickwall_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_brickwall_01_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_brickwall_01_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_brickwall_01_Roughnesscol_brickwall_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_brickwall_01_Roughnesscolumn_brickwall_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_head_1stfloor_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_head_1stfloor_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_head_1stfloor_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_head_1stfloor_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_head_1stfloor_Roughnesscol_head_1stfloor_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_head_2ndfloor_02_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_head_2ndfloor_02_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_head_2ndfloor_02_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_head_2ndfloor_02_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_head_2ndfloor_02_Roughnesscol_head_2ndfloor_02_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_head_2ndfloor_03_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_head_2ndfloor_03_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_head_2ndfloor_03_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_head_2ndfloor_03_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/col_head_2ndfloor_03_Roughnesscol_head_2ndfloor_03_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/curtain_fabric_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/curtain_fabric_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/curtain_fabric_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/curtain_fabric_blue_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/curtain_fabric_green_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/curtain_fabric_red_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/desktop.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/dirt_decal_01.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/dirt_decal_01_alpha.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/dirt_decal_01_dirt_decal_01_mask_alpha_dirt_decal_Opacity.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/dirt_decal_01_dirt_decal_01_mask_gltf_alpha_dirt_decal_Opacity.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/dirt_decal_01_invmask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/dirt_decal_01_mask.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/dirt_decal_01_mask_gltf.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/dirt_decal_01_mask_usd.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/door_stoneframe_01_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/door_stoneframe_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/door_stoneframe_01_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/door_stoneframe_01_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/door_stoneframe_01_Roughnessdoor_stoneframe_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/door_stoneframe_02_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/door_stoneframe_02_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/door_stoneframe_02_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/door_stoneframe_02_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/door_stoneframe_02_Roughnessdoor_stoneframe_02_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/floor_tiles_01_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/floor_tiles_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/floor_tiles_01_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/floor_tiles_01_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/floor_tiles_01_Roughnessfloor_tiles_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/kloppenheim_05_4k.hdr" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/lionhead_01_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/lionhead_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/lionhead_01_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/lionhead_01_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/lionhead_01_Roughnesslionhead_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/metal_door_01_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/metal_door_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/metal_door_01_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/metal_door_01_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/metal_door_01_Roughnessmetal_door_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/ornament_01_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/ornament_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/ornament_01_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/ornament_01_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/ornament_01_Roughnessornament_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/roof_tiles_01_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/roof_tiles_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/roof_tiles_01_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/roof_tiles_01_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/roof_tiles_01_Roughnessroof_tiles_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stone_01_tile_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stone_01_tile_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stone_01_tile_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stone_01_tile_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stone_01_tile_Roughnessstone_01_tile_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stone_trims_01_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stone_trims_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stone_trims_01_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stone_trims_01_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stone_trims_01_Roughnessstone_trims_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stone_trims_02_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stone_trims_02_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stone_trims_02_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stone_trims_02_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stone_trims_02_Roughnessstone_trims_02_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stones_2ndfloor_01_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stones_2ndfloor_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stones_2ndfloor_01_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stones_2ndfloor_01_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/stones_2ndfloor_01_Roughnessstones_2ndfloor_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/window_frame_01_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/window_frame_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/window_frame_01_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/window_frame_01_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/window_frame_01_Roughnesswindow_frame_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/wood_door_01_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/wood_door_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/wood_door_01_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/wood_door_01_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/wood_door_01_Roughnesswood_door_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/wood_tile_01_BaseColor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/wood_tile_01_Metalness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/wood_tile_01_Normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/wood_tile_01_Roughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/sponza gltf/wood_tile_01_Roughnesswood_tile_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/10381718147657362067.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/10388182081421875623.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/11474523244911310074.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/11490520546946913238.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/11872827283454512094.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/11968150294050148237.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/1219024358953944284.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/12501374198249454378.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/13196865903111448057.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/13824894030729245199.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/13982482287905699490.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/14118779221266351425.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/14170708867020035030.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/14267839433702832875.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/14650633544276105767.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/15295713303328085182.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/15722799267630235092.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/16275776544635328252.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/16299174074766089871.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/16885566240357350108.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/17556969131407844942.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/17876391417123941155.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/2051777328469649772.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/2185409758123873465.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/2299742237651021498.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/2374361008830720677.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/2411100444841994089.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/2775690330959970771.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/2969916736137545357.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/332936164838540657.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/3371964815757888145.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/3455394979645218238.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/3628158980083700836.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/3827035219084910048.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/4477655471536070370.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/4601176305987539675.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/466164707995436622.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/4675343432951571524.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/4871783166746854860.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/4910669866631290573.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/4975155472559461469.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/5061699253647017043.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/5792855332885324923.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/5823059166183034438.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/6047387724914829168.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/6151467286084645207.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/6593109234861095314.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/6667038893015345571.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/6772804448157695701.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/7056944414013900257.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/715093869573992647.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/7268504077753552595.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/7441062115984513793.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/755318871556304029.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/759203620573749278.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/7645212358685992005.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/7815564343179553343.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/8006627369776289000.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/8051790464816141987.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/8114461559286000061.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/8481240838833932244.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/8503262930880235456.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/8747919177698443163.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/8750083169368950601.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/8773302468495022225.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/8783994986360286082.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/9288698199695299068.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/9916269861720640319.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/arch_stone_wall_01_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/arch_stone_wall_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/arch_stone_wall_01_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/arch_stone_wall_01_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/arch_stone_wall_01_Roughnessarch_stone_wall_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/brickwall_01_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/brickwall_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/brickwall_01_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/brickwall_01_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/brickwall_01_Roughnessbrickwall_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/brickwall_02_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/brickwall_02_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/brickwall_02_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/brickwall_02_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/brickwall_02_Roughnessbrickwall_02_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/ceiling_plaster_01_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/ceiling_plaster_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/ceiling_plaster_01_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/ceiling_plaster_01_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/ceiling_plaster_01_Roughnessceiling_plaster_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/ceiling_plaster_02_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/ceiling_plaster_02_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/ceiling_plaster_02_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/ceiling_plaster_02_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/ceiling_plaster_02_Roughnessceiling_plaster_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_1stfloor_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_1stfloor_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_1stfloor_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_1stfloor_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_1stfloor_Roughnesscol_1stfloor_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_brickwall_01_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_brickwall_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_brickwall_01_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_brickwall_01_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_brickwall_01_Roughnesscol_brickwall_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_brickwall_01_Roughnesscolumn_brickwall_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_head_1stfloor_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_head_1stfloor_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_head_1stfloor_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_head_1stfloor_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_head_1stfloor_Roughnesscol_head_1stfloor_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_head_2ndfloor_02_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_head_2ndfloor_02_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_head_2ndfloor_02_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_head_2ndfloor_02_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_head_2ndfloor_02_Roughnesscol_head_2ndfloor_02_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_head_2ndfloor_03_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_head_2ndfloor_03_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_head_2ndfloor_03_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_head_2ndfloor_03_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/col_head_2ndfloor_03_Roughnesscol_head_2ndfloor_03_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/curtain_fabric_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/curtain_fabric_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/curtain_fabric_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/curtain_fabric_blue_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/curtain_fabric_green_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/curtain_fabric_red_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/desktop.ini" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/dirt_decal_01.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/dirt_decal_01_alpha.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/dirt_decal_01_dirt_decal_01_mask_alpha_dirt_decal_Opacity.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/dirt_decal_01_dirt_decal_01_mask_gltf_alpha_dirt_decal_Opacity.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/dirt_decal_01_invmask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/dirt_decal_01_mask.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/dirt_decal_01_mask_gltf.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/dirt_decal_01_mask_usd.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/door_stoneframe_01_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/door_stoneframe_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/door_stoneframe_01_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/door_stoneframe_01_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/door_stoneframe_01_Roughnessdoor_stoneframe_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/door_stoneframe_02_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/door_stoneframe_02_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/door_stoneframe_02_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/door_stoneframe_02_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/door_stoneframe_02_Roughnessdoor_stoneframe_02_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/floor_tiles_01_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/floor_tiles_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/floor_tiles_01_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/floor_tiles_01_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/floor_tiles_01_Roughnessfloor_tiles_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/kloppenheim_05_4k.hdr" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/lionhead_01_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/lionhead_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/lionhead_01_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/lionhead_01_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/lionhead_01_Roughnesslionhead_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/metal_door_01_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/metal_door_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/metal_door_01_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/metal_door_01_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/metal_door_01_Roughnessmetal_door_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/ornament_01_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/ornament_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/ornament_01_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/ornament_01_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/ornament_01_Roughnessornament_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/roof_tiles_01_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/roof_tiles_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/roof_tiles_01_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/roof_tiles_01_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/roof_tiles_01_Roughnessroof_tiles_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stone_01_tile_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stone_01_tile_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stone_01_tile_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stone_01_tile_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stone_01_tile_Roughnessstone_01_tile_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stone_trims_01_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stone_trims_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stone_trims_01_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stone_trims_01_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stone_trims_01_Roughnessstone_trims_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stone_trims_02_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stone_trims_02_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stone_trims_02_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stone_trims_02_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stone_trims_02_Roughnessstone_trims_02_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stones_2ndfloor_01_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stones_2ndfloor_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stones_2ndfloor_01_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stones_2ndfloor_01_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/stones_2ndfloor_01_Roughnessstones_2ndfloor_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/window_frame_01_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/window_frame_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/window_frame_01_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/window_frame_01_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/window_frame_01_Roughnesswindow_frame_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/wood_door_01_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/wood_door_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/wood_door_01_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/wood_door_01_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/wood_door_01_Roughnesswood_door_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/wood_tile_01_BaseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/wood_tile_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/wood_tile_01_Normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/wood_tile_01_Roughness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/textures/wood_tile_01_Roughnesswood_tile_01_Metalness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/white.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/materials/sponza.mtl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/10381718147657362067.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/10388182081421875623.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/11474523244911310074.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/11490520546946913238.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/11872827283454512094.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/11968150294050148237.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/1219024358953944284.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/12501374198249454378.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/13196865903111448057.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/13824894030729245199.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/13982482287905699490.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/14118779221266351425.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/14170708867020035030.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/14267839433702832875.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/14650633544276105767.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/15295713303328085182.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/15722799267630235092.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/16275776544635328252.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/16299174074766089871.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/16885566240357350108.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/17556969131407844942.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/17876391417123941155.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/2051777328469649772.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/2185409758123873465.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/2299742237651021498.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/2374361008830720677.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/2411100444841994089.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/2775690330959970771.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/2969916736137545357.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/332936164838540657.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/3371964815757888145.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/3455394979645218238.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/3628158980083700836.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/3827035219084910048.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/4477655471536070370.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/4601176305987539675.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/466164707995436622.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/4675343432951571524.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/4871783166746854860.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/4910669866631290573.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/4975155472559461469.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/5061699253647017043.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/5792855332885324923.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/5823059166183034438.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/6047387724914829168.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/6151467286084645207.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/6593109234861095314.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/6667038893015345571.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/6772804448157695701.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/7056944414013900257.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/715093869573992647.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/7268504077753552595.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/7441062115984513793.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/755318871556304029.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/759203620573749278.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/7645212358685992005.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/7815564343179553343.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/8006627369776289000.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/8051790464816141987.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/8114461559286000061.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/8481240838833932244.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/8503262930880235456.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/8747919177698443163.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/8750083169368950601.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/8773302468495022225.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/8783994986360286082.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/9288698199695299068.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/9916269861720640319.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/Sponza.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/Sponza.gltf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/meshes/Sponza/white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/background.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/background_bump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/chain_texture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/chain_texture_bump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/chain_texture_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/floor_gloss.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/lion.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/lion_bump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/spnza_bricks_a_bump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/spnza_bricks_a_diff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/spnza_bricks_a_spec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_arch_bump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_arch_diff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_arch_spec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_ceiling_a_diff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_ceiling_a_spec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_column_a_bump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_column_a_diff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_column_a_spec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_column_b_bump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_column_b_diff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_column_b_spec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_column_c_bump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_column_c_diff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_column_c_spec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_curtain_blue_diff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_curtain_diff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_curtain_green_diff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_details_diff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_details_spec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_fabric_blue_diff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_fabric_diff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_fabric_green_diff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_fabric_purple.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_fabric_spec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_flagpole_diff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_flagpole_spec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_floor_a_diff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_floor_a_spec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_roof_diff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_thorn_bump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_thorn_diff.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_thorn_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/sponza_thorn_spec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/vase_bump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/vase_dif.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/vase_hanging.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/vase_plant.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/vase_plant_mask.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/vase_plant_spec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/vase_round.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/vase_round_bump.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/vase_round_spec.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/.cmake/api/v1/reply/target-Shaders-Debug-a406a6132f33daba018f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/.cmake/api/v1/reply/target-copy_assets-Debug-8314e622cd9ffce85905.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/assets/shaders/compiled/simple_shader.frag.spv" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/assets/shaders/compiled/simple_shader.frag.spv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/assets/shaders/compiled/simple_shader.vert.spv" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/assets/shaders/compiled/simple_shader.vert.spv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/coral_renderer/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/coral_renderer/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/third_party/GLFW/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/third_party/GLFW/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/third_party/GLFW/cmake_uninstall.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/third_party/GLFW/cmake_uninstall.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/third_party/GLFW/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/third_party/GLFW/src/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/third_party/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/third_party/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/.cmake/api/v1/reply/target-Shaders-Release-4c29a4f674361965bb2e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/.cmake/api/v1/reply/target-copy_assets-Release-4cc115789d10d4018fbe.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/release/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/release/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/clion-Release-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/clion-Release-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/rules.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/release/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/assets/shaders/compiled/simple_shader.frag.spv" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/assets/shaders/compiled/simple_shader.frag.spv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/assets/shaders/compiled/simple_shader.vert.spv" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/assets/shaders/compiled/simple_shader.vert.spv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/build.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/coral_renderer/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/coral_renderer/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/third_party/GLFW/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/third_party/GLFW/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/third_party/GLFW/cmake_uninstall.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/third_party/GLFW/cmake_uninstall.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/release/third_party/GLFW/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/third_party/GLFW/src/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/release/third_party/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/third_party/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_material.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_material.h" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/coral_mesh.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_mesh.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/coral_mesh.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_mesh.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_pipeline.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_pipeline.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_pipeline.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_pipeline.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_renderer.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/coral_texture.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_texture.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/first_app.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/first_app.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/third_party/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/third_party/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/first_app.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/first_app.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/render_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/render_system.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/render_system.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/render_system.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/vk_initializers.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/vk_initializers.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/vk_types.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/vk_types.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shaders/compiled/simple_shader.frag.spv" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/compiled/simple_shader.frag.spv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shaders/compiled/simple_shader.vert.spv" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/compiled/simple_shader.vert.spv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shaders/simple_shader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.frag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shaders/simple_shader.vert" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.vert" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,31 +557,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "cf.advertisement.text.has.clang-format": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "E:/Game Development/Visual Studio Solutions/Coral3D",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "CMakeSettings",
-    "structure.view.defaults.are.configured": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;cf.advertisement.text.has.clang-format&quot;: &quot;true&quot;,
+    &quot;cf.advertisement.text.overridden&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;glTF-loader&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Game Development/Visual Studio Solutions/Coral3D&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CMakeSettings&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
@@ -312,6 +636,8 @@
       <workItem from="1694722684495" duration="2430000" />
       <workItem from="1694764375185" duration="1083000" />
       <workItem from="1694766001886" duration="125000" />
+      <workItem from="1694784638010" duration="11247000" />
+      <workItem from="1694801239387" duration="20095000" />
     </task>
     <task id="LOCAL-00001" summary="Have I forgotten how to git?">
       <option name="closed" value="true" />
@@ -346,6 +672,17 @@
     <MESSAGE value="Have I forgotten how to git?" />
     <MESSAGE value="Fixed MaterialUBO memory alignment. All variables are now correctly aligned and read in the shader." />
     <option name="LAST_COMMIT_MESSAGE" value="Fixed MaterialUBO memory alignment. All variables are now correctly aligned and read in the shader." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/coral_renderer/coral_mesh.cpp</url>
+          <line>110</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

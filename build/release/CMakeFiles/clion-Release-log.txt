@@ -1,13 +1,13 @@
-"C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.2/bin/ninja/win/x64/ninja.exe" -G Ninja -S "E:\Game Development\Visual Studio Solutions\Coral3D" -B "E:\Game Development\Visual Studio Solutions\Coral3D\build\release"
+"C:\Program Files\JetBrains\CLion 2023.2.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Release "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe" -G Ninja -S "C:\Game Development\Visual Studio Solutions\Coral3D" -B "C:\Game Development\Visual Studio Solutions\Coral3D\build\release"
 -- BUILDING SHADER
--- E:/Game Development/Visual Studio Solutions/Coral3D/shaders/PosNormCol.frag
+-- C:/Game Development/Visual Studio Solutions/Coral3D/shaders/PosNormCol.frag
 -- BUILDING SHADER
--- E:/Game Development/Visual Studio Solutions/Coral3D/shaders/PosNormCol.vert
+-- C:/Game Development/Visual Studio Solutions/Coral3D/shaders/PosNormCol.vert
 -- BUILDING SHADER
--- E:/Game Development/Visual Studio Solutions/Coral3D/shaders/simple_shader.frag
+-- C:/Game Development/Visual Studio Solutions/Coral3D/shaders/simple_shader.frag
 -- BUILDING SHADER
--- E:/Game Development/Visual Studio Solutions/Coral3D/shaders/simple_shader.vert
+-- C:/Game Development/Visual Studio Solutions/Coral3D/shaders/simple_shader.vert
 -- Using Win32 for window creation
--- Configuring done (0.1s)
+-- Configuring done (0.3s)
 -- Generating done (0.0s)
--- Build files have been written to: E:/Game Development/Visual Studio Solutions/Coral3D/build/release
+-- Build files have been written to: C:/Game Development/Visual Studio Solutions/Coral3D/build/release

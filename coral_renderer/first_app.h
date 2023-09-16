@@ -16,8 +16,8 @@ namespace coral_3d
 	class first_app final
 	{
 	public:
-		static constexpr int WIDTH{ 800 };
-		static constexpr int HEIGHT{ 600 };
+		static constexpr int WIDTH{ 1280 };
+		static constexpr int HEIGHT{ 720 };
 
 		first_app();
 
@@ -27,14 +27,16 @@ namespace coral_3d
 		void run();
 
 	private:
-		void load_gameobjects(VkPipelineLayout pipeline_layout, coral_descriptor_set_layout& material_set_layout);
+		void load_gameobjects(coral_descriptor_set_layout& material_set_layout);
+        void create_pipeline_layout(std::vector<VkDescriptorSetLayout> desc_set_layouts);
 
 		coral_window window_{ WIDTH, HEIGHT, "Coral Renderer" };
 		coral_device device_{ window_ };
 		coral_renderer renderer_{ window_, device_ };
 
-		std::unique_ptr<coral_descriptor_pool> global_descriptor_pool_{};
-        std::unique_ptr<coral_descriptor_pool> material_descriptor_pool_{};
+        VkPipelineLayout pipeline_layout_{};
+
+		std::unique_ptr<coral_descriptor_pool> descriptor_pool_{};
 		coral_gameobject::Map gameobjects_;
 	};
 }

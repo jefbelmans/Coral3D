@@ -1,46 +1,43 @@
 #version 450
 
-layout (location = 0) in vec3 position;
-layout (location = 1) in vec3 normal;
-layout (location = 2) in vec3 tangent;
-layout (location = 3) in vec2 uv;
+layout (location = 0) in vec3 inPosition;
+layout (location = 1) in vec3 inNormal;
+layout (location = 2) in vec4 inTangent;
+layout (location = 3) in vec2 inTexcoord;
 
-layout (location = 0) out vec3 fragPosWorld;
-layout (location = 1) out vec3 fragNormal;
-layout (location = 2) out vec3 fragTangent;
-layout (location = 3) out vec3 fragBitangent;
-layout (location = 4) out vec2 fragUV;
-layout (location = 5) out mat3 fragTBN;
+layout (location = 0) out vec3 outNormal;
+layout (location = 1) out vec4 outTangent;
+layout (location = 2) out vec2 outTexcoord;
+layout (location = 3) out vec3 outViewDir;
+layout (location = 4) out vec3 outLightDir;
 
 layout (set = 0, binding = 0) uniform GlobalUBO
 {
 	// MATRICES
 	mat4 view;
-	mat4 view_inverse;
-    mat4 view_projection;
+	mat4 viewInverse;
+    mat4 viewProjection;
 
 	// GLOBAL LIGHT
-	vec4 global_light_direction;
-	vec4 ambient_light_color;
+	vec4 globalLightDirection;
+	vec4 ambientLightColor;
 } ubo;
 
 layout (push_constant) uniform Push
 {
-	mat4 world_matrix;
-	mat4 normal_matrix;
-} push;
+	mat4 model;
+} primitive;
 
 void main() 
 {
-	vec4 worldPos = push.world_matrix * vec4(position, 1.0f);
-	gl_Position = ubo.view_projection * worldPos;
+	outNormal = inNormal;
+	outTangent = inTangent;
+	outTexcoord = inTexcoord;
 
-	fragPosWorld = worldPos.xyz;
-	fragUV = uv;
+	vec4 worldPos = primitive.model * vec4(inPosition, 1.0f);
+	gl_Position = ubo.viewProjection * worldPos;
 
-	// NORMALS
-	fragNormal = normalize(push.normal_matrix * vec4(normal, 0.f)).xyz;
-	fragTangent = normalize(push.normal_matrix * vec4(tangent, 0.f)).xyz;
-	fragBitangent = normalize(cross(normal, tangent));
-	fragTBN = mat3(fragTangent, fragBitangent, fragNormal);
+	// outNormal = mat3(primitive.model) * inNormal;
+	outLightDir = ubo.globalLightDirection.xyz;
+	outViewDir = ubo.viewInverse[3].xyz - worldPos.xyz;
 }
