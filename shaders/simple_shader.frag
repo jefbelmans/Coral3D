@@ -8,6 +8,7 @@ layout (location = 1) in vec4 inTangent;
 layout (location = 2) in vec2 inTexcoord;
 layout (location = 3) in vec3 inViewDir;
 layout (location = 4) in vec3 inLightDir;
+layout (location = 5) in mat3 inTBN;
 
 layout (location = 0) out vec4 outFragColor;
 
@@ -19,8 +20,8 @@ vec3 calculate_diffuse(vec3 color, vec3 normal)
 	float diffuse_strength = dot(normal, -inLightDir);
 
 	// HALF-LAMBERT
-//	diffuse_strength = diffuse_strength * 0.5f + 0.5f;
-//	diffuse_strength = clamp(diffuse_strength, 0.f, 1.f);
+	diffuse_strength = diffuse_strength * 0.5f + 0.5f;
+	diffuse_strength = clamp(diffuse_strength, 0.f, 1.f);
 
 	return color * diffuse_strength;
 }
@@ -28,7 +29,6 @@ vec3 calculate_diffuse(vec3 color, vec3 normal)
 void main()
 {
 	vec4 color = texture(samplerColorMap, inTexcoord);
-	vec3 normal = texture(samplerNormalMap, inTexcoord).xyz;
 
 	if (ALPHA_MASK) {
 		if (color.a < ALPHA_MASK_CUTOFF) {
@@ -36,17 +36,12 @@ void main()
 		}
 	}
 
-	vec3 N = normalize(inNormal);
-	vec3 T = normalize(inTangent.xyz);
-	vec3 B = normalize(cross(T, N) * inTangent.w);
-	mat3 TBN = mat3(T, B, N);
-	N = normalize(normal * 2.0 - 1.0) * TBN;
+	vec3 N = inTBN * normalize(texture(samplerNormalMap, inTexcoord).xyz * 2.0 - vec3(1.0));
 
-	const float ambient = 0.01f;
 	vec3 L = normalize(inLightDir);
 	vec3 V = normalize(inViewDir);
 	vec3 R = reflect(-L, N);
-	vec3 diffuse = max(dot(N, L), ambient).rrr;
-	float specular = pow(max(dot(R, V), 0.0), 32.0);
-	outFragColor = vec4(color.rgb, color.a);
+	vec3 diffuse = calculate_diffuse(color.rgb, inNormal);
+	float specular = pow(max(dot(R, V), 0.0), 64.0);
+	outFragColor = vec4(diffuse, color.a);
 }

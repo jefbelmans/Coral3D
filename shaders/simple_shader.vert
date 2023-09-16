@@ -10,6 +10,7 @@ layout (location = 1) out vec4 outTangent;
 layout (location = 2) out vec2 outTexcoord;
 layout (location = 3) out vec3 outViewDir;
 layout (location = 4) out vec3 outLightDir;
+layout (location = 5) out mat3 outTBN;
 
 layout (set = 0, binding = 0) uniform GlobalUBO
 {
@@ -40,4 +41,9 @@ void main()
 	outNormal = normalize(mat3(primitive.model) * inNormal);
 	outLightDir = ubo.globalLightDirection.xyz;
 	outViewDir = ubo.viewInverse[3].xyz - worldPos.xyz;
+
+	vec3 T = normalize(vec3(primitive.model * vec4(inTangent.xyz * inTangent.w, 0.f)));
+	vec3 N = normalize(vec3(primitive.model * vec4(inNormal, 0.f)));
+	vec3 B = normalize(cross(N, T));
+	outTBN = mat3(T, B, N);
 }

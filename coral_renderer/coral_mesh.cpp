@@ -65,14 +65,14 @@ VertexInputDescription Vertex::get_vert_desc()
     VkVertexInputAttributeDescription tangent_attrib{};
     tangent_attrib.binding = 0;
     tangent_attrib.location = 2;
-    tangent_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
+    tangent_attrib.format = VK_FORMAT_R32G32B32A32_SFLOAT;
     tangent_attrib.offset = offsetof(Vertex, tangent);
 
     // UV will be stored at Location 3
     VkVertexInputAttributeDescription texcoord_attrib{};
     texcoord_attrib.binding = 0;
     texcoord_attrib.location = 3;
-    texcoord_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
+    texcoord_attrib.format = VK_FORMAT_R32G32_SFLOAT;
     texcoord_attrib.offset = offsetof(Vertex, uv);
 
     desc.attributes.emplace_back(position_attrib);
