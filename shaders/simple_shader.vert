@@ -37,7 +37,7 @@ void main()
 	vec4 worldPos = primitive.model * vec4(inPosition, 1.0f);
 	gl_Position = ubo.viewProjection * worldPos;
 
-	// outNormal = mat3(primitive.model) * inNormal;
+	outNormal = normalize(mat3(primitive.model) * inNormal);
 	outLightDir = ubo.globalLightDirection.xyz;
 	outViewDir = ubo.viewInverse[3].xyz - worldPos.xyz;
 }

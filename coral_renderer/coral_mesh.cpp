@@ -72,7 +72,7 @@ VertexInputDescription Vertex::get_vert_desc()
     VkVertexInputAttributeDescription texcoord_attrib{};
     texcoord_attrib.binding = 0;
     texcoord_attrib.location = 3;
-    texcoord_attrib.format = VK_FORMAT_R32G32_SFLOAT;
+    texcoord_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
     texcoord_attrib.offset = offsetof(Vertex, uv);
 
     desc.attributes.emplace_back(position_attrib);
@@ -120,14 +120,14 @@ bool coral_mesh::Builder::load_from_gltf(coral_device& device, const std::string
 
 void coral_mesh::Builder::load_images(coral_device& device, tinygltf::Model &input)
 {
-    images.reserve(input.images.size());
+    images.resize(input.images.size());
     for (size_t i = 0; i < input.images.size(); ++i)
     {
         tinygltf::Image& glTF_image = input.images[i];
-        images.emplace_back(coral_texture::create_texture_from_file(
+        images[i].texture = coral_texture::create_texture_from_file(
                 device,
                 "assets/textures/" + glTF_image.uri,
-                VK_FORMAT_R8G8B8A8_UNORM));
+                VK_FORMAT_R8G8B8A8_UNORM);
     }
 }
 
@@ -143,26 +143,29 @@ void coral_mesh::Builder::load_textures(tinygltf::Model &input)
 void coral_mesh::Builder::load_materials(tinygltf::Model &input)
 {
     materials.resize(input.materials.size());
-    for (size_t i = 0; i < input.materials.size(); ++i)
+    for (size_t i = 0; i < input.materials.size(); i++)
     {
-        tinygltf::Material glTF_material = input.materials[i];
+        tinygltf::Material glTFMaterial = input.materials[i];
+        // Get the base color factor
+        if (glTFMaterial.values.find("baseColorFactor") != glTFMaterial.values.end())
+        {
+            materials[i].base_color_factor = glm::make_vec4(
+                    glTFMaterial.values["baseColorFactor"].ColorFactor().data());
+        }
+        // Get base color texture index
+        if (glTFMaterial.values.find("baseColorTexture") != glTFMaterial.values.end())
+        {
+            materials[i].base_color_texture_index = glTFMaterial.values["baseColorTexture"].TextureIndex();
+        }
+        // Get the normal map texture index
+        if (glTFMaterial.additionalValues.find("normalTexture") != glTFMaterial.additionalValues.end())
+        {
+            materials[i].normal_texture_index = glTFMaterial.additionalValues["normalTexture"].TextureIndex();
+        }
 
-        // BASE COLOR FACTOR
-        if(glTF_material.values.find("baseColorFactor") != glTF_material.values.end())
-            materials[i].base_color_factor = glm::make_vec4(glTF_material.values["baseColorFactor"].ColorFactor().data());
-
-        // BASE COLOR TEXTURE
-        if(glTF_material.values.find("baseColorTexture") != glTF_material.values.end())
-            materials[i].base_color_texture_index = glTF_material.values["baseColorTexture"].TextureIndex();
-
-        // NORMAL MAP TEXTURE
-        if(glTF_material.additionalValues.find("normalTexture") != glTF_material.additionalValues.end())
-            materials[i].normal_texture_index = glTF_material.additionalValues["normalTexture"].TextureIndex();
-
-        // ADDITIONAL PARAMETERS
-        materials[i].alpha_mode = glTF_material.alphaMode;
-        materials[i].alpha_cutoff = (float)glTF_material.alphaCutoff;
-        materials[i].double_sided = glTF_material.doubleSided;
+        materials[i].alpha_mode = glTFMaterial.alphaMode;
+        materials[i].alpha_cutoff = (float) glTFMaterial.alphaCutoff;
+        materials[i].double_sided = glTFMaterial.doubleSided;
     }
 }
 
@@ -352,7 +355,7 @@ void coral_mesh::load_materials(coral_descriptor_set_layout& material_set_layout
     for(auto& material : materials_)
     {
         auto color_desc = get_texture_descriptor(material.base_color_texture_index);
-        auto normal_desc = get_texture_descriptor(material.base_color_texture_index);
+        auto normal_desc = get_texture_descriptor(material.normal_texture_index);
 
         coral_descriptor_writer(material_set_layout, material_set_pool)
                 .write_image(0, &color_desc)

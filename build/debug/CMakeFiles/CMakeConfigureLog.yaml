@@ -61,8 +61,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-wsxbf8"
-      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-wsxbf8"
+      source: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-tgfsep"
+      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-tgfsep"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -71,9 +71,9 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-wsxbf8
+        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-tgfsep
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_ee742 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_ee742.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c"
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_000ad && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_000ad.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c"
         Using built-in specs.
         COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe
         Target: x86_64-w64-mingw32
@@ -81,8 +81,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 13.1.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_ee742.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_ee742.dir/'
-         C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_ee742.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\watwa\\AppData\\Local\\Temp\\ccOtFb7M.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_000ad.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_000ad.dir/'
+         C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_000ad.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\watwa\\AppData\\Local\\Temp\\cc3sPOSQ.s
         GNU C17 (GCC) version 13.1.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.2.0-p4, MPC version 1.3.1, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -100,13 +100,13 @@ events:
          C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: 2aa4fcf5c9208168c5e2d38a58fc2a97
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_ee742.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_ee742.dir/'
-         as -v -o CMakeFiles/cmTC_ee742.dir/CMakeCCompilerABI.c.obj C:\\Users\\watwa\\AppData\\Local\\Temp\\ccOtFb7M.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_000ad.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_000ad.dir/'
+         as -v -o CMakeFiles/cmTC_000ad.dir/CMakeCCompilerABI.c.obj C:\\Users\\watwa\\AppData\\Local\\Temp\\cc3sPOSQ.s
         GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40
         COMPILER_PATH=C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/
         LIBRARY_PATH=C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_ee742.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_ee742.dir/CMakeCCompilerABI.c.'
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe  -v CMakeFiles/cmTC_ee742.dir/CMakeCCompilerABI.c.obj -o cmTC_ee742.exe -Wl,--out-implib,libcmTC_ee742.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_000ad.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_000ad.dir/CMakeCCompilerABI.c.'
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe  -v CMakeFiles/cmTC_000ad.dir/CMakeCCompilerABI.c.obj -o cmTC_000ad.exe -Wl,--out-implib,libcmTC_000ad.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe
         COLLECT_LTO_WRAPPER=C:/Program\\ Files/JetBrains/CLion\\ 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe
@@ -117,9 +117,9 @@ events:
         gcc version 13.1.0 (GCC) 
         COMPILER_PATH=C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/
         LIBRARY_PATH=C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ee742.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_ee742.'
-         C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_ee742.exe C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_ee742.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_ee742.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ee742.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_ee742.'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_000ad.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_000ad.'
+         C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_000ad.exe C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_000ad.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_000ad.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_000ad.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_000ad.'
         
       exitCode: 0
   -
@@ -153,9 +153,9 @@ events:
     message: |
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-wsxbf8]
+        ignore line: [Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-tgfsep]
         ignore line: []
-        ignore line: [Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_ee742 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_ee742.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c"]
+        ignore line: [Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_000ad && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_000ad.dir/CMakeCCompilerABI.c.obj -c "C:/Program Files/JetBrains/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -163,8 +163,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.1.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_ee742.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_ee742.dir/']
-        ignore line: [ C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_ee742.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\watwa\\AppData\\Local\\Temp\\ccOtFb7M.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_000ad.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_000ad.dir/']
+        ignore line: [ C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_000ad.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\watwa\\AppData\\Local\\Temp\\cc3sPOSQ.s]
         ignore line: [GNU C17 (GCC) version 13.1.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.2.0-p4  MPC version 1.3.1  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -182,8 +182,8 @@ events:
         ignore line: [ C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 2aa4fcf5c9208168c5e2d38a58fc2a97]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_ee742.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_ee742.dir/']
-        ignore line: [ as -v -o CMakeFiles/cmTC_ee742.dir/CMakeCCompilerABI.c.obj C:\\Users\\watwa\\AppData\\Local\\Temp\\ccOtFb7M.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_000ad.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_000ad.dir/']
+        ignore line: [ as -v -o CMakeFiles/cmTC_000ad.dir/CMakeCCompilerABI.c.obj C:\\Users\\watwa\\AppData\\Local\\Temp\\cc3sPOSQ.s]
         ignore line: [GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40]
         ignore line: [COMPILER_PATH=C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
         ignore line: [C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/]
@@ -193,8 +193,8 @@ events:
         ignore line: [C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_ee742.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_ee742.dir/CMakeCCompilerABI.c.']
-        ignore line: [[2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe  -v CMakeFiles/cmTC_ee742.dir/CMakeCCompilerABI.c.obj -o cmTC_ee742.exe -Wl --out-implib libcmTC_ee742.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_000ad.dir/CMakeCCompilerABI.c.obj' '-c' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_000ad.dir/CMakeCCompilerABI.c.']
+        ignore line: [[2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe  -v CMakeFiles/cmTC_000ad.dir/CMakeCCompilerABI.c.obj -o cmTC_000ad.exe -Wl --out-implib libcmTC_000ad.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Program\\ Files/JetBrains/CLion\\ 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe]
@@ -211,9 +211,9 @@ events:
         ignore line: [C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ee742.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_ee742.']
-        ignore line: [ C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_ee742.exe C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_ee742.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_ee742.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_ee742.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_ee742.']
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_000ad.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_000ad.']
+        ignore line: [ C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_000ad.exe C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_000ad.dir/CMakeCCompilerABI.c.obj --out-implib libcmTC_000ad.dll.a --major-image-version 0 --minor-image-version 0 -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc -lgcc_eh -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_000ad.exe' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_000ad.']
         ignore line: []
         ignore line: []
         implicit libs: []
@@ -231,8 +231,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-hzmplj"
-      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-hzmplj"
+      source: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-c3qg5z"
+      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-c3qg5z"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
@@ -241,9 +241,9 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-hzmplj
+        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-c3qg5z
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_f90c2 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_f90c2.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/JetBrains/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp"
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_51353 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_51353.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/JetBrains/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp"
         Using built-in specs.
         COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE
         Target: x86_64-w64-mingw32
@@ -251,8 +251,8 @@ events:
         Thread model: posix
         Supported LTO compression algorithms: zlib
         gcc version 13.1.0 (GCC) 
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_f90c2.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f90c2.dir/'
-         C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f90c2.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\watwa\\AppData\\Local\\Temp\\ccpwbMxF.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_51353.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_51353.dir/'
+         C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_51353.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\watwa\\AppData\\Local\\Temp\\ccKUgV8f.s
         GNU C++17 (GCC) version 13.1.0 (x86_64-w64-mingw32)
         	compiled by GNU C version 13.1.0, GMP version 6.2.1, MPFR version 4.2.0-p4, MPC version 1.3.1, isl version none
         GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
@@ -276,13 +276,13 @@ events:
          C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include
         End of search list.
         Compiler executable checksum: e75de627edc3c57e31324b930b15b056
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_f90c2.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f90c2.dir/'
-         as -v -o CMakeFiles/cmTC_f90c2.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\watwa\\AppData\\Local\\Temp\\ccpwbMxF.s
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_51353.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_51353.dir/'
+         as -v -o CMakeFiles/cmTC_51353.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\watwa\\AppData\\Local\\Temp\\ccKUgV8f.s
         GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40
         COMPILER_PATH=C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/
         LIBRARY_PATH=C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_f90c2.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f90c2.dir/CMakeCXXCompilerABI.cpp.'
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE  -v CMakeFiles/cmTC_f90c2.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_f90c2.exe -Wl,--out-implib,libcmTC_f90c2.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
+        COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_51353.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_51353.dir/CMakeCXXCompilerABI.cpp.'
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE  -v CMakeFiles/cmTC_51353.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_51353.exe -Wl,--out-implib,libcmTC_51353.dll.a -Wl,--major-image-version,0,--minor-image-version,0   && cd ."
         Using built-in specs.
         COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE
         COLLECT_LTO_WRAPPER=C:/Program\\ Files/JetBrains/CLion\\ 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe
@@ -293,9 +293,9 @@ events:
         gcc version 13.1.0 (GCC) 
         COMPILER_PATH=C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/
         LIBRARY_PATH=C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/;C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f90c2.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_f90c2.'
-         C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_f90c2.exe C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_f90c2.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_f90c2.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
-        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f90c2.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_f90c2.'
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_51353.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_51353.'
+         C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_51353.exe C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_51353.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_51353.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o
+        COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_51353.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_51353.'
         
       exitCode: 0
   -
@@ -335,9 +335,9 @@ events:
     message: |
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld\\.exe|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
-        ignore line: [Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-hzmplj]
+        ignore line: [Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-c3qg5z]
         ignore line: []
-        ignore line: [Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_f90c2 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_f90c2.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/JetBrains/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp"]
+        ignore line: [Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_51353 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE   -fdiagnostics-color=always   -v -o CMakeFiles/cmTC_51353.dir/CMakeCXXCompilerABI.cpp.obj -c "C:/Program Files/JetBrains/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp"]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE]
         ignore line: [Target: x86_64-w64-mingw32]
@@ -345,8 +345,8 @@ events:
         ignore line: [Thread model: posix]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.1.0 (GCC) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_f90c2.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f90c2.dir/']
-        ignore line: [ C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_f90c2.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\watwa\\AppData\\Local\\Temp\\ccpwbMxF.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_51353.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_51353.dir/']
+        ignore line: [ C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/cc1plus.exe -quiet -v -iprefix C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/ -D_REENTRANT C:/Program Files/JetBrains/CLion 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_51353.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=nocona -version -fdiagnostics-color=always -o C:\\Users\\watwa\\AppData\\Local\\Temp\\ccKUgV8f.s]
         ignore line: [GNU C++17 (GCC) version 13.1.0 (x86_64-w64-mingw32)]
         ignore line: [	compiled by GNU C version 13.1.0  GMP version 6.2.1  MPFR version 4.2.0-p4  MPC version 1.3.1  isl version none]
         ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
@@ -370,8 +370,8 @@ events:
         ignore line: [ C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: e75de627edc3c57e31324b930b15b056]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_f90c2.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f90c2.dir/']
-        ignore line: [ as -v -o CMakeFiles/cmTC_f90c2.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\watwa\\AppData\\Local\\Temp\\ccpwbMxF.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_51353.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_51353.dir/']
+        ignore line: [ as -v -o CMakeFiles/cmTC_51353.dir/CMakeCXXCompilerABI.cpp.obj C:\\Users\\watwa\\AppData\\Local\\Temp\\ccKUgV8f.s]
         ignore line: [GNU assembler version 2.40 (x86_64-w64-mingw32) using BFD version (GNU Binutils) 2.40]
         ignore line: [COMPILER_PATH=C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/]
         ignore line: [C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/]
@@ -381,8 +381,8 @@ events:
         ignore line: [C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_f90c2.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_f90c2.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [[2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE  -v CMakeFiles/cmTC_f90c2.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_f90c2.exe -Wl --out-implib libcmTC_f90c2.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
+        ignore line: [COLLECT_GCC_OPTIONS='-fdiagnostics-color=always' '-v' '-o' 'CMakeFiles/cmTC_51353.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'CMakeFiles/cmTC_51353.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [[2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE  -v CMakeFiles/cmTC_51353.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_51353.exe -Wl --out-implib libcmTC_51353.dll.a -Wl --major-image-version 0 --minor-image-version 0   && cd ."]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\G__~1.EXE]
         ignore line: [COLLECT_LTO_WRAPPER=C:/Program\\ Files/JetBrains/CLion\\ 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/lto-wrapper.exe]
@@ -399,9 +399,9 @@ events:
         ignore line: [C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib/]
         ignore line: [C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/]
         ignore line: [C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f90c2.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_f90c2.']
-        ignore line: [ C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_f90c2.exe C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_f90c2.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_f90c2.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
-        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_f90c2.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_f90c2.']
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_51353.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_51353.']
+        ignore line: [ C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../libexec/gcc/x86_64-w64-mingw32/13.1.0/collect2.exe -m i386pep -Bdynamic -o cmTC_51353.exe C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/crt2.o C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtbegin.o -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0 -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib -LC:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../.. CMakeFiles/cmTC_51353.dir/CMakeCXXCompilerABI.cpp.obj --out-implib libcmTC_51353.dll.a --major-image-version 0 --minor-image-version 0 -lstdc++ -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 -lpthread -ladvapi32 -lshell32 -luser32 -lkernel32 -liconv -lmingw32 -lgcc_s -lgcc -lmoldname -lmingwex -lmsvcrt -lkernel32 C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/../../../../x86_64-w64-mingw32/lib/../lib/default-manifest.o C:/Program Files/JetBrains/CLion 2023.2.1/bin/mingw/bin/../lib/gcc/x86_64-w64-mingw32/13.1.0/crtend.o]
+        ignore line: [COLLECT_GCC_OPTIONS='-v' '-o' 'cmTC_51353.exe' '-shared-libgcc' '-mtune=generic' '-march=nocona' '-dumpdir' 'cmTC_51353.']
         ignore line: []
         ignore line: []
         implicit libs: []
@@ -421,8 +421,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-qz66op"
-      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-qz66op"
+      source: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-ks8zb5"
+      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-ks8zb5"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -432,10 +432,10 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-qz66op
+        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-ks8zb5
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_77d3c && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD  -fdiagnostics-color=always -o CMakeFiles/cmTC_77d3c.dir/src.c.obj -c "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-qz66op/src.c"
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_77d3c.dir/src.c.obj -o cmTC_77d3c.exe -Wl,--out-implib,libcmTC_77d3c.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_c1011 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -DCMAKE_HAVE_LIBC_PTHREAD  -fdiagnostics-color=always -o CMakeFiles/cmTC_c1011.dir/src.c.obj -c "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-ks8zb5/src.c"
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_c1011.dir/src.c.obj -o cmTC_c1011.exe -Wl,--out-implib,libcmTC_c1011.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -446,8 +446,8 @@ events:
     checks:
       - "Looking for dinput.h"
     directories:
-      source: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-3qs81i"
-      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-3qs81i"
+      source: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-jqtdds"
+      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-jqtdds"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -457,10 +457,10 @@ events:
       variable: "DINPUT_H_FOUND"
       cached: true
       stdout: |
-        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-3qs81i
+        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-jqtdds
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_1a989 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_1a989.dir/CheckIncludeFile.c.obj -c "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-3qs81i/CheckIncludeFile.c"
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_1a989.dir/CheckIncludeFile.c.obj -o cmTC_1a989.exe -Wl,--out-implib,libcmTC_1a989.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_0a2cf && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_0a2cf.dir/CheckIncludeFile.c.obj -c "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-jqtdds/CheckIncludeFile.c"
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_0a2cf.dir/CheckIncludeFile.c.obj -o cmTC_0a2cf.exe -Wl,--out-implib,libcmTC_0a2cf.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -471,8 +471,8 @@ events:
     checks:
       - "Looking for xinput.h"
     directories:
-      source: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-s9j4au"
-      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-s9j4au"
+      source: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-50r94l"
+      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-50r94l"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -482,10 +482,10 @@ events:
       variable: "XINPUT_H_FOUND"
       cached: true
       stdout: |
-        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-s9j4au
+        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-50r94l
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_adafb && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_adafb.dir/CheckIncludeFile.c.obj -c "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-s9j4au/CheckIncludeFile.c"
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_adafb.dir/CheckIncludeFile.c.obj -o cmTC_adafb.exe -Wl,--out-implib,libcmTC_adafb.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_6d537 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   -fdiagnostics-color=always -o CMakeFiles/cmTC_6d537.dir/CheckIncludeFile.c.obj -c "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-50r94l/CheckIncludeFile.c"
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe   CMakeFiles/cmTC_6d537.dir/CheckIncludeFile.c.obj -o cmTC_6d537.exe -Wl,--out-implib,libcmTC_6d537.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -498,8 +498,8 @@ events:
     checks:
       - "Performing Test _GLFW_HAS_DEP"
     directories:
-      source: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-gq2ayb"
-      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-gq2ayb"
+      source: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-qzn958"
+      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-qzn958"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -509,10 +509,10 @@ events:
       variable: "_GLFW_HAS_DEP"
       cached: true
       stdout: |
-        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-gq2ayb
+        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-qzn958
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_526ea && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -D_GLFW_HAS_DEP  -Wl,--nxcompat -fdiagnostics-color=always -o CMakeFiles/cmTC_526ea.dir/src.c.obj -c "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-gq2ayb/src.c"
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -Wl,--nxcompat  CMakeFiles/cmTC_526ea.dir/src.c.obj -o cmTC_526ea.exe -Wl,--out-implib,libcmTC_526ea.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_eca8e && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -D_GLFW_HAS_DEP  -Wl,--nxcompat -fdiagnostics-color=always -o CMakeFiles/cmTC_eca8e.dir/src.c.obj -c "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-qzn958/src.c"
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -Wl,--nxcompat  CMakeFiles/cmTC_eca8e.dir/src.c.obj -o cmTC_eca8e.exe -Wl,--out-implib,libcmTC_eca8e.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -525,8 +525,8 @@ events:
     checks:
       - "Performing Test _GLFW_HAS_ASLR"
     directories:
-      source: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-su4b17"
-      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-su4b17"
+      source: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-28941c"
+      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-28941c"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -536,10 +536,10 @@ events:
       variable: "_GLFW_HAS_ASLR"
       cached: true
       stdout: |
-        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-su4b17
+        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-28941c
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_517a6 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -D_GLFW_HAS_ASLR  -Wl,--dynamicbase -fdiagnostics-color=always -o CMakeFiles/cmTC_517a6.dir/src.c.obj -c "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-su4b17/src.c"
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -Wl,--dynamicbase  CMakeFiles/cmTC_517a6.dir/src.c.obj -o cmTC_517a6.exe -Wl,--out-implib,libcmTC_517a6.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_71432 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -D_GLFW_HAS_ASLR  -Wl,--dynamicbase -fdiagnostics-color=always -o CMakeFiles/cmTC_71432.dir/src.c.obj -c "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-28941c/src.c"
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -Wl,--dynamicbase  CMakeFiles/cmTC_71432.dir/src.c.obj -o cmTC_71432.exe -Wl,--out-implib,libcmTC_71432.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
   -
@@ -552,8 +552,8 @@ events:
     checks:
       - "Performing Test _GLFW_HAS_64ASLR"
     directories:
-      source: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-x9vydm"
-      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-x9vydm"
+      source: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-vhphu0"
+      binary: "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-vhphu0"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
@@ -563,10 +563,10 @@ events:
       variable: "_GLFW_HAS_64ASLR"
       cached: true
       stdout: |
-        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-x9vydm
+        Change Dir: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-vhphu0
         
-        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_4c87a && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -D_GLFW_HAS_64ASLR  -Wl,--high-entropy-va -fdiagnostics-color=always -o CMakeFiles/cmTC_4c87a.dir/src.c.obj -c "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-x9vydm/src.c"
-        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -Wl,--high-entropy-va  CMakeFiles/cmTC_4c87a.dir/src.c.obj -o cmTC_4c87a.exe -Wl,--out-implib,libcmTC_4c87a.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
+        Run Build Command(s):C:/Program Files/JetBrains/CLion 2023.2.1/bin/ninja/win/x64/ninja.exe -v cmTC_461f5 && [1/2] C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -D_GLFW_HAS_64ASLR  -Wl,--high-entropy-va -fdiagnostics-color=always -o CMakeFiles/cmTC_461f5.dir/src.c.obj -c "C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/CMakeFiles/CMakeScratch/TryCompile-vhphu0/src.c"
+        [2/2] cmd.exe /C "cd . && C:\\PROGRA~1\\JETBRA~1\\CLION2~1.1\\bin\\mingw\\bin\\gcc.exe -Wl,--high-entropy-va  CMakeFiles/cmTC_461f5.dir/src.c.obj -o cmTC_461f5.exe -Wl,--out-implib,libcmTC_461f5.dll.a -Wl,--major-image-version,0,--minor-image-version,0  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 && cd ."
         
       exitCode: 0
 ...
