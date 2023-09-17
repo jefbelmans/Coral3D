@@ -8,7 +8,7 @@ layout (location = 1) in vec4 inTangent;
 layout (location = 2) in vec2 inTexcoord;
 layout (location = 3) in vec3 inViewDir;
 layout (location = 4) in vec3 inLightDir;
-layout (location = 5) in mat3 inTBN;
+layout (location = 5) in vec3 inBitangent;
 
 layout (location = 0) out vec4 outFragColor;
 
@@ -26,6 +26,23 @@ vec3 calculate_diffuse(vec3 color, vec3 normal)
 	return color * diffuse_strength;
 }
 
+vec3 calculate_specular(vec3 V, vec3 L, vec3 normal)
+{
+	// HALF VECTOR
+	vec3 halfVector = reflect(-L, normal);
+	float specularStrength = clamp(dot(halfVector, V), 0.f, 1.0f);
+
+	// SHININESS
+	float exp = 10.f;
+	float specularity = pow(specularStrength, exp);
+
+	vec3 specularColor = vec3(0.3f, 0.3f, 0.3f);
+
+	return specularColor * specularity;
+}
+
+mat3 TBN;
+
 void main()
 {
 	vec4 color = texture(samplerColorMap, inTexcoord);
@@ -36,12 +53,18 @@ void main()
 		}
 	}
 
-	vec3 N = inTBN * normalize(texture(samplerNormalMap, inTexcoord).xyz * 2.0 - vec3(1.0));
+	vec3 T = inTangent.xyz;
+	vec3 N = inNormal;
+	vec3 B = inBitangent;
+	TBN = mat3(T, B, N);
 
-	vec3 L = normalize(inLightDir);
-	vec3 V = normalize(inViewDir);
-	vec3 R = reflect(-L, N);
-	vec3 diffuse = calculate_diffuse(color.rgb, inNormal);
-	float specular = pow(max(dot(R, V), 0.0), 64.0);
+	vec3 localNormal = 2.f * texture(samplerNormalMap, inTexcoord).rgb - 1.f;
+	vec3 normal = normalize(TBN * localNormal);
+
+	vec3 diffuse = calculate_diffuse(color.rgb, normal);
+	vec3 specular = calculate_specular(inViewDir, inLightDir, normal);
+
+	// outFragColor = vec4(inTangent.xyz, color.a);
 	outFragColor = vec4(diffuse, color.a);
+
 }

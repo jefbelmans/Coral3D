@@ -11,6 +11,7 @@
 #define GLM_ENABLE_EXPERIMENTAL
 #include <gtx/hash.hpp>
 #include <gtc/type_ptr.hpp>
+#include <gtx/orthonormalize.hpp>
 
 // STD
 #include <iostream>
@@ -68,16 +69,24 @@ VertexInputDescription Vertex::get_vert_desc()
     tangent_attrib.format = VK_FORMAT_R32G32B32A32_SFLOAT;
     tangent_attrib.offset = offsetof(Vertex, tangent);
 
-    // UV will be stored at Location 3
+    // Tangent will be stored at Location 3
+    VkVertexInputAttributeDescription bitangent_attrib{};
+    bitangent_attrib.binding = 0;
+    bitangent_attrib.location = 3;
+    bitangent_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
+    bitangent_attrib.offset = offsetof(Vertex, bitangent);
+
+    // UV will be stored at Location 4
     VkVertexInputAttributeDescription texcoord_attrib{};
     texcoord_attrib.binding = 0;
-    texcoord_attrib.location = 3;
+    texcoord_attrib.location = 4;
     texcoord_attrib.format = VK_FORMAT_R32G32_SFLOAT;
     texcoord_attrib.offset = offsetof(Vertex, uv);
 
     desc.attributes.emplace_back(position_attrib);
     desc.attributes.emplace_back(normal_attrib);
     desc.attributes.emplace_back(tangent_attrib);
+    desc.attributes.emplace_back(bitangent_attrib);
     desc.attributes.emplace_back(texcoord_attrib);
 
     return desc;
@@ -115,6 +124,51 @@ bool coral_mesh::Builder::load_from_gltf(coral_device& device, const std::string
         load_node(device, node, glTF_input, nullptr);
     }
 
+    // CALCULATE TANGENTS
+    std::vector<glm::vec3> bitangents{};
+    bitangents.resize(vertices.size());
+    for (size_t i = 0; i < indices.size(); i += 3)
+    {
+        uint32_t i0 = indices[i];
+        uint32_t i1 = indices[i + 1];
+        uint32_t i2 = indices[i + 2];
+
+        const glm::vec3& p0 = vertices[i0].position;
+        const glm::vec3& p1 = vertices[i1].position;
+        const glm::vec3& p2 = vertices[i2].position;
+        const glm::vec2& uv0 = vertices[i0].uv;
+        const glm::vec2& uv1 = vertices[i1].uv;
+        const glm::vec2& uv2 = vertices[i2].uv;
+
+        glm::vec3 edge1 = p1 - p0;
+        glm::vec3 edge2 = p2 - p0;
+        float x1 = uv1.x - uv0.x;
+        float x2 = uv2.x - uv0.x;
+        float y1 = uv1.y - uv0.y;
+        float y2 = uv2.y - uv0.y;
+
+        float r = 1.f / (x1 * y2 - x2 * y1);
+        glm::vec3 tangent = (edge1 * y2 - edge2 * y1) * r;
+        glm::vec3 bitangent = (edge2 * x1 - edge1 * x2) * r;
+
+        vertices[i0].tangent += glm::vec4(tangent, 0.f);
+        vertices[i1].tangent += glm::vec4(tangent, 0.f);
+        vertices[i2].tangent += glm::vec4(tangent, 0.f);
+
+        vertices[i0].bitangent += bitangent;
+        vertices[i1].bitangent += bitangent;
+        vertices[i2].bitangent += bitangent;
+    }
+
+    // ORTHONORMALIZE TANGENT AND CALCULATE HANDEDNESS
+    for(size_t i = 0; i < vertices.size(); i++)
+    {
+        const glm::vec3& t = vertices[i].tangent;
+        const glm::vec3& b = vertices[i].bitangent;
+        const glm::vec3& n = vertices[i].normal;
+        vertices[i].tangent = glm::vec4(glm::normalize(glm::orthonormalize(t, n)), 0.f);
+        vertices[i].tangent.w = (glm::dot(glm::cross(t,b), n) > 0.f) ? 1.f : -1.f;
+    }
     return true;
 }
 

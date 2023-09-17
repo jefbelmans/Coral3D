@@ -36,6 +36,7 @@ namespace coral_3d
 
 		const glm::mat4& get_projection() const { return projection_matrix_; }
 		const glm::mat4& get_view() const { return view_matrix_; }
+        const glm::vec3& get_position() const { return position_; }
 
 		void update_input(GLFWwindow* pWindow, float dt);
 

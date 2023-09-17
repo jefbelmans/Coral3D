@@ -32,6 +32,7 @@ namespace coral_3d
 		glm::vec3 position;
 		glm::vec3 normal;
         glm::vec4 tangent;
+        glm::vec3 bitangent;
 		glm::vec2 uv;
 
 		static VertexInputDescription get_vert_desc();

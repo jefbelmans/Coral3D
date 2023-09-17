@@ -3,14 +3,15 @@
 layout (location = 0) in vec3 inPosition;
 layout (location = 1) in vec3 inNormal;
 layout (location = 2) in vec4 inTangent;
-layout (location = 3) in vec2 inTexcoord;
+layout (location = 3) in vec3 inBitangent;
+layout (location = 4) in vec2 inTexcoord;
 
 layout (location = 0) out vec3 outNormal;
 layout (location = 1) out vec4 outTangent;
 layout (location = 2) out vec2 outTexcoord;
 layout (location = 3) out vec3 outViewDir;
 layout (location = 4) out vec3 outLightDir;
-layout (location = 5) out mat3 outTBN;
+layout (location = 5) out vec3 outBitangent;
 
 layout (set = 0, binding = 0) uniform GlobalUBO
 {
@@ -22,6 +23,7 @@ layout (set = 0, binding = 0) uniform GlobalUBO
 	// GLOBAL LIGHT
 	vec4 globalLightDirection;
 	vec4 ambientLightColor;
+	vec4 cameraPos;
 } ubo;
 
 layout (push_constant) uniform Push
@@ -31,19 +33,15 @@ layout (push_constant) uniform Push
 
 void main() 
 {
-	outNormal = inNormal;
-	outTangent = inTangent;
-	outTexcoord = inTexcoord;
-
 	vec4 worldPos = primitive.model * vec4(inPosition, 1.0f);
 	gl_Position = ubo.viewProjection * worldPos;
 
-	outNormal = normalize(mat3(primitive.model) * inNormal);
-	outLightDir = ubo.globalLightDirection.xyz;
-	outViewDir = ubo.viewInverse[3].xyz - worldPos.xyz;
+	mat3 modelM3 = mat3(primitive.model);
+	outNormal = modelM3 * inNormal;
+	outTangent = vec4(normalize(modelM3 * inTangent.xyz), inTangent.w);
+	outBitangent = modelM3 * inBitangent;
+	outTexcoord = inTexcoord;
 
-	vec3 T = normalize(vec3(primitive.model * vec4(inTangent.xyz * inTangent.w, 0.f)));
-	vec3 N = normalize(vec3(primitive.model * vec4(inNormal, 0.f)));
-	vec3 B = normalize(cross(N, T));
-	outTBN = mat3(T, B, N);
+	outLightDir = normalize(ubo.globalLightDirection.xyz);
+	outViewDir = normalize(ubo.cameraPos.xyz - worldPos.xyz);
 }
