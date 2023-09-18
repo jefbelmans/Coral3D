@@ -32,28 +32,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2ea9cb6-a6b7-419f-9266-e5263673b6e6" name="Changes" comment="Fixed MaterialUBO memory alignment. All variables are now correctly aligned and read in the shader.">
-      <change afterPath="$PROJECT_DIR$/assets/meshes/Corset/Corset.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/meshes/Corset/Corset.gltf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/meshes/Corset/Corset_1.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/meshes/Corset/Corset_O_base.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/meshes/Corset/Corset_O_metallicRoughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/meshes/Corset/Corset_O_normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/meshes/Sphere/Material_MR_base.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/meshes/Sphere/Material_MR_normal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/meshes/Sphere/sphere.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/meshes/Sphere/sphere.gltf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/Corset_O_base.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/Corset_O_metallicRoughness.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/textures/Corset_O_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/Bottle/WaterBottle.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/Bottle/WaterBottle.gltf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/Bottle/WaterBottle_baseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/Bottle/WaterBottle_emissive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/Bottle/WaterBottle_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/meshes/Bottle/WaterBottle_occlusionRoughnessMetallic.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/WaterBottle_baseColor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/WaterBottle_emissive.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/WaterBottle_normal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/textures/WaterBottle_occlusionRoughnessMetallic.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/release/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/release/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/release/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_camera.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_camera.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/coral_mesh.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_mesh.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_mesh.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_mesh.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/first_app.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/first_app.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/vk_types.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/vk_types.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shaders/compiled/simple_shader.frag.spv" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/compiled/simple_shader.frag.spv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shaders/compiled/simple_shader.vert.spv" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/compiled/simple_shader.vert.spv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shaders/simple_shader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.frag" afterDir="false" />
@@ -191,6 +185,9 @@
       <workItem from="1694957367504" duration="9608000" />
       <workItem from="1694972754091" duration="5508000" />
       <workItem from="1694978418533" duration="745000" />
+      <workItem from="1694982915453" duration="1358000" />
+      <workItem from="1695027832615" duration="56000" />
+      <workItem from="1695058918911" duration="1496000" />
     </task>
     <task id="LOCAL-00001" summary="Have I forgotten how to git?">
       <option name="closed" value="true" />

@@ -1,141 +1,135 @@
 # ninja log v5
 408	3044	7164878650268916	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_thread.c.obj	638ad3ad06125fe4
-107	3167	7166668409950585	coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj	f8abc8df015ebae9
-149	1269	7165674704886215	coral_renderer/CMakeFiles/coral_renderer.dir/coral_window.cpp.obj	8753104f895782ad
+151	2741	7166813825251285	coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj	f8abc8df015ebae9
 6357	8075	7164878700690582	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_monitor.c.obj	cbd51a1d51394156
 57	2841	7164878647547873	third_party/GLFW/src/CMakeFiles/glfw.dir/init.c.obj	1580c17bd29c94e
+149	1269	7165674704886215	coral_renderer/CMakeFiles/coral_renderer.dir/coral_window.cpp.obj	8753104f895782ad
 153	1392	7166668392127426	coral_renderer/CMakeFiles/coral_renderer.dir/coral_camera.cpp.obj	9eab96ec723d02da
 96	2816	7164878647547873	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_init.c.obj	5a54e1de51f0e2de
 398	2973	7164878649663684	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_time.c.obj	9f6825bfd5c5deb7
+22882	23059	7166817278980350	coral_renderer/coral_renderer.exe	aaf4dcad0f31df8b
 6759	8431	7164878704214983	third_party/GLFW/src/CMakeFiles/glfw.dir/osmesa_context.c.obj	bd687e5f061fc7e9
-2224	2434	7166803833773349	coral_renderer/coral_renderer.exe	aaf4dcad0f31df8b
-1393	3938	7166668417675022	coral_renderer/CMakeFiles/coral_renderer.dir/coral_descriptors.cpp.obj	abb6eb7e993f8b7a
 374	2941	7164878649103507	third_party/GLFW/src/CMakeFiles/glfw.dir/vulkan.c.obj	e890ec9a67469472
+1393	3938	7166668417675022	coral_renderer/CMakeFiles/coral_renderer.dir/coral_descriptors.cpp.obj	abb6eb7e993f8b7a
 85	2874	7164878648218203	third_party/GLFW/src/CMakeFiles/glfw.dir/monitor.c.obj	f218f9e006590936
 41	2848	7164878647733003	third_party/GLFW/src/CMakeFiles/glfw.dir/context.c.obj	5d34e7ae8ce089ae
-116	2886	7164878648608313	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_joystick.c.obj	60340a15c23596ef
 68	2857	7164878648048174	third_party/GLFW/src/CMakeFiles/glfw.dir/egl_context.c.obj	134a12be6cc8b6e1
-8	373	7164878622978046	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.frag.spv	d2b062603ad04cc6
-6088	8481	7164878704264993	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_window.c.obj	9fdad4d28de63534
+116	2886	7164878648608313	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_joystick.c.obj	60340a15c23596ef
 114	1972	7166668396503478	coral_renderer/CMakeFiles/coral_renderer.dir/vk_initializers.cpp.obj	4952414d7314413d
+6088	8481	7164878704264993	third_party/GLFW/src/CMakeFiles/glfw.dir/win32_window.c.obj	9fdad4d28de63534
+8	373	7164878622978046	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.frag.spv	d2b062603ad04cc6
 76	2910	7164878648993494	third_party/GLFW/src/CMakeFiles/glfw.dir/window.c.obj	dea033b667ff06d5
 202	1261	7165674703562097	coral_renderer/CMakeFiles/coral_renderer.dir/coral_utils.cpp.obj	1963b557c5ecfb17
 6366	8429	7164878701235774	third_party/GLFW/src/CMakeFiles/glfw.dir/wgl_context.c.obj	592ea253d8e32e8e
 48	3186	7164878651739429	third_party/GLFW/src/CMakeFiles/glfw.dir/input.c.obj	3d5a7ad29b1764da
 39	261	7164878784082658	third_party/GLFW/src/libglfw3.a	5eea7d88e6f39701
-160	2642	7166668404574269	coral_renderer/CMakeFiles/coral_renderer.dir/coral_texture.cpp.obj	111b61812a9f338a
 141	2757	7166668405745286	coral_renderer/CMakeFiles/coral_renderer.dir/coral_renderer.cpp.obj	4566d396f99878a8
-136	2990	7166668408172156	coral_renderer/CMakeFiles/coral_renderer.dir/coral_gameobject.cpp.obj	8027bda10104d9d7
-147	3134	7166668409618582	coral_renderer/CMakeFiles/coral_renderer.dir/render_system.cpp.obj	f8af26d5d71a0363
-0	2606	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-118	3271	7166668410996341	coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj	c5b2ec31ce3428df
+160	2642	7166668404574269	coral_renderer/CMakeFiles/coral_renderer.dir/coral_texture.cpp.obj	111b61812a9f338a
+169	2584	7166813824431079	coral_renderer/CMakeFiles/coral_renderer.dir/coral_gameobject.cpp.obj	8027bda10104d9d7
+164	2742	7166813825251285	coral_renderer/CMakeFiles/coral_renderer.dir/render_system.cpp.obj	f8af26d5d71a0363
+155	3133	7166813827026051	coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj	c5b2ec31ce3428df
+0	2105	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+7	22881	7166817277223051	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	1035a6b67fd24167
 87	3107	7165258684040000	coral_renderer/CMakeFiles/coral_renderer.dir/coral_material.cpp.obj	432ccaf3a8cd54b8
-108	18288	7166781671780589	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	1035a6b67fd24167
-5	263	7166805761129504	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
 127	3404	7166668412330635	coral_renderer/CMakeFiles/coral_renderer.dir/coral_swapchain.cpp.obj	50b94fc5070ab14a
+11	121	7166822956883448	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
+174	2582	7166813824441099	coral_renderer/CMakeFiles/coral_renderer.dir/coral_frame_info.cpp.obj	5d5ae4c03e37cd7e
 27	9114	7164878711076340	third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.obj	1aa6e481af04158f
-166	3017	7166668408446646	coral_renderer/CMakeFiles/coral_renderer.dir/coral_frame_info.cpp.obj	5d5ae4c03e37cd7e
 122	3827	7166668416574274	coral_renderer/CMakeFiles/coral_renderer.dir/coral_device.cpp.obj	29c0b1708d5c5e4b
-5	2223	7166803832195019	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	d432260f2316bfd6
+147	3901	7166813838029202	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	d432260f2316bfd6
 26	260	7164878784102662	third_party/libvkbootstrap.a	3c2f59e57be524c7
 175	5742	7166668435711818	coral_renderer/CMakeFiles/coral_renderer.dir/coral_buffer.cpp.obj	6a6a15321e4b334c
 1	3253	7165626446356389	build.ninja	ba309abf78566697
-0	2606	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2105	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
 21	8484	7164878704596052	third_party/CMakeFiles/tinyobjloader.dir/tinyobjloader/tiny_obj_loader.cc.obj	bc59412498a9bf65
 32	261	7164878784192681	third_party/libtinyobjloader.a	60b6a54d64599062
 3	398	7164878623288105	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.vert.spv	a0ba634e53f7a86c
-5	120	7166805117178577	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
-5	113	7166805994643734	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-0	2638	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	2638	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-6	121	7166806250160412	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
-11	124	7166806250200420	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-0	2839	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	2839	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-5	111	7166807881084992	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-0	2559	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	2559	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-5	112	7166808042057412	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-0	2693	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	2693	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-7	208	7166808489386957	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-1	2630	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-1	2630	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-5	106	7166808662582839	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-1	2775	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-1	2775	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-5	110	7166808883518967	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-1	2609	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-1	2609	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-6	113	7166809051043745	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-0	2659	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	2659	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-8	2186	7166809337702903	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	d432260f2316bfd6
-2186	2396	7166809339335304	coral_renderer/coral_renderer.exe	aaf4dcad0f31df8b
-0	2545	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	2545	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-6	112	7166809719908983	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-0	1951	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	1951	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-6	112	7166809881811516	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-1	1867	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-1	1867	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-6	116	7166810032220421	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-0	2005	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	2005	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-5	122	7166810353083361	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-1	2106	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-1	2106	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-5	109	7166810648125992	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-0	1986	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	1986	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-5	20374	7166811070004031	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	1035a6b67fd24167
-20374	20573	7166811071689035	coral_renderer/coral_renderer.exe	aaf4dcad0f31df8b
-0	2081	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	2081	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-6	147	7166813800539638	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
-174	2582	7166813824441099	coral_renderer/CMakeFiles/coral_renderer.dir/coral_frame_info.cpp.obj	5d5ae4c03e37cd7e
-169	2584	7166813824431079	coral_renderer/CMakeFiles/coral_renderer.dir/coral_gameobject.cpp.obj	8027bda10104d9d7
-151	2741	7166813825251285	coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj	f8abc8df015ebae9
-164	2742	7166813825251285	coral_renderer/CMakeFiles/coral_renderer.dir/render_system.cpp.obj	f8af26d5d71a0363
-155	3133	7166813827026051	coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj	c5b2ec31ce3428df
-147	3901	7166813838029202	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	d432260f2316bfd6
-159	19913	7166813998151524	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	1035a6b67fd24167
-19913	20100	7166814000069878	coral_renderer/coral_renderer.exe	aaf4dcad0f31df8b
-0	1921	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	1921	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-8	21355	7166816677938796	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	1035a6b67fd24167
-21355	21730	7166816681635718	coral_renderer/coral_renderer.exe	aaf4dcad0f31df8b
-0	3946	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	3946	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-7	22881	7166817277223051	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	1035a6b67fd24167
-22882	23059	7166817278980350	coral_renderer/coral_renderer.exe	aaf4dcad0f31df8b
-1	2137	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-1	2137	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-5	113	7166818175669403	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
-11	117	7166818175719417	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-0	1921	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	1921	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-6	118	7166818560201558	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
-0	2046	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	2046	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-6	119	7166818729094611	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
-0	1938	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	1938	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-5	140	7166819040751491	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-1	2386	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-1	2386	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-5	116	7166819515915437	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
-10	126	7166819516020410	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-0	2080	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	2080	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-6	110	7166819998625670	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-0	1999	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	1999	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-11	121	7166822956883448	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
-5	106	7166823209091055	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
-1	2768	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-1	2768	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
 7	156	7166823556566203	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
-0	2105	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
-0	2105	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+7	2321	7166862092514326	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	d432260f2316bfd6
+2322	2630	7166862095560289	coral_renderer/coral_renderer.exe	aaf4dcad0f31df8b
+0	2376	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2376	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+6	117	7166863021778121	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
+0	2627	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2627	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+6	144	7166865850440003	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
+144	19367	7166866042683515	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	1035a6b67fd24167
+19368	19536	7166866044352076	coral_renderer/coral_renderer.exe	aaf4dcad0f31df8b
+9	19392	7166866358621381	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	1035a6b67fd24167
+19393	19554	7166866360225821	coral_renderer/coral_renderer.exe	aaf4dcad0f31df8b
+1	2629	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+1	2629	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+5	19647	7166866751742509	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	1035a6b67fd24167
+19647	19803	7166866753307938	coral_renderer/coral_renderer.exe	aaf4dcad0f31df8b
+0	2556	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2556	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+6	19716	7166867515498902	coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj	1035a6b67fd24167
+19716	19878	7166867517146963	coral_renderer/coral_renderer.exe	aaf4dcad0f31df8b
+1	2517	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+1	2517	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+5	109	7166869014328571	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
+0	2597	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2597	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+5	109	7166872065539313	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
+9	115	7166872065589322	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
+0	2508	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2508	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+5	108	7166872345798281	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
+0	2567	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2567	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+5	114	7166872720570670	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
+0	2543	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2543	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+5	104	7166874520822806	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
+0	2585	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2585	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	4332	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	4332	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+6	147	7167310545181034	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
+0	2789	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2789	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+5	112	7167627965623576	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
+5	112	7167628341651510	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
+0	3460	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	3460	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+7	119	7167628776027979	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
+0	2507	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2507	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+6	115	7167629041510839	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
+1	2519	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+1	2519	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+5	123	7167629352246879	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
+0	2544	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2544	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+5	107	7167629646927505	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
+0	2491	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2491	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+5	109	7167630372957770	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
+1	2470	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+1	2470	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+5	108	7167630777625637	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
+0	2515	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2515	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+7	107	7167632594440844	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
+1	2507	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+1	2507	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+5	120	7167632718212396	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
+0	2483	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2483	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+5	106	7167633637317979	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
+0	2507	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2507	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+5	105	7167633937010507	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
+0	2586	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2586	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+5	108	7167635459383873	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv	dd4b741ae13c35f5
+108	2416	7167635482491588	coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj	d432260f2316bfd6
+2416	2769	7167635485981804	coral_renderer/coral_renderer.exe	aaf4dcad0f31df8b
+1	2798	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+1	2798	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+6	115	7167635686294312	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
+0	2663	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2663	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+6	113	7167635928350093	C:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv	c8e05f14162426a5
+0	2784	0	coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85
+0	2784	0	C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/copy_assets	6856ffc941de2b85

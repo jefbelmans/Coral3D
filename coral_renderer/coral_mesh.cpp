@@ -163,11 +163,12 @@ bool coral_mesh::Builder::load_from_gltf(coral_device& device, const std::string
     // ORTHONORMALIZE TANGENT AND CALCULATE HANDEDNESS
     for(size_t i = 0; i < vertices.size(); i++)
     {
-        const glm::vec3& t = vertices[i].tangent;
+        const glm::vec3 t = vertices[i].tangent;
         const glm::vec3& b = vertices[i].bitangent;
         const glm::vec3& n = vertices[i].normal;
-        vertices[i].tangent = glm::vec4(glm::normalize(glm::orthonormalize(t, n)), 0.f);
-        vertices[i].tangent.w = (glm::dot(glm::cross(t,b), n) > 0.f) ? 1.f : -1.f;
+        // vertices[i].tangent = glm::vec4(glm::normalize(glm::orthonormalize(t, n)), 0.f);
+        vertices[i].tangent = glm::vec4(t - (glm::dot(n, t) * n), 0.f);
+        vertices[i].tangent.w = (glm::dot(glm::cross(n,t), b) < 0.f) ? 1.f : -1.f;
     }
     return true;
 }

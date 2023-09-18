@@ -1,23 +1,30 @@
 #version 450
 
+// SAMPLERS
 layout (set = 1, binding = 0) uniform sampler2D samplerColorMap;
 layout (set = 1, binding = 1) uniform sampler2D samplerNormalMap;
 
-layout (location = 0) in vec3 inNormal;
-layout (location = 1) in vec4 inTangent;
-layout (location = 2) in vec2 inTexcoord;
-layout (location = 3) in vec3 inViewDir;
-layout (location = 4) in vec3 inLightDir;
-layout (location = 5) in vec3 inBitangent;
-
-layout (location = 0) out vec4 outFragColor;
-
+// CONSTANTS
 layout (constant_id = 0) const bool ALPHA_MASK = false;
 layout (constant_id = 1) const float ALPHA_MASK_CUTOFF = 0.0f;
 
+// FRAGMENT INPUT
+layout (location = 0) in struct FS_IN
+{
+	vec3 normal;
+	vec4 tangent;
+	vec3 bitangent;
+	vec2 texcoord;
+	vec3 viewDir;
+	vec3 lightDir;
+} fs_in;
+
+// OUT COLOR
+layout (location = 0) out vec4 outFragColor;
+
 vec3 calculate_diffuse(vec3 color, vec3 normal)
 {
-	float diffuse_strength = dot(normal, -inLightDir);
+	float diffuse_strength = dot(normal, -fs_in.lightDir);
 
 	// HALF-LAMBERT
 	diffuse_strength = diffuse_strength * 0.5f + 0.5f;
@@ -41,11 +48,9 @@ vec3 calculate_specular(vec3 V, vec3 L, vec3 normal)
 	return specularColor * specularity;
 }
 
-mat3 TBN;
-
 void main()
 {
-	vec4 color = texture(samplerColorMap, inTexcoord);
+	vec4 color = texture(samplerColorMap, fs_in.texcoord);
 
 	if (ALPHA_MASK) {
 		if (color.a < ALPHA_MASK_CUTOFF) {
@@ -53,18 +58,11 @@ void main()
 		}
 	}
 
-	vec3 T = inTangent.xyz;
-	vec3 N = inNormal;
-	vec3 B = inBitangent;
-	TBN = mat3(T, B, N);
-
-	vec3 localNormal = 2.f * texture(samplerNormalMap, inTexcoord).rgb - 1.f;
-	vec3 normal = normalize(TBN * localNormal);
+	vec3 localNormal = 2.f * texture(samplerNormalMap, fs_in.texcoord).rgb - 1.f;
+	vec3 normal = normalize(localNormal);
 
 	vec3 diffuse = calculate_diffuse(color.rgb, normal);
-	vec3 specular = calculate_specular(inViewDir, inLightDir, normal);
+	vec3 specular = calculate_specular(fs_in.viewDir, fs_in.lightDir, normal);
 
-	// outFragColor = vec4(inTangent.xyz, color.a);
-	outFragColor = vec4(diffuse, color.a);
-
+	outFragColor = vec4(diffuse + specular, color.a);
 }
