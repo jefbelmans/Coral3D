@@ -126,7 +126,7 @@ void first_app::run()
 void first_app::load_gameobjects(coral_descriptor_set_layout& material_set_layout)
 {
 #pragma region Sponza
-    std::shared_ptr<coral_mesh> sponza_mesh{ coral_mesh::create_mesh_from_file(device_, "assets/meshes/Bottle/WaterBottle.gltf") };
+    std::shared_ptr<coral_mesh> sponza_mesh{ coral_mesh::create_mesh_from_file(device_, "assets/meshes/Helmet/Scene.gltf") };
     sponza_mesh->load_materials(material_set_layout, *descriptor_pool_);
     sponza_mesh->create_pipelines(
             "assets/shaders/simple_shader.vert.spv",
