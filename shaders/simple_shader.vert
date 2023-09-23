@@ -44,6 +44,7 @@ void main()
 	vec3 N = normalize(modelM3 * inNormal);
 	vec3 B = normalize(cross(N, T)) * inTangent.w;
 
+	// Transposed matrix to transform light and view vectors from world to tangent space.
 	mat3 TBN = mat3(
 	T.x, B.x, N.x,
 	T.y, B.y, N.y,
@@ -55,7 +56,6 @@ void main()
 	vs_out.bitangent = normalize(modelM3 * inBitangent);
 	vs_out.texcoord = inTexcoord;
 
-	vs_out.lightDir = normalize(ubo.globalLightDirection.xyz) * TBN;
-	// vs_out.viewDir = -normalize(ubo.view * primitive.model * vec4(inPosition, 1.f)).xyz;
-	vs_out.viewDir = normalize(worldPos.xyz - ubo.cameraPos.xyz) * TBN;
+	vs_out.lightDir = ubo.globalLightDirection.xyz * TBN;
+	vs_out.viewDir = (worldPos.xyz - ubo.cameraPos.xyz) * TBN;
 }

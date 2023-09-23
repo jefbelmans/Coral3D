@@ -24,7 +24,7 @@ layout (location = 0) out vec4 outFragColor;
 
 vec3 calculate_diffuse(vec3 color, vec3 normal)
 {
-	float diffuse_strength = dot(normal, -fs_in.lightDir);
+	float diffuse_strength = dot(normal, -normalize(fs_in.lightDir));
 
 	// HALF-LAMBERT
 	diffuse_strength = diffuse_strength * 0.5f + 0.5f;
@@ -40,10 +40,10 @@ vec3 calculate_specular(vec3 V, vec3 L, vec3 normal)
 	float specularStrength = clamp(dot(halfVector, V), 0.f, 1.0f);
 
 	// SHININESS
-	float exp = 10.f;
+	float exp = 15.f;
 	float specularity = pow(specularStrength, exp);
 
-	vec3 specularColor = vec3(0.3f, 0.3f, 0.3f);
+	vec3 specularColor = vec3(1.f, 1.f, 1.f);
 
 	return specularColor * specularity;
 }
@@ -62,7 +62,6 @@ void main()
 	vec3 normal = normalize(localNormal);
 
 	vec3 diffuse = calculate_diffuse(color.rgb, normal);
-	vec3 specular = calculate_specular(fs_in.viewDir, fs_in.lightDir, normal);
 
-	outFragColor = vec4(diffuse + specular, color.a);
+	outFragColor = vec4(diffuse, color.a);
 }
