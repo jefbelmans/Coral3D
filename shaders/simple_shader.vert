@@ -14,6 +14,7 @@ layout (location = 0) out struct VS_OUT
 	vec2 texcoord;
 	vec3 viewDir;
 	vec3 lightDir;
+	mat3 TBN;
 } vs_out;
 
 layout (set = 0, binding = 0) uniform GlobalUBO
@@ -39,23 +40,17 @@ void main()
 	vec4 worldPos = primitive.model * vec4(inPosition, 1.0f);
 	gl_Position = ubo.viewProjection * worldPos;
 
-	mat3 modelM3 = transpose(inverse(mat3(primitive.model)));
-	vec3 T = normalize(modelM3 * inTangent.xyz);
-	vec3 N = normalize(modelM3 * inNormal);
-	vec3 B = normalize(cross(N, T)) * inTangent.w;
-
-	// Transposed matrix to transform light and view vectors from world to tangent space.
-	mat3 TBN = mat3(
-	T.x, B.x, N.x,
-	T.y, B.y, N.y,
-	T.z, B.z, N.z
-	);
-
-	vs_out.normal = N;
-	vs_out.tangent = vec4(T, inTangent.w);
-	vs_out.bitangent = normalize(modelM3 * inBitangent);
+	vs_out.normal = inNormal;
+	vs_out.tangent = inTangent;
+	vs_out.bitangent = inBitangent;
 	vs_out.texcoord = inTexcoord;
 
-	vs_out.lightDir = ubo.globalLightDirection.xyz * TBN;
-	vs_out.viewDir = (worldPos.xyz - ubo.cameraPos.xyz) * TBN;
+	vs_out.lightDir = ubo.globalLightDirection.xyz;
+	vs_out.viewDir = (worldPos.xyz - ubo.cameraPos.xyz);
+
+	vec3 T = normalize(mat3(primitive.model) * inTangent.xyz);
+	vec3 B = normalize(mat3(primitive.model) * inBitangent);
+	vec3 N = normalize(mat3(primitive.model) * inNormal);
+
+	vs_out.TBN = mat3(T, B, N);
 }

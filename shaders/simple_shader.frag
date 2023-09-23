@@ -17,6 +17,7 @@ layout (location = 0) in struct FS_IN
 	vec2 texcoord;
 	vec3 viewDir;
 	vec3 lightDir;
+	mat3 TBN;
 } fs_in;
 
 // OUT COLOR
@@ -59,7 +60,7 @@ void main()
 	}
 
 	vec3 localNormal = 2.f * texture(samplerNormalMap, fs_in.texcoord).rgb - 1.f;
-	vec3 normal = normalize(localNormal);
+	vec3 normal = normalize(localNormal * fs_in.TBN);
 
 	vec3 diffuse = calculate_diffuse(color.rgb, normal);
 
