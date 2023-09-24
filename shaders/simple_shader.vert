@@ -8,11 +8,12 @@ layout (location = 4) in vec2 inTexcoord;
 
 layout (location = 0) out struct VS_OUT
 {
+	vec3 fragPos;
 	vec3 normal;
 	vec4 tangent;
 	vec3 bitangent;
 	vec2 texcoord;
-	vec3 viewDir;
+	vec3 viewPos;
 	vec3 lightDir;
 	mat3 TBN;
 } vs_out;
@@ -40,17 +41,19 @@ void main()
 	vec4 worldPos = primitive.model * vec4(inPosition, 1.0f);
 	gl_Position = ubo.viewProjection * worldPos;
 
+
 	vs_out.normal = inNormal;
 	vs_out.tangent = inTangent;
 	vs_out.bitangent = inBitangent;
 	vs_out.texcoord = inTexcoord;
 
-	vs_out.lightDir = ubo.globalLightDirection.xyz;
-	vs_out.viewDir = (worldPos.xyz - ubo.cameraPos.xyz);
-
 	vec3 T = normalize(mat3(primitive.model) * inTangent.xyz);
-	vec3 B = normalize(mat3(primitive.model) * inBitangent);
 	vec3 N = normalize(mat3(primitive.model) * inNormal);
+	vec3 B = normalize(mat3(primitive.model) * inBitangent);
 
-	vs_out.TBN = mat3(T, B, N);
+	vs_out.TBN = transpose(mat3(T, B, N));
+
+	vs_out.fragPos =  vs_out.TBN * worldPos.xyz;
+	vs_out.lightDir = vs_out.TBN * ubo.globalLightDirection.xyz;
+	vs_out.viewPos = vs_out.TBN * ubo.cameraPos.xyz;
 }

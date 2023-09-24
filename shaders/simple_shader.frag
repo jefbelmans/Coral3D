@@ -11,11 +11,12 @@ layout (constant_id = 1) const float ALPHA_MASK_CUTOFF = 0.0f;
 // FRAGMENT INPUT
 layout (location = 0) in struct FS_IN
 {
+	vec3 fragPos;
 	vec3 normal;
 	vec4 tangent;
 	vec3 bitangent;
 	vec2 texcoord;
-	vec3 viewDir;
+	vec3 viewPos;
 	vec3 lightDir;
 	mat3 TBN;
 } fs_in;
@@ -23,9 +24,9 @@ layout (location = 0) in struct FS_IN
 // OUT COLOR
 layout (location = 0) out vec4 outFragColor;
 
-vec3 calculate_diffuse(vec3 color, vec3 normal)
+vec3 calculate_diffuse(vec3 color, vec3 N, vec3 L)
 {
-	float diffuse_strength = dot(normal, -normalize(fs_in.lightDir));
+	float diffuse_strength = clamp(dot(N, -L), 0, 1);
 
 	// HALF-LAMBERT
 	diffuse_strength = diffuse_strength * 0.5f + 0.5f;
@@ -37,11 +38,11 @@ vec3 calculate_diffuse(vec3 color, vec3 normal)
 vec3 calculate_specular(vec3 V, vec3 L, vec3 normal)
 {
 	// HALF VECTOR
-	vec3 halfVector = reflect(-L, normal);
-	float specularStrength = clamp(dot(halfVector, V), 0.f, 1.0f);
+	vec3 halfVector = reflect(-normalize(L), normal);
+	float specularStrength = clamp(dot(halfVector, normalize(V)), 0.f, 1.0f);
 
 	// SHININESS
-	float exp = 15.f;
+	float exp = 30.f;
 	float specularity = pow(specularStrength, exp);
 
 	vec3 specularColor = vec3(1.f, 1.f, 1.f);
@@ -53,16 +54,15 @@ void main()
 {
 	vec4 color = texture(samplerColorMap, fs_in.texcoord);
 
-	if (ALPHA_MASK) {
-		if (color.a < ALPHA_MASK_CUTOFF) {
-			discard;
-		}
+	if (ALPHA_MASK)
+	{
+		if (color.a < ALPHA_MASK_CUTOFF) discard;
 	}
 
-	vec3 localNormal = 2.f * texture(samplerNormalMap, fs_in.texcoord).rgb - 1.f;
-	vec3 normal = normalize(localNormal * fs_in.TBN);
+	vec3 normal = texture(samplerNormalMap, fs_in.texcoord).rgb;
+	normal = normalize(normal * 2.f - 1.f);
 
-	vec3 diffuse = calculate_diffuse(color.rgb, normal);
+	vec3 diffuse = calculate_diffuse(color.rgb, normal, normalize(fs_in.lightDir));
 
 	outFragColor = vec4(diffuse, color.a);
 }

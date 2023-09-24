@@ -124,9 +124,7 @@ bool coral_mesh::Builder::load_from_gltf(coral_device& device, const std::string
         load_node(device, node, glTF_input, nullptr);
     }
 
-    // CALCULATE TANGENTS
-    std::vector<glm::vec3> bitangents{};
-    bitangents.resize(vertices.size());
+    // CALCULATE TANGENTS & BITANGENTS
     for (size_t i = 0; i < indices.size(); i += 3)
     {
         uint32_t i0 = indices[i];
@@ -166,7 +164,6 @@ bool coral_mesh::Builder::load_from_gltf(coral_device& device, const std::string
         const glm::vec3 t = vertices[i].tangent;
         const glm::vec3& b = vertices[i].bitangent;
         const glm::vec3& n = vertices[i].normal;
-        // vertices[i].tangent = glm::vec4(glm::normalize(glm::orthonormalize(t, n)), 0.f);
         vertices[i].tangent = glm::vec4(t - (glm::dot(n, t) * n), 0.f);
         vertices[i].tangent.w = (glm::dot(glm::cross(n,t), b) < 0.f) ? 1.f : -1.f;
     }
