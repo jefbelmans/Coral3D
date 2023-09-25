@@ -15,7 +15,6 @@ layout (location = 0) out struct VS_OUT
 	vec2 texcoord;
 	vec3 viewPos;
 	vec3 lightDir;
-	mat3 TBN;
 } vs_out;
 
 layout (set = 0, binding = 0) uniform GlobalUBO
@@ -50,9 +49,9 @@ void main()
 	vec3 N = normalize(mat3(primitive.model) * inNormal);
 	vec3 B = normalize(mat3(primitive.model) * inBitangent);
 
-	vs_out.TBN = transpose(mat3(T, B, N));
+	mat3 TBN = transpose(mat3(T, B, N));
 
-	vs_out.fragPos = vs_out.TBN * worldPos.xyz;
-	vs_out.lightDir =  vs_out.TBN * ubo.globalLightDirection.xyz;
-	vs_out.viewPos = ubo.cameraPos.xyz;
+	vs_out.fragPos  = TBN * worldPos.xyz;
+	vs_out.lightDir = TBN * ubo.globalLightDirection.xyz;
+	vs_out.viewPos  = TBN * ubo.cameraPos.xyz;
 }
