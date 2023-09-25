@@ -41,7 +41,6 @@ void main()
 	vec4 worldPos = primitive.model * vec4(inPosition, 1.0f);
 	gl_Position = ubo.viewProjection * worldPos;
 
-
 	vs_out.normal = inNormal;
 	vs_out.tangent = inTangent;
 	vs_out.bitangent = inBitangent;
@@ -53,7 +52,7 @@ void main()
 
 	vs_out.TBN = transpose(mat3(T, B, N));
 
-	vs_out.fragPos =  vs_out.TBN * worldPos.xyz;
-	vs_out.lightDir = vs_out.TBN * ubo.globalLightDirection.xyz;
-	vs_out.viewPos = vs_out.TBN * ubo.cameraPos.xyz;
+	vs_out.fragPos = vs_out.TBN * worldPos.xyz;
+	vs_out.lightDir =  vs_out.TBN * ubo.globalLightDirection.xyz;
+	vs_out.viewPos = ubo.cameraPos.xyz;
 }

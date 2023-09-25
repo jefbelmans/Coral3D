@@ -26,11 +26,11 @@ layout (location = 0) out vec4 outFragColor;
 
 vec3 calculate_diffuse(vec3 color, vec3 N, vec3 L)
 {
-	float diffuse_strength = clamp(dot(N, -L), 0, 1);
+	float diffuse_strength = max(dot(N, -L), 0);
 
 	// HALF-LAMBERT
-	diffuse_strength = diffuse_strength * 0.5f + 0.5f;
-	diffuse_strength = clamp(diffuse_strength, 0.f, 1.f);
+	diffuse_strength = pow(diffuse_strength * 0.5f + 0.5f, 2);
+	diffuse_strength = max(diffuse_strength, 0.f);
 
 	return color * diffuse_strength;
 }
@@ -38,6 +38,9 @@ vec3 calculate_diffuse(vec3 color, vec3 N, vec3 L)
 vec3 calculate_specular(vec3 V, vec3 L, vec3 normal)
 {
 	// HALF VECTOR
+	V = normalize(V);
+	L = normalize(L);
+	normal = normalize(normal);
 	vec3 halfVector = reflect(-normalize(L), normal);
 	float specularStrength = clamp(dot(halfVector, normalize(V)), 0.f, 1.0f);
 
@@ -61,8 +64,10 @@ void main()
 
 	vec3 normal = texture(samplerNormalMap, fs_in.texcoord).rgb;
 	normal = normalize(normal * 2.f - 1.f);
+	normal = normalize(normal);
 
 	vec3 diffuse = calculate_diffuse(color.rgb, normal, normalize(fs_in.lightDir));
+	vec3 specular = calculate_specular(normalize(fs_in.viewPos) - normalize(fs_in.fragPos), fs_in.lightDir, normal);
 
 	outFragColor = vec4(diffuse, color.a);
 }

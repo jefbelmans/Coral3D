@@ -43,7 +43,8 @@ namespace coral_3d
 				position == other.position &&
 				normal == other.normal &&
 				uv == other.uv &&
-				tangent == other.tangent;
+				tangent == other.tangent &&
+                bitangent == other.bitangent;
 		}
 	};
 

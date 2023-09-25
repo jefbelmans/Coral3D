@@ -174,9 +174,9 @@ std::unique_ptr<coral_texture> coral_texture::create_texture_from_file(coral_dev
 	return std::make_unique<coral_texture>(device, builder.image, builder.mip_levels, format);
 }
 
-void coral_texture::create_image_view(VkFormat)
+void coral_texture::create_image_view(VkFormat format)
 {
-	VkImageViewCreateInfo image_info{ vkinit::image_view_ci(VK_FORMAT_R8G8B8A8_SRGB, image_.image, VK_IMAGE_ASPECT_COLOR_BIT) };
+	VkImageViewCreateInfo image_info{ vkinit::image_view_ci(format, image_.image, VK_IMAGE_ASPECT_COLOR_BIT) };
 	image_info.subresourceRange.levelCount = mip_levels_;
 
 	if (vkCreateImageView(device_.device(), &image_info, nullptr, &image_view_) != VK_SUCCESS)

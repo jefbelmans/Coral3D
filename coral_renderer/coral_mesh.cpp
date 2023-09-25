@@ -20,6 +20,7 @@
 
 #include "coral_utils.h"
 
+#define CALC_TANGENTS
 using namespace coral_3d;
 
 namespace std
@@ -125,6 +126,7 @@ bool coral_mesh::Builder::load_from_gltf(coral_device& device, const std::string
     }
 
     // CALCULATE TANGENTS & BITANGENTS
+#ifdef CALC_TANGENTS
     for (size_t i = 0; i < indices.size(); i += 3)
     {
         uint32_t i0 = indices[i];
@@ -167,6 +169,7 @@ bool coral_mesh::Builder::load_from_gltf(coral_device& device, const std::string
         vertices[i].tangent = glm::vec4(t - (glm::dot(n, t) * n), 0.f);
         vertices[i].tangent.w = (glm::dot(glm::cross(n,t), b) < 0.f) ? 1.f : -1.f;
     }
+#endif
     return true;
 }
 
@@ -176,10 +179,24 @@ void coral_mesh::Builder::load_images(coral_device& device, tinygltf::Model &inp
     for (size_t i = 0; i < input.images.size(); ++i)
     {
         tinygltf::Image& glTF_image = input.images[i];
+
+        bool is_normal_map{false};
+        for(size_t j = 0; j < input.materials.size(); ++j)
+        {
+            tinygltf::Material glTFMaterial = input.materials[j];
+            if(glTFMaterial.additionalValues.find("normalTexture") == glTFMaterial.additionalValues.end()) continue;
+
+            if((size_t)input.textures[glTFMaterial.additionalValues["normalTexture"].TextureIndex()].source == i)
+            {
+                is_normal_map = true;
+                break;
+            }
+        }
+
         images[i].texture = coral_texture::create_texture_from_file(
                 device,
                 "assets/textures/" + glTF_image.uri,
-                VK_FORMAT_R8G8B8A8_UNORM);
+                is_normal_map ? VK_FORMAT_R8G8B8A8_UNORM : VK_FORMAT_R8G8B8A8_SRGB);
     }
 }
 
