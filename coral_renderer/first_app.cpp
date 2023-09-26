@@ -65,14 +65,15 @@ void first_app::run()
         material_set_layout->get_descriptor_set_layout()
     };
 
-    create_pipeline_layout(desc_set_layouts);
+    pipeline_layout_ = coral_pipeline::create_pipeline_layout(device_, desc_set_layouts);
 
     // RENDER SYSTEM
     render_system render_system{device_, pipeline_layout_};
     load_gameobjects(*material_set_layout);
 
     // CAMERA
-    coral_camera camera{ {0.f, 2.5f, 0.f} };
+    coral_camera camera{ {0.f, 0.f, 3.f} };
+    camera.set_view_direction(camera.get_position(), {0.f, 0.f, -1.f});
 
     auto last_time{ std::chrono::high_resolution_clock::now() };
 	while (!window_.should_close())
@@ -108,7 +109,6 @@ void first_app::run()
             ubo.view = camera.get_view();
             ubo.view_inverse = glm::inverse(camera.get_view());
             ubo.view_projection = camera.get_projection() * camera.get_view();
-            ubo.camera_pos = glm::vec4(camera.get_position(), 0.f);
             global_ubo.write_to_index(&ubo, frame_index);
             global_ubo.flush_index(frame_index);
 
@@ -136,25 +136,7 @@ void first_app::load_gameobjects(coral_descriptor_set_layout& material_set_layou
 
     auto sponza_scene{ coral_gameobject::create_gameobject() };
     sponza_scene.mesh_ = sponza_mesh;
-    sponza_scene.transform_.translation = { 0.f, 0.f, 0.f };
     gameobjects_.emplace(sponza_scene.get_id(), std::move(sponza_scene));
 
 #pragma endregion
-}
-
-void first_app::create_pipeline_layout(std::vector<VkDescriptorSetLayout> desc_set_layouts)
-{
-    VkPushConstantRange push_constant_range{};
-    push_constant_range.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
-    push_constant_range.offset = 0;
-    push_constant_range.size = sizeof(PushConstant);
-
-    VkPipelineLayoutCreateInfo layout_info{ vkinit::pipeline_layout_ci() };
-    layout_info.pushConstantRangeCount = 1;
-    layout_info.pPushConstantRanges = &push_constant_range;
-    layout_info.setLayoutCount = static_cast<uint32_t>(desc_set_layouts.size());
-    layout_info.pSetLayouts = desc_set_layouts.data();
-
-    if (vkCreatePipelineLayout(device_.device(), &layout_info, nullptr, &pipeline_layout_) != VK_SUCCESS)
-        throw std::runtime_error("ERROR! render_system::create_pipeline_layout() >> Failed to create pipeline layout!");
 }

@@ -49,7 +49,8 @@ namespace coral_3d
 
 		static void default_pipeline_config_info(PipelineConfigInfo& config_info);
         static std::vector<char> read_file(const std::string& file_path);
-        static void create_shader_module(  coral_device& device, const std::vector<char>& code, VkShaderModule* shader_module);
+        static void create_shader_module(coral_device& device, const std::vector<char>& code, VkShaderModule* shader_module);
+        static VkPipelineLayout create_pipeline_layout(coral_device& device, std::vector<VkDescriptorSetLayout> desc_set_layouts);
 
     private:
 		void create_graphics_pipeline(
@@ -57,7 +58,6 @@ namespace coral_3d
 			const std::string& frag_file_path,
 			const PipelineConfigInfo& config_info
 		);
-
 
 		coral_device& device_;
 		VkPipeline graphics_pipeline_;

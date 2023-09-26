@@ -70,24 +70,16 @@ VertexInputDescription Vertex::get_vert_desc()
     tangent_attrib.format = VK_FORMAT_R32G32B32A32_SFLOAT;
     tangent_attrib.offset = offsetof(Vertex, tangent);
 
-    // Tangent will be stored at Location 3
-    VkVertexInputAttributeDescription bitangent_attrib{};
-    bitangent_attrib.binding = 0;
-    bitangent_attrib.location = 3;
-    bitangent_attrib.format = VK_FORMAT_R32G32B32_SFLOAT;
-    bitangent_attrib.offset = offsetof(Vertex, bitangent);
-
-    // UV will be stored at Location 4
+    // UV will be stored at Location 3
     VkVertexInputAttributeDescription texcoord_attrib{};
     texcoord_attrib.binding = 0;
-    texcoord_attrib.location = 4;
+    texcoord_attrib.location = 3;
     texcoord_attrib.format = VK_FORMAT_R32G32_SFLOAT;
     texcoord_attrib.offset = offsetof(Vertex, uv);
 
     desc.attributes.emplace_back(position_attrib);
     desc.attributes.emplace_back(normal_attrib);
     desc.attributes.emplace_back(tangent_attrib);
-    desc.attributes.emplace_back(bitangent_attrib);
     desc.attributes.emplace_back(texcoord_attrib);
 
     return desc;
@@ -127,6 +119,8 @@ bool coral_mesh::Builder::load_from_gltf(coral_device& device, const std::string
 
     // CALCULATE TANGENTS & BITANGENTS
 #ifdef CALC_TANGENTS
+    std::vector<glm::vec3> bitangents{vertices.size()};
+
     for (size_t i = 0; i < indices.size(); i += 3)
     {
         uint32_t i0 = indices[i];
@@ -155,19 +149,19 @@ bool coral_mesh::Builder::load_from_gltf(coral_device& device, const std::string
         vertices[i1].tangent += glm::vec4(tangent, 0.f);
         vertices[i2].tangent += glm::vec4(tangent, 0.f);
 
-        vertices[i0].bitangent += bitangent;
-        vertices[i1].bitangent += bitangent;
-        vertices[i2].bitangent += bitangent;
+        bitangents[i0] += bitangent;
+        bitangents[i1] += bitangent;
+        bitangents[i2] += bitangent;
     }
 
     // ORTHONORMALIZE TANGENT AND CALCULATE HANDEDNESS
     for(size_t i = 0; i < vertices.size(); i++)
     {
-        const glm::vec3 t = vertices[i].tangent;
-        const glm::vec3& b = vertices[i].bitangent;
+        const glm::vec3& t = vertices[i].tangent;
+        const glm::vec3& b = bitangents[i];
         const glm::vec3& n = vertices[i].normal;
-        vertices[i].tangent = glm::vec4(t - (glm::dot(n, t) * n), 0.f);
-        vertices[i].tangent.w = (glm::dot(glm::cross(n,t), b) < 0.f) ? 1.f : -1.f;
+        vertices[i].tangent = glm::vec4(glm::normalize(glm::orthonormalize(t, n)), 0.f);
+        vertices[i].tangent.w = (glm::dot(glm::cross(t,b), n) > 0.f) ? 1.f : -1.f;
     }
 #endif
     return true;

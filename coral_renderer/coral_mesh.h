@@ -32,7 +32,6 @@ namespace coral_3d
 		glm::vec3 position;
 		glm::vec3 normal;
         glm::vec4 tangent;
-        glm::vec3 bitangent;
 		glm::vec2 uv;
 
 		static VertexInputDescription get_vert_desc();
@@ -42,9 +41,8 @@ namespace coral_3d
 			return
 				position == other.position &&
 				normal == other.normal &&
-				uv == other.uv &&
-				tangent == other.tangent &&
-                bitangent == other.bitangent;
+                tangent == other.tangent &&
+				uv == other.uv;
 		}
 	};
 
@@ -131,8 +129,6 @@ namespace coral_3d
                 const std::string &frag_file_path,
                 VkRenderPass render_pass,
                 VkPipelineLayout pipeline_layout);
-
-        std::vector<Material>& get_materials() { return materials_;}
 
 		void draw(VkCommandBuffer command_buffer, VkPipelineLayout pipeline_layout);
 

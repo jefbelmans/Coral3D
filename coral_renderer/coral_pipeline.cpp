@@ -180,3 +180,23 @@ void coral_pipeline::create_shader_module(coral_device& device, const std::vecto
 	if(vkCreateShaderModule(device.device(), &create_info, nullptr, shader_module) != VK_SUCCESS)
 		throw std::runtime_error("ERROR! coral_pipeline::create_shader_module() >> Failed to create shader module!");
 }
+
+VkPipelineLayout coral_pipeline::create_pipeline_layout(coral_device &device, std::vector<VkDescriptorSetLayout> desc_set_layouts)
+{
+    VkPushConstantRange push_constant_range{};
+    push_constant_range.stageFlags = VK_SHADER_STAGE_VERTEX_BIT;
+    push_constant_range.offset = 0;
+    push_constant_range.size = sizeof(PushConstant);
+
+    VkPipelineLayoutCreateInfo layout_info{ vkinit::pipeline_layout_ci() };
+    layout_info.pushConstantRangeCount = 1;
+    layout_info.pPushConstantRanges = &push_constant_range;
+    layout_info.setLayoutCount = static_cast<uint32_t>(desc_set_layouts.size());
+    layout_info.pSetLayouts = desc_set_layouts.data();
+
+    VkPipelineLayout pipeline_layout;
+    if (vkCreatePipelineLayout(device.device(), &layout_info, nullptr, &pipeline_layout) != VK_SUCCESS)
+        throw std::runtime_error("ERROR! render_system::create_pipeline_layout() >> Failed to create pipeline layout!");
+
+    return pipeline_layout;
+}

@@ -28,7 +28,6 @@ namespace coral_3d
 
 	private:
 		void load_gameobjects(coral_descriptor_set_layout& material_set_layout);
-        void create_pipeline_layout(std::vector<VkDescriptorSetLayout> desc_set_layouts);
 
 		coral_window window_{ WIDTH, HEIGHT, "Coral Renderer" };
 		coral_device device_{ window_ };

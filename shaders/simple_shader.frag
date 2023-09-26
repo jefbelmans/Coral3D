@@ -13,8 +13,6 @@ layout (location = 0) in struct FS_IN
 {
 	vec3 fragPos;
 	vec3 normal;
-	vec4 tangent;
-	vec3 bitangent;
 	vec2 texcoord;
 	vec3 viewPos;
 	vec3 lightDir;
@@ -41,6 +39,8 @@ vec3 calculate_specular(vec3 V, vec3 L, vec3 N)
 
 	// HALF VECTOR
 	vec3 halfVector = normalize(L + V);
+
+	// Specularity
 	float shininess = 256.f;
 	float specularity = pow(max(dot(N, halfVector), 0.f), shininess);
 
@@ -54,9 +54,7 @@ void main()
 	vec4 color = texture(samplerColorMap, fs_in.texcoord);
 
 	if (ALPHA_MASK)
-	{
 		if (color.a < ALPHA_MASK_CUTOFF) discard;
-	}
 
 	vec3 normal = texture(samplerNormalMap, fs_in.texcoord).rgb;
 	normal = normalize(normal * 2.f - 1.f);
