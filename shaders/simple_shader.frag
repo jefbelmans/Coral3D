@@ -23,7 +23,7 @@ layout (location = 0) out vec4 outFragColor;
 
 vec3 calculate_diffuse(vec3 color, vec3 N, vec3 L)
 {
-	float diffuse_strength = max(dot(N, -L), 0);
+	float diffuse_strength = max(dot(N, L), 0);
 
 	// HALF-LAMBERT
 	diffuse_strength = pow(diffuse_strength * 0.5f + 0.5f, 2);

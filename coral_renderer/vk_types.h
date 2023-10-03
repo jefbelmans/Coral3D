@@ -39,7 +39,7 @@ struct GlobalUBO
     glm::mat4 view_projection{1.f};
 
     // GLOBAL LIGHT
-    glm::vec4 global_light_direction{ glm::normalize(glm::vec4{ -0.477f, -0.477f, -0.477f, 0.f})}; // w is ignored
+    glm::vec4 global_light_direction{ glm::normalize(glm::vec4{ -0.477f, 0.477f, -0.477f, 0.f})}; // w is ignored
 };
 
 struct PushConstant
