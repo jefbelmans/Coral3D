@@ -36,9 +36,21 @@ void first_app::run()
 	};
     global_ubo.map();
 
+    PointLight point_lights[MAX_POINT_LIGHTS]
+    {
+            {{-6.f, .5f, 0.25f, 10.f}, {1.f, 1.f, 1.f, 1.f}},
+            {{-4.f, .5f, 0.25f, 10.f}, {0.f, 1.f, 0.f, 1.f}},
+            {{-2.f, .5f, 0.25f, 10.f}, {0.f, 0.f, 1.f, 1.f}},
+            {{0.f, .5f, 0.25f, 10.f}, {1.f, 1.f, 0.f, 1.f}},
+            {{2.f, .5f, 0.25f, 10.f}, {1.f, 0.f, 1.f, 1.f}},
+            {{4.f, .5f, 0.25f, 10.f}, {0.f, 1.f, 1.f, 1.f}},
+            {{6.f, .5f, 0.25f, 10.f}, {1.f, 0.f, 0.f, 1.f}},
+            {{8.f, .5f, 0.25f, 10.f}, {1.f, 0.5f, 1.f, 1.f}},
+    };
+
     // Set 0: Global descriptor set (Scene data)
     auto global_set_layout = coral_descriptor_set_layout::Builder(device_)
-		.add_binding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_VERTEX_BIT)
+		.add_binding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT)
         .build();
 
     // Write to global descriptor (Scene data)
@@ -106,9 +118,17 @@ void first_app::run()
 
             // UPDATE GLOBAL UBO
             GlobalUBO ubo{};
+
             ubo.view = camera.get_view();
             ubo.view_inverse = glm::inverse(camera.get_view());
             ubo.view_projection = camera.get_projection() * camera.get_view();
+
+            for (int i = 0; i < MAX_POINT_LIGHTS; ++i)
+            {
+                ubo.point_lights[i] = point_lights[i];
+            }
+            ubo.num_lights = MAX_POINT_LIGHTS;
+
             global_ubo.write_to_index(&ubo, frame_index);
             global_ubo.flush_index(frame_index);
 

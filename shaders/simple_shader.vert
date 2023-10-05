@@ -10,19 +10,30 @@ layout (location = 0) out struct VS_OUT
 	vec3 fragPos;
 	vec3 normal;
 	vec2 texcoord;
-	vec3 viewPos;
+	vec3 viewDir;
 	vec3 lightDir;
 } vs_out;
+
+struct PointLight
+{
+	vec4 position; // w is radius
+	vec4 color; // w is intensity
+};
 
 layout (set = 0, binding = 0) uniform GlobalUBO
 {
 	// MATRICES
 	mat4 view;
 	mat4 viewInverse;
-    mat4 viewProjection;
+	mat4 viewProjection;
 
-	// GLOBAL LIGHT
+	// LIGHTING
 	vec4 globalLightDirection;
+	vec4 ambientLighting;
+
+	// POINT LIGHTS
+	PointLight pointLights[8];
+	float numLights;
 } ubo;
 
 layout (push_constant) uniform Push
@@ -38,6 +49,7 @@ void main()
 	vs_out.normal = inNormal;
 	vs_out.texcoord = inTexcoord;
 
+	// TBN
 	vec3 T = normalize(mat3(primitive.model) * inTangent.xyz);
 	vec3 N = normalize(mat3(primitive.model) * inNormal);
 	vec3 B = cross(N, T) * inTangent.w;
@@ -46,5 +58,5 @@ void main()
 
 	vs_out.fragPos  = TBN * worldPos.xyz;
 	vs_out.lightDir = TBN * ubo.globalLightDirection.xyz;
-	vs_out.viewPos  = TBN * ubo.viewInverse[3].xyz;
+	vs_out.viewDir  = TBN * (ubo.viewInverse[3].xyz - worldPos.xyz);
 }

@@ -31,17 +31,6 @@ struct DeletionQueue
 	}
 };
 
-struct GlobalUBO
-{
-    // MATRICES
-    glm::mat4 view{1.f};
-    glm::mat4 view_inverse{1.f};
-    glm::mat4 view_projection{1.f};
-
-    // GLOBAL LIGHT
-    glm::vec4 global_light_direction{ glm::normalize(glm::vec4{ -0.477f, 0.477f, -0.477f, 0.f})}; // w is ignored
-};
-
 struct PushConstant
 {
     glm::mat4 node_transform;
