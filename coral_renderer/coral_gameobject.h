@@ -13,11 +13,11 @@ namespace coral_3d
 {
 	struct TransformComponent
 	{
-		glm::vec3 translation{};
-		glm::vec3 scale{1.f, 1.f, 1.f};
-		glm::vec3 rotation{};
+		glm::vec3 translation{0.f};
+		glm::vec3 scale{1.f};
+		glm::vec3 rotation{0.f};
 
-		// Matrix corrsponds to Translate * Ry * Rx * Rz * Scale
+		// Matrix corresponds to Translate * Ry * Rx * Rz * Scale
 		// Rotations correspond to Tait-bryan angles of Y(1), X(2), Z(3)
 		// https://en.wikipedia.org/wiki/Euler_angles#Rotation_matrix
 		glm::mat4 mat4()
@@ -58,17 +58,25 @@ namespace coral_3d
 		}
 	};
 
+    struct PointLightComponent
+    {
+        glm::vec4 color{1.f}; // W is intensity
+    };
+
 	class coral_gameobject final
 	{
 	public:
 		using id_t = unsigned int;
-		using Map = std::unordered_map<id_t, coral_gameobject>;
+		using Map = std::unordered_map<id_t, std::shared_ptr<coral_gameobject>>;
 
+        // Creators
 		static coral_gameobject create_gameobject()
 		{
 			static id_t current_id = 0;
 			return coral_gameobject{ current_id++ };
 		}
+
+        static coral_gameobject create_point_light(float intensity = 1.f, float radius = .1f, glm::vec3 color = glm::vec3{1.f});
 
 		coral_gameobject(const coral_gameobject&) = delete;
 		coral_gameobject& operator=(const coral_gameobject&) = delete;
@@ -77,12 +85,14 @@ namespace coral_3d
 
 		id_t get_id() const { return id_; }
 
-		std::shared_ptr<coral_mesh> mesh_;
-		glm::vec3 color_{};
 		TransformComponent transform_{};
 
+        // Optional components
+        std::shared_ptr<coral_mesh> mesh_;
+        std::unique_ptr<PointLightComponent> point_light_ = nullptr;
+
 	private:
-		coral_gameobject(id_t object_id) : id_{ object_id } {}
+		explicit coral_gameobject(id_t object_id) : id_{ object_id } {}
 		id_t id_;
 	};
 }

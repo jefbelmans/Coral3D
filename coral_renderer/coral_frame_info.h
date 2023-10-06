@@ -25,11 +25,11 @@ namespace coral_3d
 
         // GLOBAL LIGHT
         glm::vec4 global_light_direction{ glm::normalize(glm::vec4{ -0.477f, 0.477f, -0.477f, 0.f})}; // w is intensity
-        glm::vec4 ambient_lighting{0.14f, 0.12f, 0.10f, 0.15f}; // w is intensity
+        glm::vec4 ambient_lighting{0.14f, 0.14f, 0.14f, 0.05f}; // w is intensity
 
         // POINT LIGHTS
         PointLight point_lights[MAX_POINT_LIGHTS];
-        float num_lights{0.f};
+        int num_lights{0};
     };
 
 	struct FrameInfo

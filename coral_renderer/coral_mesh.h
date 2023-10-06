@@ -21,7 +21,7 @@ namespace coral_3d
 {
 	struct VertexInputDescription
 	{
-		std::vector<VkVertexInputBindingDescription> bindings_;
+		std::vector<VkVertexInputBindingDescription> bindings;
 		std::vector<VkVertexInputAttributeDescription> attributes;
 
 		VkPipelineVertexInputStateCreateFlags flags = 0;
@@ -116,12 +116,12 @@ namespace coral_3d
             void load_node(coral_device& device, const tinygltf::Node& input_node, const tinygltf::Model& input, coral_3d::Node* parent);
 		};
 
-		coral_mesh(coral_device& device, Builder& builder);
+		coral_mesh(coral_device& device, Builder& builder, class coral_gameobject* parent);
         ~coral_mesh();
 		coral_mesh(const coral_mesh&) = delete;
 		coral_mesh& operator=(const coral_mesh&) = delete;
 
-		static std::unique_ptr<coral_mesh> create_mesh_from_file(coral_device& device, const std::string& file_path);
+		static std::unique_ptr<coral_mesh> create_mesh_from_file(coral_device& device, const std::string& file_path, coral_gameobject* parent);
 
         void load_materials(coral_descriptor_set_layout& material_set_layout, coral_descriptor_pool& material_set_pool);
         void create_pipelines(
@@ -144,6 +144,8 @@ namespace coral_3d
 
 		std::unique_ptr<coral_buffer> vertex_buffer_;
 		std::unique_ptr<coral_buffer> index_buffer_;
+
+        coral_gameobject* ptr_parent_;
 
         std::vector<Image> images_;
         std::vector<Texture> textures_;

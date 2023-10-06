@@ -12,7 +12,7 @@
 
 using namespace coral_3d;
 
-bool coral_texture::Builder::load_image_from_file(coral_device& device, const std::string& file_name)
+bool coral_texture::Builder::load_image_from_file(coral_device& device, const std::string& file_name, VkFormat format)
 {
 	int tex_width, tex_height, tex_channels;
 
@@ -30,7 +30,7 @@ bool coral_texture::Builder::load_image_from_file(coral_device& device, const st
 	VkDeviceSize img_size{ static_cast<uint64_t>(tex_width * tex_height * 4) };
 
 	// This format must match with the format loaded from stb_image
-	VkFormat img_format{ VK_FORMAT_R8G8B8A8_SRGB };
+	VkFormat img_format{ format };
 
 	// Holds texture data to upload to GPU
 	coral_buffer staging_buffer
@@ -170,7 +170,7 @@ coral_texture::~coral_texture()
 std::unique_ptr<coral_texture> coral_texture::create_texture_from_file(coral_device& device, const std::string& file_path, VkFormat format)
 {
 	Builder builder{};
-	builder.load_image_from_file(device, file_path);
+	builder.load_image_from_file(device, file_path, format);
 	return std::make_unique<coral_texture>(device, builder.image, builder.mip_levels, format);
 }
 

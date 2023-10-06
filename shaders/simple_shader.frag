@@ -36,7 +36,7 @@ layout (set = 0, binding = 0) uniform GlobalUBO
 
 	// POINT LIGHTS
 	PointLight pointLights[8];
-	float numLights;
+	int numLights;
 } ubo;
 
 // OUT COLOR

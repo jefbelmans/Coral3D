@@ -1,6 +1,7 @@
 #include "first_app.h"
 
 #include "render_system.h"
+#include "point_light_system.h"
 #include "coral_camera.h"
 #include "coral_buffer.h"
 
@@ -36,18 +37,6 @@ void first_app::run()
 	};
     global_ubo.map();
 
-    PointLight point_lights[MAX_POINT_LIGHTS]
-    {
-            {{-6.f, 0.75f, -0.5f, 10.f}, {1.f, 1.f, 1.f, 1.f}},
-            {{-4.f, .75f, -0.5f, 10.f}, {0.f, 1.f, 0.f, 1.f}},
-            {{-2.f, .75f, -0.5f, 10.f}, {0.f, 0.f, 1.f, 1.f}},
-            {{0.f, .75f, -0.5f, 10.f}, {1.f, 1.f, 0.f, 1.f}},
-            {{2.f, .75f, -0.5f, 10.f}, {1.f, 0.f, 1.f, 1.f}},
-            {{4.f, .75f, -0.5f, 10.f}, {0.f, 1.f, 1.f, 1.f}},
-            {{6.f, .75f, -0.5f, 10.f}, {1.f, 0.f, 0.f, 1.f}},
-            {{8.f, .75f, -0.5f, 10.f}, {1.f, 0.5f, 1.f, 1.f}},
-    };
-
     // Set 0: Global descriptor set (Scene data)
     auto global_set_layout = coral_descriptor_set_layout::Builder(device_)
 		.add_binding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT)
@@ -77,11 +66,12 @@ void first_app::run()
         material_set_layout->get_descriptor_set_layout()
     };
 
-    pipeline_layout_ = coral_pipeline::create_pipeline_layout(device_, desc_set_layouts);
-
     // RENDER SYSTEM
-    render_system render_system{device_, pipeline_layout_};
-    load_gameobjects(*material_set_layout);
+    render_system render_system{device_, desc_set_layouts};
+    load_gameobjects(*material_set_layout, render_system.pipeline_layout());
+
+    // POINT LIGHT SYSTEM
+    point_light_system point_light_system{device_, renderer_.get_swapchain_render_pass(), desc_set_layouts};
 
     // CAMERA
     coral_camera camera{ {0.f, 0.f, 3.f} };
@@ -116,25 +106,19 @@ void first_app::run()
                 gameobjects_
             };
 
-            // UPDATE GLOBAL UBO
+            // UPDATE
             GlobalUBO ubo{};
-
             ubo.view = camera.get_view();
             ubo.view_inverse = glm::inverse(camera.get_view());
             ubo.view_projection = camera.get_projection() * camera.get_view();
-
-            for (int i = 0; i < MAX_POINT_LIGHTS; ++i)
-            {
-                ubo.point_lights[i] = point_lights[i];
-            }
-            ubo.num_lights = MAX_POINT_LIGHTS;
-
+            point_light_system.update(frame_info, ubo);
             global_ubo.write_to_index(&ubo, frame_index);
             global_ubo.flush_index(frame_index);
 
             // RENDER
 			renderer_.begin_swapchain_render_pass(command_buffer);
 			render_system.render_gameobjects(frame_info);
+            point_light_system.render(frame_info);
 			renderer_.end_swapchain_render_pass(command_buffer);
 			renderer_.end_frame();
 		}
@@ -143,20 +127,27 @@ void first_app::run()
 	vkDeviceWaitIdle(device_.device());
 }
 
-void first_app::load_gameobjects(coral_descriptor_set_layout& material_set_layout)
+void first_app::load_gameobjects(coral_descriptor_set_layout& material_set_layout, VkPipelineLayout pipeline_layout)
 {
-#pragma region Sponza
-    std::shared_ptr<coral_mesh> sponza_mesh{ coral_mesh::create_mesh_from_file(device_, "assets/meshes/Sponza/Sponza.gltf") };
+    auto sponza_scene{std::make_shared<coral_gameobject>(coral_gameobject::create_gameobject()) };
+
+    std::shared_ptr<coral_mesh> sponza_mesh{ coral_mesh::create_mesh_from_file(device_, "assets/meshes/Sponza/Sponza.gltf", sponza_scene.get()) };
     sponza_mesh->load_materials(material_set_layout, *descriptor_pool_);
     sponza_mesh->create_pipelines(
             "assets/shaders/simple_shader.vert.spv",
             "assets/shaders/simple_shader.frag.spv",
             renderer_.get_swapchain_render_pass(),
-            pipeline_layout_);
+            pipeline_layout);
 
-    auto sponza_scene{ coral_gameobject::create_gameobject() };
-    sponza_scene.mesh_ = sponza_mesh;
-    gameobjects_.emplace(sponza_scene.get_id(), std::move(sponza_scene));
+    sponza_scene->mesh_ = sponza_mesh;
+    gameobjects_.emplace(sponza_scene->get_id(), sponza_scene);
 
-#pragma endregion
+    // LIGHTS
+    auto point_light = std::make_shared<coral_gameobject>(coral_gameobject::create_point_light(1.f));
+    point_light->transform_.translation = glm::vec3(0.f, 1.f, -0.35f);
+    gameobjects_.emplace(point_light->get_id(), point_light);
+
+    point_light = std::make_shared<coral_gameobject>(coral_gameobject::create_point_light(1.f, 0.1f, {1.f, 0.2f, 0.14f}));
+    point_light->transform_.translation = glm::vec3(5.f, 1.f, -0.35f);
+    gameobjects_.emplace(point_light->get_id(), point_light);
 }

@@ -32,7 +32,7 @@ layout (set = 0, binding = 0) uniform GlobalUBO
 
 	// POINT LIGHTS
 	PointLight pointLights[8];
-	float numLights;
+	int numLights;
 } ubo;
 
 layout (push_constant) uniform Push
@@ -51,7 +51,7 @@ void main()
 	// TBN
 	vec3 T = normalize(mat3(primitive.model) * inTangent.xyz);
 	vec3 N = normalize(mat3(primitive.model) * inNormal);
-	// T = normalize(T - dot(T, N) * N);
+	T = normalize(T - dot(T, N) * N);
 	vec3 B = cross(N, T) * inTangent.w;
 
 	vs_out.TBN = mat3(T, B, N);

@@ -27,13 +27,11 @@ namespace coral_3d
 		void run();
 
 	private:
-		void load_gameobjects(coral_descriptor_set_layout& material_set_layout);
+		void load_gameobjects(coral_descriptor_set_layout& material_set_layout, VkPipelineLayout pipeline_layout);
 
 		coral_window window_{ WIDTH, HEIGHT, "Coral Renderer" };
 		coral_device device_{ window_ };
 		coral_renderer renderer_{ window_, device_ };
-
-        VkPipelineLayout pipeline_layout_{};
 
 		std::unique_ptr<coral_descriptor_pool> descriptor_pool_{};
 		coral_gameobject::Map gameobjects_;

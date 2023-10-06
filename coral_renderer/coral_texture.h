@@ -35,7 +35,7 @@ namespace coral_3d
 		{
 			AllocatedImage image;
 			uint32_t mip_levels;
-			bool load_image_from_file(coral_device& device, const std::string& file_name);
+			bool load_image_from_file(coral_device& device, const std::string& file_name, VkFormat format);
 			void generate_mipmaps(coral_device& device, uint32_t width, uint32_t height);
 		};
 

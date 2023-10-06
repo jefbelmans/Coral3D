@@ -75,6 +75,9 @@ void coral_pipeline::default_pipeline_config_info(PipelineConfigInfo& config_inf
 	config_info.dynamic_state_info.dynamicStateCount =
 		static_cast<uint32_t>(config_info.dynamic_state_enables.size());
 	config_info.dynamic_state_info.flags = 0;
+
+    config_info.binding_descriptions = Vertex::get_vert_desc().bindings;
+    config_info.attribute_descriptions = Vertex::get_vert_desc().attributes;
 }
 
 std::vector<char> coral_pipeline::read_file(const std::string& file_path)
@@ -132,15 +135,17 @@ void coral_pipeline::create_graphics_pipeline(
 	shader_stages[1].pSpecializationInfo = nullptr;
 
 	// VERTEX INPUT INFO
-	VkPipelineVertexInputStateCreateInfo vertex_input_info{ vkinit::vertex_input_state_ci() };
-	
-	VertexInputDescription vertex_desc{ Vertex::get_vert_desc() };
-	
-	vertex_input_info.vertexAttributeDescriptionCount = static_cast<uint32_t>(vertex_desc.attributes.size());
-	vertex_input_info.pVertexAttributeDescriptions = vertex_desc.attributes.data();
 
-	vertex_input_info.vertexBindingDescriptionCount = static_cast<uint32_t>(vertex_desc.bindings_.size());
-	vertex_input_info.pVertexBindingDescriptions = vertex_desc.bindings_.data();
+	auto& binding_descriptions{config_info.binding_descriptions};
+	auto& attribute_descriptions{config_info.attribute_descriptions};
+
+    VkPipelineVertexInputStateCreateInfo vertex_input_info{ vkinit::vertex_input_state_ci() };
+
+	vertex_input_info.vertexAttributeDescriptionCount = static_cast<uint32_t>(attribute_descriptions.size());
+	vertex_input_info.pVertexAttributeDescriptions = attribute_descriptions.data();
+
+	vertex_input_info.vertexBindingDescriptionCount = static_cast<uint32_t>(binding_descriptions.size());
+	vertex_input_info.pVertexBindingDescriptions = binding_descriptions.data();
 
 	VkGraphicsPipelineCreateInfo pipeline_info{};
 	pipeline_info.sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO;
@@ -196,7 +201,7 @@ VkPipelineLayout coral_pipeline::create_pipeline_layout(coral_device &device, st
 
     VkPipelineLayout pipeline_layout;
     if (vkCreatePipelineLayout(device.device(), &layout_info, nullptr, &pipeline_layout) != VK_SUCCESS)
-        throw std::runtime_error("ERROR! render_system::create_pipeline_layout() >> Failed to create pipeline layout!");
+        throw std::runtime_error("ERROR! coral_pipeline::create_pipeline_layout() >> Failed to create pipeline layout!");
 
     return pipeline_layout;
 }

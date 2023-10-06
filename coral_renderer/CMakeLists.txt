@@ -16,8 +16,7 @@ add_executable(coral_renderer
     "coral_mesh.h"
     "coral_mesh.cpp"
     "coral_gameobject.h"
-    "coral_gameobject.cpp"
-    "coral_renderer.h"
+        "coral_renderer.h"
     "coral_renderer.cpp"
     "render_system.h"
     "render_system.cpp"
@@ -30,9 +29,11 @@ add_executable(coral_renderer
     "coral_buffer.h"
     "coral_buffer.cpp"
     "coral_frame_info.h"
-    "coral_frame_info.cpp"
-    "coral_descriptors.h"
+        "coral_descriptors.h"
     "coral_descriptors.cpp"
+        point_light_system.cpp
+        point_light_system.h
+        coral_gameobject.cpp
 )
 
 if(MSVC)

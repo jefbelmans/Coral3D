@@ -20,6 +20,8 @@
 
 #include "coral_utils.h"
 
+#include "coral_gameobject.h"
+
 #define CALC_TANGENTS
 using namespace coral_3d;
 
@@ -47,7 +49,7 @@ VertexInputDescription Vertex::get_vert_desc()
     main_binding.stride = sizeof(Vertex);
     main_binding.inputRate = VK_VERTEX_INPUT_RATE_VERTEX;
 
-    desc.bindings_.emplace_back(main_binding);
+    desc.bindings.emplace_back(main_binding);
 
     // Position will be stored at Location 0
     VkVertexInputAttributeDescription position_attrib{};
@@ -117,8 +119,8 @@ bool coral_mesh::Builder::load_from_gltf(coral_device& device, const std::string
         load_node(device, node, glTF_input, nullptr);
     }
 
-    // CALCULATE TANGENTS & BITANGENTS
 #ifdef CALC_TANGENTS
+    // CALCULATE TANGENTS & BITANGENTS
     std::vector<glm::vec3> bitangents{vertices.size()};
 
     for (size_t i = 0; i < indices.size(); i += 3)
@@ -384,8 +386,9 @@ void coral_mesh::Builder::load_node(coral_device& device, const tinygltf::Node &
         nodes.emplace_back(node);
 }
 
-coral_mesh::coral_mesh(coral_device& device, Builder& builder)
+coral_mesh::coral_mesh(coral_device& device, Builder& builder, coral_gameobject* parent)
     : device_{device}
+    , ptr_parent_{parent}
 {
     create_vertex_buffers(builder.vertices);
     create_index_buffers(builder.indices);
@@ -398,11 +401,11 @@ coral_mesh::coral_mesh(coral_device& device, Builder& builder)
 
 coral_mesh::~coral_mesh()
 {
-    for(Material material : materials_)
+    for(const Material& material : materials_)
         vkDestroyPipeline(device_.device(), material.pipeline, nullptr);
 }
 
-std::unique_ptr<coral_mesh> coral_mesh::create_mesh_from_file(coral_device& device, const std::string& file_path)
+std::unique_ptr<coral_mesh> coral_mesh::create_mesh_from_file(coral_device& device, const std::string& file_path, coral_gameobject* parent)
 {
     std::cout<< "INFO! coral_mesh::load_from_gltf() >> Loading mesh..." << std::endl;
     Builder builder{};
@@ -410,7 +413,7 @@ std::unique_ptr<coral_mesh> coral_mesh::create_mesh_from_file(coral_device& devi
     std::cout << "[" << file_path << "] vertex count: " << builder.vertices.size() << "\n";
     std::cout << "[" << file_path << "] index count: " << builder.indices.size() << "\n";
 
-    return std::make_unique<coral_mesh>(device, builder);
+    return std::make_unique<coral_mesh>(device, builder, parent);
 }
 
 void coral_mesh::load_materials(coral_descriptor_set_layout& material_set_layout, coral_descriptor_pool& material_set_pool)
@@ -456,7 +459,7 @@ void coral_mesh::draw_node(VkCommandBuffer command_buffer, VkPipelineLayout pipe
         }
 
         PushConstant push{};
-        push.node_transform = node_transform;
+        push.node_transform = ptr_parent_->transform_.mat4() * node_transform;
 
         // Pass the final matrix to the vertex shader using push constants
         vkCmdPushConstants(
@@ -619,13 +622,14 @@ void coral_mesh::create_pipelines(
     // VERTEX INPUT INFO
     VkPipelineVertexInputStateCreateInfo vertex_input_info{ vkinit::vertex_input_state_ci() };
 
-    VertexInputDescription vertex_desc{ Vertex::get_vert_desc() };
+    auto& binding_descriptions{config_info.binding_descriptions};
+    auto& attribute_descriptions{config_info.attribute_descriptions};
 
-    vertex_input_info.vertexAttributeDescriptionCount = static_cast<uint32_t>(vertex_desc.attributes.size());
-    vertex_input_info.pVertexAttributeDescriptions = vertex_desc.attributes.data();
+    vertex_input_info.vertexAttributeDescriptionCount = static_cast<uint32_t>(attribute_descriptions.size());
+    vertex_input_info.pVertexAttributeDescriptions = attribute_descriptions.data();
 
-    vertex_input_info.vertexBindingDescriptionCount = static_cast<uint32_t>(vertex_desc.bindings_.size());
-    vertex_input_info.pVertexBindingDescriptions = vertex_desc.bindings_.data();
+    vertex_input_info.vertexBindingDescriptionCount = static_cast<uint32_t>(binding_descriptions.size());
+    vertex_input_info.pVertexBindingDescriptions = binding_descriptions.data();
 
     VkGraphicsPipelineCreateInfo pipeline_info{};
     pipeline_info.sType = VK_STRUCTURE_TYPE_GRAPHICS_PIPELINE_CREATE_INFO;
