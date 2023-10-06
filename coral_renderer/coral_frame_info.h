@@ -35,7 +35,7 @@ namespace coral_3d
 	struct FrameInfo
 	{
 		int frame_index{};
-		float frame_tine{};
+		float frame_time{};
 		VkCommandBuffer command_buffer{};
 		coral_camera& camera;
 		VkDescriptorSet global_descriptor_set;

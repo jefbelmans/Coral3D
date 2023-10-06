@@ -143,11 +143,23 @@ void first_app::load_gameobjects(coral_descriptor_set_layout& material_set_layou
     gameobjects_.emplace(sponza_scene->get_id(), sponza_scene);
 
     // LIGHTS
-    auto point_light = std::make_shared<coral_gameobject>(coral_gameobject::create_point_light(1.f));
-    point_light->transform_.translation = glm::vec3(0.f, 1.f, -0.35f);
+    auto point_light = std::make_shared<coral_gameobject>(coral_gameobject::create_point_light(1.f, 0.1f, {1.f, 0.2f, 0.2f}));
+    point_light->transform_.translation = glm::vec3(-4.f, 1.f, 0.f);
     gameobjects_.emplace(point_light->get_id(), point_light);
 
-    point_light = std::make_shared<coral_gameobject>(coral_gameobject::create_point_light(1.f, 0.1f, {1.f, 0.2f, 0.14f}));
-    point_light->transform_.translation = glm::vec3(5.f, 1.f, -0.35f);
+    point_light = std::make_shared<coral_gameobject>(coral_gameobject::create_point_light(1.f, 0.1f, {0.2f, 1.f, 0.2f}));
+    point_light->transform_.translation = glm::vec3(-2.f, 1.f, 0.f);
+    gameobjects_.emplace(point_light->get_id(), point_light);
+
+    point_light = std::make_shared<coral_gameobject>(coral_gameobject::create_point_light(1.f));
+    point_light->transform_.translation = glm::vec3(0.f, 1.f, 0.f);
+    gameobjects_.emplace(point_light->get_id(), point_light);
+
+    point_light = std::make_shared<coral_gameobject>(coral_gameobject::create_point_light(1.f, 0.1f, {0.2f, 0.2f, 1.f}));
+    point_light->transform_.translation = glm::vec3(2.f, 1.f, 0.f);
+    gameobjects_.emplace(point_light->get_id(), point_light);
+
+    point_light = std::make_shared<coral_gameobject>(coral_gameobject::create_point_light(1.f, 0.1f, {1.f, 0.2f, 1.f}));
+    point_light->transform_.translation = glm::vec3(4.f, 1.f, 0.f);
     gameobjects_.emplace(point_light->get_id(), point_light);
 }

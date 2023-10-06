@@ -675,4 +675,7 @@ void coral_mesh::create_pipelines(
             != VK_SUCCESS)
             throw std::runtime_error("ERROR! coral_pipeline::create_graphics_pipeline() >> Failed to create graphics pipeline!");
     }
+
+    vkDestroyShaderModule(device_.device(), frag_shader_module, nullptr);
+    vkDestroyShaderModule(device_.device(), vert_shader_module, nullptr);
 }

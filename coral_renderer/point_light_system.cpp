@@ -23,11 +23,14 @@ point_light_system::~point_light_system()
 
 void point_light_system::update(FrameInfo &frame_info, GlobalUBO &ubo)
 {
+    auto rotation = glm::rotate(glm::mat4(1.f), frame_info.frame_time, {0.f, -1.f, 0.f});
     int light_index{0};
     for(auto& kv: frame_info.gameobjects)
     {
         auto& obj = kv.second;
         if(obj->point_light_ == nullptr) continue;
+
+        obj->transform_.translation = glm::vec3(rotation * glm::vec4(obj->transform_.translation, 1.f));
 
         // Copy light to UBO
         ubo.point_lights[light_index].position = glm::vec4(obj->transform_.translation, obj->transform_.scale.x);

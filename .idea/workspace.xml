@@ -32,44 +32,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2ea9cb6-a6b7-419f-9266-e5263673b6e6" name="Changes" comment="Fixed MaterialUBO memory alignment. All variables are now correctly aligned and read in the shader.">
-      <change afterPath="$PROJECT_DIR$/coral_renderer/point_light_system.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coral_renderer/point_light_system.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shaders/compiled/point_light.frag.spv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shaders/point_light.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shaders/point_light.vert" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/clion-Release-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/clion-Release-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/assets/shaders/compiled/simple_shader.frag.spv" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/assets/shaders/compiled/simple_shader.frag.spv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/assets/shaders/compiled/simple_shader.vert.spv" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/assets/shaders/compiled/simple_shader.vert.spv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_frame_info.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/coral_frame_info.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_frame_info.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_gameobject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_gameobject.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_gameobject.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_gameobject.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/coral_mesh.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_mesh.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_mesh.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_mesh.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_pipeline.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_pipeline.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_pipeline.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_pipeline.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_texture.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_texture.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_texture.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_texture.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/first_app.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/first_app.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/first_app.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/first_app.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/render_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/render_system.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/render_system.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/render_system.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shaders/PosNormCol.frag" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shaders/PosNormCol.vert" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shaders/compiled/PosNormCol.frag.spv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shaders/compiled/PosNormCol.vert.spv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shaders/compiled/simple_shader.frag.spv" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/compiled/simple_shader.frag.spv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shaders/compiled/simple_shader.vert.spv" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/compiled/simple_shader.vert.spv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shaders/simple_shader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.frag" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shaders/simple_shader.vert" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.vert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/point_light_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/point_light_system.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +46,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -237,7 +204,7 @@
       <workItem from="1696518823306" duration="2282000" />
       <workItem from="1696602059143" duration="666000" />
       <workItem from="1696605383562" duration="9264000" />
-      <workItem from="1696621767016" duration="4005000" />
+      <workItem from="1696621767016" duration="4866000" />
     </task>
     <task id="LOCAL-00001" summary="Have I forgotten how to git?">
       <option name="closed" value="true" />
@@ -274,15 +241,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Fixed MaterialUBO memory alignment. All variables are now correctly aligned and read in the shader." />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/coral_renderer/point_light_system.cpp</url>
-          <line>59</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
         <watch expression="glTF_image.height" />
