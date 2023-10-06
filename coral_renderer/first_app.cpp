@@ -36,6 +36,21 @@ void first_app::run()
 	};
     global_ubo.map();
 
+<<<<<<< Updated upstream
+=======
+    PointLight point_lights[MAX_POINT_LIGHTS]
+    {
+            {{0.f, .0f, 0.5f, 10.f}, {1.f, 0.f, 0.f, 1.f}},
+            {{0.f, .0f, -0.5f, 10.f}, {0.f, 1.f, 0.f, 1.f}},
+            {{-2.f, .5f, 0.25f, 10.f}, {0.f, 0.f, 1.f, 1.f}},
+            {{0.f, .5f, 0.25f, 10.f}, {1.f, 1.f, 0.f, 1.f}},
+            {{2.f, .5f, 0.25f, 10.f}, {1.f, 0.f, 1.f, 1.f}},
+            {{4.f, .5f, 0.25f, 10.f}, {0.f, 1.f, 1.f, 1.f}},
+            {{6.f, .5f, 0.25f, 10.f}, {1.f, 0.f, 0.f, 1.f}},
+            {{8.f, .5f, 0.25f, 10.f}, {1.f, 0.5f, 1.f, 1.f}},
+    };
+
+>>>>>>> Stashed changes
     // Set 0: Global descriptor set (Scene data)
     auto global_set_layout = coral_descriptor_set_layout::Builder(device_)
 		.add_binding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_VERTEX_BIT)
@@ -72,7 +87,7 @@ void first_app::run()
     load_gameobjects(*material_set_layout);
 
     // CAMERA
-    coral_camera camera{ {0.f, 0.f, 3.f} };
+    coral_camera camera{ {0.f, 0.f, 0.f} };
     camera.set_view_direction(camera.get_position(), {0.f, 0.f, -1.f});
 
     auto last_time{ std::chrono::high_resolution_clock::now() };
@@ -109,6 +124,16 @@ void first_app::run()
             ubo.view = camera.get_view();
             ubo.view_inverse = glm::inverse(camera.get_view());
             ubo.view_projection = camera.get_projection() * camera.get_view();
+<<<<<<< Updated upstream
+=======
+
+            for (int i = 0; i < MAX_POINT_LIGHTS; ++i)
+            {
+                ubo.point_lights[i] = point_lights[i];
+            }
+            ubo.num_lights = 2;
+
+>>>>>>> Stashed changes
             global_ubo.write_to_index(&ubo, frame_index);
             global_ubo.flush_index(frame_index);
 
@@ -126,7 +151,7 @@ void first_app::run()
 void first_app::load_gameobjects(coral_descriptor_set_layout& material_set_layout)
 {
 #pragma region Sponza
-    std::shared_ptr<coral_mesh> sponza_mesh{ coral_mesh::create_mesh_from_file(device_, "assets/meshes/Sponza/Sponza.gltf") };
+    std::shared_ptr<coral_mesh> sponza_mesh{ coral_mesh::create_mesh_from_file(device_, "assets/meshes/SciFiHelmet/SciFiHelmet.gltf") };
     sponza_mesh->load_materials(material_set_layout, *descriptor_pool_);
     sponza_mesh->create_pipelines(
             "assets/shaders/simple_shader.vert.spv",

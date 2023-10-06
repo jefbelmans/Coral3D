@@ -59,8 +59,27 @@ void main()
 	vec3 normal = texture(samplerNormalMap, fs_in.texcoord).rgb;
 	normal = normalize(normal * 2.f - 1.f);
 
+<<<<<<< Updated upstream
 	vec3 diffuse = calculate_diffuse(color.rgb, normal, normalize(fs_in.lightDir));
 	vec3 specular = calculate_specular(fs_in.viewPos - fs_in.fragPos, fs_in.lightDir, normal);
 
+=======
+	// POINT LIGHTS
+	vec3 ambient = ubo.ambientLighting.xyz * ubo.ambientLighting.w;
+	vec3 diffuse = calculate_diffuse(color.xyz, normal, fs_in.lightDir);
+	vec3 specular = calculate_specular(fs_in.viewDir, fs_in.lightDir, normal, vec3(1,1,1));
+
+//	for(int i = 0; i < ubo.numLights; i++)
+//	{
+//		PointLight light = ubo.pointLights[i];
+//		vec3 directionToLight = light.position.xzy - fs_in.fragPos.xyz;
+//		float attenuation = 1.f / dot(directionToLight, directionToLight);
+//		vec3 lightColor = light.color.xyz * light.color.w * attenuation;
+//
+//		diffuse += calculate_diffuse(lightColor, normal, directionToLight);
+//		specular += calculate_specular(fs_in.viewDir, directionToLight, normal, light.color.xyz * light.color.w);
+//	}
+
+>>>>>>> Stashed changes
 	outFragColor = vec4(diffuse + specular, color.a);
 }
