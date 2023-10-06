@@ -1,0 +1,9 @@
+# Hashes of file build rules.
+74cecd0fde70b20e9e0363bfd0d47cde E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.frag.spv
+cab44a2d7f5c3be1cdf8dcbb003f32fe E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/PosNormCol.vert.spv
+10038b65f3eb98ccc3df21da0e066f1c E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv
+2ef39bb3931d6b777a45335d86eee85d E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv
+54247874d8b47ba8474bd9b98b808d0f coral_renderer/CMakeFiles/Shaders
+0305b98e240ee27a8d08944af28a8e7e coral_renderer/CMakeFiles/copy_assets
+2e90babc4d8c37f25038870e5b68961f third_party/GLFW/CMakeFiles/uninstall
+1a49ed4445df572952456f064b5b9f7b third_party/GLFW/src/CMakeFiles/update_mappings

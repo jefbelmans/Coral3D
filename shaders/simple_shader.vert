@@ -10,8 +10,7 @@ layout (location = 0) out struct VS_OUT
 	vec3 fragPos;
 	vec3 normal;
 	vec2 texcoord;
-	vec3 viewDir;
-	vec3 lightDir;
+	mat3 TBN;
 } vs_out;
 
 struct PointLight
@@ -52,11 +51,9 @@ void main()
 	// TBN
 	vec3 T = normalize(mat3(primitive.model) * inTangent.xyz);
 	vec3 N = normalize(mat3(primitive.model) * inNormal);
+	// T = normalize(T - dot(T, N) * N);
 	vec3 B = cross(N, T) * inTangent.w;
 
-	mat3 TBN = transpose(mat3(T, B, N));
-
-	vs_out.fragPos  = TBN * worldPos.xyz;
-	vs_out.lightDir = TBN * ubo.globalLightDirection.xyz;
-	vs_out.viewDir  = TBN * (ubo.viewInverse[3].xyz - worldPos.xyz);
+	vs_out.TBN = mat3(T, B, N);
+	vs_out.fragPos  = worldPos.xyz;
 }

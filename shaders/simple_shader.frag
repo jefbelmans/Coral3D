@@ -14,9 +14,7 @@ layout (location = 0) in struct FS_IN
 	vec3 fragPos;
 	vec3 normal;
 	vec2 texcoord;
-	vec3 viewDir;
-	vec3 lightDir;
-	vec4 ambient;
+	mat3 TBN;
 } fs_in;
 
 struct PointLight
@@ -44,7 +42,7 @@ layout (set = 0, binding = 0) uniform GlobalUBO
 // OUT COLOR
 layout (location = 0) out vec4 outFragColor;
 
-vec3 calculate_diffuse(vec3 color, vec3 N, vec3 L)
+vec3 calculate_diffuse(vec3 N, vec3 L, vec3 C)
 {
 	float diffuse_strength = max(dot(N, L), 0);
 
@@ -52,10 +50,10 @@ vec3 calculate_diffuse(vec3 color, vec3 N, vec3 L)
 	diffuse_strength = pow(diffuse_strength * 0.5f + 0.5f, 2);
 	diffuse_strength = max(diffuse_strength, 0.f);
 
-	return color * diffuse_strength;
+	return C * diffuse_strength;
 }
 
-vec3 calculate_specular(vec3 V, vec3 L, vec3 N, vec3 C)
+vec3 calculate_specular(vec3 N, vec3 V, vec3 L, vec3 C)
 {
 	V = normalize(V);
 	L = normalize(L);
@@ -64,7 +62,7 @@ vec3 calculate_specular(vec3 V, vec3 L, vec3 N, vec3 C)
 	vec3 halfVector = normalize(L + V);
 
 	// Specularity
-	float shininess = 32.f;
+	float shininess = 16.f;
 	float specularity = pow(max(dot(N, halfVector), 0.f), shininess * shininess);
 
 	return C * specularity;
@@ -80,21 +78,27 @@ void main()
 
 	// SAMPLE NORMAL
 	vec3 normal = texture(samplerNormalMap, fs_in.texcoord).rgb;
-	normal = normalize(normal * 2.f - 1.f);
+	normal = normalize(fs_in.TBN * (normal * 2.f - 1.f));
+
+	// VECTORS
+	vec3 V = normalize(ubo.viewInverse[3].xyz - fs_in.fragPos);
+
+	// GLOBAL LIGHT
+	vec3 ambient = ubo.ambientLighting.xyz * ubo.ambientLighting.w;
+	vec3 diffuse = calculate_diffuse(normal, ubo.globalLightDirection.xyz, color.rgb * ubo.globalLightDirection.w);
+	vec3 specular = calculate_specular(normal, V,  ubo.globalLightDirection.xyz, vec3(1,1,1) *  ubo.globalLightDirection.w);
 
 	// POINT LIGHTS
-	vec3 diffuse = ubo.ambientLighting.xyz * ubo.ambientLighting.w;
-	vec3 specular = vec3(0,0,0);
 	for(int i = 0; i < ubo.numLights; i++)
 	{
 		PointLight light = ubo.pointLights[i];
-		vec3 directionToLight = light.position.xzy - fs_in.fragPos.xyz;
+		vec3 directionToLight = light.position.xyz - fs_in.fragPos;
 		float attenuation = 1.f / dot(directionToLight, directionToLight);
-		vec3 lightColor = light.color.xyz * light.color.w * attenuation;
+		vec3 lightColor = light.color.xyz * color.rgb * light.color.w * attenuation;
 
-		diffuse += calculate_diffuse(lightColor, normal, directionToLight);
-		specular += calculate_specular(fs_in.viewDir, directionToLight, normal, light.color.xyz * light.color.w);
+		diffuse += calculate_diffuse(normal, directionToLight, lightColor);
+		specular += calculate_specular(normal, V, directionToLight, lightColor);
 	}
 
-	outFragColor = vec4(color.xyz * diffuse + specular, color.a);
+	outFragColor = vec4(ambient + diffuse + specular, color.a);
 }
