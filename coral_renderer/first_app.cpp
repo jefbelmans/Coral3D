@@ -16,17 +16,6 @@ using namespace coral_3d;
 first_app::first_app()
  : cubemap_{device_, true}
 {
-    std::vector<std::string> file_names
-    {
-      "assets/textures/cubemap/posx.jpg",
-      "assets/textures/cubemap/negx.jpg",
-      "assets/textures/cubemap/negy.jpg",
-      "assets/textures/cubemap/posy.jpg",
-      "assets/textures/cubemap/posz.jpg",
-      "assets/textures/cubemap/negz.jpg"
-    };
-    cubemap_.init(file_names,true, true);
-
     descriptor_pool_ = coral_descriptor_pool::Builder(device_)
             .set_max_sets(MAX_MATERIAL_SETS)
             .add_pool_size(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, coral_swapchain::MAX_FRAMES_IN_FLIGHT)
@@ -69,6 +58,7 @@ void first_app::run()
     auto material_set_layout = coral_descriptor_set_layout::Builder(device_)
             .add_binding(0, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
             .add_binding(1, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
+            .add_binding(2, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
             .build();
 
     // Combined descriptor set layouts
@@ -146,8 +136,20 @@ void first_app::load_gameobjects(coral_descriptor_set_layout& material_set_layou
 
     std::shared_ptr<coral_mesh> sponza_mesh
     {
-        coral_mesh::create_mesh_from_file(device_,"assets/meshes/Sponza/Sponza.gltf", sponza_scene.get())
+        coral_mesh::create_mesh_from_file(device_,"assets/meshes/Helmet/Scene.gltf", sponza_scene.get())
     };
+
+    std::vector<std::string> file_names
+            {
+                    "assets/textures/cubemap/posx.jpg",
+                    "assets/textures/cubemap/negx.jpg",
+                    "assets/textures/cubemap/negy.jpg",
+                    "assets/textures/cubemap/posy.jpg",
+                    "assets/textures/cubemap/posz.jpg",
+                    "assets/textures/cubemap/negz.jpg"
+            };
+    cubemap_.init(file_names,true, true);
+
     sponza_mesh->load_materials(material_set_layout, *descriptor_pool_, cubemap_.get_descriptor_image_info());
     sponza_mesh->create_pipelines(
             "assets/shaders/simple_shader.vert.spv",

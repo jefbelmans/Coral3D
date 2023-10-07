@@ -68,6 +68,18 @@ vec3 calculate_specular(vec3 N, vec3 V, vec3 L, vec3 C)
 	return C * specularity;
 }
 
+vec3 calculate_fresnel(vec3 N, vec3 V, vec3 C)
+{
+	float fresnelPower = 1.f;
+	float fresnelMultiplier = 1.f;
+	float fresnelHardness = 0.f;
+
+	float fresnel = pow(1.f - max(abs(dot(N, V)), 0), fresnelPower) * fresnelMultiplier;
+	vec3 fresnelMask = pow(1.f - max(vec3(0.0f, -1.0f, 0.0f) * N, 0.f), vec3(fresnelHardness));
+
+	return fresnel * fresnelMask * C;
+}
+
 void main()
 {
 	// BASE COLOR
@@ -101,6 +113,7 @@ void main()
 		specular += calculate_specular(N, V, directionToLight, lightColor);
 	}
 
-	vec3 environment = texture(samplerCubeMap, R).rgb * 0.2f;
-	outFragColor = vec4(ambient + diffuse + specular, color.a);
+	vec3 environment = texture(samplerCubeMap, R).rgb;
+	environment = calculate_fresnel(N, V, environment);
+	outFragColor = vec4(ambient + diffuse + specular + environment, color.a);
 }

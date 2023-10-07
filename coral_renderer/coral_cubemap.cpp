@@ -53,7 +53,6 @@ namespace coral_3d
         };
         staging_buffer.map();
         staging_buffer.write_to_buffer(pixels, layer_size);
-
         stbi_image_free(pixels);
 
         // Load other 5 faces
@@ -99,8 +98,10 @@ namespace coral_3d
         img_extent.height = static_cast<uint32_t>(height_);
         img_extent.depth = 1;
 
-        VkImageCreateInfo create_info{vkinit::image_ci(format, VK_IMAGE_USAGE_TRANSFER_DST_BIT |
-        VK_IMAGE_USAGE_SAMPLED_BIT, img_extent)};
+        VkImageCreateInfo create_info{vkinit::image_ci(
+                format,
+                VK_IMAGE_USAGE_SAMPLED_BIT | VK_IMAGE_USAGE_TRANSFER_DST_BIT | VK_IMAGE_USAGE_TRANSFER_SRC_BIT,
+                img_extent)};
         create_info.mipLevels = mip_levels_;
         create_info.arrayLayers = NUMBER_OF_CUBEMAP_IMAGES;
         create_info.flags = VK_IMAGE_CREATE_CUBE_COMPATIBLE_BIT;
@@ -120,9 +121,10 @@ namespace coral_3d
         image_info.subresourceRange.levelCount = mip_levels_;
         image_info.subresourceRange.layerCount = NUMBER_OF_CUBEMAP_IMAGES;
         image_info.viewType = VK_IMAGE_VIEW_TYPE_CUBE;
+        image_info.components = { VK_COMPONENT_SWIZZLE_R, VK_COMPONENT_SWIZZLE_G, VK_COMPONENT_SWIZZLE_B, VK_COMPONENT_SWIZZLE_A };
 
         if (vkCreateImageView(device_.device(), &image_info, nullptr, &image_view_) != VK_SUCCESS)
-            throw std::runtime_error("ERROR! coral_cubemap::create_inage_view() >> Failed to create image view!");
+            throw std::runtime_error("ERROR! coral_cubemap::create_image_view() >> Failed to create image view!");
 
         return true;
     }
