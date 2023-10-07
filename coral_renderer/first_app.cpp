@@ -49,6 +49,8 @@ void first_app::run()
     auto material_set_layout = coral_descriptor_set_layout::Builder(device_)
             .add_binding(0, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
             .add_binding(1, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
+            .add_binding(2, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
+            .add_binding(3, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
             .build();
 
     // Combined descriptor set layouts
@@ -92,6 +94,11 @@ void first_app::run()
 		{
             const int frame_index{ renderer_.get_frame_index() };
 
+            auto rotation = glm::rotate(glm::mat4(1.f), frame_time, {0.f, -1.f, 0.f});
+
+            auto& obj = gameobjects_.at(0);
+            obj->transform_.translation = glm::vec3(rotation * glm::vec4(obj->transform_.translation, 1.f));
+
             FrameInfo frame_info
             {
                 frame_index,
@@ -133,7 +140,7 @@ void first_app::load_gameobjects(coral_descriptor_set_layout& material_set_layou
     // MESHES
     std::shared_ptr<coral_mesh> sponza_mesh
     {
-        coral_mesh::create_mesh_from_file(device_,"assets/meshes/Helmet/Scene.gltf", sponza_scene.get())
+        coral_mesh::create_mesh_from_file(device_,"assets/meshes/SciFiHelmet/SciFiHelmet.gltf", sponza_scene.get())
     };
 
     // CREATE MESH MATERIALS AND PIPELINES
@@ -145,6 +152,7 @@ void first_app::load_gameobjects(coral_descriptor_set_layout& material_set_layou
             pipeline_layout);
 
     sponza_scene->mesh_ = sponza_mesh;
+    sponza_scene->transform_.translation = glm::vec3(0.f, 0.f, 0.f);
     gameobjects_.emplace(sponza_scene->get_id(), sponza_scene);
 
     // LIGHTS

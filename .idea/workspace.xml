@@ -32,28 +32,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2ea9cb6-a6b7-419f-9266-e5263673b6e6" name="Changes" comment="Fixed MaterialUBO memory alignment. All variables are now correctly aligned and read in the shader.">
-      <change afterPath="$PROJECT_DIR$/coral_renderer/skybox_system.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/coral_renderer/skybox_system.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shaders/compiled/skybox.frag.spv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shaders/compiled/skybox.vert.spv" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shaders/skybox.frag" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/shaders/skybox.vert" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/clion-Release-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/clion-Release-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/assets/shaders/compiled/simple_shader.frag.spv" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/assets/shaders/compiled/simple_shader.frag.spv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/assets/shaders/compiled/simple_shader.vert.spv" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/assets/shaders/compiled/simple_shader.vert.spv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeCache.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/coral_mesh.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_mesh.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/coral_mesh.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_mesh.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/first_app.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/first_app.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/first_app.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/first_app.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/point_light_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/point_light_system.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shaders/compiled/simple_shader.frag.spv" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/compiled/simple_shader.frag.spv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/shaders/simple_shader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.frag" afterDir="false" />
     </list>
@@ -109,32 +92,32 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
-    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;cf.advertisement.text.has.clang-format&quot;: &quot;true&quot;,
-    &quot;cf.advertisement.text.overridden&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;cubemap&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/Game Development/Visual Studio Solutions/Coral3D/coral_renderer&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;CPPToolchains&quot;,
-    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "cf.advertisement.text.has.clang-format": "true",
+    "cf.advertisement.text.overridden": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "E:/Game Development/Visual Studio Solutions/Coral3D/coral_renderer",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "CPPToolchains",
+    "structure.view.defaults.are.configured": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Game Development\Visual Studio Solutions\Coral3D\coral_renderer" />

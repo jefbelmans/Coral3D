@@ -228,6 +228,18 @@ void coral_mesh::Builder::load_materials(tinygltf::Model &input)
             materials[i].normal_texture_index = glTFMaterial.additionalValues["normalTexture"].TextureIndex();
         }
 
+        // Get the occlusion map texture index
+        if (glTFMaterial.additionalValues.find("occlusionTexture") != glTFMaterial.additionalValues.end())
+        {
+            materials[i].occlusion_texture_index = glTFMaterial.additionalValues["occlusionTexture"].TextureIndex();
+        }
+
+        // Get the metallic roughness map texture index
+        if (glTFMaterial.values.find("metallicRoughnessTexture") != glTFMaterial.additionalValues.end())
+        {
+            materials[i].metallic_roughness_texture_index = glTFMaterial.values["metallicRoughnessTexture"].TextureIndex();
+        }
+
         materials[i].alpha_mode = glTFMaterial.alphaMode;
         materials[i].alpha_cutoff = (float) glTFMaterial.alphaCutoff;
         materials[i].double_sided = glTFMaterial.doubleSided;
@@ -423,11 +435,32 @@ void coral_mesh::load_materials(coral_descriptor_set_layout& material_set_layout
     {
         auto color_desc = get_texture_descriptor(material.base_color_texture_index);
         auto normal_desc = get_texture_descriptor(material.normal_texture_index);
+        auto occlusion_desc = get_texture_descriptor(material.occlusion_texture_index);
+        auto metallic_roughness_desc = get_texture_descriptor(material.metallic_roughness_texture_index);
 
-        coral_descriptor_writer(material_set_layout, material_set_pool)
-                .write_image(0, &color_desc)
-                .write_image(1, &normal_desc)
-                .build(material.descriptor_set);
+        coral_descriptor_writer writer{material_set_layout, material_set_pool};
+
+        if(material.base_color_texture_index != -1)
+        {
+            writer.write_image(0, &color_desc);
+        }
+
+        if(material.normal_texture_index != -1)
+        {
+            writer.write_image(1, &normal_desc);
+        }
+
+        if(material.occlusion_texture_index != -1)
+        {
+            writer.write_image(2, &occlusion_desc);
+        }
+
+        if(material.metallic_roughness_texture_index != -1)
+        {
+            writer.write_image(3, &metallic_roughness_desc);
+        }
+
+        writer.build(material.descriptor_set);
     }
 }
 
@@ -568,8 +601,11 @@ void coral_mesh::create_index_buffers(const std::vector<uint32_t>& indices)
     device_.copy_buffer(staging_buffer.get_buffer(), index_buffer_->get_buffer(), buffer_size);
 }
 
-VkDescriptorImageInfo coral_mesh::get_texture_descriptor(const size_t index)
+VkDescriptorImageInfo coral_mesh::get_texture_descriptor(const int index)
 {
+    if(index == -1)
+        return VkDescriptorImageInfo{};
+
     return images_[index].texture->get_descriptor_info();
 }
 

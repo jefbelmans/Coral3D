@@ -76,9 +76,14 @@ namespace coral_3d
     struct Material
     {
         glm::vec4 base_color_factor = glm::vec4{1.f};
-        uint32_t base_color_texture_index;
-        uint32_t normal_texture_index;
 
+        // TEXTURES
+        int base_color_texture_index{-1};
+        int normal_texture_index{-1};
+        int occlusion_texture_index{-1};
+        int metallic_roughness_texture_index{-1};
+
+        // PROPERTIES
         std::string alpha_mode = "OPAQUE";
         float alpha_cutoff;
         bool double_sided = false;
@@ -134,7 +139,7 @@ namespace coral_3d
 		void draw(VkCommandBuffer command_buffer, VkPipelineLayout pipeline_layout);
 
 	private:
-        VkDescriptorImageInfo get_texture_descriptor(size_t index);
+        VkDescriptorImageInfo get_texture_descriptor(int index);
 
         void draw_node(VkCommandBuffer command_buffer, VkPipelineLayout pipeline_layout, coral_3d::Node* node);
 

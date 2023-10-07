@@ -26,6 +26,8 @@ layout (set = 0, binding = 0) uniform GlobalUBO
 layout (set = 0, binding = 1) uniform samplerCube samplerCubeMap;
 layout (set = 1, binding = 0) uniform sampler2D samplerColorMap;
 layout (set = 1, binding = 1) uniform sampler2D samplerNormalMap;
+layout (set = 1, binding = 2) uniform sampler2D samplerOcclusionMap;
+layout (set = 1, binding = 3) uniform sampler2D samplerMetallicRoughness;
 
 // CONSTANTS
 layout (constant_id = 0) const bool ALPHA_MASK = false;
@@ -72,7 +74,7 @@ vec3 calculate_fresnel(vec3 N, vec3 V, vec3 C)
 {
 	float fresnelPower = 1.f;
 	float fresnelMultiplier = 1.f;
-	float fresnelHardness = 0.f;
+	float fresnelHardness = 1.f;
 
 	float fresnel = pow(1.f - max(abs(dot(N, V)), 0), fresnelPower) * fresnelMultiplier;
 	vec3 fresnelMask = pow(1.f - max(vec3(0.0f, -1.0f, 0.0f) * N, 0.f), vec3(fresnelHardness));
@@ -100,6 +102,7 @@ void main()
 	vec3 ambient = ubo.ambientLighting.xyz * ubo.ambientLighting.w;
 	vec3 diffuse = calculate_diffuse(N, ubo.globalLightDirection.xyz, color.rgb * ubo.globalLightDirection.w);
 	vec3 specular = calculate_specular(N, V,  ubo.globalLightDirection.xyz, vec3(1,1,1) *  ubo.globalLightDirection.w);
+	vec3 occlusion = texture(samplerOcclusionMap, fs_in.texcoord).rgb;
 
 	// POINT LIGHTS
 	for(int i = 0; i < ubo.numLights; i++)
@@ -113,7 +116,13 @@ void main()
 		specular += calculate_specular(N, V, directionToLight, lightColor);
 	}
 
+	// ROUGHNESS
+	float roughness = texture(samplerMetallicRoughness, fs_in.texcoord).b;
+	specular *= roughness;
+
+	// ENVIRONMENT MAPPING
 	vec3 environment = texture(samplerCubeMap, R).rgb;
-	environment = calculate_fresnel(N, V, environment);
-	outFragColor = vec4(ambient + diffuse + specular + environment, color.a);
+	environment = calculate_fresnel(N, V, environment) * roughness;
+
+	outFragColor = vec4((ambient + diffuse + specular + environment) * occlusion, color.a);
 }
