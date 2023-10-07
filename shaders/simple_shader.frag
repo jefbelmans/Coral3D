@@ -3,6 +3,7 @@
 // SAMPLERS
 layout (set = 1, binding = 0) uniform sampler2D samplerColorMap;
 layout (set = 1, binding = 1) uniform sampler2D samplerNormalMap;
+layout (set = 1, binding = 2) uniform samplerCube samplerCubeMap;
 
 // CONSTANTS
 layout (constant_id = 0) const bool ALPHA_MASK = false;
@@ -12,7 +13,6 @@ layout (constant_id = 1) const float ALPHA_MASK_CUTOFF = 0.0f;
 layout (location = 0) in struct FS_IN
 {
 	vec3 fragPos;
-	vec3 normal;
 	vec2 texcoord;
 	mat3 TBN;
 } fs_in;
@@ -77,16 +77,17 @@ void main()
 		if (color.a < ALPHA_MASK_CUTOFF) discard;
 
 	// SAMPLE NORMAL
-	vec3 normal = texture(samplerNormalMap, fs_in.texcoord).rgb;
-	normal = normalize(fs_in.TBN * (normal * 2.f - 1.f));
+	vec3 N = texture(samplerNormalMap, fs_in.texcoord).rgb;
+	N = normalize(fs_in.TBN * (N * 2.f - 1.f));
 
 	// VECTORS
 	vec3 V = normalize(ubo.viewInverse[3].xyz - fs_in.fragPos);
+	vec3 R = reflect(V, N);
 
 	// GLOBAL LIGHT
 	vec3 ambient = ubo.ambientLighting.xyz * ubo.ambientLighting.w;
-	vec3 diffuse = calculate_diffuse(normal, ubo.globalLightDirection.xyz, color.rgb * ubo.globalLightDirection.w);
-	vec3 specular = calculate_specular(normal, V,  ubo.globalLightDirection.xyz, vec3(1,1,1) *  ubo.globalLightDirection.w);
+	vec3 diffuse = calculate_diffuse(N, ubo.globalLightDirection.xyz, color.rgb * ubo.globalLightDirection.w);
+	vec3 specular = calculate_specular(N, V,  ubo.globalLightDirection.xyz, vec3(1,1,1) *  ubo.globalLightDirection.w);
 
 	// POINT LIGHTS
 	for(int i = 0; i < ubo.numLights; i++)
@@ -96,9 +97,10 @@ void main()
 		float attenuation = 1.f / dot(directionToLight, directionToLight);
 		vec3 lightColor = light.color.xyz * color.rgb * light.color.w * attenuation;
 
-		diffuse += calculate_diffuse(normal, directionToLight, lightColor);
-		specular += calculate_specular(normal, V, directionToLight, lightColor);
+		diffuse += calculate_diffuse(N, directionToLight, lightColor);
+		specular += calculate_specular(N, V, directionToLight, lightColor);
 	}
 
+	vec3 environment = texture(samplerCubeMap, R).rgb * 0.2f;
 	outFragColor = vec4(ambient + diffuse + specular, color.a);
 }

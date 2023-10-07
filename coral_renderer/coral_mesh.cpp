@@ -416,7 +416,8 @@ std::unique_ptr<coral_mesh> coral_mesh::create_mesh_from_file(coral_device& devi
     return std::make_unique<coral_mesh>(device, builder, parent);
 }
 
-void coral_mesh::load_materials(coral_descriptor_set_layout& material_set_layout, coral_descriptor_pool& material_set_pool)
+void coral_mesh::load_materials(coral_descriptor_set_layout& material_set_layout,
+                                coral_descriptor_pool& material_set_pool, VkDescriptorImageInfo)
 {
     for(auto& material : materials_)
     {

@@ -8,7 +8,6 @@ layout (location = 3) in vec2 inTexcoord;
 layout (location = 0) out struct VS_OUT
 {
 	vec3 fragPos;
-	vec3 normal;
 	vec2 texcoord;
 	mat3 TBN;
 } vs_out;
@@ -45,7 +44,7 @@ void main()
 	vec4 worldPos = primitive.model * vec4(inPosition, 1.0f);
 	gl_Position = ubo.viewProjection * worldPos;
 
-	vs_out.normal = inNormal;
+	vs_out.fragPos  = worldPos.xyz;
 	vs_out.texcoord = inTexcoord;
 
 	// TBN
@@ -55,5 +54,4 @@ void main()
 	vec3 B = cross(N, T) * inTangent.w;
 
 	vs_out.TBN = mat3(T, B, N);
-	vs_out.fragPos  = worldPos.xyz;
 }

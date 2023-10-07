@@ -14,12 +14,24 @@
 using namespace coral_3d;
 
 first_app::first_app()
+ : cubemap_{device_, true}
 {
-   descriptor_pool_ = coral_descriptor_pool::Builder(device_)
-        .set_max_sets(MAX_MATERIAL_SETS)
-        .add_pool_size(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, coral_swapchain::MAX_FRAMES_IN_FLIGHT)
-        .add_pool_size(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, MAX_MATERIAL_SETS)
-        .build();
+    std::vector<std::string> file_names
+    {
+      "assets/textures/cubemap/posx.jpg",
+      "assets/textures/cubemap/negx.jpg",
+      "assets/textures/cubemap/negy.jpg",
+      "assets/textures/cubemap/posy.jpg",
+      "assets/textures/cubemap/posz.jpg",
+      "assets/textures/cubemap/negz.jpg"
+    };
+    cubemap_.init(file_names,true, true);
+
+    descriptor_pool_ = coral_descriptor_pool::Builder(device_)
+            .set_max_sets(MAX_MATERIAL_SETS)
+            .add_pool_size(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, coral_swapchain::MAX_FRAMES_IN_FLIGHT)
+            .add_pool_size(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, MAX_MATERIAL_SETS)
+            .build();
 }
 
 void first_app::run()
@@ -129,10 +141,14 @@ void first_app::run()
 
 void first_app::load_gameobjects(coral_descriptor_set_layout& material_set_layout, VkPipelineLayout pipeline_layout)
 {
+    // MESHES
     auto sponza_scene{std::make_shared<coral_gameobject>(coral_gameobject::create_gameobject()) };
 
-    std::shared_ptr<coral_mesh> sponza_mesh{ coral_mesh::create_mesh_from_file(device_, "assets/meshes/Sponza/Sponza.gltf", sponza_scene.get()) };
-    sponza_mesh->load_materials(material_set_layout, *descriptor_pool_);
+    std::shared_ptr<coral_mesh> sponza_mesh
+    {
+        coral_mesh::create_mesh_from_file(device_,"assets/meshes/Sponza/Sponza.gltf", sponza_scene.get())
+    };
+    sponza_mesh->load_materials(material_set_layout, *descriptor_pool_, cubemap_.get_descriptor_image_info());
     sponza_mesh->create_pipelines(
             "assets/shaders/simple_shader.vert.spv",
             "assets/shaders/simple_shader.frag.spv",
@@ -144,22 +160,22 @@ void first_app::load_gameobjects(coral_descriptor_set_layout& material_set_layou
 
     // LIGHTS
     auto point_light = std::make_shared<coral_gameobject>(coral_gameobject::create_point_light(1.f, 0.1f, {1.f, 0.2f, 0.2f}));
-    point_light->transform_.translation = glm::vec3(-4.f, 1.f, 0.f);
+    point_light->transform_.translation = glm::vec3(-4.f, 0.f, 0.f);
     gameobjects_.emplace(point_light->get_id(), point_light);
 
     point_light = std::make_shared<coral_gameobject>(coral_gameobject::create_point_light(1.f, 0.1f, {0.2f, 1.f, 0.2f}));
-    point_light->transform_.translation = glm::vec3(-2.f, 1.f, 0.f);
+    point_light->transform_.translation = glm::vec3(-2.f, 0.f, 0.f);
     gameobjects_.emplace(point_light->get_id(), point_light);
 
     point_light = std::make_shared<coral_gameobject>(coral_gameobject::create_point_light(1.f));
-    point_light->transform_.translation = glm::vec3(0.f, 1.f, 0.f);
+    point_light->transform_.translation = glm::vec3(0.f, 0.f, 0.f);
     gameobjects_.emplace(point_light->get_id(), point_light);
 
     point_light = std::make_shared<coral_gameobject>(coral_gameobject::create_point_light(1.f, 0.1f, {0.2f, 0.2f, 1.f}));
-    point_light->transform_.translation = glm::vec3(2.f, 1.f, 0.f);
+    point_light->transform_.translation = glm::vec3(2.f, 0.f, 0.f);
     gameobjects_.emplace(point_light->get_id(), point_light);
 
     point_light = std::make_shared<coral_gameobject>(coral_gameobject::create_point_light(1.f, 0.1f, {1.f, 0.2f, 1.f}));
-    point_light->transform_.translation = glm::vec3(4.f, 1.f, 0.f);
+    point_light->transform_.translation = glm::vec3(4.f, 0.f, 0.f);
     gameobjects_.emplace(point_light->get_id(), point_light);
 }

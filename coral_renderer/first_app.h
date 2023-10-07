@@ -6,6 +6,7 @@
 #include "coral_renderer.h"
 #include "coral_descriptors.h"
 #include "coral_texture.h"
+#include "coral_cubemap.h"
 
 // STD
 #include <memory>
@@ -32,6 +33,8 @@ namespace coral_3d
 		coral_window window_{ WIDTH, HEIGHT, "Coral Renderer" };
 		coral_device device_{ window_ };
 		coral_renderer renderer_{ window_, device_ };
+
+        coral_cubemap cubemap_;
 
 		std::unique_ptr<coral_descriptor_pool> descriptor_pool_{};
 		coral_gameobject::Map gameobjects_;
