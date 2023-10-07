@@ -36,6 +36,8 @@ add_executable(coral_renderer
         "point_light_system.h"
         "coral_cubemap.cpp"
         "coral_cubemap.h"
+        skybox_system.cpp
+        skybox_system.h
 )
 
 if(MSVC)

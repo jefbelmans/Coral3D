@@ -28,7 +28,8 @@ namespace coral_3d
 		void run();
 
 	private:
-		void load_gameobjects(coral_descriptor_set_layout& material_set_layout, VkPipelineLayout pipeline_layout);
+		void load_gameobjects(coral_descriptor_set_layout& material_set_layout, VkPipelineLayout pipeline_layout,
+                              coral_buffer& global_ubo);
 
 		coral_window window_{ WIDTH, HEIGHT, "Coral Renderer" };
 		coral_device device_{ window_ };
@@ -37,6 +38,11 @@ namespace coral_3d
         coral_cubemap cubemap_;
 
 		std::unique_ptr<coral_descriptor_pool> descriptor_pool_{};
+
+        // GLOBAL DESCRIPTOR SETS
+        std::vector<VkDescriptorSet> global_descriptor_sets_{coral_swapchain::MAX_FRAMES_IN_FLIGHT};
+        std::unique_ptr<coral_descriptor_set_layout> global_set_layout_;
+
 		coral_gameobject::Map gameobjects_;
 	};
 }

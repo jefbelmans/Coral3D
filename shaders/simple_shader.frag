@@ -1,9 +1,31 @@
 #version 450
 
+struct PointLight
+{
+	vec4 position; // w is radius
+	vec4 color; // w is intensity
+};
+
+layout (set = 0, binding = 0) uniform GlobalUBO
+{
+// MATRICES
+	mat4 view;
+	mat4 viewInverse;
+	mat4 viewProjection;
+
+// LIGHTING
+	vec4 globalLightDirection;
+	vec4 ambientLighting;
+
+// POINT LIGHTS
+	PointLight pointLights[8];
+	int numLights;
+} ubo;
+
 // SAMPLERS
+layout (set = 0, binding = 1) uniform samplerCube samplerCubeMap;
 layout (set = 1, binding = 0) uniform sampler2D samplerColorMap;
 layout (set = 1, binding = 1) uniform sampler2D samplerNormalMap;
-layout (set = 1, binding = 2) uniform samplerCube samplerCubeMap;
 
 // CONSTANTS
 layout (constant_id = 0) const bool ALPHA_MASK = false;
@@ -16,28 +38,6 @@ layout (location = 0) in struct FS_IN
 	vec2 texcoord;
 	mat3 TBN;
 } fs_in;
-
-struct PointLight
-{
-	vec4 position; // w is radius
-	vec4 color; // w is intensity
-};
-
-layout (set = 0, binding = 0) uniform GlobalUBO
-{
-	// MATRICES
-	mat4 view;
-	mat4 viewInverse;
-	mat4 viewProjection;
-
-	// LIGHTING
-	vec4 globalLightDirection;
-	vec4 ambientLighting;
-
-	// POINT LIGHTS
-	PointLight pointLights[8];
-	int numLights;
-} ubo;
 
 // OUT COLOR
 layout (location = 0) out vec4 outFragColor;

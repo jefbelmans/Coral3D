@@ -2,11 +2,11 @@
 
 #include "render_system.h"
 #include "point_light_system.h"
+#include "skybox_system.h"
 #include "coral_camera.h"
 #include "coral_buffer.h"
 
 // STD
-#include <array>
 #include <chrono>
 
 #include "vk_initializers.h"
@@ -39,41 +39,35 @@ void first_app::run()
     global_ubo.map();
 
     // Set 0: Global descriptor set (Scene data)
-    auto global_set_layout = coral_descriptor_set_layout::Builder(device_)
+    global_set_layout_ = coral_descriptor_set_layout::Builder(device_)
 		.add_binding(0, VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, VK_SHADER_STAGE_VERTEX_BIT | VK_SHADER_STAGE_FRAGMENT_BIT)
+        .add_binding(1, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
         .build();
 
-    // Write to global descriptor (Scene data)
-    std::vector<VkDescriptorSet> global_descriptor_sets{coral_swapchain::MAX_FRAMES_IN_FLIGHT};
-    for (size_t i = 0; i < global_descriptor_sets.size(); i++)
-    {
-        auto buffer_info = global_ubo.descriptor_info_index(i);
-
-        coral_descriptor_writer(*global_set_layout, *descriptor_pool_)
-                .write_buffer(0, &buffer_info)
-                .build(global_descriptor_sets[i]);
-    }
 
     // Set 1: Material descriptor set
     auto material_set_layout = coral_descriptor_set_layout::Builder(device_)
             .add_binding(0, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
             .add_binding(1, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
-            .add_binding(2, VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, VK_SHADER_STAGE_FRAGMENT_BIT)
             .build();
 
     // Combined descriptor set layouts
     std::vector<VkDescriptorSetLayout> desc_set_layouts
     {
-        global_set_layout->get_descriptor_set_layout(),
+        global_set_layout_->get_descriptor_set_layout(),
         material_set_layout->get_descriptor_set_layout()
     };
 
     // RENDER SYSTEM
     render_system render_system{device_, desc_set_layouts};
-    load_gameobjects(*material_set_layout, render_system.pipeline_layout());
+    load_gameobjects(*material_set_layout, render_system.pipeline_layout(), global_ubo);
 
     // POINT LIGHT SYSTEM
+    desc_set_layouts.pop_back();
     point_light_system point_light_system{device_, renderer_.get_swapchain_render_pass(), desc_set_layouts};
+
+    // SKYBOX SYSTEM
+    skybox_system skybox_system{device_, renderer_.get_swapchain_render_pass(), desc_set_layouts};
 
     // CAMERA
     coral_camera camera{ {0.f, 0.f, 3.f} };
@@ -104,7 +98,7 @@ void first_app::run()
                 frame_time,
                 command_buffer,
                 camera,
-                global_descriptor_sets[frame_index],
+                global_descriptor_sets_[frame_index],
                 gameobjects_
             };
 
@@ -121,6 +115,7 @@ void first_app::run()
 			renderer_.begin_swapchain_render_pass(command_buffer);
 			render_system.render_gameobjects(frame_info);
             point_light_system.render(frame_info);
+            skybox_system.render(frame_info);
 			renderer_.end_swapchain_render_pass(command_buffer);
 			renderer_.end_frame();
 		}
@@ -129,28 +124,20 @@ void first_app::run()
 	vkDeviceWaitIdle(device_.device());
 }
 
-void first_app::load_gameobjects(coral_descriptor_set_layout& material_set_layout, VkPipelineLayout pipeline_layout)
+void first_app::load_gameobjects(coral_descriptor_set_layout& material_set_layout, VkPipelineLayout pipeline_layout,
+                                 coral_buffer& global_ubo)
 {
-    // MESHES
+    // GAMEOBJECTS
     auto sponza_scene{std::make_shared<coral_gameobject>(coral_gameobject::create_gameobject()) };
 
+    // MESHES
     std::shared_ptr<coral_mesh> sponza_mesh
     {
         coral_mesh::create_mesh_from_file(device_,"assets/meshes/Helmet/Scene.gltf", sponza_scene.get())
     };
 
-    std::vector<std::string> file_names
-            {
-                    "assets/textures/cubemap/posx.jpg",
-                    "assets/textures/cubemap/negx.jpg",
-                    "assets/textures/cubemap/negy.jpg",
-                    "assets/textures/cubemap/posy.jpg",
-                    "assets/textures/cubemap/posz.jpg",
-                    "assets/textures/cubemap/negz.jpg"
-            };
-    cubemap_.init(file_names,true, true);
-
-    sponza_mesh->load_materials(material_set_layout, *descriptor_pool_, cubemap_.get_descriptor_image_info());
+    // CREATE MESH MATERIALS AND PIPELINES
+    sponza_mesh->load_materials(material_set_layout, *descriptor_pool_);
     sponza_mesh->create_pipelines(
             "assets/shaders/simple_shader.vert.spv",
             "assets/shaders/simple_shader.frag.spv",
@@ -180,4 +167,28 @@ void first_app::load_gameobjects(coral_descriptor_set_layout& material_set_layou
     point_light = std::make_shared<coral_gameobject>(coral_gameobject::create_point_light(1.f, 0.1f, {1.f, 0.2f, 1.f}));
     point_light->transform_.translation = glm::vec3(4.f, 0.f, 0.f);
     gameobjects_.emplace(point_light->get_id(), point_light);
+
+    // SKYBOX
+    std::vector<std::string> file_names
+    {
+        "assets/textures/cubemap/posx.jpg",
+        "assets/textures/cubemap/negx.jpg",
+        "assets/textures/cubemap/negy.jpg",
+        "assets/textures/cubemap/posy.jpg",
+        "assets/textures/cubemap/posz.jpg",
+        "assets/textures/cubemap/negz.jpg"
+    };
+    cubemap_.init(file_names,true, true);
+
+    // Write global UBO
+    for (size_t i = 0; i < global_descriptor_sets_.size(); i++)
+    {
+        auto buffer_info = global_ubo.descriptor_info_index(i);
+        auto skybox_info =  cubemap_.get_descriptor_image_info();
+
+        coral_descriptor_writer(*global_set_layout_, *descriptor_pool_)
+                .write_buffer(0, &buffer_info)
+                .write_image(1, &skybox_info)
+                .build(global_descriptor_sets_[i]);
+    }
 }

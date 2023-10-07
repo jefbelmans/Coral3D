@@ -7,6 +7,10 @@
 -- E:/Game Development/Visual Studio Solutions/Coral3D/shaders/simple_shader.frag
 -- BUILDING SHADER
 -- E:/Game Development/Visual Studio Solutions/Coral3D/shaders/simple_shader.vert
+-- BUILDING SHADER
+-- E:/Game Development/Visual Studio Solutions/Coral3D/shaders/skybox.frag
+-- BUILDING SHADER
+-- E:/Game Development/Visual Studio Solutions/Coral3D/shaders/skybox.vert
 -- Using Win32 for window creation
 -- Configuring done (0.1s)
 -- Generating done (0.0s)

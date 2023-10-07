@@ -124,7 +124,7 @@ namespace coral_3d
 		static std::unique_ptr<coral_mesh> create_mesh_from_file(coral_device& device, const std::string& file_path, coral_gameobject* parent);
 
         void load_materials(coral_descriptor_set_layout& material_set_layout,
-                            coral_descriptor_pool& material_set_pool, VkDescriptorImageInfo cubemap_descriptor);
+                            coral_descriptor_pool& material_set_pool);
         void create_pipelines(
                 const std::string &vert_file_path,
                 const std::string &frag_file_path,

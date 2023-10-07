@@ -245,6 +245,13 @@ build coral_renderer/CMakeFiles/coral_renderer.dir/coral_cubemap.cpp.obj: CXX_CO
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
 
+build coral_renderer/CMakeFiles/coral_renderer.dir/skybox_system.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/skybox_system.cpp || cmake_object_order_depends_target_coral_renderer
+  DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\skybox_system.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
+  INCLUDES = -I"E:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"E:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"E:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"E:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"E:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "E:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "E:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
+  OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target coral_renderer
@@ -253,7 +260,7 @@ build coral_renderer/CMakeFiles/coral_renderer.dir/coral_cubemap.cpp.obj: CXX_CO
 #############################################
 # Link the executable coral_renderer\coral_renderer.exe
 
-build coral_renderer/coral_renderer.exe: CXX_EXECUTABLE_LINKER__coral_renderer_Debug coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_window.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_device.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/vk_initializers.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_swapchain.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_gameobject.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_renderer.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/render_system.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_camera.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_utils.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_texture.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_buffer.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_descriptors.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/point_light_system.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_cubemap.cpp.obj | C$:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib third_party/GLFW/src/libglfw3.a third_party/libvkbootstrap.a third_party/libtinyobjloader.a C$:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib || coral_renderer/Shaders third_party/GLFW/src/libglfw3.a third_party/libtinyobjloader.a third_party/libvkbootstrap.a
+build coral_renderer/coral_renderer.exe: CXX_EXECUTABLE_LINKER__coral_renderer_Debug coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_window.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_device.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/vk_initializers.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_swapchain.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_gameobject.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_renderer.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/render_system.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_camera.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_utils.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_texture.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_buffer.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_descriptors.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/point_light_system.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_cubemap.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/skybox_system.cpp.obj | C$:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib third_party/GLFW/src/libglfw3.a third_party/libvkbootstrap.a third_party/libtinyobjloader.a C$:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib || coral_renderer/Shaders third_party/GLFW/src/libglfw3.a third_party/libtinyobjloader.a third_party/libvkbootstrap.a
   FLAGS = -g
   LINK_LIBRARIES = C:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib  third_party/GLFW/src/libglfw3.a  third_party/libvkbootstrap.a  third_party/libtinyobjloader.a  C:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
@@ -267,7 +274,7 @@ build coral_renderer/coral_renderer.exe: CXX_EXECUTABLE_LINKER__coral_renderer_D
 #############################################
 # Utility command for Shaders
 
-build coral_renderer/Shaders: phony coral_renderer/CMakeFiles/Shaders E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/point_light.frag.spv E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/point_light.vert.spv E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv
+build coral_renderer/Shaders: phony coral_renderer/CMakeFiles/Shaders E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/point_light.frag.spv E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/point_light.vert.spv E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/skybox.frag.spv E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/skybox.vert.spv
 
 
 #############################################
@@ -344,7 +351,7 @@ build coral_renderer/install/strip: phony coral_renderer/CMakeFiles/install/stri
 #############################################
 # Phony custom command for coral_renderer\CMakeFiles\Shaders
 
-build coral_renderer/CMakeFiles/Shaders | ${cmake_ninja_workdir}coral_renderer/CMakeFiles/Shaders: phony E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/point_light.frag.spv E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/point_light.vert.spv E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv
+build coral_renderer/CMakeFiles/Shaders | ${cmake_ninja_workdir}coral_renderer/CMakeFiles/Shaders: phony E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/point_light.frag.spv E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/point_light.vert.spv E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/simple_shader.frag.spv E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/skybox.frag.spv E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/skybox.vert.spv
 
 
 #############################################
@@ -380,6 +387,24 @@ build E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/s
 build E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv: CUSTOM_COMMAND E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/simple_shader.vert
   COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\build\debug\coral_renderer" && "C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -E make_directory "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/" && C:\VulkanSDK\1.3.250.0\Bin\glslangValidator.exe -V "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/simple_shader.vert" -o "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv""
   DESC = Generating E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/simple_shader.vert.spv
+  restat = 1
+
+
+#############################################
+# Custom command for E:\Game Development\Visual Studio Solutions\Coral3D\shaders\compiled\skybox.frag.spv
+
+build E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/skybox.frag.spv: CUSTOM_COMMAND E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/skybox.frag
+  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\build\debug\coral_renderer" && "C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -E make_directory "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/" && C:\VulkanSDK\1.3.250.0\Bin\glslangValidator.exe -V "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/skybox.frag" -o "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/skybox.frag.spv""
+  DESC = Generating E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/skybox.frag.spv
+  restat = 1
+
+
+#############################################
+# Custom command for E:\Game Development\Visual Studio Solutions\Coral3D\shaders\compiled\skybox.vert.spv
+
+build E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/compiled/skybox.vert.spv: CUSTOM_COMMAND E$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/shaders/skybox.vert
+  COMMAND = cmd.exe /C "cd /D "E:\Game Development\Visual Studio Solutions\Coral3D\build\debug\coral_renderer" && "C:\Program Files\JetBrains\CLion 2023.2\bin\cmake\win\x64\bin\cmake.exe" -E make_directory "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/" && C:\VulkanSDK\1.3.250.0\Bin\glslangValidator.exe -V "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/skybox.vert" -o "E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/skybox.vert.spv""
+  DESC = Generating E:/Game Development/Visual Studio Solutions/Coral3D/shaders/compiled/skybox.vert.spv
   restat = 1
 
 

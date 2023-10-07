@@ -89,7 +89,7 @@ void point_light_system::create_pipeline_layout(coral_device &device, std::vecto
     layout_info.pSetLayouts = desc_set_layouts.data();
 
     if (vkCreatePipelineLayout(device.device(), &layout_info, nullptr, &pipeline_layout_) != VK_SUCCESS)
-        throw std::runtime_error("ERROR! coral_pipeline::create_pipeline_layout() >> Failed to create pipeline layout!");
+        throw std::runtime_error("ERROR! point_light_system::create_pipeline_layout() >> Failed to create pipeline layout!");
 }
 
 void point_light_system::create_pipeline(VkRenderPass render_pass)

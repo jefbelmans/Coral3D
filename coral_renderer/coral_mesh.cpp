@@ -417,7 +417,7 @@ std::unique_ptr<coral_mesh> coral_mesh::create_mesh_from_file(coral_device& devi
 }
 
 void coral_mesh::load_materials(coral_descriptor_set_layout& material_set_layout,
-                                coral_descriptor_pool& material_set_pool, VkDescriptorImageInfo cubemap_descriptor)
+                                coral_descriptor_pool& material_set_pool)
 {
     for(auto& material : materials_)
     {
@@ -427,7 +427,6 @@ void coral_mesh::load_materials(coral_descriptor_set_layout& material_set_layout
         coral_descriptor_writer(material_set_layout, material_set_pool)
                 .write_image(0, &color_desc)
                 .write_image(1, &normal_desc)
-                .write_image(2, &cubemap_descriptor)
                 .build(material.descriptor_set);
     }
 }
