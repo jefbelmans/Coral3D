@@ -4,7 +4,7 @@
 This repository contains a basic Vulkan graphics engine implemented in C++ using CMake. It provides abstractions for common Vulkan logic, making it easier to develop graphics applications. Additionally, a branch has been created to develop a small voxel terrain generator using the engine from the main branch.
 Everything is still very much work in progress and will continue being developed over the summer of 2023.
 
-![A screenshot of the famous Sponza scene inside Coral3D](https://github.com/jefbelmans/Coral3D/blob/main/images/coral_sponza_overview.png)
+![A screenshot of the famous Sponza scene inside Coral3D](https://github.com/jefbelmans/Coral3D/blob/main/images/coral_scifi_helmet.png)
 
 ### Features:
 - Abstractions for common Vulkan logic, including surface creation, command pools, synchronization structures, and command buffers.
@@ -14,9 +14,10 @@ Everything is still very much work in progress and will continue being developed
 - VMA (Vulkan Memory Allocator) integration for managing Vulkan memory.
 - Swapchain support and surface capabilities querying.
 - Queue family and device extension support checking.
+- Basic point light render system
+- Basic skybox render system
 
 ### Roadmap (priority high to low):
-- Point lights
 - Shadow mapping (directional, omni & spot)
 - PBR support
 - Deferred rendering
