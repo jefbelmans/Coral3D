@@ -120,9 +120,9 @@ void first_app::run()
 
             // RENDER
 			renderer_.begin_swapchain_render_pass(command_buffer);
+            skybox_system.render(frame_info);
 			render_system.render_gameobjects(frame_info);
             point_light_system.render(frame_info);
-            skybox_system.render(frame_info);
 			renderer_.end_swapchain_render_pass(command_buffer);
 			renderer_.end_frame();
 		}

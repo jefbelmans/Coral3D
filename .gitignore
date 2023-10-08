@@ -39,20 +39,6 @@
 .vs/
 
 # Build directories
-/build/
-/cmake-build-debug/
+build/
+cmake-build-debug/
 .idea/workspace.xml
-build/debug/build.ninja
-build/debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin
-build/debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin
-build/debug/CMakeFiles/clion-Debug-log.txt
-build/debug/CMakeFiles/clion-environment.txt
-build/debug/CMakeFiles/CMakeConfigureLog.yaml
-build/release/.ninja_deps
-build/release/.ninja_log
-build/release/build.ninja
-build/release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin
-build/release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin
-build/release/CMakeFiles/clion-environment.txt
-build/release/CMakeFiles/clion-Release-log.txt
-build/release/CMakeFiles/CMakeConfigureLog.yaml

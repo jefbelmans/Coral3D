@@ -72,7 +72,6 @@ layout(location = 0) out vec3 outTexCoord;
 void main()
 {
     outTexCoord = VERTS[gl_VertexIndex];
-    outTexCoord *= 100.f;
-    gl_Position = ubo.viewProjection * vec4(outTexCoord, 1.f);
+    gl_Position = ubo.viewProjection * vec4(outTexCoord + ubo.viewInverse[3].xyz, 1.f) ;
     outTexCoord.xy *= -1.f;
 }

@@ -57,6 +57,8 @@ namespace coral_3d
         coral_pipeline::default_pipeline_config_info(config_info);
         config_info.binding_descriptions.clear();
         config_info.attribute_descriptions.clear();
+        config_info.depth_stencil_info.depthWriteEnable = VK_FALSE;
+        config_info.depth_stencil_info.depthTestEnable = VK_FALSE;
         config_info.render_pass = render_pass;
         config_info.pipeline_layout = pipeline_layout_;
 
