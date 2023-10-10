@@ -32,51 +32,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2ea9cb6-a6b7-419f-9266-e5263673b6e6" name="Changes" comment="Fixed MaterialUBO memory alignment. All variables are now correctly aligned and read in the shader.">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/rules.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/coral_renderer/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/coral_renderer/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/third_party/GLFW/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/third_party/GLFW/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/third_party/GLFW/cmake_uninstall.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/third_party/GLFW/cmake_uninstall.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/third_party/GLFW/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/third_party/GLFW/src/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/third_party/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/third_party/cmake_install.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/release/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/release/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/release/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/3.26.4/CMakeRCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/clion-Release-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/clion-Release-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/clion-environment.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/rules.ninja" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/release/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/Testing/Temporary/LastTest.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/release/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/coral_renderer/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/coral_renderer/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/third_party/GLFW/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/third_party/GLFW/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/third_party/GLFW/cmake_uninstall.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/third_party/GLFW/cmake_uninstall.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/third_party/GLFW/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/third_party/GLFW/src/cmake_install.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/third_party/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/third_party/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_renderer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_renderer.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_swapchain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_swapchain.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/first_app.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/first_app.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/skybox_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/skybox_system.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shaders/compiled/skybox.vert.spv" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/compiled/skybox.vert.spv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shaders/skybox.vert" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/skybox.vert" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/point_light_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/point_light_system.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shaders/compiled/simple_shader.frag.spv" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/compiled/simple_shader.frag.spv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/shaders/simple_shader.frag" beforeDir="false" afterPath="$PROJECT_DIR$/shaders/simple_shader.frag" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,11 +135,6 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="coral_renderer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Coral3D" TARGET_NAME="coral_renderer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Coral3D" RUN_TARGET_NAME="coral_renderer">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -251,6 +214,9 @@
       <workItem from="1696605383562" duration="9264000" />
       <workItem from="1696621767016" duration="4866000" />
       <workItem from="1696698697580" duration="457000" />
+      <workItem from="1696879125723" duration="2095000" />
+      <workItem from="1696921357115" duration="2000" />
+      <workItem from="1696969853217" duration="1000" />
     </task>
     <task id="LOCAL-00001" summary="Have I forgotten how to git?">
       <option name="closed" value="true" />

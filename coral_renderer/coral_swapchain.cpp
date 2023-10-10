@@ -397,9 +397,9 @@ VkPresentModeKHR coral_swapchain::choose_present_mode(const std::vector<VkPresen
 {
 	for (const auto& available_present_mode : available_present_modes)
 	{
-		if (available_present_mode == VK_PRESENT_MODE_MAILBOX_KHR)
+		if (available_present_mode == VK_PRESENT_MODE_FIFO_KHR)
 		{
-			std::cout << "Present mode: Mailbox" << std::endl;
+			std::cout << "Present mode: FIFO" << std::endl;
 			return available_present_mode;
 		}
 	}

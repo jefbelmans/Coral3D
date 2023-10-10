@@ -72,8 +72,8 @@ vec3 calculate_specular(vec3 N, vec3 V, vec3 L, vec3 C)
 
 vec3 calculate_fresnel(vec3 N, vec3 V, vec3 C)
 {
-	float fresnelPower = 1.f;
-	float fresnelMultiplier = 1.f;
+	float fresnelPower = 2.5f;
+	float fresnelMultiplier = 0.8f;
 	float fresnelHardness = 1.f;
 
 	float fresnel = pow(1.f - max(abs(dot(N, V)), 0), fresnelPower) * fresnelMultiplier;
