@@ -18,12 +18,13 @@ add_subdirectory(third_party)
 
 # Link libs
 target_link_libraries(coral_renderer PRIVATE
-	Vulkan::Vulkan
-	glfw
-	glm
-	vkbootstrap
-	tinyobjloader
+		Vulkan::Vulkan
+		glfw
+		glm
+		vkbootstrap
+		tinyobjloader
 		tinygltf
-	vma
-	stb_image
+		vma
+		stb_image
+		imgui
 )

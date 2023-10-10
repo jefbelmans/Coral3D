@@ -2,6 +2,7 @@
 
 #include <gtc/matrix_transform.hpp>
 #include <algorithm>
+#include "imgui.h"
 
 using namespace coral_3d;
 

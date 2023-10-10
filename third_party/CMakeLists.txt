@@ -1,5 +1,8 @@
 find_package(Vulkan REQUIRED)
 
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/libs")
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${PROJECT_SOURCE_DIR}/libs")
+
 # GLFW
 set(GLFW_BUILD_DOCS OFF CACHE BOOL "" FORCE)
 set(GLFW_BUILD_TESTS OFF CACHE BOOL "" FORCE)
@@ -41,3 +44,26 @@ target_include_directories(tinygltf INTERFACE tinygltf)
 # STB
 add_library(stb_image INTERFACE)
 target_include_directories(stb_image SYSTEM INTERFACE stb_image)
+
+# IMGUI
+add_library(imgui STATIC)
+
+target_include_directories(imgui PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/imgui")
+
+target_sources(imgui PRIVATE
+		"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui.h"
+		"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui.cpp"
+
+		"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_stdlib.h"
+		"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_stdlib.cpp"
+
+		"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_demo.cpp"
+		"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_draw.cpp"
+		"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_widgets.cpp"
+		"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_tables.cpp"
+
+		"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_impl_vulkan.cpp"
+		"${CMAKE_CURRENT_SOURCE_DIR}/imgui/imgui_impl_glfw.cpp"
+)
+
+target_link_libraries(imgui PUBLIC Vulkan::Vulkan glfw)

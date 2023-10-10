@@ -31,6 +31,9 @@ namespace coral_3d
 		void load_gameobjects(coral_descriptor_set_layout& material_set_layout, VkPipelineLayout pipeline_layout,
                               coral_buffer& global_ubo);
 
+        void init_imgui();
+        std::unique_ptr<coral_descriptor_pool> imgui_pool_{};
+
 		coral_window window_{ WIDTH, HEIGHT, "Coral Renderer" };
 		coral_device device_{ window_ };
 		coral_renderer renderer_{ window_, device_ };

@@ -15,6 +15,7 @@ C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer
 C:/Game Development/Visual Studio Solutions/Coral3D/build/release/coral_renderer/CMakeFiles/install/strip.dir
 C:/Game Development/Visual Studio Solutions/Coral3D/build/release/third_party/CMakeFiles/vkbootstrap.dir
 C:/Game Development/Visual Studio Solutions/Coral3D/build/release/third_party/CMakeFiles/tinyobjloader.dir
+C:/Game Development/Visual Studio Solutions/Coral3D/build/release/third_party/CMakeFiles/imgui.dir
 C:/Game Development/Visual Studio Solutions/Coral3D/build/release/third_party/CMakeFiles/edit_cache.dir
 C:/Game Development/Visual Studio Solutions/Coral3D/build/release/third_party/CMakeFiles/rebuild_cache.dir
 C:/Game Development/Visual Studio Solutions/Coral3D/build/release/third_party/CMakeFiles/list_install_components.dir

@@ -76,6 +76,8 @@ namespace coral_3d
         coral_descriptor_pool(const coral_descriptor_pool&) = delete;
         coral_descriptor_pool& operator=(const coral_descriptor_pool&) = delete;
 
+        VkDescriptorPool pool() {return descriptor_pool_; }
+
         bool allocate_descriptor_set(const VkDescriptorSetLayout descriptor_set_layout, VkDescriptorSet& descriptor) const;
         void free_descriptors(std::vector<VkDescriptorSet>& descriptors) const;
         void reset_pool();

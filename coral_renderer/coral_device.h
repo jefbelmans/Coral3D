@@ -55,6 +55,7 @@ namespace coral_3d
 
 		VkCommandPool get_command_pool() { return command_pool_; }
 		VkDevice device() { return device_; }
+        VkInstance instance() {return instance_; }
 		VkPhysicalDevice physical_device() { return physical_device_; }
 		VmaAllocator allocator() { return allocator_; }
 		VkSurfaceKHR surface() { return surface_; }

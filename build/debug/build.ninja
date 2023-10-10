@@ -117,178 +117,140 @@ build install/strip: phony CMakeFiles/install/strip.util
 #############################################
 # Order-only phony target for coral_renderer
 
-build cmake_object_order_depends_target_coral_renderer: phony || cmake_object_order_depends_target_glfw cmake_object_order_depends_target_tinyobjloader cmake_object_order_depends_target_vkbootstrap coral_renderer/Shaders
+build cmake_object_order_depends_target_coral_renderer: phony || cmake_object_order_depends_target_glfw cmake_object_order_depends_target_imgui cmake_object_order_depends_target_tinyobjloader cmake_object_order_depends_target_vkbootstrap coral_renderer/Shaders
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/main.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\main.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/coral_window.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/coral_window.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\coral_window.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/first_app.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\first_app.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/coral_pipeline.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\coral_pipeline.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/coral_device.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/coral_device.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\coral_device.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/vk_initializers.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/vk_initializers.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\vk_initializers.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/coral_swapchain.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/coral_swapchain.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\coral_swapchain.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/coral_mesh.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\coral_mesh.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/coral_gameobject.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/coral_gameobject.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\coral_gameobject.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/coral_renderer.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/coral_renderer.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\coral_renderer.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/render_system.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/render_system.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\render_system.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/coral_camera.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/coral_camera.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\coral_camera.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/coral_utils.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/coral_utils.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\coral_utils.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/coral_texture.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/coral_texture.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\coral_texture.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/coral_buffer.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/coral_buffer.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\coral_buffer.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/coral_descriptors.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/coral_descriptors.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\coral_descriptors.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/point_light_system.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/point_light_system.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\point_light_system.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/coral_cubemap.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/coral_cubemap.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\coral_cubemap.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 build coral_renderer/CMakeFiles/coral_renderer.dir/skybox_system.cpp.obj: CXX_COMPILER__coral_renderer_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/skybox_system.cpp || cmake_object_order_depends_target_coral_renderer
   DEP_FILE = coral_renderer\CMakeFiles\coral_renderer.dir\skybox_system.cpp.obj.d
   FLAGS = -g -std=gnu++23 -fdiagnostics-color=always -Wall -Wextra -Wpedantic -Werror
-  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/glm" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinygltf" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -isystem C:/VulkanSDK/1.3.250.0/Include -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vma" -isystem "C:/Game Development/Visual Studio Solutions/Coral3D/third_party/stb_image"
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   OBJECT_FILE_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
 
 
 # =============================================================================
@@ -298,16 +260,15 @@ build coral_renderer/CMakeFiles/coral_renderer.dir/skybox_system.cpp.obj: CXX_CO
 #############################################
 # Link the executable coral_renderer\coral_renderer.exe
 
-build coral_renderer/coral_renderer.exe: CXX_EXECUTABLE_LINKER__coral_renderer_Debug coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_window.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_device.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/vk_initializers.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_swapchain.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_gameobject.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_renderer.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/render_system.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_camera.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_utils.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_texture.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_buffer.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_descriptors.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/point_light_system.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_cubemap.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/skybox_system.cpp.obj | C$:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib third_party/GLFW/src/libglfw3.a third_party/libvkbootstrap.a third_party/libtinyobjloader.a C$:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib || coral_renderer/Shaders third_party/GLFW/src/libglfw3.a third_party/libtinyobjloader.a third_party/libvkbootstrap.a
+build coral_renderer/coral_renderer.exe: CXX_EXECUTABLE_LINKER__coral_renderer_Debug coral_renderer/CMakeFiles/coral_renderer.dir/main.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_window.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/first_app.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_pipeline.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_device.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/vk_initializers.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_swapchain.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_mesh.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_gameobject.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_renderer.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/render_system.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_camera.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_utils.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_texture.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_buffer.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_descriptors.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/point_light_system.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/coral_cubemap.cpp.obj coral_renderer/CMakeFiles/coral_renderer.dir/skybox_system.cpp.obj | C$:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libglfw3.a C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libvkbootstrap.a C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libtinyobjloader.a C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libimgui.a C$:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libglfw3.a || C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libglfw3.a C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libimgui.a C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libtinyobjloader.a C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libvkbootstrap.a coral_renderer/Shaders
   FLAGS = -g
-  LINK_LIBRARIES = C:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib  third_party/GLFW/src/libglfw3.a  third_party/libvkbootstrap.a  third_party/libtinyobjloader.a  C:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
+  LINK_LIBRARIES = C:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib  "C:/Game Development/Visual Studio Solutions/Coral3D/libs/libglfw3.a"  "C:/Game Development/Visual Studio Solutions/Coral3D/libs/libvkbootstrap.a"  "C:/Game Development/Visual Studio Solutions/Coral3D/libs/libtinyobjloader.a"  "C:/Game Development/Visual Studio Solutions/Coral3D/libs/libimgui.a"  C:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib  "C:/Game Development/Visual Studio Solutions/Coral3D/libs/libglfw3.a"  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = coral_renderer\CMakeFiles\coral_renderer.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = coral_renderer\CMakeFiles\coral_renderer.dir\
   TARGET_FILE = coral_renderer\coral_renderer.exe
   TARGET_IMPLIB = coral_renderer\libcoral_renderer.dll.a
-  TARGET_PDB = coral_renderer\coral_renderer.pdb
+  TARGET_PDB = coral_renderer.exe.dbg
 
 
 #############################################
@@ -473,8 +434,6 @@ build third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.obj: CX
   INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/vkbootstrap" -isystem C:/VulkanSDK/1.3.250.0/Include
   OBJECT_DIR = third_party\CMakeFiles\vkbootstrap.dir
   OBJECT_FILE_DIR = third_party\CMakeFiles\vkbootstrap.dir\vkbootstrap
-  TARGET_COMPILE_PDB = third_party\CMakeFiles\vkbootstrap.dir\vkbootstrap.pdb
-  TARGET_PDB = third_party\libvkbootstrap.pdb
 
 
 # =============================================================================
@@ -482,16 +441,15 @@ build third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.obj: CX
 
 
 #############################################
-# Link the static library third_party\libvkbootstrap.a
+# Link the static library C:\Game Development\Visual Studio Solutions\Coral3D\libs\libvkbootstrap.a
 
-build third_party/libvkbootstrap.a: CXX_STATIC_LIBRARY_LINKER__vkbootstrap_Debug third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.obj
+build C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libvkbootstrap.a: CXX_STATIC_LIBRARY_LINKER__vkbootstrap_Debug third_party/CMakeFiles/vkbootstrap.dir/vkbootstrap/VkBootstrap.cpp.obj
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = third_party\CMakeFiles\vkbootstrap.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = third_party\CMakeFiles\vkbootstrap.dir\vkbootstrap.pdb
-  TARGET_FILE = third_party\libvkbootstrap.a
-  TARGET_PDB = third_party\libvkbootstrap.pdb
+  TARGET_FILE = "C:\Game Development\Visual Studio Solutions\Coral3D\libs\libvkbootstrap.a"
+  TARGET_PDB = vkbootstrap.a.dbg
 
 # =============================================================================
 # Object build statements for STATIC_LIBRARY target tinyobjloader
@@ -508,8 +466,6 @@ build third_party/CMakeFiles/tinyobjloader.dir/tinyobjloader/tiny_obj_loader.cc.
   INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/tinyobjloader"
   OBJECT_DIR = third_party\CMakeFiles\tinyobjloader.dir
   OBJECT_FILE_DIR = third_party\CMakeFiles\tinyobjloader.dir\tinyobjloader
-  TARGET_COMPILE_PDB = third_party\CMakeFiles\tinyobjloader.dir\tinyobjloader.pdb
-  TARGET_PDB = third_party\libtinyobjloader.pdb
 
 
 # =============================================================================
@@ -517,16 +473,96 @@ build third_party/CMakeFiles/tinyobjloader.dir/tinyobjloader/tiny_obj_loader.cc.
 
 
 #############################################
-# Link the static library third_party\libtinyobjloader.a
+# Link the static library C:\Game Development\Visual Studio Solutions\Coral3D\libs\libtinyobjloader.a
 
-build third_party/libtinyobjloader.a: CXX_STATIC_LIBRARY_LINKER__tinyobjloader_Debug third_party/CMakeFiles/tinyobjloader.dir/tinyobjloader/tiny_obj_loader.cc.obj
+build C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libtinyobjloader.a: CXX_STATIC_LIBRARY_LINKER__tinyobjloader_Debug third_party/CMakeFiles/tinyobjloader.dir/tinyobjloader/tiny_obj_loader.cc.obj
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = third_party\CMakeFiles\tinyobjloader.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = third_party\CMakeFiles\tinyobjloader.dir\tinyobjloader.pdb
-  TARGET_FILE = third_party\libtinyobjloader.a
-  TARGET_PDB = third_party\libtinyobjloader.pdb
+  TARGET_FILE = "C:\Game Development\Visual Studio Solutions\Coral3D\libs\libtinyobjloader.a"
+  TARGET_PDB = tinyobjloader.a.dbg
+
+# =============================================================================
+# Object build statements for STATIC_LIBRARY target imgui
+
+
+#############################################
+# Order-only phony target for imgui
+
+build cmake_object_order_depends_target_imgui: phony || cmake_object_order_depends_target_glfw
+
+build third_party/CMakeFiles/imgui.dir/imgui/imgui.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/imgui/imgui.cpp || cmake_object_order_depends_target_imgui
+  DEP_FILE = third_party\CMakeFiles\imgui.dir\imgui\imgui.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -isystem C:/VulkanSDK/1.3.250.0/Include
+  OBJECT_DIR = third_party\CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = third_party\CMakeFiles\imgui.dir\imgui
+
+build third_party/CMakeFiles/imgui.dir/imgui/imgui_stdlib.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/imgui/imgui_stdlib.cpp || cmake_object_order_depends_target_imgui
+  DEP_FILE = third_party\CMakeFiles\imgui.dir\imgui\imgui_stdlib.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -isystem C:/VulkanSDK/1.3.250.0/Include
+  OBJECT_DIR = third_party\CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = third_party\CMakeFiles\imgui.dir\imgui
+
+build third_party/CMakeFiles/imgui.dir/imgui/imgui_demo.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/imgui/imgui_demo.cpp || cmake_object_order_depends_target_imgui
+  DEP_FILE = third_party\CMakeFiles\imgui.dir\imgui\imgui_demo.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -isystem C:/VulkanSDK/1.3.250.0/Include
+  OBJECT_DIR = third_party\CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = third_party\CMakeFiles\imgui.dir\imgui
+
+build third_party/CMakeFiles/imgui.dir/imgui/imgui_draw.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/imgui/imgui_draw.cpp || cmake_object_order_depends_target_imgui
+  DEP_FILE = third_party\CMakeFiles\imgui.dir\imgui\imgui_draw.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -isystem C:/VulkanSDK/1.3.250.0/Include
+  OBJECT_DIR = third_party\CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = third_party\CMakeFiles\imgui.dir\imgui
+
+build third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/imgui/imgui_widgets.cpp || cmake_object_order_depends_target_imgui
+  DEP_FILE = third_party\CMakeFiles\imgui.dir\imgui\imgui_widgets.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -isystem C:/VulkanSDK/1.3.250.0/Include
+  OBJECT_DIR = third_party\CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = third_party\CMakeFiles\imgui.dir\imgui
+
+build third_party/CMakeFiles/imgui.dir/imgui/imgui_tables.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/imgui/imgui_tables.cpp || cmake_object_order_depends_target_imgui
+  DEP_FILE = third_party\CMakeFiles\imgui.dir\imgui\imgui_tables.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -isystem C:/VulkanSDK/1.3.250.0/Include
+  OBJECT_DIR = third_party\CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = third_party\CMakeFiles\imgui.dir\imgui
+
+build third_party/CMakeFiles/imgui.dir/imgui/imgui_impl_vulkan.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/imgui/imgui_impl_vulkan.cpp || cmake_object_order_depends_target_imgui
+  DEP_FILE = third_party\CMakeFiles\imgui.dir\imgui\imgui_impl_vulkan.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -isystem C:/VulkanSDK/1.3.250.0/Include
+  OBJECT_DIR = third_party\CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = third_party\CMakeFiles\imgui.dir\imgui
+
+build third_party/CMakeFiles/imgui.dir/imgui/imgui_impl_glfw.cpp.obj: CXX_COMPILER__imgui_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/imgui/imgui_impl_glfw.cpp || cmake_object_order_depends_target_imgui
+  DEP_FILE = third_party\CMakeFiles\imgui.dir\imgui\imgui_impl_glfw.cpp.obj.d
+  FLAGS = -g -std=gnu++23 -fdiagnostics-color=always
+  INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/imgui" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -isystem C:/VulkanSDK/1.3.250.0/Include
+  OBJECT_DIR = third_party\CMakeFiles\imgui.dir
+  OBJECT_FILE_DIR = third_party\CMakeFiles\imgui.dir\imgui
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target imgui
+
+
+#############################################
+# Link the static library C:\Game Development\Visual Studio Solutions\Coral3D\libs\libimgui.a
+
+build C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libimgui.a: CXX_STATIC_LIBRARY_LINKER__imgui_Debug third_party/CMakeFiles/imgui.dir/imgui/imgui.cpp.obj third_party/CMakeFiles/imgui.dir/imgui/imgui_stdlib.cpp.obj third_party/CMakeFiles/imgui.dir/imgui/imgui_demo.cpp.obj third_party/CMakeFiles/imgui.dir/imgui/imgui_draw.cpp.obj third_party/CMakeFiles/imgui.dir/imgui/imgui_widgets.cpp.obj third_party/CMakeFiles/imgui.dir/imgui/imgui_tables.cpp.obj third_party/CMakeFiles/imgui.dir/imgui/imgui_impl_vulkan.cpp.obj third_party/CMakeFiles/imgui.dir/imgui/imgui_impl_glfw.cpp.obj || C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libglfw3.a
+  LANGUAGE_COMPILE_FLAGS = -g
+  OBJECT_DIR = third_party\CMakeFiles\imgui.dir
+  POST_BUILD = cd .
+  PRE_LINK = cd .
+  TARGET_FILE = "C:\Game Development\Visual Studio Solutions\Coral3D\libs\libimgui.a"
+  TARGET_PDB = imgui.a.dbg
 
 
 #############################################
@@ -703,8 +739,6 @@ build third_party/GLFW/src/CMakeFiles/glfw.dir/context.c.obj: C_COMPILER__glfw_u
   INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/src" -I"C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/third_party/GLFW/src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
-  TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
-  TARGET_PDB = third_party\GLFW\src\libglfw3.pdb
 
 build third_party/GLFW/src/CMakeFiles/glfw.dir/init.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE
@@ -713,8 +747,6 @@ build third_party/GLFW/src/CMakeFiles/glfw.dir/init.c.obj: C_COMPILER__glfw_unsc
   INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/src" -I"C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/third_party/GLFW/src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
-  TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
-  TARGET_PDB = third_party\GLFW\src\libglfw3.pdb
 
 build third_party/GLFW/src/CMakeFiles/glfw.dir/input.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/input.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE
@@ -723,8 +755,6 @@ build third_party/GLFW/src/CMakeFiles/glfw.dir/input.c.obj: C_COMPILER__glfw_uns
   INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/src" -I"C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/third_party/GLFW/src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
-  TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
-  TARGET_PDB = third_party\GLFW\src\libglfw3.pdb
 
 build third_party/GLFW/src/CMakeFiles/glfw.dir/monitor.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE
@@ -733,8 +763,6 @@ build third_party/GLFW/src/CMakeFiles/glfw.dir/monitor.c.obj: C_COMPILER__glfw_u
   INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/src" -I"C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/third_party/GLFW/src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
-  TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
-  TARGET_PDB = third_party\GLFW\src\libglfw3.pdb
 
 build third_party/GLFW/src/CMakeFiles/glfw.dir/vulkan.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/vulkan.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE
@@ -743,8 +771,6 @@ build third_party/GLFW/src/CMakeFiles/glfw.dir/vulkan.c.obj: C_COMPILER__glfw_un
   INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/src" -I"C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/third_party/GLFW/src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
-  TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
-  TARGET_PDB = third_party\GLFW\src\libglfw3.pdb
 
 build third_party/GLFW/src/CMakeFiles/glfw.dir/window.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE
@@ -753,8 +779,6 @@ build third_party/GLFW/src/CMakeFiles/glfw.dir/window.c.obj: C_COMPILER__glfw_un
   INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/src" -I"C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/third_party/GLFW/src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
-  TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
-  TARGET_PDB = third_party\GLFW\src\libglfw3.pdb
 
 build third_party/GLFW/src/CMakeFiles/glfw.dir/win32_init.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/win32_init.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE
@@ -763,8 +787,6 @@ build third_party/GLFW/src/CMakeFiles/glfw.dir/win32_init.c.obj: C_COMPILER__glf
   INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/src" -I"C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/third_party/GLFW/src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
-  TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
-  TARGET_PDB = third_party\GLFW\src\libglfw3.pdb
 
 build third_party/GLFW/src/CMakeFiles/glfw.dir/win32_joystick.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/win32_joystick.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE
@@ -773,8 +795,6 @@ build third_party/GLFW/src/CMakeFiles/glfw.dir/win32_joystick.c.obj: C_COMPILER_
   INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/src" -I"C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/third_party/GLFW/src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
-  TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
-  TARGET_PDB = third_party\GLFW\src\libglfw3.pdb
 
 build third_party/GLFW/src/CMakeFiles/glfw.dir/win32_monitor.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/win32_monitor.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE
@@ -783,8 +803,6 @@ build third_party/GLFW/src/CMakeFiles/glfw.dir/win32_monitor.c.obj: C_COMPILER__
   INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/src" -I"C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/third_party/GLFW/src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
-  TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
-  TARGET_PDB = third_party\GLFW\src\libglfw3.pdb
 
 build third_party/GLFW/src/CMakeFiles/glfw.dir/win32_time.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/win32_time.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE
@@ -793,8 +811,6 @@ build third_party/GLFW/src/CMakeFiles/glfw.dir/win32_time.c.obj: C_COMPILER__glf
   INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/src" -I"C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/third_party/GLFW/src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
-  TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
-  TARGET_PDB = third_party\GLFW\src\libglfw3.pdb
 
 build third_party/GLFW/src/CMakeFiles/glfw.dir/win32_thread.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/win32_thread.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE
@@ -803,8 +819,6 @@ build third_party/GLFW/src/CMakeFiles/glfw.dir/win32_thread.c.obj: C_COMPILER__g
   INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/src" -I"C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/third_party/GLFW/src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
-  TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
-  TARGET_PDB = third_party\GLFW\src\libglfw3.pdb
 
 build third_party/GLFW/src/CMakeFiles/glfw.dir/win32_window.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/win32_window.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE
@@ -813,8 +827,6 @@ build third_party/GLFW/src/CMakeFiles/glfw.dir/win32_window.c.obj: C_COMPILER__g
   INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/src" -I"C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/third_party/GLFW/src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
-  TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
-  TARGET_PDB = third_party\GLFW\src\libglfw3.pdb
 
 build third_party/GLFW/src/CMakeFiles/glfw.dir/wgl_context.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/wgl_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE
@@ -823,8 +835,6 @@ build third_party/GLFW/src/CMakeFiles/glfw.dir/wgl_context.c.obj: C_COMPILER__gl
   INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/src" -I"C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/third_party/GLFW/src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
-  TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
-  TARGET_PDB = third_party\GLFW\src\libglfw3.pdb
 
 build third_party/GLFW/src/CMakeFiles/glfw.dir/egl_context.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/egl_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE
@@ -833,8 +843,6 @@ build third_party/GLFW/src/CMakeFiles/glfw.dir/egl_context.c.obj: C_COMPILER__gl
   INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/src" -I"C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/third_party/GLFW/src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
-  TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
-  TARGET_PDB = third_party\GLFW\src\libglfw3.pdb
 
 build third_party/GLFW/src/CMakeFiles/glfw.dir/osmesa_context.c.obj: C_COMPILER__glfw_unscanned_Debug C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/osmesa_context.c || cmake_object_order_depends_target_glfw
   DEFINES = -DUNICODE -DWINVER=0x0501 -D_GLFW_USE_CONFIG_H -D_UNICODE
@@ -843,8 +851,6 @@ build third_party/GLFW/src/CMakeFiles/glfw.dir/osmesa_context.c.obj: C_COMPILER_
   INCLUDES = -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/include" -I"C:/Game Development/Visual Studio Solutions/Coral3D/third_party/GLFW/src" -I"C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/third_party/GLFW/src"
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   OBJECT_FILE_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
-  TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
-  TARGET_PDB = third_party\GLFW\src\libglfw3.pdb
 
 
 # =============================================================================
@@ -852,16 +858,15 @@ build third_party/GLFW/src/CMakeFiles/glfw.dir/osmesa_context.c.obj: C_COMPILER_
 
 
 #############################################
-# Link the static library third_party\GLFW\src\libglfw3.a
+# Link the static library C:\Game Development\Visual Studio Solutions\Coral3D\libs\libglfw3.a
 
-build third_party/GLFW/src/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Debug third_party/GLFW/src/CMakeFiles/glfw.dir/context.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/init.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/input.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/monitor.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/vulkan.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/window.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/win32_init.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/win32_joystick.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/win32_monitor.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/win32_time.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/win32_thread.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/win32_window.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/wgl_context.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/egl_context.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/osmesa_context.c.obj
+build C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libglfw3.a: C_STATIC_LIBRARY_LINKER__glfw_Debug third_party/GLFW/src/CMakeFiles/glfw.dir/context.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/init.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/input.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/monitor.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/vulkan.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/window.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/win32_init.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/win32_joystick.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/win32_monitor.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/win32_time.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/win32_thread.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/win32_window.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/wgl_context.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/egl_context.c.obj third_party/GLFW/src/CMakeFiles/glfw.dir/osmesa_context.c.obj
   LANGUAGE_COMPILE_FLAGS = -g
   OBJECT_DIR = third_party\GLFW\src\CMakeFiles\glfw.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_COMPILE_PDB = third_party\GLFW\src\CMakeFiles\glfw.dir\glfw.pdb
-  TARGET_FILE = third_party\GLFW\src\libglfw3.a
-  TARGET_PDB = third_party\GLFW\src\libglfw3.pdb
+  TARGET_FILE = "C:\Game Development\Visual Studio Solutions\Coral3D\libs\libglfw3.a"
+  TARGET_PDB = glfw3.a.dbg
 
 
 #############################################
@@ -947,21 +952,25 @@ build coral_renderer: phony coral_renderer/coral_renderer.exe
 
 build coral_renderer.exe: phony coral_renderer/coral_renderer.exe
 
-build glfw: phony third_party/GLFW/src/libglfw3.a
+build glfw: phony C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libglfw3.a
 
-build libglfw3.a: phony third_party/GLFW/src/libglfw3.a
+build imgui: phony C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libimgui.a
 
-build libtinyobjloader.a: phony third_party/libtinyobjloader.a
+build libglfw3.a: phony C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libglfw3.a
 
-build libvkbootstrap.a: phony third_party/libvkbootstrap.a
+build libimgui.a: phony C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libimgui.a
 
-build tinyobjloader: phony third_party/libtinyobjloader.a
+build libtinyobjloader.a: phony C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libtinyobjloader.a
+
+build libvkbootstrap.a: phony C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libvkbootstrap.a
+
+build tinyobjloader: phony C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libtinyobjloader.a
 
 build uninstall: phony third_party/GLFW/uninstall
 
 build update_mappings: phony third_party/GLFW/src/update_mappings
 
-build vkbootstrap: phony third_party/libvkbootstrap.a
+build vkbootstrap: phony C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libvkbootstrap.a
 
 # =============================================================================
 # Folder targets.
@@ -985,7 +994,7 @@ build coral_renderer/all: phony coral_renderer/coral_renderer.exe coral_renderer
 #############################################
 # Folder: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/third_party
 
-build third_party/all: phony third_party/libvkbootstrap.a third_party/libtinyobjloader.a third_party/GLFW/all
+build third_party/all: phony C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libvkbootstrap.a C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libtinyobjloader.a C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libimgui.a third_party/GLFW/all
 
 # =============================================================================
 
@@ -999,7 +1008,7 @@ build third_party/GLFW/all: phony third_party/GLFW/src/all
 #############################################
 # Folder: C:/Game Development/Visual Studio Solutions/Coral3D/build/debug/third_party/GLFW/src
 
-build third_party/GLFW/src/all: phony third_party/GLFW/src/libglfw3.a
+build third_party/GLFW/src/all: phony C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/libs/libglfw3.a
 
 # =============================================================================
 # Built-in targets
@@ -1008,14 +1017,14 @@ build third_party/GLFW/src/all: phony third_party/GLFW/src/libglfw3.a
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/cmake_uninstall.cmake.in C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/glfw3.pc.in C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/glfw3Config.cmake.in C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/glfw_config.h.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystem.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckCCompilerFlag.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckIncludeFile.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindThreads.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindVulkan.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckFlagCommonConfig.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-Determine-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/cmake_uninstall.cmake.in C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/glfw3.pc.in C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/glfw3Config.cmake.in C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/glfw_config.h.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckCCompilerFlag.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckIncludeFile.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindThreads.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindVulkan.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckFlagCommonConfig.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/cmake_uninstall.cmake.in C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/glfw3.pc.in C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/glfw3Config.cmake.in C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/glfw_config.h.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCCompilerABI.c C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXCompilerABI.cpp C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCompilerIdDetection.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCXXCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompileFeatures.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineCompilerId.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDetermineSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeFindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeParseImplicitIncludeInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeParseImplicitLinkInfo.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeParseLibraryArchitecture.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCCompiler.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystem.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCXXCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestCompilerCommon.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeTestRCCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckCCompilerFlag.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckIncludeFile.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/ADSP-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/ARMCC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/ARMClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/AppleClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Borland-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Bruce-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Clang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Clang-DetermineCompilerInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Compaq-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Cray-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Embarcadero-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Fujitsu-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GHS-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-FindBinUtils.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/HP-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/HP-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/IAR-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Intel-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/LCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/MSVC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/NVHPC-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/NVIDIA-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/PGI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/PathScale-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/SCO-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/SDCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/SunPro-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/TI-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Tasking-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/Watcom-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/XL-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/XL-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/XLClang-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/zOS-C-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindThreads.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindVulkan.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckFlagCommonConfig.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/FeatureTesting.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-Determine-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
+build C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/coral_renderer/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/cmake_uninstall.cmake.in C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/CMakeLists.txt C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/glfw3.pc.in C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/glfw3Config.cmake.in C$:/Game$ Development/Visual$ Studio$ Solutions/Coral3D/third_party/GLFW/src/glfw_config.h.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/BasicConfigVersion-SameMajorVersion.cmake.in C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCXXInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeCommonLanguageInclude.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeDependentOption.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeGenericSystem.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeInitializeConfigs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeLanguageInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakePackageConfigHelpers.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeRCInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInformation.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CMakeSystemSpecificInitialize.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckCCompilerFlag.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckCSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckIncludeFile.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/CheckLibraryExists.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/CMakeCommonCompilerMacros.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Compiler/GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageHandleStandardArgs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindPackageMessage.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindThreads.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/FindVulkan.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/GNUInstallDirs.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckCompilerFlag.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckFlagCommonConfig.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Internal/CheckSourceCompiles.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-C.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX-ABI.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU-CXX.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-GNU.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows-windres.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/Windows.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/Platform/WindowsPaths.cmake C$:/Program$ Files/JetBrains/CLion$ 2023.2.1/bin/cmake/win/x64/share/cmake-3.26/Modules/WriteBasicConfigVersionFile.cmake CMakeCache.txt CMakeFiles/3.26.4/CMakeCCompiler.cmake CMakeFiles/3.26.4/CMakeCXXCompiler.cmake CMakeFiles/3.26.4/CMakeRCCompiler.cmake CMakeFiles/3.26.4/CMakeSystem.cmake: phony
 
 
 #############################################

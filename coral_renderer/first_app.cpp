@@ -5,17 +5,22 @@
 #include "skybox_system.h"
 #include "coral_camera.h"
 #include "coral_buffer.h"
+#include "vk_initializers.h"
 
 // STD
 #include <chrono>
 
-#include "vk_initializers.h"
+// IMGUI
+#include "imgui.h"
+#include "imgui_impl_vulkan.h"
+#include "imgui_impl_glfw.h"
 
 using namespace coral_3d;
 
 first_app::first_app()
  : cubemap_{device_, true}
 {
+    init_imgui();
     descriptor_pool_ = coral_descriptor_pool::Builder(device_)
             .set_max_sets(MAX_MATERIAL_SETS)
             .add_pool_size(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, coral_swapchain::MAX_FRAMES_IN_FLIGHT)
@@ -90,6 +95,13 @@ void first_app::run()
         float aspect{ renderer_.get_aspect_ratio() };
         camera.set_perspective_projection(glm::radians(60.f), aspect, 0.1f, 1000.f);
 
+        // IMGUI FRAME
+        ImGui_ImplVulkan_NewFrame();
+        ImGui_ImplGlfw_NewFrame();
+
+        ImGui::NewFrame();
+        ImGui::ShowDemoWindow();
+
 		if (auto command_buffer = renderer_.begin_frame())
 		{
             const int frame_index{ renderer_.get_frame_index() };
@@ -120,9 +132,12 @@ void first_app::run()
 
             // RENDER
 			renderer_.begin_swapchain_render_pass(command_buffer);
+            // IMGUI
+            ImGui::Render();
             skybox_system.render(frame_info);
 			render_system.render_gameobjects(frame_info);
             point_light_system.render(frame_info);
+            ImGui_ImplVulkan_RenderDrawData(ImGui::GetDrawData(), command_buffer);
 			renderer_.end_swapchain_render_pass(command_buffer);
 			renderer_.end_frame();
 		}
@@ -199,4 +214,54 @@ void first_app::load_gameobjects(coral_descriptor_set_layout& material_set_layou
                 .write_image(1, &skybox_info)
                 .build(global_descriptor_sets_[i]);
     }
+}
+
+void first_app::init_imgui()
+{
+    // Create descriptor pool for IMGUI
+    imgui_pool_ = coral_descriptor_pool::Builder(device_)
+            .set_max_sets(MAX_MATERIAL_SETS)
+            .add_pool_size(VK_DESCRIPTOR_TYPE_SAMPLER, 1000)
+            .add_pool_size(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, 1000)
+            .add_pool_size(VK_DESCRIPTOR_TYPE_SAMPLED_IMAGE, 1000)
+            .add_pool_size(VK_DESCRIPTOR_TYPE_STORAGE_IMAGE, 1000)
+            .add_pool_size(VK_DESCRIPTOR_TYPE_UNIFORM_TEXEL_BUFFER, 1000)
+            .add_pool_size(VK_DESCRIPTOR_TYPE_STORAGE_TEXEL_BUFFER, 1000)
+            .add_pool_size(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, 1000)
+            .add_pool_size(VK_DESCRIPTOR_TYPE_STORAGE_BUFFER, 1000)
+            .add_pool_size(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER_DYNAMIC, 1000)
+            .add_pool_size(VK_DESCRIPTOR_TYPE_STORAGE_BUFFER_DYNAMIC, 1000)
+            .add_pool_size(VK_DESCRIPTOR_TYPE_INPUT_ATTACHMENT, 1000)
+            .build();
+
+    // Initialize ImGui
+    ImGui::CreateContext();
+
+    // Initialize ImGui for GLFW
+    ImGui_ImplGlfw_InitForVulkan(window_.get_glfw_window(), true);
+
+    // Initialize ImGui for Vulkan
+    ImGui_ImplVulkan_InitInfo init_info = {};
+    init_info.Instance = device_.instance();
+    init_info.PhysicalDevice = device_.physical_device();
+    init_info.Device = device_.device();
+    init_info.Queue = device_.graphics_queue();
+    init_info.DescriptorPool = imgui_pool_->pool();
+    init_info.MinImageCount = 3;
+    init_info.ImageCount = 3;
+    init_info.MSAASamples = VK_SAMPLE_COUNT_1_BIT;
+
+    ImGui_ImplVulkan_Init(&init_info, renderer_.get_swapchain_render_pass());
+
+    // Execute GPU command to upload font textures
+    device_.immediate_submit([&](VkCommandBuffer cmd){
+        ImGui_ImplVulkan_CreateFontsTexture(cmd);
+    });
+
+    // Delete font textures from the CPU
+    ImGui_ImplVulkan_DestroyFontUploadObjects();
+
+    device_.deletion_queue().deletors.emplace_back([=](){
+        ImGui_ImplVulkan_Shutdown();
+    });
 }
