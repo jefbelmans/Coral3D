@@ -1,4 +1,5 @@
 #include "coral_window.h"
+#include "coral_input.h"
 
 #include <stdexcept>
 
@@ -43,6 +44,9 @@ void coral_window::init_window()
 
 	// Set mouse input mode
 	glfwSetInputMode(pWindow_, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
+    // Initialize input
+    coral_input::initialize(pWindow_);
 }
 
 void coral_window::create_window_surface(VkInstance instance, VkSurfaceKHR* surface)

@@ -30,6 +30,7 @@ void coral_camera::set_view_direction(glm::vec3 position, glm::vec3 direction, g
 
 void coral_camera::update_input(GLFWwindow* pWindow, float dt)
 {
+    if(ImGui::IsWindowFocused()) return;
 	// Mouse input
 	double mouse_x, mouse_y;
 	glfwGetCursorPos(pWindow, &mouse_x, &mouse_y);

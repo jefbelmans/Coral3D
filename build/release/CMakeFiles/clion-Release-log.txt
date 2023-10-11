@@ -13,5 +13,5 @@
 -- C:/Game Development/Visual Studio Solutions/Coral3D/shaders/skybox.vert
 -- Using Win32 for window creation
 -- Configuring done (0.2s)
--- Generating done (0.0s)
+-- Generating done (0.1s)
 -- Build files have been written to: C:/Game Development/Visual Studio Solutions/Coral3D/build/release

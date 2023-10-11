@@ -9,6 +9,7 @@
 
 // STD
 #include <chrono>
+#include <iostream>
 
 // IMGUI
 #include "imgui.h"
@@ -26,6 +27,13 @@ first_app::first_app()
             .add_pool_size(VK_DESCRIPTOR_TYPE_UNIFORM_BUFFER, coral_swapchain::MAX_FRAMES_IN_FLIGHT)
             .add_pool_size(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, MAX_MATERIAL_SETS)
             .build();
+
+    input.add_callback(GLFW_KEY_B,
+                       coral_input::Callback(GLFW_PRESS, [&](){
+                           show_cursor_ = !show_cursor_;
+                           glfwSetInputMode(window_.get_glfw_window(), GLFW_CURSOR,
+                         show_cursor_ ? GLFW_CURSOR_NORMAL : GLFW_CURSOR_DISABLED);
+    }));
 }
 
 void first_app::run()
@@ -83,6 +91,7 @@ void first_app::run()
     auto last_time{ std::chrono::high_resolution_clock::now() };
 	while (!window_.should_close())
 	{
+        // UPDATE INPUT
 		glfwPollEvents();
 
         auto current_time{ std::chrono::high_resolution_clock::now() };
@@ -90,7 +99,10 @@ void first_app::run()
         last_time = current_time;
 
         // MOVE CAMERA
-        camera.update_input(window_.get_glfw_window(), frame_time);
+        if(!show_cursor_)
+        {
+            camera.update_input(window_.get_glfw_window(), frame_time);
+        }
 
         float aspect{ renderer_.get_aspect_ratio() };
         camera.set_perspective_projection(glm::radians(60.f), aspect, 0.1f, 1000.f);

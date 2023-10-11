@@ -7,6 +7,7 @@
 #include "coral_descriptors.h"
 #include "coral_texture.h"
 #include "coral_cubemap.h"
+#include "coral_input.h"
 
 // STD
 #include <memory>
@@ -47,5 +48,9 @@ namespace coral_3d
         std::unique_ptr<coral_descriptor_set_layout> global_set_layout_;
 
 		coral_gameobject::Map gameobjects_;
+
+        // INPUT
+        coral_input input{};
+        bool show_cursor_{false};
 	};
 }
