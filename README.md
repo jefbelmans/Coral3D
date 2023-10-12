@@ -14,8 +14,9 @@ Everything is still very much work in progress and will continue being developed
 - VMA (Vulkan Memory Allocator) integration for managing Vulkan memory.
 - Swapchain support and surface capabilities querying.
 - Queue family and device extension support checking.
-- Basic point light render system
-- Basic skybox render system
+- Basic point light render system.
+- Basic skybox render system.
+- Environment mapping using fresnel falloff.
 
 ### Roadmap (priority high to low):
 - Shadow mapping (directional, omni & spot)
