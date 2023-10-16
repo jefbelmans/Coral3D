@@ -70,10 +70,10 @@ namespace coral_3d
 		using Map = std::unordered_map<id_t, std::shared_ptr<coral_gameobject>>;
 
         // Creators
-		static coral_gameobject create_gameobject()
+		static coral_gameobject create_gameobject(const std::string& name)
 		{
 			static id_t current_id = 0;
-			return coral_gameobject{ current_id++ };
+			return coral_gameobject{ current_id++, name };
 		}
 
         static coral_gameobject create_point_light(float intensity = 1.f, float radius = .1f, glm::vec3 color = glm::vec3{1.f});
@@ -84,6 +84,7 @@ namespace coral_3d
 		coral_gameobject& operator=(coral_gameobject&&) = default;
 
 		id_t get_id() const { return id_; }
+        std::string& get_name() { return name_; }
 
 		TransformComponent transform_{};
 
@@ -92,7 +93,9 @@ namespace coral_3d
         std::unique_ptr<PointLightComponent> point_light_ = nullptr;
 
 	private:
-		explicit coral_gameobject(id_t object_id) : id_{ object_id } {}
+		explicit coral_gameobject(id_t object_id, const std::string& name) :
+        id_{ object_id }, name_{name} {}
 		id_t id_;
+        std::string name_;
 	};
 }

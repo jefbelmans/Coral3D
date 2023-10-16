@@ -1,6 +1,5 @@
 #include "point_light_system.h"
 #include "vk_initializers.h"
-#include "imgui.h"
 
 using namespace coral_3d;
 

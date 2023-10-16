@@ -28,7 +28,7 @@ first_app::first_app()
             .add_pool_size(VK_DESCRIPTOR_TYPE_COMBINED_IMAGE_SAMPLER, MAX_MATERIAL_SETS)
             .build();
 
-    input.add_callback(GLFW_KEY_B,
+    input.add_callback(GLFW_KEY_F1,
                        coral_input::Callback(GLFW_PRESS, [&](){
                            show_cursor_ = !show_cursor_;
                            glfwSetInputMode(window_.get_glfw_window(), GLFW_CURSOR,
@@ -112,11 +112,13 @@ void first_app::run()
         ImGui_ImplGlfw_NewFrame();
 
         ImGui::NewFrame();
+        ImGui::SetNextWindowPos(ImVec2(20, 20));
+        ImGui::SetNextWindowSize(ImVec2(250, 300));
+        ImGui::Begin("Coral 3D", nullptr, ImGuiWindowFlags_NoResize);
 
 		if (auto command_buffer = renderer_.begin_frame())
 		{
             const int frame_index{ renderer_.get_frame_index() };
-            auto& obj = gameobjects_.at(0);
 
             FrameInfo frame_info
             {
@@ -129,12 +131,21 @@ void first_app::run()
             };
 
             // UPDATE
-            GlobalUBO ubo{};
-            ubo.view = camera.get_view();
-            ubo.view_inverse = glm::inverse(camera.get_view());
-            ubo.view_projection = camera.get_projection() * camera.get_view();
-            point_light_system.update(frame_info, ubo);
-            global_ubo.write_to_index(&ubo, frame_index);
+            ubo_.view = camera.get_view();
+            ubo_.view_inverse = glm::inverse(camera.get_view());
+            ubo_.view_projection = camera.get_projection() * camera.get_view();
+
+            // DIRECTIONAL LIGHT
+            if(ImGui::CollapsingHeader("Directional Light"))
+            {
+                ImGui::SliderFloat3("Direction", &ubo_
+                .global_light_direction[0], -1.f, 1.f);
+                ImGui::SliderFloat("Intensity", &ubo_.global_light_direction.w,
+                                   0.f, 1.f);
+            }
+
+            point_light_system.update(frame_info, ubo_);
+            global_ubo.write_to_index(&ubo_, frame_index);
             global_ubo.flush_index(frame_index);
 
             // RENDER
@@ -157,7 +168,8 @@ void first_app::load_gameobjects(coral_descriptor_set_layout& material_set_layou
                                  coral_buffer& global_ubo)
 {
     // GAMEOBJECTS
-    auto sponza_scene{std::make_shared<coral_gameobject>(coral_gameobject::create_gameobject()) };
+    auto sponza_scene{std::make_shared<coral_gameobject>
+            (coral_gameobject::create_gameobject("Helmet")) };
 
     // MESHES
     std::shared_ptr<coral_mesh> sponza_mesh
