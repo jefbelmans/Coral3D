@@ -33,21 +33,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e2ea9cb6-a6b7-419f-9266-e5263673b6e6" name="Changes" comment="Fixed MaterialUBO memory alignment. All variables are now correctly aligned and read in the shader.">
-      <change afterPath="$PROJECT_DIR$/coral_renderer/coral_input.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/debug/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/debug/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/.ninja_deps" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/.ninja_log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/CMakeFiles/clion-Release-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/CMakeFiles/clion-Release-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/release/build.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/build/release/build.ninja" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_camera.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_camera.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_input.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_input.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/coral_window.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/coral_window.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/coral_renderer/first_app.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/first_app.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/coral_renderer/first_app.h" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/first_app.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coral_renderer/point_light_system.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/coral_renderer/point_light_system.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +50,7 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Release" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -120,7 +108,7 @@
     "cf.advertisement.text.overridden": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "imgui-implementation",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "last_opened_file_path": "E:/Game Development/Visual Studio Solutions/Coral3D/coral_renderer",
     "node.js.detected.package.eslint": "true",
@@ -234,7 +222,7 @@
       <workItem from="1696879125723" duration="2095000" />
       <workItem from="1696921357115" duration="2000" />
       <workItem from="1696969853217" duration="3062000" />
-      <workItem from="1697009962900" duration="9026000" />
+      <workItem from="1697009962900" duration="9983000" />
     </task>
     <task id="LOCAL-00001" summary="Have I forgotten how to git?">
       <option name="closed" value="true" />

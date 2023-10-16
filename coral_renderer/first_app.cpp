@@ -112,16 +112,11 @@ void first_app::run()
         ImGui_ImplGlfw_NewFrame();
 
         ImGui::NewFrame();
-        ImGui::ShowDemoWindow();
 
 		if (auto command_buffer = renderer_.begin_frame())
 		{
             const int frame_index{ renderer_.get_frame_index() };
-
-            auto rotation = glm::rotate(glm::mat4(1.f), frame_time, {0.f, -1.f, 0.f});
-
             auto& obj = gameobjects_.at(0);
-            obj->transform_.translation = glm::vec3(rotation * glm::vec4(obj->transform_.translation, 1.f));
 
             FrameInfo frame_info
             {
