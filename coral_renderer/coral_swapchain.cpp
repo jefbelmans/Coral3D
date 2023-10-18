@@ -261,8 +261,6 @@ void coral_swapchain::create_render_pass()
 	dependency.srcSubpass = VK_SUBPASS_EXTERNAL;
 	dependency.srcAccessMask = 0;
 	dependency.srcStageMask = VK_PIPELINE_STAGE_COLOR_ATTACHMENT_OUTPUT_BIT | VK_PIPELINE_STAGE_EARLY_FRAGMENT_TESTS_BIT;
-	
-	
 
 	std::array<VkAttachmentDescription, 2> attachments { color_attachment, depth_attachment };
 

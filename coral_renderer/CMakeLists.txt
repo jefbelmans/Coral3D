@@ -40,6 +40,8 @@ add_executable(coral_renderer
         skybox_system.h
         coral_input.cpp
         coral_input.h
+        coral_shadowmap_renderer.cpp
+        coral_shadowmap_renderer.h
 )
 
 if(MSVC)

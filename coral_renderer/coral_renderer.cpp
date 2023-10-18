@@ -35,7 +35,8 @@ VkCommandBuffer coral_renderer::begin_frame()
 	}
 
 	if (result != VK_SUCCESS && result != VK_SUBOPTIMAL_KHR)
-		throw std::runtime_error("ERROR! coral_renderer::begin_frame() >> Failed to aquire swapchain image!");
+		throw std::runtime_error("ERROR! coral_renderer::begin_frame() >> "
+                                 "Failed to acquire swapchain image!");
 
 	is_frame_started_ = true;
 
@@ -108,9 +109,9 @@ void coral_renderer::begin_swapchain_render_pass(VkCommandBuffer command_buffer)
 
 void coral_renderer::end_swapchain_render_pass(VkCommandBuffer command_buffer)
 {
-	assert(is_frame_started_ && "ERROR! first_app::end_swapchain_render_pass() >> Can't call end_swapchain_render_pass() if frame is not in progress!");
+	assert(is_frame_started_ && "ERROR! coral_renderer::end_swapchain_render_pass() >> Can't call end_swapchain_render_pass() if frame is not in progress!");
 	assert(command_buffer == get_current_command_buffer() &&
-		"ERROR! first_app::end_swapchain_render_pass() >> Can't end render pass on a buffer from a different frame");
+		"ERROR! coral_renderer::end_swapchain_render_pass() >> Can't end render pass on a buffer from a different frame");
 
 	vkCmdEndRenderPass(command_buffer);
 }
@@ -121,7 +122,7 @@ void coral_renderer::create_command_buffers()
 
 	VkCommandBufferAllocateInfo alloc_info{ vkinit::command_buffer_ai(device_.get_command_pool(), static_cast<uint32_t>(command_buffers_.size())) };
 	if (vkAllocateCommandBuffers(device_.device(), &alloc_info, command_buffers_.data()) != VK_SUCCESS)
-		throw std::runtime_error("ERROR! first_app::create_command_buffers() >> Failed to allocate command buffers!");
+		throw std::runtime_error("ERROR! coral_renderer::create_command_buffers() >> Failed to allocate command buffers!");
 }
 
 void coral_renderer::free_command_buffers()
@@ -155,7 +156,7 @@ void coral_renderer::recreate_swapchain()
 		std::shared_ptr<coral_swapchain> old_swapchain { std::move(swapchain_) };
 		swapchain_ = std::make_unique<coral_swapchain>(device_, extent, old_swapchain);
 
-		if (!old_swapchain->compare_swap_formats(*swapchain_.get()))
+		if (!old_swapchain->compare_swap_formats(*swapchain_))
 			throw std::runtime_error("ERROR! coral_renderer::recreate_swapchain() >> Swapchain image or depth format has changed!");
 	}
 }
