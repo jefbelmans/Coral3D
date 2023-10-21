@@ -1,2 +1,0 @@
-C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\ar.exe qc libtinyobjloader.a CMakeFiles/tinyobjloader.dir/tinyobjloader/tiny_obj_loader.cc.obj
-C:\PROGRA~1\JETBRA~1\CLION2~1.2\bin\mingw\bin\ranlib.exe libtinyobjloader.a

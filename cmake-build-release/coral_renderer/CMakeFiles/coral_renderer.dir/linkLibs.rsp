@@ -1,1 +1,0 @@
- "C:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib" ../third_party/GLFW/src/libglfw3.a ../third_party/libvkbootstrap.a ../third_party/libtinyobjloader.a "C:/VulkanSDK/1.3.250.0/Lib/vulkan-1.lib" -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32 
