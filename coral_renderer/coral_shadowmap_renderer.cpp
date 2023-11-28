@@ -39,15 +39,15 @@ namespace coral_3d
         attachment_description.finalLayout = VK_IMAGE_LAYOUT_DEPTH_STENCIL_READ_ONLY_OPTIMAL;
 
         // DEPTH REFERENCE
-        VkAttachmentReference depth_ref{};
-        depth_ref.attachment = 0;
-        depth_ref.layout = VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL;
+//        VkAttachmentReference depth_ref{};
+//        depth_ref.attachment = 0;
+//        depth_ref.layout = VK_IMAGE_LAYOUT_DEPTH_STENCIL_ATTACHMENT_OPTIMAL;
 
         // SUB PASSES
-        VkSubpassDescription sub_pass{};
-        sub_pass.pipelineBindPoint = VK_PIPELINE_BIND_POINT_GRAPHICS;
-        sub_pass.colorAttachmentCount = 0;
-        sub_pass.pDepthStencilAttachment = &depth_ref;
+//        VkSubpassDescription sub_pass{};
+//        sub_pass.pipelineBindPoint = VK_PIPELINE_BIND_POINT_GRAPHICS;
+//        sub_pass.colorAttachmentCount = 0;
+//        sub_pass.pDepthStencilAttachment = &depth_ref;
 
         // Dependencies
         std::array<VkSubpassDependency, 2> dependencies;
