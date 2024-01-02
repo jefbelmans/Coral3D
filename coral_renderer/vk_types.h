@@ -1,7 +1,6 @@
 #pragma once
 #include <vulkan/vulkan.h>
 #include <vk_mem_alloc.h>
-#define GLM_FORCE_SWIZZLE
 #include <glm.hpp>
 
 #include <deque>

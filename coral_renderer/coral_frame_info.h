@@ -24,8 +24,7 @@ namespace coral_3d
         glm::mat4 view_projection{1.f};
 
         // GLOBAL LIGHT
-        glm::vec4 global_light_direction{ glm::normalize(glm::vec4{ -0.477f,
-                                                                    0.477f, -0.477f, 1.f})}; // w is intensity
+        glm::vec4 global_light_direction{ glm::normalize(glm::vec4{ -0.477f, 0.477f, -0.477f, 0.f})}; // w is intensity
         glm::vec4 ambient_lighting{0.14f, 0.14f, 0.14f, 0.05f}; // w is intensity
 
         // POINT LIGHTS

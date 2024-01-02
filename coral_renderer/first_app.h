@@ -8,7 +8,6 @@
 #include "coral_texture.h"
 #include "coral_cubemap.h"
 #include "coral_input.h"
-#include "coral_frame_info.h"
 
 // STD
 #include <memory>
@@ -48,9 +47,7 @@ namespace coral_3d
         std::vector<VkDescriptorSet> global_descriptor_sets_{coral_swapchain::MAX_FRAMES_IN_FLIGHT};
         std::unique_ptr<coral_descriptor_set_layout> global_set_layout_;
 
-        // GAME DATA
 		coral_gameobject::Map gameobjects_;
-        GlobalUBO ubo_;
 
         // INPUT
         coral_input input{};
